@@ -1,3 +1,1 @@
-data/raw/*.csv
-data/cleaned/*.csv
-data/exports/*.csv
+venv/
