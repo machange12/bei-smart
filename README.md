@@ -34,13 +34,13 @@ bei-smart/
 
 ## Team
 
-| Name | Role | Branch |
-|---|---|---|
-| Mathews Machanje | Lead, RAG & NLP | eda/mat |
-| Millicent Onchari | EDA & Project Management | eda/millicent |
-| James Wakhu | Time Series Forecasting | eda/james |
-| Esther | Spatial Analysis & Clustering | eda/esther |
-| Mohamed Abdirahman | Supplementary Data & Dashboard | eda/mohamed |
+| Name | 
+|---|
+| Mathews Machanje |
+| Millicent Onchari 
+| James Wakhu 
+| Esther 
+| Mohamed Abdirahman 
 
 ## Deliverables
 
