@@ -1,0 +1,35 @@
+commodity,market,region,pricetype,n_records,mae,mape,reliable
+Maize,Nairobi,Nairobi,Wholesale,190,3.874,12.12,True
+Maize,Nakuru,Rift Valley,Wholesale,164,3.099,9.9,True
+Maize,Mombasa,Coast,Wholesale,179,4.35,15.54,True
+Maize,Kisumu,Nyanza,Wholesale,168,6.473,16.47,True
+Maize,Kitui,Eastern,Retail,239,4.286,7.46,True
+Maize,Meru,Eastern,Retail,188,7.342,12.85,True
+Maize,Makueni,Eastern,Retail,188,2.281,4.06,True
+Maize,Eldoret,Rift Valley,Wholesale,200,17.553,33.83,False
+Maize,Wajir,North Eastern,Retail,188,11.954,13.45,True
+Maize,Mandera,North Eastern,Retail,221,10.538,11.35,True
+Maize,Marsabit,North Eastern,Retail,239,10.585,15.54,True
+Maize,Isiolo,Eastern,Retail,188,7.446,10.43,True
+Beans,Nairobi,Nairobi,Wholesale,144,12.591,18.83,True
+Beans,Nakuru,Rift Valley,Wholesale,129,8.33,13.48,True
+Beans,Mombasa,Coast,Wholesale,143,19.532,37.15,False
+Beans,Kisumu,Nyanza,Wholesale,160,6.498,9.26,True
+Beans,Eldoret,Rift Valley,Wholesale,156,15.263,24.21,True
+Beans (dry),Nairobi,Nairobi,Wholesale,170,19.231,20.09,True
+Beans (dry),Nakuru,Rift Valley,Wholesale,62,20.646,24.62,True
+Beans (dry),Nakuru,Rift Valley,Retail,205,20.795,15.17,True
+Beans (dry),Mombasa,Coast,Wholesale,167,25.414,28.19,False
+Beans (dry),Kisumu,Nyanza,Wholesale,134,11.872,13.92,True
+Beans (dry),Kitui,Eastern,Retail,164,8.903,9.58,True
+Beans (dry),Eldoret,Rift Valley,Wholesale,170,6.992,6.84,True
+Beans (mixed),Kitui,Eastern,Retail,190,21.903,16.29,True
+Beans (mixed),Meru,Eastern,Retail,128,23.484,21.7,True
+Beans (mixed),Makueni,Eastern,Retail,116,6.296,4.23,True
+Beans (mixed),Marsabit,North Eastern,Retail,64,20.389,16.46,True
+Sorghum,Nairobi,Nairobi,Wholesale,169,16.878,24.84,True
+Sorghum,Nakuru,Rift Valley,Wholesale,62,9.42,18.68,True
+Sorghum,Kisumu,Nyanza,Wholesale,161,8.259,23.19,True
+Sorghum,Kitui,Eastern,Wholesale,145,18.287,36.17,False
+Sorghum,Eldoret,Rift Valley,Wholesale,105,13.53,22.42,True
+Maize meal,Nairobi,Nairobi,Retail,231,15.214,20.02,True

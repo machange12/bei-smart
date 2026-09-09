@@ -1,0 +1,18 @@
+commodity,market,pricetype,region,n_months,median_error,mean_error,period_start,period_end,series_ended
+Maize,Nakuru,Wholesale,Rift Valley,12,2.85,6.48,2021-01-15,2022-04-15,2022-04-15
+Sorghum,Eldoret,Wholesale,Rift Valley,12,3.6,5.18,2018-12-15,2020-03-15,2020-03-15
+Maize,Mombasa,Wholesale,Coast,12,3.95,9.64,2020-03-15,2021-11-15,2021-11-15
+Maize,Nairobi,Wholesale,Nairobi,12,6.7,10.01,2021-02-15,2022-03-15,2022-03-15
+Beans (dry),Eldoret,Wholesale,Rift Valley,12,8.2,9.27,2019-04-15,2020-03-15,2020-03-15
+Beans,Kisumu,Wholesale,Nyanza,12,8.85,9.72,2018-08-15,2019-07-15,2019-07-15
+Beans,Nairobi,Wholesale,Nairobi,12,9.1,10.23,2019-05-15,2021-11-15,2021-11-15
+Beans,Nakuru,Wholesale,Rift Valley,12,9.3,11.38,2018-09-15,2021-02-15,2021-02-15
+Beans,Eldoret,Wholesale,Rift Valley,12,11.3,11.51,2018-08-01,2019-07-01,2019-07-01
+Sorghum,Nakuru,Wholesale,Rift Valley,12,12.05,16.89,2019-04-15,2020-03-15,2020-03-15
+Beans (dry),Kisumu,Wholesale,Nyanza,12,12.6,13.8,2018-08-15,2019-10-15,2019-10-15
+Beans (dry),Nakuru,Wholesale,Rift Valley,12,13.05,16.85,2019-04-15,2020-03-15,2020-03-15
+Sorghum,Kisumu,Wholesale,Nyanza,12,13.15,15.43,2018-11-15,2019-10-15,2019-10-15
+Beans (dry),Kitui,Retail,Eastern,12,16.95,13.92,2019-11-15,2020-12-15,2020-12-15
+Beans (dry),Nairobi,Wholesale,Nairobi,12,23.6,21.07,2019-04-15,2020-03-15,2020-03-15
+Maize,Kisumu,Wholesale,Nyanza,12,28.85,24.46,2019-02-15,2022-02-15,2022-02-15
+Sorghum,Nairobi,Wholesale,Nairobi,12,36.25,33.73,2019-04-15,2020-03-15,2020-03-15

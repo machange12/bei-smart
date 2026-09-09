@@ -1,1 +1,16 @@
 venv/
+venv_modeling/
+venv_api/
+venv_app/
+__pycache__/
+*.pyc
+
+# Secrets -- never commit actual API keys, see .env.example for the template
+.env
+
+# AgriPulse Streamlit data snapshot must remain tracked
+!app/data/*.csv
+!app/data/*.json
+
+# Regenerable Chroma vector index -- rebuilt from app/data/kb/*.md on first query
+app/data/chroma/
