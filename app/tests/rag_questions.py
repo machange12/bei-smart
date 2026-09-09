@@ -1,0 +1,73 @@
+"""30 test questions for the AgriPulse RAG pipeline.
+
+Each entry is (question, note) where `note` documents what the question is
+deliberately probing -- read the printed test_rag.py output against these
+notes to spot extraction failures without reading pipeline code.
+"""
+
+QUESTIONS = [
+    # --- forecast intent -----------------------------------------------
+    ("What is the maize price forecast for Nairobi wholesale next month?",
+     "forecast / EN / covered market+commodity, 'next month' -> horizon 3"),
+    ("Bei ya mahindi itakuwa ngapi Nairobi jumla mwezi ujao?",
+     "forecast / SW / mahindi->Maize, jumla->Wholesale, mwezi ujao->3"),
+    ("Niaje, bei ya unga itakuwaje Nairobi miezi sita?",
+     "forecast / Sheng / unga->Maize meal, miezi sita->6"),
+    ("How much will maize cost in Kiambu next year?",
+     "forecast / EN / UNCOVERED MARKET (Kiambu) -> expect status=no_market"),
+    ("Bei ya viazi itakuwa ngapi Nakuru?",
+     "forecast / SW / viazi->Potatoes, UNCOVERED COMMODITY -> expect status=no_commodity"),
+    ("What's the rice price forecast in Kisumu?",
+     "forecast / EN / UNCOVERED COMMODITY (rice) -> expect status=no_commodity"),
+    ("What is the wholesale maize price forecast for Kitui?",
+     "forecast / EN / WRONG PRICETYPE (Kitui maize is Retail only) -> expect status=no_combination"),
+    ("What is the wholesale sorghum price forecast in Kitui?",
+     "forecast / EN / UNRELIABLE series (Sorghum/Kitui/Wholesale, 36.17% MAPE) -> expect status=unreliable"),
+    ("Bei ya mahindi Nakru itakuwaje miezi sita?",
+     "forecast / SW-Sheng / TYPO 'Nakru'->Nakuru via fuzzy match, miezi sita->6"),
+    ("What will beans cost in Eldoret wholesale in six months?",
+     "forecast / EN / covered, straightforward"),
+    ("Mtama utauzwa bei gani Kisumu jumla mwaka ujao?",
+     "forecast / SW / mtama->Sorghum, jumla->Wholesale, mwaka ujao->12"),
+    ("Give me the maize meal forecast for Nairobi retail.",
+     "forecast / EN / covered, default horizon 3"),
+    ("Bei ya maharagwe Nakuru itakuwa ngapi?",
+     "forecast / SW / maharagwe->Beans, covered market, default horizon"),
+    ("Sasa bei ya mahindi Wajir itakuwa aje mwezi ujao?",
+     "forecast / Sheng-SW / mahindi->Maize, Wajir covered retail, mwezi ujao->3"),
+    ("What about maize in Marsabit, six months out?",
+     "forecast / EN / covered arid-county retail market"),
+    # --- compare intent --------------------------------------------------
+    ("Which market has the cheapest maize?",
+     "compare / EN / nationwide cheapest lookup"),
+    ("Soko gani lina bei nafuu ya mahindi?",
+     "compare / SW / mahindi->Maize, cheapest market"),
+    ("Maize ni cheap wapi kuliko Nairobi?",
+     "compare / Sheng / mixed EN/SW, cheapest market comparison"),
+    ("Where can I find the cheapest beans wholesale?",
+     "compare / EN / cheapest market for Beans"),
+    ("Wapi bei ya mtama ni nafuu zaidi?",
+     "compare / SW / mtama->Sorghum, cheapest market"),
+    ("Compare maize prices between Nairobi and Mombasa.",
+     "compare / EN / ranked market list should include both"),
+    # --- alert intent ------------------------------------------------------
+    ("Is the maize price in Marsabit normal or a spike right now?",
+     "alert / EN / covered, expect anomaly status"),
+    ("Bei ya mahindi Marsabit ni ya kawaida au imepanda ghafla?",
+     "alert / SW / mahindi->Maize, kawaida/ghafla->alert intent"),
+    ("Maize price Kitui iko sawa ama imeshuka?",
+     "alert / Sheng / mixed EN/SW anomaly check for Kitui maize"),
+    ("How volatile has the beans market been in Nakuru?",
+     "alert / EN / volatility trend for Beans/Nakuru"),
+    ("Soko la maharagwe Nairobi lina mabadiliko mengi ya bei?",
+     "alert / SW / maharagwe->Beans, mabadiliko->alert intent, volatility"),
+    ("Are there any price alerts for sorghum today?",
+     "alert / EN / Sorghum anomaly check, no market given"),
+    # --- explain intent (exactly 3, per spec) ------------------------------
+    ("Why do prices vary so much by region?",
+     "explain / EN / should retrieve KB doc 15_regional_price_differences.md"),
+    ("Kwa nini bei za vyakula hubadilika kila mwaka?",
+     "explain / SW / should retrieve KB doc 14_seasonality_in_prices.md"),
+    ("How are these forecasts actually made?",
+     "explain / EN / should retrieve KB doc 01_how_forecasts_work.md"),
+]

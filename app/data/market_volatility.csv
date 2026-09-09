@@ -1,0 +1,86 @@
+commodity,market,pricetype,region,current_volatility_pct,median_volatility_pct,trend
+Sorghum,Mogadishu (Kakuma),Retail,—,53.6,33.3,rising
+Maize,Nakuru,Retail,Rift Valley,38.0,5.1,rising
+Sorghum,Kakuma 3,Retail,—,31.3,31.8,stable
+Sorghum,HongKong (Kakuma),Retail,—,29.2,21.9,rising
+Sorghum,Kakuma 4,Retail,—,28.9,25.3,stable
+Maize,Eldoret,Wholesale,Rift Valley,28.6,16.0,rising
+Beans,Mombasa,Wholesale,Coast,27.5,11.4,rising
+Sorghum,Ethiopia (Kakuma),Retail,—,24.0,19.6,rising
+Beans (mixed),Kwale,Retail,—,22.7,15.7,rising
+Sorghum,Nakuru,Wholesale,Rift Valley,21.6,14.6,rising
+Beans (dry),Nakuru,Wholesale,Rift Valley,20.5,14.4,rising
+Maize,Kisumu,Wholesale,Nyanza,19.8,11.2,rising
+Maize,Kwale,Retail,—,19.5,10.4,rising
+Beans (dry),Mogadishu (Kakuma),Retail,—,18.8,14.2,rising
+Beans (mixed),Meru,Retail,Eastern,18.7,17.2,stable
+Sorghum,Nairobi,Wholesale,Nairobi,18.6,9.0,rising
+Maize,Mogadishu (Kakuma),Retail,—,17.5,17.5,stable
+Maize,Kakuma 2,Retail,—,17.2,19.6,stable
+Beans (dry),Kalobeyei (Village 2),Retail,—,16.9,15.4,stable
+Beans (dry),Kisumu,Wholesale,Nyanza,16.4,12.1,rising
+Beans,Eldoret,Wholesale,Rift Valley,16.4,13.0,rising
+Beans,Nakuru,Wholesale,Rift Valley,16.0,9.5,rising
+Beans (dry),Ethiopia (Kakuma),Retail,—,15.5,14.1,stable
+Beans (dry),Nairobi,Wholesale,Nairobi,14.7,9.3,rising
+Beans (dry),Mombasa,Wholesale,Coast,14.4,10.6,rising
+Beans (dry),Kalobeyei (Village 3),Retail,—,14.2,15.6,stable
+Sorghum,Kisumu,Wholesale,Nyanza,14.2,10.4,rising
+Maize,Eldoret,Retail,Rift Valley,14.1,38.5,falling
+Beans (dry),Kakuma 2,Retail,—,14.0,16.9,stable
+Maize,HongKong (Kakuma),Retail,—,13.6,22.4,falling
+Maize,Kalobeyei (Village 3),Retail,—,13.0,24.0,falling
+Beans (dry),Kakuma 4,Retail,—,12.9,11.4,stable
+Beans (dry),Kakuma 3,Retail,—,12.7,13.1,stable
+Beans (dry),Kalobeyei (Village 1),Retail,—,12.6,12.0,stable
+Maize,Ethiopia (Kakuma),Retail,—,12.6,20.2,falling
+Maize,Mombasa,Wholesale,Coast,12.5,13.7,stable
+Beans,Kisumu,Wholesale,Nyanza,12.5,11.1,stable
+Beans (dry),HongKong (Kakuma),Retail,—,12.2,12.4,stable
+Maize,Kalobeyei (Village 1),Retail,—,12.0,14.3,stable
+Sorghum,Kitui,Wholesale,Eastern,11.7,18.2,falling
+Maize,Marigat (Baringo),Retail,—,11.6,13.4,stable
+Maize,Meru,Retail,Eastern,11.0,19.3,falling
+Beans,Nairobi,Wholesale,Nairobi,10.7,11.5,stable
+Beans (dry),Dagahaley (Daadab),Retail,—,10.3,11.9,stable
+Maize,Nakuru,Wholesale,Rift Valley,10.3,12.3,stable
+Maize,Nairobi,Wholesale,Nairobi,10.2,11.9,stable
+Maize,Kakuma 4,Retail,—,10.0,17.5,falling
+Maize,Kalobeyei (Village 2),Retail,—,10.0,16.5,falling
+Maize,Kakuma 3,Retail,—,9.5,13.8,falling
+Beans (dry),Eldoret,Wholesale,Rift Valley,9.5,11.3,stable
+Maize,Isiolo,Retail,Eastern,9.4,6.9,rising
+Sorghum,Hagadera (Daadab),Retail,—,9.3,32.2,falling
+Maize,Embu-Mbeere,Retail,—,9.1,18.3,falling
+Maize meal,Nairobi,Retail,Nairobi,7.8,8.7,stable
+Maize,Hagadera (Daadab),Retail,—,7.3,15.7,falling
+Sorghum,Eldoret,Wholesale,Rift Valley,6.7,18.3,falling
+Beans (dry),Marigat (Baringo),Retail,—,6.1,7.3,stable
+Maize,Tharaka Nithi,Retail,—,6.1,13.7,falling
+Beans (dry),Kitui,Retail,Eastern,6.0,8.7,falling
+Beans (mixed),Embu-Mbeere,Retail,—,5.9,10.7,falling
+Maize,Kajiado,Retail,—,5.8,9.2,falling
+Maize,Wajir,Retail,North Eastern,5.7,5.4,stable
+Beans (mixed),Kilifi,Retail,—,5.6,6.1,stable
+Maize,Mandera,Retail,North Eastern,5.5,5.3,stable
+Maize,Lodwar (Turkana),Retail,—,5.2,7.1,falling
+Maize,Marsabit,Retail,North Eastern,5.2,6.8,falling
+Beans (mixed),Marsabit,Retail,North Eastern,4.9,5.2,stable
+Maize,Kilifi,Retail,—,4.9,7.6,falling
+Beans (dry),Kajiado,Retail,—,4.7,10.8,falling
+Maize,IFO (Daadab),Retail,—,4.5,6.9,falling
+Beans (mixed),Taita Taveta,Retail,—,4.0,3.9,stable
+Beans (dry),Hagadera (Daadab),Retail,—,3.9,10.3,falling
+Maize,Turkana,Retail,—,3.7,6.2,falling
+Maize,Lamu,Retail,—,3.6,14.6,falling
+Maize,Tana River,Retail,—,3.1,12.2,falling
+Beans (dry),IFO (Daadab),Retail,—,3.0,9.6,falling
+Beans (mixed),Lamu,Retail,—,2.9,5.5,falling
+Maize,Kitui,Retail,Eastern,2.9,11.5,falling
+Maize,Makueni,Retail,Eastern,2.5,10.6,falling
+Maize,Taita Taveta,Retail,—,2.2,6.7,falling
+Beans (mixed),Makueni,Retail,Eastern,2.2,8.5,falling
+Beans (dry),Kilifi,Retail,—,2.1,7.2,falling
+Beans (mixed),Kitui,Retail,Eastern,2.1,7.1,falling
+Maize,Garissa,Retail,—,2.1,7.0,falling
+Beans (dry),Nakuru,Retail,Rift Valley,1.5,14.2,falling

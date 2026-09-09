@@ -1,0 +1,56 @@
+commodity,market,pricetype,latest_date,latest_price,normal_low,normal_high,status,deviation_pct
+Beans (dry),Dagahaley (Daadab),Retail,2026-07-15,126.45,55.8,202.05,NORMAL,0.0
+Beans (dry),Ethiopia (Kakuma),Retail,2026-08-15,116.67,36.84,241.9,NORMAL,0.0
+Beans (dry),Hagadera (Daadab),Retail,2026-07-15,120.0,71.61,183.5,NORMAL,0.0
+Beans (dry),HongKong (Kakuma),Retail,2026-08-15,143.33,0.0,307.43,NORMAL,0.0
+Beans (dry),IFO (Daadab),Retail,2026-08-15,119.09,85.38,170.78,NORMAL,0.0
+Beans (dry),Kakuma 2,Retail,2026-06-15,123.33,39.16,242.51,NORMAL,0.0
+Beans (dry),Kakuma 3,Retail,2026-08-15,134.44,30.32,256.8,NORMAL,0.0
+Beans (dry),Kakuma 4,Retail,2026-08-15,113.33,33.7,251.78,NORMAL,0.0
+Beans (dry),Kalobeyei (Village 1),Retail,2026-08-15,106.67,38.75,228.75,NORMAL,0.0
+Beans (dry),Kalobeyei (Village 2),Retail,2026-08-15,100.0,42.77,230.34,NORMAL,0.0
+Beans (dry),Kalobeyei (Village 3),Retail,2026-08-15,113.33,67.69,183.38,NORMAL,0.0
+Beans (dry),Mogadishu (Kakuma),Retail,2026-08-15,113.33,32.5,252.5,NORMAL,0.0
+Beans (dry),Nakuru,Retail,2026-06-01,137.9,0.0,160.0,NORMAL,0.0
+Beans (mixed),Embu-Mbeere,Retail,2026-05-01,120.0,10.25,188.25,NORMAL,0.0
+Beans (mixed),Kilifi,Retail,2026-05-01,135.0,39.25,169.25,NORMAL,0.0
+Beans (mixed),Kitui,Retail,2026-05-01,132.0,45.0,125.0,SPIKE,5.6
+Beans (mixed),Lamu,Retail,2026-05-01,175.0,5.62,268.62,NORMAL,0.0
+Beans (mixed),Makueni,Retail,2026-05-01,150.0,0.0,227.75,NORMAL,0.0
+Beans (mixed),Marsabit,Retail,2026-05-01,126.0,63.75,169.75,NORMAL,0.0
+Beans (mixed),Meru,Retail,2026-05-01,110.0,28.0,132.0,NORMAL,0.0
+Beans (mixed),Taita Taveta,Retail,2026-05-01,145.0,46.25,168.25,NORMAL,0.0
+Maize,Embu-Mbeere,Retail,2026-05-01,55.0,7.0,71.0,NORMAL,0.0
+Maize,Ethiopia (Kakuma),Retail,2026-08-15,56.67,20.0,100.0,NORMAL,0.0
+Maize,Garissa,Retail,2026-05-01,105.0,9.5,121.5,NORMAL,0.0
+Maize,Hagadera (Daadab),Retail,2026-07-15,60.0,34.76,79.97,NORMAL,0.0
+Maize,HongKong (Kakuma),Retail,2026-08-15,60.0,15.3,102.82,NORMAL,0.0
+Maize,IFO (Daadab),Retail,2026-08-15,68.81,55.51,78.94,NORMAL,0.0
+Maize,Isiolo,Retail,2026-05-01,76.0,18.0,82.0,NORMAL,0.0
+Maize,Kakuma 2,Retail,2026-08-15,56.67,10.72,102.98,NORMAL,0.0
+Maize,Kakuma 3,Retail,2026-08-15,67.5,18.61,100.83,NORMAL,0.0
+Maize,Kakuma 4,Retail,2026-08-15,53.33,21.25,91.25,NORMAL,0.0
+Maize,Kalobeyei (Village 1),Retail,2026-08-15,50.0,18.4,90.12,NORMAL,0.0
+Maize,Kalobeyei (Village 2),Retail,2026-08-15,53.33,17.57,96.57,NORMAL,0.0
+Maize,Kalobeyei (Village 3),Retail,2026-08-15,50.0,22.5,82.5,NORMAL,0.0
+Maize,Kilifi,Retail,2026-05-01,54.0,21.38,68.38,NORMAL,0.0
+Maize,Kitui,Retail,2026-05-01,55.0,12.14,59.77,NORMAL,0.0
+Maize,Kwale,Retail,2026-05-01,63.0,25.0,65.0,NORMAL,0.0
+Maize,Lamu,Retail,2026-05-01,62.0,0.0,89.5,NORMAL,0.0
+Maize,Makueni,Retail,2026-05-01,56.0,20.0,60.0,NORMAL,0.0
+Maize,Mandera,Retail,2026-05-01,94.0,23.0,119.0,NORMAL,0.0
+Maize,Marsabit,Retail,2026-05-01,70.0,26.87,68.68,SPIKE,1.9
+Maize,Meru,Retail,2026-05-01,57.0,2.0,74.0,NORMAL,0.0
+Maize,Mogadishu (Kakuma),Retail,2026-08-15,55.0,13.99,113.35,NORMAL,0.0
+Maize,Taita Taveta,Retail,2026-05-01,57.0,27.35,55.75,SPIKE,2.2
+Maize,Tana River,Retail,2026-05-01,70.0,11.5,95.5,NORMAL,0.0
+Maize,Tharaka Nithi,Retail,2026-05-01,56.0,6.5,74.5,NORMAL,0.0
+Maize,Turkana,Retail,2026-05-01,98.0,33.75,119.75,NORMAL,0.0
+Maize,Wajir,Retail,2026-05-01,95.0,20.0,100.0,NORMAL,0.0
+Maize meal,Nairobi,Retail,2026-05-01,84.0,14.5,90.5,NORMAL,0.0
+Sorghum,Ethiopia (Kakuma),Retail,2026-08-15,43.33,10.62,115.62,NORMAL,0.0
+Sorghum,Hagadera (Daadab),Retail,2026-07-15,50.0,22.5,82.5,NORMAL,0.0
+Sorghum,HongKong (Kakuma),Retail,2026-08-15,30.0,3.39,117.97,NORMAL,0.0
+Sorghum,Kakuma 3,Retail,2026-08-15,45.0,0.0,134.19,NORMAL,0.0
+Sorghum,Kakuma 4,Retail,2026-08-15,30.0,0.0,116.98,NORMAL,0.0
+Sorghum,Mogadishu (Kakuma),Retail,2026-08-15,43.33,0.0,150.0,NORMAL,0.0

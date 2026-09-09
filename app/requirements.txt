@@ -1,0 +1,12 @@
+streamlit
+pandas
+plotly
+folium
+streamlit-folium
+requests
+chromadb
+sentence-transformers
+rapidfuzz
+groq
+langdetect
+python-dotenv
