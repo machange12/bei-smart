@@ -706,18 +706,25 @@
     "region": "Eastern",
     "months_stale": 3
   },
-  "Sorghum|Nairobi|Wholesale": {
-    "strategy": "chronos",
-    "test_mape": 24.49,
-    "confidence": "low",
-    "region": "Nairobi",
-    "months_stale": 19
-  },
   "Maize meal|Nairobi|Retail": {
     "strategy": "chronos",
     "test_mape": 12.41,
     "confidence": "medium",
     "region": "Nairobi",
     "months_stale": 4
+  },
+  "Sorghum|Kisumu|Wholesale": {
+    "strategy": "ensemble",
+    "test_mape": 18.2,
+    "confidence": "medium",
+    "region": "Nyanza",
+    "months_stale": 2
+  },
+  "Sorghum|Nairobi|Wholesale": {
+    "strategy": "ensemble",
+    "test_mape": 21.78,
+    "confidence": "low",
+    "region": "Nairobi",
+    "months_stale": 19
   }
 }
