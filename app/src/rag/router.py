@@ -42,6 +42,17 @@ _INTENT_KEYWORDS = {
         "why", "how are these", "how are forecasts", "how does the",
         "explain", "kwa nini", "maana ya", "sababu", "how come",
     ],
+    "seasonality": [
+        "best time to sell", "when should i sell", "when to sell",
+        "best month to sell", "when is the best time", "when do prices peak",
+        "wakati mzuri wa kuuza", "lini niuze", "muda mzuri wa kuuza",
+    ],
+    "history": [
+        "was the price", "has the price been", "has been", "used to cost",
+        "used to be", "historically", "in the past", "past price",
+        "history of", "last year", "last month", "ilikuwa", "zamani",
+        "hapo awali", "mwaka jana", "mwezi jana", "historia ya",
+    ],
     "compare": [
         "compare", "cheapest", "cheaper", "cheap", "which market", "best price",
         "lowest price", "vs", "versus", "nafuu", "gani ina bei", "gani ni bora",
@@ -58,7 +69,10 @@ _INTENT_KEYWORDS = {
     ],
 }
 
-_INTENT_ORDER = ["explain", "compare", "alert", "forecast"]
+# seasonality and history are checked ahead of forecast/compare/alert since
+# a question like "when is maize cheapest to sell" or "what was the price"
+# would otherwise fall through to the forecast/compare default.
+_INTENT_ORDER = ["explain", "seasonality", "history", "compare", "alert", "forecast"]
 
 
 def classify_intent(text: str, llm_fallback=None) -> str:
@@ -70,6 +84,15 @@ def classify_intent(text: str, llm_fallback=None) -> str:
     for intent in _INTENT_ORDER:
         if any(keyword in lower for keyword in _INTENT_KEYWORDS[intent]):
             return intent
+
+    # A bare past-year mention ("maize price in 2023", or even an
+    # out-of-range one like 1990) carries the same intent as an explicit
+    # "historically"/"last year" phrase but won't match any fixed keyword
+    # above. lookup.get_historical_price reports "no data for that period"
+    # gracefully for years outside the actual data span.
+    year_match = re.search(r"\b(1[5-9]\d{2}|20[0-2]\d)\b", lower)
+    if year_match and int(year_match.group(1)) < 2026:
+        return "history"
 
     if llm_fallback is not None:
         try:

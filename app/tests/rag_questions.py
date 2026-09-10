@@ -70,4 +70,18 @@ QUESTIONS = [
      "explain / SW / should retrieve KB doc 14_seasonality_in_prices.md"),
     ("How are these forecasts actually made?",
      "explain / EN / should retrieve KB doc 01_how_forecasts_work.md"),
+    # --- history intent (actual past prices, not forecasts) ----------------
+    ("What was the maize price in Nairobi last year?",
+     "history / EN / 'last year' resolves relative to the data's own max date"),
+    ("Bei ya mahindi Nairobi ilikuwa ngapi mwaka jana?",
+     "history / SW / mahindi->Maize, ilikuwa/mwaka jana->history intent"),
+    ("What was the maize price in Nairobi in 2023?",
+     "history / EN / explicit year extraction, exact-period lookup"),
+    ("What was the maize price in Nairobi in 1990?",
+     "history / EN / out-of-range year -> expect no_data_for_period, not a forecast"),
+    # --- seasonality intent (best/worst month to sell, from history) -------
+    ("When is the best time to sell maize in Nairobi?",
+     "seasonality / EN / seasonal averaging over full history"),
+    ("Wakati mzuri wa kuuza mahindi Nairobi ni lini?",
+     "seasonality / SW / mahindi->Maize, best-time-to-sell phrasing"),
 ]

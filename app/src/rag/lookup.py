@@ -88,20 +88,20 @@ def _load():
     anomalies = pd.read_csv(DATA_DIR / "price_anomalies.csv", parse_dates=["latest_date"])
     volatility = pd.read_csv(DATA_DIR / "market_volatility.csv")
     model_metrics = pd.read_csv(DATA_DIR / "model_metrics.csv")
-    historical = pd.read_csv(
-        DATA_DIR / "bei_smart_forecasting_final.csv",
-        usecols=["market", "admin1"],
+    historical_full = pd.read_csv(
+        DATA_DIR / "bei_smart_forecasting_final.csv", parse_dates=["date"]
     )
     market_region_map = (
-        historical.dropna(subset=["admin1"])
+        historical_full.dropna(subset=["admin1"])
         .drop_duplicates(subset=["market"])
         .set_index("market")["admin1"]
         .to_dict()
     )
-    return forecasts, anomalies, volatility, model_metrics, market_region_map
+    return forecasts, anomalies, volatility, model_metrics, historical_full, market_region_map
 
 
-FORECASTS, ANOMALIES, VOLATILITY, MODEL_METRICS, MARKET_REGION_MAP = _load()
+FORECASTS, ANOMALIES, VOLATILITY, MODEL_METRICS, HISTORICAL, MARKET_REGION_MAP = _load()
+HISTORICAL_MAX_DATE = HISTORICAL["date"].max()
 
 COVERED_MARKETS = sorted(FORECASTS["market"].unique().tolist())
 COVERED_COMMODITIES = sorted(FORECASTS["commodity"].unique().tolist())
@@ -191,8 +191,53 @@ def _extract_horizon(question: str) -> int:
     return 3
 
 
+MONTH_NAMES_EN = {
+    1: "january", 2: "february", 3: "march", 4: "april", 5: "may", 6: "june",
+    7: "july", 8: "august", 9: "september", 10: "october", 11: "november", 12: "december",
+}
+MONTH_NAMES_SW = {
+    1: "januari", 2: "februari", 3: "machi", 4: "aprili", 5: "mei", 6: "juni",
+    7: "julai", 8: "agosti", 9: "septemba", 10: "oktoba", 11: "novemba", 12: "desemba",
+}
+MONTH_LOOKUP = {name: num for num, name in MONTH_NAMES_EN.items()}
+MONTH_LOOKUP.update({name: num for num, name in MONTH_NAMES_SW.items()})
+
+
+def _extract_period(question: str) -> dict:
+    """Pull an explicit past period (year and/or month) out of a history
+    question. Returns {"year": int|None, "month": int|None}. "Last year" /
+    "mwaka jana" and "last month" / "mwezi jana" are resolved relative to
+    the most recent date actually in the historical data, not wall-clock
+    'today', so they stay meaningful regardless of when this runs."""
+    lower = question.lower()
+    year, month = None, None
+
+    year_match = re.search(r"\b(1[5-9]\d{2}|20\d{2})\b", lower)
+    if year_match:
+        year = int(year_match.group(1))
+
+    for name, num in MONTH_LOOKUP.items():
+        if name in lower:
+            month = num
+            break
+
+    if year is None:
+        if "last year" in lower or "mwaka jana" in lower or "mwaka uliopita" in lower:
+            year = HISTORICAL_MAX_DATE.year - 1
+        elif "this year" in lower or "mwaka huu" in lower:
+            year = HISTORICAL_MAX_DATE.year
+
+    if month is None and year is None:
+        if "last month" in lower or "mwezi jana" in lower or "mwezi uliopita" in lower:
+            last_month_date = HISTORICAL_MAX_DATE - pd.DateOffset(months=1)
+            year, month = last_month_date.year, last_month_date.month
+
+    return {"year": year, "month": month}
+
+
 def extract_entities(question: str) -> dict:
-    """Pull commodity, market, pricetype and horizon out of free text.
+    """Pull commodity, market, pricetype, horizon and (for past-price
+    questions) an explicit period out of free text.
 
     Values are the best fuzzy-matched canonical names (which may or may not
     be *covered* -- that classification happens in get_forecast) or None
@@ -203,6 +248,7 @@ def extract_entities(question: str) -> dict:
         "market": _extract_market(question),
         "pricetype": _extract_pricetype(question),
         "horizon_months": _extract_horizon(question),
+        "period": _extract_period(question),
     }
 
 
@@ -472,4 +518,157 @@ def get_cheapest_market(commodity: str | None, region: str | None = None, horizo
         "confidence": cheapest["confidence"],
         "test_mape": float(cheapest["test_mape"]),
         "ranked_markets": ranked,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Historical (past) price lookup -- separate from get_forecast, which only
+# ever reads production_forecasts.csv (future). This reads the actual
+# observed price series in bei_smart_forecasting_final.csv.
+# ---------------------------------------------------------------------------
+
+
+def get_historical_price(entities: dict) -> dict:
+    """Return an actually-observed past price: for an explicit year/month
+    if the question named one, otherwise the most recent observation."""
+    commodity = entities.get("commodity")
+    market = entities.get("market")
+    pricetype = entities.get("pricetype")
+    period = entities.get("period") or {}
+    year, month = period.get("year"), period.get("month")
+
+    available = _available()
+
+    if not market or market not in COVERED_MARKETS:
+        return {
+            "status": "no_market",
+            "requested": {"commodity": commodity, "market": market, "pricetype": pricetype},
+            "alternatives": COVERED_MARKETS,
+            "available": available,
+        }
+    if not commodity or commodity not in COVERED_COMMODITIES:
+        return {
+            "status": "no_commodity",
+            "requested": {"commodity": commodity, "market": market, "pricetype": pricetype},
+            "alternatives": COVERED_COMMODITIES,
+            "available": available,
+        }
+
+    sub = HISTORICAL[(HISTORICAL["commodity"] == commodity) & (HISTORICAL["market"] == market)]
+    if pricetype:
+        narrowed = sub[sub["pricetype"] == pricetype]
+        if not narrowed.empty:
+            sub = narrowed
+
+    if sub.empty:
+        return {
+            "status": "no_combination",
+            "message": f"{commodity} has no historical price records in {market}.",
+            "requested": {"commodity": commodity, "market": market, "pricetype": pricetype},
+            "available": available,
+        }
+
+    sub = sub.sort_values("date")
+    resolved_pricetype = sub["pricetype"].iloc[-1]
+
+    if year is not None:
+        filtered = sub[sub["date"].dt.year == year]
+        if month is not None:
+            filtered = filtered[filtered["date"].dt.month == month]
+        if filtered.empty:
+            span_start, span_end = sub["date"].min(), sub["date"].max()
+            return {
+                "status": "no_data_for_period",
+                "message": (
+                    f"No {commodity} records for {market} in that period. "
+                    f"Data covers {span_start.date()} to {span_end.date()}."
+                ),
+                "requested": {"commodity": commodity, "market": market, "pricetype": pricetype},
+                "period": {"year": year, "month": month},
+                "available": available,
+            }
+        row = filtered.iloc[-1]
+        is_exact_period = True
+    else:
+        row = sub.iloc[-1]
+        is_exact_period = False
+
+    return {
+        "status": "found",
+        "commodity": commodity,
+        "market": market,
+        "pricetype": resolved_pricetype,
+        "date": row["date"].date(),
+        "price_per_kg": float(row["price_per_kg"]),
+        "is_exact_period": is_exact_period,
+        "requested_period": {"year": year, "month": month},
+    }
+
+
+# ---------------------------------------------------------------------------
+# Seasonality: best (and worst) time of year to sell, from historical data
+# ---------------------------------------------------------------------------
+
+
+def get_seasonality(entities: dict) -> dict:
+    """Determine which calendar month historically commands the highest
+    (and lowest) average price for a series -- deterministic seasonal
+    averaging over the full observed history, not a forecast."""
+    commodity = entities.get("commodity")
+    market = entities.get("market")
+    pricetype = entities.get("pricetype")
+
+    available = _available()
+
+    if not market or market not in COVERED_MARKETS:
+        return {
+            "status": "no_market",
+            "requested": {"commodity": commodity, "market": market, "pricetype": pricetype},
+            "alternatives": COVERED_MARKETS,
+            "available": available,
+        }
+    if not commodity or commodity not in COVERED_COMMODITIES:
+        return {
+            "status": "no_commodity",
+            "requested": {"commodity": commodity, "market": market, "pricetype": pricetype},
+            "alternatives": COVERED_COMMODITIES,
+            "available": available,
+        }
+
+    sub = HISTORICAL[(HISTORICAL["commodity"] == commodity) & (HISTORICAL["market"] == market)]
+    if pricetype:
+        narrowed = sub[sub["pricetype"] == pricetype]
+        if not narrowed.empty:
+            sub = narrowed
+
+    MIN_MONTHS_FOR_SEASONALITY = 24
+    if len(sub) < MIN_MONTHS_FOR_SEASONALITY:
+        return {
+            "status": "insufficient_history",
+            "message": (
+                f"{commodity} in {market} has only {len(sub)} months of history -- "
+                "not enough to identify a reliable seasonal pattern."
+            ),
+            "requested": {"commodity": commodity, "market": market, "pricetype": pricetype},
+            "available": available,
+        }
+
+    sub = sub.copy()
+    sub["month"] = sub["date"].dt.month
+    monthly_avg = sub.groupby("month")["price_per_kg"].mean().round(2)
+    best_month = int(monthly_avg.idxmax())
+    worst_month = int(monthly_avg.idxmin())
+    resolved_pricetype = sub["pricetype"].iloc[-1]
+
+    return {
+        "status": "found",
+        "commodity": commodity,
+        "market": market,
+        "pricetype": resolved_pricetype,
+        "best_month": best_month,
+        "best_month_avg_price": float(monthly_avg[best_month]),
+        "worst_month": worst_month,
+        "worst_month_avg_price": float(monthly_avg[worst_month]),
+        "n_years": int(sub["date"].dt.year.nunique()),
+        "monthly_averages": {int(m): float(v) for m, v in monthly_avg.items()},
     }
