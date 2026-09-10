@@ -45,9 +45,22 @@ st.markdown(
 
 col1, col2, col3, col4 = st.columns(4)
 
-live_series_count = len(forecasts[["commodity", "market", "pricetype"]].drop_duplicates())
-median_forecast_error = validation_archive["error_pct"].median()
-markets_covered = forecasts["market"].nunique()
+live_series = forecasts
+if "months_stale" in forecasts.columns:
+    live_series = forecasts[forecasts["months_stale"] <= 6]
+live_series_count = len(live_series[["commodity", "market", "pricetype"]].drop_duplicates())
+
+# Median error: prefer the discontinued-series validation archive when it has
+# data (accuracy checked against real outcomes); otherwise fall back to the
+# deployed series' own measured test MAPE.
+if not validation_archive.empty:
+    median_forecast_error = validation_archive["error_pct"].median()
+    error_source = "measured on discontinued series retained for method validation"
+else:
+    median_forecast_error = forecasts.drop_duplicates(["commodity", "market", "pricetype"])["test_mape"].median()
+    error_source = "measured test error across all currently deployed series"
+
+markets_covered = live_series["market"].nunique()
 active_alerts = int((anomalies["status"] != "NORMAL").sum())
 
 col1.metric("Live series", f"{live_series_count:,}")
@@ -55,10 +68,7 @@ col2.metric("Median forecast error", f"{median_forecast_error:.1f}%")
 col3.metric("Markets covered", f"{markets_covered:,}")
 col4.metric("Active price alerts", f"{active_alerts:,}")
 
-st.caption(
-    "Median forecast error is measured on 17 discontinued series retained for method "
-    "validation — see the Validation page for details."
-)
+st.caption(f"Median forecast error is {error_source} — see the Validation page for details.")
 
 st.divider()
 st.markdown(

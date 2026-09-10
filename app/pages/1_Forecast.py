@@ -34,11 +34,19 @@ def load_routing() -> dict:
     return json.loads((DATA_DIR / "model_routing.json").read_text())
 
 
-forecasts = load_forecasts()
+forecasts_all = load_forecasts()
 historical = load_historical()
 routing = load_routing()
 
 render_header("Price Forecast", "📈")
+
+# The data layer can carry series up to 36 months stale (with confidence
+# capped accordingly -- see model_routing.json), but this page only offers
+# genuinely current series so a user never has to second-guess freshness.
+if "months_stale" in forecasts_all.columns:
+    forecasts = forecasts_all[forecasts_all["months_stale"] <= 6]
+else:
+    forecasts = forecasts_all
 
 commodities = sorted(forecasts["commodity"].unique())
 commodity = st.selectbox("Commodity", commodities)

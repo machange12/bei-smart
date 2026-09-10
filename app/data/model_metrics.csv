@@ -1,35 +1,150 @@
-commodity,market,region,pricetype,n_records,mae,mape,reliable
-Maize,Nairobi,Nairobi,Wholesale,190,3.874,12.12,True
-Maize,Nakuru,Rift Valley,Wholesale,164,3.099,9.9,True
-Maize,Mombasa,Coast,Wholesale,179,4.35,15.54,True
-Maize,Kisumu,Nyanza,Wholesale,168,6.473,16.47,True
-Maize,Kitui,Eastern,Retail,239,4.286,7.46,True
-Maize,Meru,Eastern,Retail,188,7.342,12.85,True
-Maize,Makueni,Eastern,Retail,188,2.281,4.06,True
-Maize,Eldoret,Rift Valley,Wholesale,200,17.553,33.83,False
-Maize,Wajir,North Eastern,Retail,188,11.954,13.45,True
-Maize,Mandera,North Eastern,Retail,221,10.538,11.35,True
-Maize,Marsabit,North Eastern,Retail,239,10.585,15.54,True
-Maize,Isiolo,Eastern,Retail,188,7.446,10.43,True
-Beans,Nairobi,Nairobi,Wholesale,144,12.591,18.83,True
-Beans,Nakuru,Rift Valley,Wholesale,129,8.33,13.48,True
-Beans,Mombasa,Coast,Wholesale,143,19.532,37.15,False
-Beans,Kisumu,Nyanza,Wholesale,160,6.498,9.26,True
-Beans,Eldoret,Rift Valley,Wholesale,156,15.263,24.21,True
-Beans (dry),Nairobi,Nairobi,Wholesale,170,19.231,20.09,True
-Beans (dry),Nakuru,Rift Valley,Wholesale,62,20.646,24.62,True
-Beans (dry),Nakuru,Rift Valley,Retail,205,20.795,15.17,True
-Beans (dry),Mombasa,Coast,Wholesale,167,25.414,28.19,False
-Beans (dry),Kisumu,Nyanza,Wholesale,134,11.872,13.92,True
-Beans (dry),Kitui,Eastern,Retail,164,8.903,9.58,True
-Beans (dry),Eldoret,Rift Valley,Wholesale,170,6.992,6.84,True
-Beans (mixed),Kitui,Eastern,Retail,190,21.903,16.29,True
-Beans (mixed),Meru,Eastern,Retail,128,23.484,21.7,True
-Beans (mixed),Makueni,Eastern,Retail,116,6.296,4.23,True
-Beans (mixed),Marsabit,North Eastern,Retail,64,20.389,16.46,True
-Sorghum,Nairobi,Nairobi,Wholesale,169,16.878,24.84,True
-Sorghum,Nakuru,Rift Valley,Wholesale,62,9.42,18.68,True
-Sorghum,Kisumu,Nyanza,Wholesale,161,8.259,23.19,True
-Sorghum,Kitui,Eastern,Wholesale,145,18.287,36.17,False
-Sorghum,Eldoret,Rift Valley,Wholesale,105,13.53,22.42,True
-Maize meal,Nairobi,Nairobi,Retail,231,15.214,20.02,True
+commodity,market,region,pricetype,source,n_records,last_obs,months_stale,mae,mape,reliable
+Beans (dry),Busia,,Wholesale,FEWS,86,2024-03-01,30,40.883,24.5,True
+Beans (dry),Eldoret,Rift Valley,Wholesale,FEWS,221,2026-05-01,4,36.774,27.27,False
+Beans (dry),Kisumu,Nyanza,Wholesale,FEWS,232,2026-07-01,2,19.494,11.66,True
+Beans (dry),Kitale,Rift Valley,Wholesale,FEWS,119,2026-03-01,6,26.446,24.8,True
+Beans (dry),Kitui,Eastern,Wholesale,FEWS,101,2025-11-01,10,21.39,16.16,True
+Beans (dry),Mombasa,,Wholesale,FEWS,202,2025-11-01,10,43.666,24.86,True
+Beans (dry),Nairobi,Nairobi,Wholesale,FEWS,243,2026-07-01,2,45.048,39.15,False
+Beans (mixed),Ahero,Nyanza,Retail,FEWS,70,2026-06-01,3,26.869,18.87,True
+Beans (mixed),Bomet,Rift Valley,Retail,FEWS,87,2026-06-01,3,22.328,14.98,True
+Beans (mixed),Butere,Western,Retail,FEWS,86,2026-06-01,3,28.358,18.91,True
+Beans (mixed),Eldoret,Rift Valley,Retail,FEWS,77,2026-06-01,3,21.005,13.07,True
+Beans (mixed),Embu-Mbeere,Eastern,Retail,FEWS,124,2026-07-01,2,11.136,8.44,True
+Beans (mixed),Gakoromere,Eastern,Retail,FEWS,88,2026-06-01,3,6.991,5.46,True
+Beans (mixed),Gatundu,Central,Retail,FEWS,82,2026-06-01,3,37.441,24.41,True
+Beans (mixed),Githurai,Nairobi,Retail,FEWS,88,2026-06-01,3,14.266,11.41,True
+Beans (mixed),Hola,Coast,Retail,FEWS,80,2026-06-01,3,17.543,10.83,True
+Beans (mixed),Iciara,Eastern,Retail,FEWS,74,2026-06-01,3,27.559,22.83,True
+Beans (mixed),Iten,,Retail,FEWS,67,2026-05-01,4,119.746,83.6,False
+Beans (mixed),Kabarnet,,Retail,FEWS,73,2026-02-01,7,56.671,35.34,False
+Beans (mixed),Kajiado,Rift Valley,Retail,FEWS,79,2026-05-01,4,135.866,87.65,False
+Beans (mixed),Kakamega,Western,Retail,FEWS,86,2026-06-01,3,59.65,40.67,False
+Beans (mixed),Kalundu,Eastern,Retail,FEWS,83,2026-06-01,3,21.249,15.29,True
+Beans (mixed),Kapsabet,Rift Valley,Retail,FEWS,86,2026-06-01,3,45.413,28.58,False
+Beans (mixed),Karatina,Central,Retail,FEWS,87,2026-06-01,3,11.942,9.48,True
+Beans (mixed),Kerugoya,Central,Retail,FEWS,85,2026-06-01,3,13.351,10.59,True
+Beans (mixed),Kiambu,Central,Retail,FEWS,76,2026-06-01,3,8.147,4.87,True
+Beans (mixed),Kianjai,Eastern,Retail,FEWS,84,2026-06-01,3,15.778,13.36,True
+Beans (mixed),Kiboswa,,Retail,FEWS,70,2026-06-01,3,45.938,31.39,False
+Beans (mixed),Kibuye,Nyanza,Retail,FEWS,71,2026-06-01,3,7.216,4.54,True
+Beans (mixed),Kilifi,Coast,Retail,FEWS,160,2026-07-01,2,17.793,13.1,True
+Beans (mixed),Kimulot,Rift Valley,Retail,FEWS,85,2026-06-01,3,11.811,8.66,True
+Beans (mixed),Kipkaren,Rift Valley,Retail,FEWS,89,2026-06-01,3,35.966,24.85,True
+Beans (mixed),Kiritiri,Eastern,Retail,FEWS,74,2026-06-01,3,24.796,20.12,True
+Beans (mixed),Kitale,Rift Valley,Retail,FEWS,84,2026-06-01,3,14.325,11.12,True
+Beans (mixed),Kitui,Eastern,Retail,FEWS,246,2026-07-01,2,29.1,22.08,True
+Beans (mixed),Kongowea,Coast,Retail,FEWS,95,2026-06-01,3,54.355,47.38,False
+Beans (mixed),Kutus,Central,Retail,FEWS,86,2026-06-01,3,11.267,74.72,False
+Beans (mixed),Kwale,Coast,Retail,FEWS,76,2026-06-01,3,35.401,25.57,False
+Beans (mixed),Lamu,Coast,Retail,FEWS,123,2026-07-01,2,7.755,4.32,True
+Beans (mixed),Lodwar,,Retail,FEWS,69,2026-06-01,3,88.841,69.62,False
+Beans (mixed),Majengo,Coast,Retail,FEWS,94,2026-05-01,4,49.278,35.3,False
+Beans (mixed),Makueni,Eastern,Retail,FEWS,124,2026-07-01,2,8.552,5.75,True
+Beans (mixed),Makuyu,,Retail,FEWS,70,2026-06-01,3,67.159,57.26,False
+Beans (mixed),Marsabit,North Eastern,Retail,FEWS,72,2026-07-01,2,4.502,3.64,True
+Beans (mixed),Mbale,,Retail,FEWS,75,2026-06-01,3,14.512,6.73,True
+Beans (mixed),Meru,Eastern,Retail,FEWS,135,2026-07-01,2,23.848,20.88,True
+Beans (mixed),Migori,Nyanza,Retail,FEWS,78,2026-06-01,3,43.33,23.61,True
+Beans (mixed),Mulot,Rift Valley,Retail,FEWS,85,2026-06-01,3,28.874,19.9,True
+Beans (mixed),Mumias,Western,Retail,FEWS,85,2026-06-01,3,12.973,8.59,True
+Beans (mixed),Mwembe Tayari,,Retail,FEWS,60,2026-05-01,4,8.69,7.68,True
+Beans (mixed),Nanyuki,,Retail,FEWS,78,2026-02-01,7,36.024,30.51,False
+Beans (mixed),Nyabite,,Retail,FEWS,61,2025-10-01,11,20.445,12.05,True
+Beans (mixed),Nyahururu,,Retail,FEWS,68,2026-02-01,7,77.015,60.3,False
+Beans (mixed),Nyeri,Central,Retail,FEWS,87,2026-06-01,3,20.058,15.39,True
+Beans (mixed),Nyeri-Kieni,Central,Retail,FEWS,124,2026-07-01,2,9.519,9.19,True
+Beans (mixed),Ol Kalou,,Retail,FEWS,60,2026-06-01,3,33.278,19.32,True
+Beans (mixed),Runyenjes,Eastern,Retail,FEWS,82,2026-06-01,3,17.745,14.73,True
+Beans (mixed),Siakago,Eastern,Retail,FEWS,80,2026-06-01,3,14.856,11.5,True
+Beans (mixed),Siaya,,Retail,FEWS,61,2026-06-01,3,23.903,13.65,True
+Beans (mixed),Sotik,Rift Valley,Retail,FEWS,86,2026-05-01,4,10.986,7.35,True
+Beans (mixed),Taita Taveta,Coast,Retail,FEWS,160,2026-07-01,2,13.243,9.09,True
+Beans (mixed),Thika,Central,Retail,FEWS,85,2026-06-01,3,8.834,5.7,True
+Beans (mixed),Turbo,Rift Valley,Retail,FEWS,88,2026-06-01,3,30.995,21.23,True
+Beans (mixed),Voi,,Retail,FEWS,61,2026-06-01,3,20.16,15.17,True
+Beans (mixed),Wote,Eastern,Retail,FEWS,84,2026-06-01,3,7.746,4.72,True
+Maize,Ahero,Nyanza,Retail,FEWS,70,2026-06-01,3,15.06,25.93,False
+Maize,Baringo,Eastern,Retail,FEWS,220,2026-07-01,2,12.676,19.58,True
+Maize,Bomet,Rift Valley,Retail,FEWS,87,2026-06-01,3,6.852,11.24,True
+Maize,Bumala,,Retail,FEWS,63,2026-06-01,3,22.186,41.93,False
+Maize,Busia,,Wholesale,FEWS,92,2024-03-01,30,9.972,19.88,True
+Maize,Butere,Western,Retail,FEWS,86,2026-06-01,3,20.494,37.32,False
+Maize,Eldoret,Rift Valley,Retail,FEWS,74,2026-06-01,3,7.198,15.06,True
+Maize,Eldoret,Rift Valley,Wholesale,FEWS,230,2026-05-01,4,32.009,74.33,False
+Maize,Embu-Mbeere,Eastern,Retail,FEWS,220,2026-07-01,2,6.781,12.39,True
+Maize,Gakoromere,Eastern,Retail,FEWS,87,2026-06-01,3,15.844,26.49,False
+Maize,Garissa,North Eastern,Retail,FEWS,247,2026-07-01,2,11.747,11.33,True
+Maize,Gatundu,Central,Retail,FEWS,79,2026-06-01,3,9.1,15.07,True
+Maize,Githurai,Nairobi,Retail,FEWS,85,2026-06-01,3,6.358,9.42,True
+Maize,Hola,Coast,Retail,FEWS,64,2026-06-01,3,4.923,7.21,True
+Maize,Iciara,Eastern,Retail,FEWS,74,2026-06-01,3,8.73,13.42,True
+Maize,Isiolo,Eastern,Retail,FEWS,220,2026-07-01,2,8.362,12.05,True
+Maize,Kabarnet,,Retail,FEWS,62,2026-02-01,7,20.606,45.95,False
+Maize,Kajiado,Rift Valley,Retail,FEWS,223,2026-07-01,2,6.058,8.03,True
+Maize,Kakamega,Western,Retail,FEWS,74,2026-06-01,3,20.652,37.14,False
+Maize,Kalundu,Eastern,Retail,FEWS,84,2026-06-01,3,24.866,47.02,False
+Maize,Kapsabet,Rift Valley,Retail,FEWS,87,2026-06-01,3,3.575,6.36,True
+Maize,Karatina,Central,Retail,FEWS,88,2026-06-01,3,3.635,6.26,True
+Maize,Kerugoya,Central,Retail,FEWS,88,2026-06-01,3,18.707,30.28,False
+Maize,Kiambu,Central,Retail,FEWS,64,2026-06-01,3,16.171,31.16,False
+Maize,Kianjai,Eastern,Retail,FEWS,72,2026-06-01,3,11.937,21.72,True
+Maize,Kiboswa,,Retail,FEWS,71,2026-06-01,3,6.252,11.05,True
+Maize,Kibuye,Nyanza,Retail,FEWS,70,2026-06-01,3,18.501,32.28,False
+Maize,Kilifi,Coast,Retail,FEWS,220,2026-07-01,2,8.512,15.88,True
+Maize,Kimulot,Rift Valley,Retail,FEWS,84,2026-06-01,3,8.679,15.25,True
+Maize,Kipkaren,Rift Valley,Retail,FEWS,89,2026-06-01,3,8.729,17.3,True
+Maize,Kiritiri,Eastern,Retail,FEWS,62,2026-06-01,3,10.494,17.57,True
+Maize,Kisumu,Nyanza,Wholesale,FEWS,236,2026-07-01,2,4.824,9.7,True
+Maize,Kitale,Rift Valley,Retail,FEWS,76,2026-06-01,3,9.991,16.98,True
+Maize,Kitale,Rift Valley,Wholesale,FEWS,119,2026-03-01,6,24.502,53.5,False
+Maize,Kitui,Eastern,Retail,FEWS,247,2026-07-01,2,3.177,5.65,True
+Maize,Kitui,Eastern,Wholesale,FEWS,138,2026-04-01,5,12.474,28.69,False
+Maize,Kongowea,Coast,Retail,FEWS,93,2026-06-01,3,17.737,30.29,False
+Maize,Kutus,Central,Retail,FEWS,87,2026-06-01,3,17.676,33.29,False
+Maize,Kwale,Coast,Retail,FEWS,223,2026-07-01,2,13.584,25.81,False
+Maize,Laikipia,Rift Valley,Retail,FEWS,220,2026-07-01,2,9.471,19.0,True
+Maize,Lamu,Coast,Retail,FEWS,220,2026-07-01,2,5.455,8.71,True
+Maize,Machakos Town,,Retail,FEWS,63,2026-06-01,3,10.395,17.42,True
+Maize,Majengo,Coast,Retail,FEWS,87,2026-05-01,4,21.033,30.01,False
+Maize,Makueni,Eastern,Retail,FEWS,220,2026-07-01,2,4.801,8.58,True
+Maize,Makuyu,,Retail,FEWS,66,2026-06-01,3,2.982,4.84,True
+Maize,Mandera,North Eastern,Retail,FEWS,220,2026-07-01,2,10.216,11.01,True
+Maize,Marsabit,North Eastern,Retail,FEWS,220,2026-07-01,2,12.079,17.55,True
+Maize,Mbale,,Retail,FEWS,66,2026-06-01,3,21.557,37.51,False
+Maize,Meru,Eastern,Retail,FEWS,220,2026-07-01,2,8.377,15.66,True
+Maize,Migori,Nyanza,Retail,FEWS,83,2026-06-01,3,9.578,16.67,True
+Maize,Mkunguni,,Retail,FEWS,66,2026-06-01,3,21.133,20.5,True
+Maize,Mombasa,,Wholesale,FEWS,215,2025-11-01,10,9.441,17.17,True
+Maize,Mulot,Rift Valley,Retail,FEWS,85,2026-06-01,3,9.838,16.12,True
+Maize,Mumias,Western,Retail,FEWS,85,2026-06-01,3,16.022,28.28,False
+Maize,Mwembe Tayari,,Retail,FEWS,69,2026-06-01,3,5.149,9.09,True
+Maize,Nairobi,Nairobi,Wholesale,FEWS,243,2026-07-01,2,6.426,13.79,True
+Maize,Nakuru Town,,Retail,FEWS,65,2026-06-01,3,6.37,11.38,True
+Maize,Nanyuki,,Retail,FEWS,78,2026-02-01,7,22.455,33.54,False
+Maize,Narok,Rift Valley,Retail,FEWS,220,2026-07-01,2,6.794,10.74,True
+Maize,Nyabite,,Retail,FEWS,61,2025-09-01,12,21.471,46.77,False
+Maize,Nyahururu,,Retail,FEWS,72,2026-02-01,7,16.286,25.72,False
+Maize,Nyeri,Central,Retail,FEWS,76,2026-06-01,3,14.291,24.52,True
+Maize,Nyeri-Kieni,Central,Retail,FEWS,220,2026-07-01,2,10.831,19.37,True
+Maize,Ol Kalou,,Retail,FEWS,67,2026-06-01,3,6.675,9.11,True
+Maize,Runyenjes,Eastern,Retail,FEWS,81,2026-06-01,3,7.929,11.32,True
+Maize,Samburu,Central,Retail,FEWS,220,2026-07-01,2,9.294,14.6,True
+Maize,Siakago,Eastern,Retail,FEWS,79,2026-06-01,3,6.062,10.7,True
+Maize,Sotik,Rift Valley,Retail,FEWS,86,2026-05-01,4,26.76,46.03,False
+Maize,Taita Taveta,Coast,Retail,FEWS,220,2026-07-01,2,8.166,14.56,True
+Maize,Tana River,Coast,Retail,FEWS,220,2026-07-01,2,13.988,20.53,True
+Maize,Taveta,,Wholesale,FEWS,75,2026-01-01,8,19.945,51.6,False
+Maize,Tharaka Nithi,Eastern,Retail,FEWS,220,2026-07-01,2,7.584,13.9,True
+Maize,Thika,Central,Retail,FEWS,84,2026-06-01,3,16.793,27.91,False
+Maize,Turbo,Rift Valley,Retail,FEWS,88,2026-06-01,3,3.383,6.29,True
+Maize,Turkana,Rift Valley,Retail,FEWS,220,2026-07-01,2,11.911,12.64,True
+Maize,Wajir,North Eastern,Retail,FEWS,220,2026-07-01,2,15.617,17.45,True
+Maize,West Pokot,Rift Valley,Retail,FEWS,220,2026-07-01,2,13.979,25.79,False
+Maize,Wote,Eastern,Retail,FEWS,71,2026-06-01,3,6.883,11.79,True
+Sorghum,Eldoret,Rift Valley,Wholesale,FEWS,185,2024-06-01,27,20.18,37.88,False
+Sorghum,Kisumu,Nyanza,Wholesale,FEWS,191,2026-07-01,2,18.402,25.05,False
+Sorghum,Kitale,Rift Valley,Wholesale,FEWS,79,2025-10-01,11,21.738,28.4,False
+Sorghum,Kitui,Eastern,Wholesale,FEWS,155,2025-11-01,10,17.822,44.07,False
+Sorghum,Nairobi,Nairobi,Wholesale,FEWS,195,2025-02-01,19,13.481,16.56,True
+Maize meal,Nairobi,,Retail,FAO_GIEWS,231,2026-05-01,4,15.214,20.02,True

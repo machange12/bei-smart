@@ -37,18 +37,25 @@ archive = load_archive()
 render_header("Validation Archive", "✅")
 
 st.info(
-    "These 17 series were discontinued by the data provider between 2019 and 2022 "
-    "(Nairobi, Nakuru, Mombasa, Kisumu, and Eldoret wholesale markets). They are **not** "
-    "current prices — the forecast period for each has already occurred, so the error "
-    "shown here is verified against real outcomes rather than claimed in advance. They "
-    "are retained solely as evidence of forecasting method accuracy."
+    "This archive holds series the data provider discontinued -- prices that stopped "
+    "updating, so their forecast accuracy can be checked against real outcomes rather "
+    "than claimed in advance. They are **not** current prices. An empty archive is a "
+    "good sign: it means every series currently modelled still has fresh, recent data "
+    "and nothing has had to be retired here."
 )
 
+if archive.empty:
+    st.success("No series are currently archived -- every modelled series has recent data.")
+    st.divider()
+    render_footer()
+    st.stop()
+
 overall_median_error = archive["error_pct"].median()
+n_series = archive[["commodity", "market"]].drop_duplicates().shape[0]
 st.metric(
     "Overall median error (all forecast-actual pairs)",
     f"{overall_median_error:.1f}%",
-    help=f"Computed across {len(archive)} monthly forecast-actual pairs from all 17 archived series.",
+    help=f"Computed across {len(archive)} monthly forecast-actual pairs from {n_series} archived series.",
 )
 
 st.divider()
