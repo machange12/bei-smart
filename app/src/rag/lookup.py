@@ -26,7 +26,9 @@ FUZZY_THRESHOLD = 85
 
 SWAHILI_COMMODITY_MAP = {
     "mahindi": "Maize",
-    "maharagwe": "Beans",
+    # generic Swahili "beans" -- routes to the larger of the two covered
+    # bean series since plain "Beans" no longer exists post-rebuild.
+    "maharagwe": "Beans (mixed)",
     "mtama": "Sorghum",
     "unga": "Maize meal",
     "viazi": "Potatoes",
@@ -36,13 +38,28 @@ SWAHILI_COMMODITY_MAP = {
 # explicitly means a real, well-known place (Kiambu) is reported as "not
 # covered" rather than silently fuzzy-matching to some unrelated market that
 # happens to share a few letters.
+#
+# Updated after the FEWS-primary rebuild: Baringo, Bomet, Busia, Garissa,
+# Kajiado, Kiambu, Kilifi, Laikipia, Lamu, Migori, Narok, Nyeri, Samburu,
+# Siaya, Taita Taveta, Tharaka Nithi and Turkana moved to COVERED_MARKETS
+# and were removed from this list. The remainder are still genuinely
+# uncovered by exact market name, even where a same-county town (e.g.
+# Butere/Mumias in Kakamega County) is now covered.
 KNOWN_UNCOVERED_MARKETS = [
-    "Kiambu", "Nyeri", "Kakamega", "Bungoma", "Busia", "Machakos", "Kericho",
-    "Kisii", "Murang'a", "Embu", "Garissa", "Turkana", "Kajiado", "Narok",
-    "Bomet", "Siaya", "Migori", "Homa Bay", "Kilifi", "Kwale", "Lamu",
-    "Taita Taveta", "Tharaka Nithi", "Nyandarua", "Kirinyaga", "Laikipia",
-    "Baringo", "West Pokot", "Samburu", "Trans Nzoia", "Nandi", "Vihiga",
+    "Kakamega", "Bungoma", "Machakos", "Kericho", "Kisii", "Murang'a",
+    "Embu", "Homa Bay", "Kwale", "Nyandarua", "Kirinyaga",
+    "West Pokot", "Trans Nzoia", "Nandi", "Vihiga",
 ]
+
+# Colloquial short forms that fuzzy matching alone can't bridge -- e.g.
+# "nakuru" vs "Nakuru Town" scores 71 (below the 85 threshold), so a plain
+# fuzzy match would incorrectly report Nakuru as uncovered even though
+# it is. Checked as a direct word match before fuzzy matching runs.
+MARKET_ALIASES = {
+    "nakuru": "Nakuru Town",
+    "machakos": "Machakos Town",
+    "embu": "Embu-Mbeere",
+}
 
 # A handful of well-known commodities this system does not model. Not
 # exhaustive -- just enough that "rice" resolves to a name we can report as
@@ -144,8 +161,13 @@ def _extract_commodity(question: str) -> str | None:
 
 
 def _extract_market(question: str) -> str | None:
-    match, _ = _best_fuzzy_match(question, _ALL_MARKET_CHOICES)
-    return match
+    # Aliases are added as extra fuzzy-matchable choices (not just an exact
+    # word check) so a typo on the colloquial form -- "Nakru" for Nakuru --
+    # still resolves, the same way typos on official names do.
+    match, _ = _best_fuzzy_match(question, _ALL_MARKET_CHOICES + list(MARKET_ALIASES.keys()))
+    if match is not None:
+        return MARKET_ALIASES.get(match.lower(), match)
+    return None
 
 
 def _extract_pricetype(question: str) -> str | None:

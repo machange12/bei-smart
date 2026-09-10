@@ -1,56 +1,191 @@
 commodity,market,pricetype,latest_date,latest_price,normal_low,normal_high,status,deviation_pct
-Beans (dry),Dagahaley (Daadab),Retail,2026-07-15,126.45,55.8,202.05,NORMAL,0.0
-Beans (dry),Ethiopia (Kakuma),Retail,2026-08-15,116.67,36.84,241.9,NORMAL,0.0
-Beans (dry),Hagadera (Daadab),Retail,2026-07-15,120.0,71.61,183.5,NORMAL,0.0
-Beans (dry),HongKong (Kakuma),Retail,2026-08-15,143.33,0.0,307.43,NORMAL,0.0
-Beans (dry),IFO (Daadab),Retail,2026-08-15,119.09,85.38,170.78,NORMAL,0.0
-Beans (dry),Kakuma 2,Retail,2026-06-15,123.33,39.16,242.51,NORMAL,0.0
-Beans (dry),Kakuma 3,Retail,2026-08-15,134.44,30.32,256.8,NORMAL,0.0
-Beans (dry),Kakuma 4,Retail,2026-08-15,113.33,33.7,251.78,NORMAL,0.0
-Beans (dry),Kalobeyei (Village 1),Retail,2026-08-15,106.67,38.75,228.75,NORMAL,0.0
-Beans (dry),Kalobeyei (Village 2),Retail,2026-08-15,100.0,42.77,230.34,NORMAL,0.0
-Beans (dry),Kalobeyei (Village 3),Retail,2026-08-15,113.33,67.69,183.38,NORMAL,0.0
-Beans (dry),Mogadishu (Kakuma),Retail,2026-08-15,113.33,32.5,252.5,NORMAL,0.0
-Beans (dry),Nakuru,Retail,2026-06-01,137.9,0.0,160.0,NORMAL,0.0
-Beans (mixed),Embu-Mbeere,Retail,2026-05-01,120.0,10.25,188.25,NORMAL,0.0
-Beans (mixed),Kilifi,Retail,2026-05-01,135.0,39.25,169.25,NORMAL,0.0
-Beans (mixed),Kitui,Retail,2026-05-01,132.0,45.0,125.0,SPIKE,5.6
-Beans (mixed),Lamu,Retail,2026-05-01,175.0,5.62,268.62,NORMAL,0.0
-Beans (mixed),Makueni,Retail,2026-05-01,150.0,0.0,227.75,NORMAL,0.0
-Beans (mixed),Marsabit,Retail,2026-05-01,126.0,63.75,169.75,NORMAL,0.0
-Beans (mixed),Meru,Retail,2026-05-01,110.0,28.0,132.0,NORMAL,0.0
-Beans (mixed),Taita Taveta,Retail,2026-05-01,145.0,46.25,168.25,NORMAL,0.0
-Maize,Embu-Mbeere,Retail,2026-05-01,55.0,7.0,71.0,NORMAL,0.0
-Maize,Ethiopia (Kakuma),Retail,2026-08-15,56.67,20.0,100.0,NORMAL,0.0
-Maize,Garissa,Retail,2026-05-01,105.0,9.5,121.5,NORMAL,0.0
-Maize,Hagadera (Daadab),Retail,2026-07-15,60.0,34.76,79.97,NORMAL,0.0
-Maize,HongKong (Kakuma),Retail,2026-08-15,60.0,15.3,102.82,NORMAL,0.0
-Maize,IFO (Daadab),Retail,2026-08-15,68.81,55.51,78.94,NORMAL,0.0
-Maize,Isiolo,Retail,2026-05-01,76.0,18.0,82.0,NORMAL,0.0
-Maize,Kakuma 2,Retail,2026-08-15,56.67,10.72,102.98,NORMAL,0.0
-Maize,Kakuma 3,Retail,2026-08-15,67.5,18.61,100.83,NORMAL,0.0
-Maize,Kakuma 4,Retail,2026-08-15,53.33,21.25,91.25,NORMAL,0.0
-Maize,Kalobeyei (Village 1),Retail,2026-08-15,50.0,18.4,90.12,NORMAL,0.0
-Maize,Kalobeyei (Village 2),Retail,2026-08-15,53.33,17.57,96.57,NORMAL,0.0
-Maize,Kalobeyei (Village 3),Retail,2026-08-15,50.0,22.5,82.5,NORMAL,0.0
-Maize,Kilifi,Retail,2026-05-01,54.0,21.38,68.38,NORMAL,0.0
-Maize,Kitui,Retail,2026-05-01,55.0,12.14,59.77,NORMAL,0.0
-Maize,Kwale,Retail,2026-05-01,63.0,25.0,65.0,NORMAL,0.0
-Maize,Lamu,Retail,2026-05-01,62.0,0.0,89.5,NORMAL,0.0
-Maize,Makueni,Retail,2026-05-01,56.0,20.0,60.0,NORMAL,0.0
-Maize,Mandera,Retail,2026-05-01,94.0,23.0,119.0,NORMAL,0.0
-Maize,Marsabit,Retail,2026-05-01,70.0,26.87,68.68,SPIKE,1.9
-Maize,Meru,Retail,2026-05-01,57.0,2.0,74.0,NORMAL,0.0
-Maize,Mogadishu (Kakuma),Retail,2026-08-15,55.0,13.99,113.35,NORMAL,0.0
-Maize,Taita Taveta,Retail,2026-05-01,57.0,27.35,55.75,SPIKE,2.2
-Maize,Tana River,Retail,2026-05-01,70.0,11.5,95.5,NORMAL,0.0
-Maize,Tharaka Nithi,Retail,2026-05-01,56.0,6.5,74.5,NORMAL,0.0
-Maize,Turkana,Retail,2026-05-01,98.0,33.75,119.75,NORMAL,0.0
-Maize,Wajir,Retail,2026-05-01,95.0,20.0,100.0,NORMAL,0.0
+Beans (dry),Eldoret,Wholesale,2026-05-01,105.0,0.0,162.29,NORMAL,0.0
+Beans (dry),Kisumu,Wholesale,2026-07-01,176.0,0.0,177.88,NORMAL,0.0
+Beans (dry),Kitale,Wholesale,2026-03-01,121.0,0.0,162.69,NORMAL,0.0
+Beans (dry),Nairobi,Wholesale,2026-07-01,115.0,0.0,154.25,NORMAL,0.0
+Beans (mixed),Ahero,Retail,2026-06-01,127.6,51.6,202.8,NORMAL,0.0
+Beans (mixed),Bomet,Retail,2026-06-01,172.6,0.0,235.79,NORMAL,0.0
+Beans (mixed),Bondo,Retail,2026-06-01,160.7,5.16,358.46,NORMAL,0.0
+Beans (mixed),Bumala,Retail,2026-06-01,150.0,29.68,295.47,NORMAL,0.0
+Beans (mixed),Bungoma Town,Retail,2026-06-01,151.7,57.75,224.95,NORMAL,0.0
+Beans (mixed),Burma,Retail,2026-06-01,190.0,117.75,249.35,NORMAL,0.0
+Beans (mixed),Busia Town,Retail,2026-06-01,140.0,48.28,276.35,NORMAL,0.0
+Beans (mixed),Butere,Retail,2026-06-01,144.5,6.9,278.1,NORMAL,0.0
+Beans (mixed),Chuka Town,Retail,2026-06-01,113.4,69.34,171.71,NORMAL,0.0
+Beans (mixed),Daraja Mbili,Retail,2026-06-01,173.0,0.0,278.82,NORMAL,0.0
+Beans (mixed),Eldoret,Retail,2026-06-01,203.9,26.35,227.75,NORMAL,0.0
+Beans (mixed),Embu Town,Retail,2026-06-01,164.5,0.0,233.64,NORMAL,0.0
+Beans (mixed),Embu-Mbeere,Retail,2026-07-01,125.0,11.25,189.25,NORMAL,0.0
+Beans (mixed),Gakoromere,Retail,2026-06-01,123.1,0.0,240.13,NORMAL,0.0
+Beans (mixed),Gatundu,Retail,2026-06-01,146.2,3.45,245.45,NORMAL,0.0
+Beans (mixed),Gikomba,Retail,2026-05-01,182.5,0.0,331.17,NORMAL,0.0
+Beans (mixed),Githurai,Retail,2026-06-01,112.2,33.54,203.56,NORMAL,0.0
+Beans (mixed),Hola,Retail,2026-06-01,180.0,87.75,173.75,SPIKE,3.6
+Beans (mixed),Homabay,Retail,2026-06-01,163.5,105.04,237.94,NORMAL,0.0
+Beans (mixed),Iciara,Retail,2026-06-01,157.3,27.4,217.8,NORMAL,0.0
+Beans (mixed),Isiolo Town,Retail,2026-06-01,146.9,0.0,304.6,NORMAL,0.0
+Beans (mixed),Iten,Retail,2026-05-01,162.5,12.59,245.69,NORMAL,0.0
+Beans (mixed),Kajiado,Retail,2026-05-01,150.0,54.44,207.34,NORMAL,0.0
+Beans (mixed),Kakamega,Retail,2026-06-01,130.3,0.0,294.9,NORMAL,0.0
+Beans (mixed),Kalundu,Retail,2026-06-01,140.0,40.0,200.0,NORMAL,0.0
+Beans (mixed),Kangemi,Retail,2026-05-01,180.0,95.0,295.0,NORMAL,0.0
+Beans (mixed),Kapsabet,Retail,2026-06-01,156.6,17.55,238.75,NORMAL,0.0
+Beans (mixed),Karatina,Retail,2026-06-01,142.1,31.29,222.5,NORMAL,0.0
+Beans (mixed),Kawangware,Retail,2026-06-01,171.7,23.75,160.35,SPIKE,7.1
+Beans (mixed),Kayole,Retail,2026-06-01,140.6,106.25,196.25,NORMAL,0.0
+Beans (mixed),Kerugoya,Retail,2026-06-01,126.4,0.0,214.7,NORMAL,0.0
+Beans (mixed),Kiambu,Retail,2026-06-01,175.0,0.0,280.68,NORMAL,0.0
+Beans (mixed),Kianjai,Retail,2026-06-01,99.5,16.01,188.87,NORMAL,0.0
+Beans (mixed),Kiboswa,Retail,2026-06-01,150.0,43.35,208.55,NORMAL,0.0
+Beans (mixed),Kibuye,Retail,2026-06-01,152.3,32.54,235.04,NORMAL,0.0
+Beans (mixed),Kilifi,Retail,2026-07-01,142.0,34.0,178.0,NORMAL,0.0
+Beans (mixed),Kimulot,Retail,2026-06-01,131.6,0.0,248.35,NORMAL,0.0
+Beans (mixed),Kipkaren,Retail,2026-06-01,177.2,32.84,211.94,NORMAL,0.0
+Beans (mixed),Kiritiri,Retail,2026-06-01,166.7,24.1,216.9,NORMAL,0.0
+Beans (mixed),Kitale,Retail,2026-06-01,137.9,0.87,220.76,NORMAL,0.0
+Beans (mixed),Kitui,Retail,2026-07-01,130.0,35.5,127.5,SPIKE,2.0
+Beans (mixed),Kongowea,Retail,2026-06-01,123.8,53.75,143.75,NORMAL,0.0
+Beans (mixed),Korokocho,Retail,2026-05-01,185.0,0.0,290.62,NORMAL,0.0
+Beans (mixed),Kutus,Retail,2026-06-01,111.0,0.0,195.3,NORMAL,0.0
+Beans (mixed),Kwale,Retail,2026-06-01,127.5,0.0,228.75,NORMAL,0.0
+Beans (mixed),Lamu,Retail,2026-07-01,178.0,6.62,271.62,NORMAL,0.0
+Beans (mixed),Lodwar,Retail,2026-06-01,144.2,39.43,189.98,NORMAL,0.0
+Beans (mixed),Machakos Town,Retail,2026-06-01,161.3,0.0,322.5,NORMAL,0.0
+Beans (mixed),Majengo,Retail,2026-05-01,140.0,58.0,170.0,NORMAL,0.0
+Beans (mixed),Makueni,Retail,2026-07-01,144.0,0.0,236.75,NORMAL,0.0
+Beans (mixed),Makutano,Retail,2026-06-01,160.0,74.96,187.06,NORMAL,0.0
+Beans (mixed),Makuyu,Retail,2026-06-01,117.1,1.88,187.35,NORMAL,0.0
+Beans (mixed),Marsabit,Retail,2026-07-01,120.0,65.25,171.25,NORMAL,0.0
+Beans (mixed),Marsabit Town,Retail,2026-05-01,121.0,49.06,159.56,NORMAL,0.0
+Beans (mixed),Mbale,Retail,2026-06-01,214.7,0.0,393.31,NORMAL,0.0
+Beans (mixed),Meru,Retail,2026-07-01,82.0,26.38,137.38,NORMAL,0.0
+Beans (mixed),Migori,Retail,2026-06-01,173.9,0.0,301.5,NORMAL,0.0
+Beans (mixed),Mkunguni,Retail,2026-06-01,165.0,19.63,281.02,NORMAL,0.0
+Beans (mixed),Mulot,Retail,2026-06-01,144.4,0.0,248.1,NORMAL,0.0
+Beans (mixed),Mumias,Retail,2026-06-01,144.4,11.14,279.08,NORMAL,0.0
+Beans (mixed),Mwembe Tayari,Retail,2026-05-01,115.0,69.25,161.25,NORMAL,0.0
+Beans (mixed),Nakuru Town,Retail,2026-06-01,137.9,0.0,246.45,NORMAL,0.0
+Beans (mixed),Nyeri,Retail,2026-06-01,129.0,32.91,192.77,NORMAL,0.0
+Beans (mixed),Nyeri-Kieni,Retail,2026-07-01,94.0,39.5,167.5,NORMAL,0.0
+Beans (mixed),Ol Kalou,Retail,2026-06-01,180.3,0.0,276.06,NORMAL,0.0
+Beans (mixed),Runyenjes,Retail,2026-06-01,150.4,15.8,215.0,NORMAL,0.0
+Beans (mixed),Siakago,Retail,2026-06-01,148.3,10.4,218.8,NORMAL,0.0
+Beans (mixed),Siaya,Retail,2026-06-01,166.7,0.0,382.04,NORMAL,0.0
+Beans (mixed),Soko Mjinga,Retail,2026-06-01,144.2,0.0,250.82,NORMAL,0.0
+Beans (mixed),Sotik,Retail,2026-05-01,156.1,0.0,247.25,NORMAL,0.0
+Beans (mixed),Taita Taveta,Retail,2026-07-01,125.0,32.75,190.75,NORMAL,0.0
+Beans (mixed),Thika,Retail,2026-06-01,149.2,0.0,266.84,NORMAL,0.0
+Beans (mixed),Toi,Retail,2026-03-01,180.0,147.0,231.8,NORMAL,0.0
+Beans (mixed),Turbo,Retail,2026-06-01,174.6,36.65,212.25,NORMAL,0.0
+Beans (mixed),Voi,Retail,2026-06-01,120.0,52.29,206.19,NORMAL,0.0
+Beans (mixed),Wajir Town,Retail,2026-06-01,150.0,75.0,195.0,NORMAL,0.0
+Beans (mixed),Wote,Retail,2026-06-01,152.9,10.0,250.0,NORMAL,0.0
+Maize,Ahero,Retail,2026-06-01,56.4,1.35,94.55,NORMAL,0.0
+Maize,Baringo,Retail,2026-07-01,72.0,19.25,77.25,NORMAL,0.0
+Maize,Bomet,Retail,2026-06-01,58.1,0.0,92.46,NORMAL,0.0
+Maize,Bondo,Retail,2026-06-01,59.5,6.95,109.75,NORMAL,0.0
+Maize,Bumala,Retail,2026-06-01,52.0,11.99,106.77,NORMAL,0.0
+Maize,Bungoma Town,Retail,2026-06-01,55.0,0.0,85.7,NORMAL,0.0
+Maize,Burma,Retail,2026-06-01,65.2,5.7,129.7,NORMAL,0.0
+Maize,Busia Town,Retail,2026-06-01,55.5,7.01,104.96,NORMAL,0.0
+Maize,Butere,Retail,2026-06-01,54.5,0.0,88.75,NORMAL,0.0
+Maize,Chuka Town,Retail,2026-06-01,66.0,37.75,77.35,NORMAL,0.0
+Maize,Daraja Mbili,Retail,2026-06-01,60.0,13.73,61.98,NORMAL,0.0
+Maize,Eldoret,Retail,2026-06-01,47.0,11.08,76.55,NORMAL,0.0
+Maize,Eldoret,Wholesale,2026-05-01,37.78,1.92,55.74,NORMAL,0.0
+Maize,Embu Town,Retail,2026-06-01,68.7,11.66,69.17,NORMAL,0.0
+Maize,Embu-Mbeere,Retail,2026-07-01,56.0,7.0,71.0,NORMAL,0.0
+Maize,Gakoromere,Retail,2026-06-01,60.7,0.0,116.08,NORMAL,0.0
+Maize,Garissa,Retail,2026-07-01,105.0,4.5,112.5,NORMAL,0.0
+Maize,Gatundu,Retail,2026-06-01,70.0,11.88,102.88,NORMAL,0.0
+Maize,Gikomba,Retail,2026-05-01,69.8,32.05,94.45,NORMAL,0.0
+Maize,Githurai,Retail,2026-06-01,58.3,15.25,102.85,NORMAL,0.0
+Maize,Hola,Retail,2026-06-01,75.0,20.0,100.0,NORMAL,0.0
+Maize,Homabay,Retail,2026-06-01,62.5,32.65,82.65,NORMAL,0.0
+Maize,Iciara,Retail,2026-06-01,68.4,0.0,127.85,NORMAL,0.0
+Maize,Isiolo,Retail,2026-07-01,71.0,13.0,85.0,NORMAL,0.0
+Maize,Isiolo Town,Retail,2026-06-01,67.5,1.5,107.1,NORMAL,0.0
+Maize,Iten,Retail,2026-05-01,65.5,0.0,97.5,NORMAL,0.0
+Maize,Kajiado,Retail,2026-07-01,79.0,10.0,98.0,NORMAL,0.0
+Maize,Kakamega,Retail,2026-06-01,52.7,7.85,76.25,NORMAL,0.0
+Maize,Kalundu,Retail,2026-06-01,55.0,5.5,79.9,NORMAL,0.0
+Maize,Kangemi,Retail,2026-05-01,70.0,4.05,157.85,NORMAL,0.0
+Maize,Kapsabet,Retail,2026-06-01,59.0,0.0,88.96,NORMAL,0.0
+Maize,Karatina,Retail,2026-06-01,62.2,7.19,100.49,NORMAL,0.0
+Maize,Kawangware,Retail,2026-06-01,57.9,24.09,99.39,NORMAL,0.0
+Maize,Kayole,Retail,2026-06-01,75.0,30.0,110.0,NORMAL,0.0
+Maize,Kerugoya,Retail,2026-06-01,57.0,4.42,101.83,NORMAL,0.0
+Maize,Kiambu,Retail,2026-06-01,70.1,9.07,104.88,NORMAL,0.0
+Maize,Kianjai,Retail,2026-06-01,49.9,0.0,101.46,NORMAL,0.0
+Maize,Kibauni Kilifi,Retail,2026-06-01,56.3,20.94,83.44,NORMAL,0.0
+Maize,Kiboswa,Retail,2026-06-01,60.9,4.77,91.98,NORMAL,0.0
+Maize,Kibuye,Retail,2026-06-01,60.9,12.8,85.6,NORMAL,0.0
+Maize,Kilifi,Retail,2026-07-01,62.0,19.25,69.25,NORMAL,0.0
+Maize,Kimulot,Retail,2026-06-01,57.2,0.76,86.58,NORMAL,0.0
+Maize,Kipkaren,Retail,2026-06-01,55.6,7.21,81.31,NORMAL,0.0
+Maize,Kiritiri,Retail,2026-06-01,69.0,0.0,111.7,NORMAL,0.0
+Maize,Kisumu,Wholesale,2026-07-01,53.0,5.16,67.94,NORMAL,0.0
+Maize,Kitale,Retail,2026-06-01,52.7,0.0,87.31,NORMAL,0.0
+Maize,Kitale,Wholesale,2026-03-01,48.0,0.0,72.73,NORMAL,0.0
+Maize,Kitui,Retail,2026-07-01,54.0,12.0,60.0,NORMAL,0.0
+Maize,Kitui,Wholesale,2026-04-01,50.0,14.07,55.56,NORMAL,0.0
+Maize,Kongowea,Retail,2026-06-01,57.5,19.5,84.3,NORMAL,0.0
+Maize,Korokocho,Retail,2026-05-01,80.0,17.5,116.86,NORMAL,0.0
+Maize,Kutus,Retail,2026-06-01,63.6,0.0,109.34,NORMAL,0.0
+Maize,Kwale,Retail,2026-07-01,54.0,17.5,69.5,NORMAL,0.0
+Maize,Laikipia,Retail,2026-07-01,54.0,18.5,62.5,NORMAL,0.0
+Maize,Lamu,Retail,2026-07-01,64.0,0.0,92.5,NORMAL,0.0
+Maize,Lodwar,Retail,2026-06-01,60.1,2.06,142.89,NORMAL,0.0
+Maize,Machakos Town,Retail,2026-06-01,60.4,25.0,65.0,NORMAL,0.0
+Maize,Majengo,Retail,2026-05-01,76.3,30.62,102.62,NORMAL,0.0
+Maize,Makueni,Retail,2026-07-01,56.0,17.5,61.5,NORMAL,0.0
+Maize,Makutano,Retail,2026-06-01,56.8,10.5,83.3,NORMAL,0.0
+Maize,Makuyu,Retail,2026-06-01,61.3,5.85,93.45,NORMAL,0.0
+Maize,Mandera,Retail,2026-07-01,94.0,27.5,119.5,NORMAL,0.0
+Maize,Marsabit,Retail,2026-07-01,67.0,26.0,74.0,NORMAL,0.0
+Maize,Marsabit Town,Retail,2026-06-01,60.0,20.5,75.7,NORMAL,0.0
+Maize,Mbale,Retail,2026-06-01,55.1,2.55,90.15,NORMAL,0.0
+Maize,Meru,Retail,2026-07-01,46.0,0.0,75.5,NORMAL,0.0
+Maize,Migori,Retail,2026-06-01,60.0,0.0,91.24,NORMAL,0.0
+Maize,Mkunguni,Retail,2026-06-01,105.0,0.0,167.5,NORMAL,0.0
+Maize,Mulot,Retail,2026-06-01,53.2,0.0,94.62,NORMAL,0.0
+Maize,Mumias,Retail,2026-06-01,55.6,0.0,86.71,NORMAL,0.0
+Maize,Mwembe Tayari,Retail,2026-06-01,60.9,41.88,76.88,NORMAL,0.0
+Maize,Nairobi,Wholesale,2026-07-01,54.0,6.69,60.12,NORMAL,0.0
+Maize,Nakuru Town,Retail,2026-06-01,55.0,24.62,73.23,NORMAL,0.0
+Maize,Narok,Retail,2026-07-01,62.0,17.0,89.0,NORMAL,0.0
+Maize,Nyeri,Retail,2026-06-01,58.8,19.28,79.07,NORMAL,0.0
+Maize,Nyeri-Kieni,Retail,2026-07-01,58.0,19.5,71.5,NORMAL,0.0
+Maize,Ol Kalou,Retail,2026-06-01,70.0,22.44,95.94,NORMAL,0.0
+Maize,Runyenjes,Retail,2026-06-01,80.6,0.0,111.46,NORMAL,0.0
+Maize,Samburu,Retail,2026-07-01,65.0,32.5,68.5,NORMAL,0.0
+Maize,Siakago,Retail,2026-06-01,51.1,0.0,103.86,NORMAL,0.0
+Maize,Siaya,Retail,2026-06-01,58.3,1.02,98.43,NORMAL,0.0
+Maize,Soko Mjinga,Retail,2026-06-01,56.3,13.23,64.22,NORMAL,0.0
+Maize,Sotik,Retail,2026-05-01,57.6,0.0,95.4,NORMAL,0.0
+Maize,Taita Taveta,Retail,2026-07-01,56.0,22.35,58.75,NORMAL,0.0
+Maize,Tana River,Retail,2026-07-01,70.0,1.5,101.5,NORMAL,0.0
+Maize,Tharaka Nithi,Retail,2026-07-01,53.0,4.0,76.0,NORMAL,0.0
+Maize,Thika,Retail,2026-06-01,62.5,6.75,108.75,NORMAL,0.0
+Maize,Toi,Retail,2026-03-01,67.6,30.0,101.92,NORMAL,0.0
+Maize,Turbo,Retail,2026-06-01,54.0,4.62,85.62,NORMAL,0.0
+Maize,Turkana,Retail,2026-07-01,99.0,26.25,124.25,NORMAL,0.0
+Maize,Voi,Retail,2026-06-01,53.8,15.51,80.81,NORMAL,0.0
+Maize,Wajir,Retail,2026-07-01,90.0,20.0,100.0,NORMAL,0.0
+Maize,Wajir Town,Retail,2026-06-01,80.0,38.73,138.32,NORMAL,0.0
+Maize,West Pokot,Retail,2026-07-01,62.0,9.5,85.5,NORMAL,0.0
+Maize,Wote,Retail,2026-06-01,55.0,0.0,97.5,NORMAL,0.0
 Maize meal,Nairobi,Retail,2026-05-01,84.0,14.5,90.5,NORMAL,0.0
-Sorghum,Ethiopia (Kakuma),Retail,2026-08-15,43.33,10.62,115.62,NORMAL,0.0
-Sorghum,Hagadera (Daadab),Retail,2026-07-15,50.0,22.5,82.5,NORMAL,0.0
-Sorghum,HongKong (Kakuma),Retail,2026-08-15,30.0,3.39,117.97,NORMAL,0.0
-Sorghum,Kakuma 3,Retail,2026-08-15,45.0,0.0,134.19,NORMAL,0.0
-Sorghum,Kakuma 4,Retail,2026-08-15,30.0,0.0,116.98,NORMAL,0.0
-Sorghum,Mogadishu (Kakuma),Retail,2026-08-15,43.33,0.0,150.0,NORMAL,0.0
+Potatoes (Irish),Dagahaley (Daadab),Retail,2026-07-15,66.71,18.88,114.5,NORMAL,0.0
+Potatoes (Irish),Ethiopia (Kakuma),Retail,2026-08-15,80.0,9.81,122.11,NORMAL,0.0
+Potatoes (Irish),Hagadera (Daadab),Retail,2026-08-15,60.0,35.16,100.14,NORMAL,0.0
+Potatoes (Irish),HongKong (Kakuma),Retail,2026-08-15,75.0,0.0,140.62,NORMAL,0.0
+Potatoes (Irish),IFO (Daadab),Retail,2026-08-15,66.0,31.05,103.69,NORMAL,0.0
+Potatoes (Irish),Kakuma 2,Retail,2026-08-15,90.0,5.0,125.0,NORMAL,0.0
+Potatoes (Irish),Kakuma 3,Retail,2026-08-15,80.0,5.0,125.0,NORMAL,0.0
+Potatoes (Irish),Kakuma 4,Retail,2026-08-15,100.0,0.01,133.32,NORMAL,0.0
+Potatoes (Irish),Kalobeyei (Village 1),Retail,2026-03-15,100.0,0.0,137.5,NORMAL,0.0
+Potatoes (Irish),Kalobeyei (Village 2),Retail,2026-03-15,100.0,6.88,121.88,NORMAL,0.0
+Potatoes (Irish),Kalobeyei (Village 3),Retail,2026-08-15,100.0,0.0,156.25,NORMAL,0.0
+Potatoes (Irish),Mogadishu (Kakuma),Retail,2026-08-15,80.0,9.16,122.5,NORMAL,0.0
+Sorghum,Kisumu,Wholesale,2026-07-01,47.0,3.02,69.23,NORMAL,0.0
