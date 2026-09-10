@@ -14,13 +14,14 @@ the knowledge base.
 from __future__ import annotations
 
 from . import llm
+from .lookup import MONTH_NAMES_EN, MONTH_NAMES_SW
 
 SYSTEM_PROMPT = """You are the AgriPulse assistant, answering questions about Kenyan food prices.
 
 Rules:
 - Answer only from the context provided below. Never state a number that is not present in that context.
 - Reply entirely in the requested language. If the language is Swahili, answer entirely in Swahili with no English words mixed in.
-- The response must contain: the forecast or fact itself, the confidence statement given to you (repeat it, do not invent your own wording for it), and -- only if an anomaly note is supplied -- a brief mention that current prices are unusual. Add nothing else unless the question explicitly asks for more.
+- The response must contain the fact itself and -- only if the context supplies one -- the confidence statement (repeat it verbatim, do not invent your own wording) or an anomaly note about unusual current prices. If the context is an actual historical observation rather than a forecast, do not add a confidence statement at all -- observed prices are facts, not predictions. Add nothing else unless the question explicitly asks for more.
 - Do not name the underlying model (Prophet, SARIMA, Chronos, ensemble) or quote volatility percentages unless the question specifically asks about the model or volatility.
 - Keep the answer short: two to three sentences.
 """
@@ -116,11 +117,38 @@ def _template_unreliable(result: dict, language: str) -> str:
     )
 
 
+def _template_no_data_for_period(result: dict, language: str) -> str:
+    req = result.get("requested") or {}
+    commodity, market = req.get("commodity"), req.get("market")
+    period = result.get("period") or {}
+    year, month = period.get("year"), period.get("month")
+    when = f"{MONTH_NAMES_EN.get(month, '').title()} {year}".strip() if month else str(year)
+    if language == "sw":
+        when_sw = f"{MONTH_NAMES_SW.get(month, '').title()} {year}".strip() if month else str(year)
+        return f"Hakuna rekodi za {commodity} huko {market} kwa {when_sw}."
+    return f"No records of {commodity} in {market} for {when}."
+
+
+def _template_insufficient_history(result: dict, language: str) -> str:
+    req = result.get("requested") or {}
+    commodity, market = req.get("commodity"), req.get("market")
+    if language == "sw":
+        return (
+            f"{commodity} huko {market} haina historia ya kutosha kubaini "
+            "msimu wa bei kwa uhakika."
+        )
+    return result.get(
+        "message", f"{commodity} in {market} does not have enough history for a seasonal pattern."
+    )
+
+
 _TEMPLATES = {
     "no_market": _template_no_market,
     "no_commodity": _template_no_commodity,
     "no_combination": _template_no_combination,
     "unreliable": _template_unreliable,
+    "no_data_for_period": _template_no_data_for_period,
+    "insufficient_history": _template_insufficient_history,
 }
 
 
@@ -249,6 +277,70 @@ def generate_from_context(context: str, question: str, language: str, determinis
         return llm.generate(prompt, SYSTEM_PROMPT)
     except Exception:
         return deterministic_fallback
+
+
+# ---------------------------------------------------------------------------
+# Historical price + seasonality answers
+# ---------------------------------------------------------------------------
+
+
+def _month_name(month: int, language: str) -> str:
+    names = MONTH_NAMES_SW if language == "sw" else MONTH_NAMES_EN
+    return names.get(month, "").title()
+
+
+def historical_context(result: dict, language: str) -> str:
+    lines = [
+        f"Commodity: {result['commodity']}",
+        f"Market: {result['market']}",
+        f"Pricetype: {result['pricetype']}",
+        f"Date of this actual observation: {result['date']}",
+        f"Observed price: {result['price_per_kg']:.2f} KES/kg",
+        "This is an actual recorded price, not a forecast -- do not attach a confidence statement to it.",
+    ]
+    return "\n".join(lines)
+
+
+def build_history_answer(result: dict, language: str) -> str:
+    price = result["price_per_kg"]
+    date_str = result["date"].strftime("%B %Y")
+    if language == "sw":
+        if result["is_exact_period"]:
+            return (
+                f"Bei ya {result['commodity']} {result['market']} ({result['pricetype']}) "
+                f"mnamo {date_str} ilikuwa KES {price:.2f}/kg."
+            )
+        return (
+            f"Bei ya mwisho iliyorekodiwa ya {result['commodity']} {result['market']} "
+            f"({result['pricetype']}) ilikuwa KES {price:.2f}/kg, mnamo {date_str}."
+        )
+    if result["is_exact_period"]:
+        return (
+            f"The price of {result['commodity']} in {result['market']} ({result['pricetype']}) "
+            f"in {date_str} was KES {price:.2f}/kg."
+        )
+    return (
+        f"The most recently recorded price of {result['commodity']} in {result['market']} "
+        f"({result['pricetype']}) was KES {price:.2f}/kg, as of {date_str}."
+    )
+
+
+def build_seasonality_answer(result: dict, language: str) -> str:
+    best_name = _month_name(result["best_month"], language)
+    worst_name = _month_name(result["worst_month"], language)
+    if language == "sw":
+        return (
+            f"Kwa {result['commodity']} {result['market']} ({result['pricetype']}), bei huwa "
+            f"juu zaidi mnamo {best_name} (wastani KES {result['best_month_avg_price']:.2f}/kg) "
+            f"na chini zaidi mnamo {worst_name} (wastani KES {result['worst_month_avg_price']:.2f}/kg), "
+            f"kulingana na miaka {result['n_years']} ya data. {best_name} ndio wakati mzuri zaidi wa kuuza."
+        )
+    return (
+        f"For {result['commodity']} in {result['market']} ({result['pricetype']}), prices are "
+        f"typically highest in {best_name} (averaging KES {result['best_month_avg_price']:.2f}/kg) "
+        f"and lowest in {worst_name} (averaging KES {result['worst_month_avg_price']:.2f}/kg), "
+        f"based on {result['n_years']} years of data. {best_name} is the best time to sell."
+    )
 
 
 def generate_explain_answer(question: str, chunks: list[dict], language: str) -> str:

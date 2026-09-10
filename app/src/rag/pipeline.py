@@ -163,6 +163,63 @@ def _answer_alert(question: str, entities: dict, language: str) -> dict:
     }
 
 
+def _answer_history(question: str, entities: dict, language: str) -> dict:
+    result = lookup.get_historical_price(entities)
+    status = result["status"]
+
+    if status != "found":
+        text = generate.render_status_message(result, language)
+        return {
+            "answer": text,
+            "status": status,
+            "sources": ["bei_smart_forecasting_final.csv"],
+            "confidence": None,
+        }
+
+    deterministic = generate.build_history_answer(result, language)
+    context = generate.historical_context(result, language)
+    text = generate.generate_from_context(context, question, language, deterministic)
+    return {
+        "answer": text,
+        "status": status,
+        "sources": ["bei_smart_forecasting_final.csv"],
+        "confidence": None,
+    }
+
+
+def _answer_seasonality(question: str, entities: dict, language: str) -> dict:
+    result = lookup.get_seasonality(entities)
+    status = result["status"]
+
+    if status != "found":
+        text = generate.render_status_message(result, language)
+        return {
+            "answer": text,
+            "status": status,
+            "sources": ["bei_smart_forecasting_final.csv"],
+            "confidence": None,
+        }
+
+    deterministic = generate.build_seasonality_answer(result, language)
+    context = (
+        f"Commodity: {result['commodity']}\nMarket: {result['market']}\n"
+        f"Pricetype: {result['pricetype']}\n"
+        f"Best month to sell (highest average price): month {result['best_month']}, "
+        f"avg {result['best_month_avg_price']:.2f} KES/kg\n"
+        f"Worst month to sell (lowest average price): month {result['worst_month']}, "
+        f"avg {result['worst_month_avg_price']:.2f} KES/kg\n"
+        f"Based on {result['n_years']} years of history. This is a seasonal pattern from "
+        f"actual past prices, not a forecast -- do not attach a confidence statement."
+    )
+    text = generate.generate_from_context(context, question, language, deterministic)
+    return {
+        "answer": text,
+        "status": status,
+        "sources": ["bei_smart_forecasting_final.csv"],
+        "confidence": None,
+    }
+
+
 def _answer_explain(question: str, language: str) -> dict:
     chunks = vectorstore.query(question, n_results=3)
     text = generate.generate_explain_answer(question, chunks, language)
@@ -183,6 +240,10 @@ def answer(question: str) -> dict:
 
     if intent == "explain":
         result = _answer_explain(question, language)
+    elif intent == "seasonality":
+        result = _answer_seasonality(question, entities, language)
+    elif intent == "history":
+        result = _answer_history(question, entities, language)
     elif intent == "compare":
         result = _answer_compare(question, entities, language)
     elif intent == "alert":
