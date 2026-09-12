@@ -25,9 +25,11 @@ API_BASE_URL = os.environ.get("AGRIPULSE_API_URL", "http://localhost:8000")
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 
-from src.ui import render_footer, render_header  # noqa: E402
+from src.ui import inject_css, sidebar_brand, sidebar_footer  # noqa: E402
 
 st.set_page_config(page_title="Classify | AgriPulse", page_icon="🔮", layout="wide")
+inject_css()
+sidebar_brand()
 
 # One representative (county, market, lat, long, rainfall) per classifier
 # region, verified against the classifier's own valid_values so the model
@@ -95,7 +97,7 @@ def fetch_metadata() -> dict | None:
         return None
 
 
-render_header("Price Classification", "🔮")
+st.subheader("Price Classification")
 st.markdown("Predict whether a price point is cheap, average, or expensive relative to norms.")
 
 metadata = fetch_metadata()
@@ -105,7 +107,7 @@ if metadata is None:
         f"Cannot reach AgriPulse API at `{API_BASE_URL}`. "
         "Is it running? (`uvicorn api.main:app --reload`)"
     )
-    render_footer()
+    sidebar_footer()
     st.stop()
 
 valid_values = metadata["valid_values"]
@@ -150,7 +152,7 @@ if submitted:
             f"Cannot reach AgriPulse API at `{API_BASE_URL}`. "
             "Is it running? (`uvicorn api.main:app --reload`)"
         )
-        render_footer()
+        sidebar_footer()
         st.stop()
 
     if resp.status_code == 200:
@@ -178,4 +180,4 @@ if submitted:
     else:
         st.error(f"Unexpected error ({resp.status_code}): {resp.text}")
 
-render_footer()
+sidebar_footer()

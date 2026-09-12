@@ -11,13 +11,13 @@ if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 
 from src.rag import pipeline  # noqa: E402
-from src.ui import render_footer, render_header  # noqa: E402
+from src.ui import CONFIDENCE_COLORS, inject_css, sidebar_brand, sidebar_footer  # noqa: E402
 
 st.set_page_config(page_title="Chat | AgriPulse", page_icon="💬", layout="wide")
+inject_css()
+sidebar_brand()
 
-CONFIDENCE_COLORS = {"high": "#1a7f37", "medium": "#b8860b", "low": "#c0392b"}
-
-render_header("Ask AgriPulse", "💬")
+st.subheader("Ask AgriPulse")
 st.caption(
     "Ask about forecasts, price alerts, or which market is cheapest -- in English or Kiswahili."
 )
@@ -95,4 +95,4 @@ if user_input:
         }
     )
 
-render_footer()
+sidebar_footer()

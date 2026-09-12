@@ -17,9 +17,11 @@ STATUS_COLORS = {"NORMAL": "green", "SPIKE": "red"}
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 
-from src.ui import render_footer, render_header  # noqa: E402
+from src.ui import inject_css, sidebar_brand, sidebar_footer  # noqa: E402
 
 st.set_page_config(page_title="Map | AgriPulse", page_icon="🗺️", layout="wide")
+inject_css()
+sidebar_brand()
 
 
 @st.cache_data
@@ -55,7 +57,7 @@ market_status = load_market_status()
 
 markets = markets.merge(market_status, on="market", how="left")
 
-render_header("Market Map", "🗺️")
+st.subheader("Market Map")
 st.markdown("🟢 Normal · 🔴 Spike · ⚪ No anomaly data")
 
 m = folium.Map(location=KENYA_CENTER, zoom_start=6)
@@ -81,4 +83,4 @@ for row in markets.to_dict("records"):
 
 st_folium(m, use_container_width=True, height=600)
 
-render_footer()
+sidebar_footer()

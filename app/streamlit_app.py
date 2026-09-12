@@ -1,4 +1,4 @@
-"""AgriPulse landing page: headline metrics."""
+"""AgriPulse landing page: hero band, headline metrics, regional coverage."""
 
 import sys
 from pathlib import Path
@@ -12,9 +12,11 @@ DATA_DIR = APP_DIR / "data"
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 
-from src.ui import render_footer, render_header  # noqa: E402
+from src.ui import inject_css, render_hero, sidebar_brand, sidebar_footer  # noqa: E402
 
 st.set_page_config(page_title="AgriPulse", page_icon="🌾", layout="wide")
+inject_css()
+sidebar_brand()
 
 
 @st.cache_data
@@ -36,14 +38,7 @@ forecasts = load_forecasts()
 anomalies = load_anomalies()
 validation_archive = load_validation_archive()
 
-render_header()
-
-st.markdown(
-    "Use the sidebar to explore forecasts, anomaly alerts, market locations, "
-    "the price-movement classifier, and the validation archive."
-)
-
-col1, col2, col3, col4 = st.columns(4)
+render_hero()
 
 live_series = forecasts
 if "months_stale" in forecasts.columns:
@@ -63,6 +58,7 @@ else:
 markets_covered = live_series["market"].nunique()
 active_alerts = int((anomalies["status"] != "NORMAL").sum())
 
+col1, col2, col3, col4 = st.columns(4)
 col1.metric("Live series", f"{live_series_count:,}")
 col2.metric("Median forecast error", f"{median_forecast_error:.1f}%")
 col3.metric("Markets covered", f"{markets_covered:,}")
@@ -71,15 +67,36 @@ col4.metric("Active price alerts", f"{active_alerts:,}")
 st.caption(f"Median forecast error is {error_source} — see the Validation page for details.")
 
 st.divider()
+
 st.markdown(
     """
-    ### Pages
-    - **Forecast** — historical prices plus forward-looking forecasts with confidence bands
-    - **Alerts** — price anomaly table and market volatility
-    - **Map** — market locations colored by anomaly status
-    - **Classify** — predict whether a price point is cheap, average, or expensive
-    - **Validation** — forecast accuracy evidence from discontinued series
+    AgriPulse forecasts retail and wholesale food prices across Kenya's markets, flags
+    unusual price spikes and crashes as they happen, and classifies whether a given price
+    point is cheap, average, or expensive relative to local norms. It draws on FEWS NET,
+    WFP, KAMIS, KNBS and climate data to serve traders, buyers, policy analysts and
+    anyone who needs to know where prices are heading before they get there.
     """
 )
 
-render_footer()
+st.divider()
+st.subheader("Regional coverage")
+
+region_col = "region" if "region" in live_series.columns else None
+if region_col:
+    coverage = (
+        live_series.groupby(region_col)
+        .agg(
+            markets=("market", "nunique"),
+            series=("commodity", "count"),
+            median_error=("test_mape", "median"),
+        )
+        .reset_index()
+        .rename(columns={region_col: "Region", "markets": "Markets", "series": "Series", "median_error": "Median error (%)"})
+        .sort_values("Series", ascending=False)
+    )
+    coverage["Median error (%)"] = coverage["Median error (%)"].round(1)
+    st.dataframe(coverage, width="stretch", hide_index=True)
+else:
+    st.caption("Regional breakdown unavailable -- no region column in the forecast export.")
+
+sidebar_footer()
