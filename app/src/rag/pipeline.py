@@ -22,7 +22,29 @@ def _confidence_label(status: str, test_mape: float | None) -> str | None:
     return "low"
 
 
+def _missing_followup(
+    entities: dict, language: str, need_commodity: bool = True, need_market: bool = True
+) -> dict | None:
+    """A question with no market/commodity named at all gets a direct
+    follow-up question instead of a dump of every covered option -- that
+    dump is still the right response once a *specific but uncovered* value
+    has been named (handled separately by no_market/no_commodity)."""
+    missing_commodity = need_commodity and not entities.get("commodity")
+    missing_market = need_market and not entities.get("market")
+    if not missing_commodity and not missing_market:
+        return None
+    if missing_commodity and missing_market:
+        return {"answer": generate.ask_followup("both", language), "status": "missing_both"}
+    if missing_commodity:
+        return {"answer": generate.ask_followup("commodity", language), "status": "missing_commodity"}
+    return {"answer": generate.ask_followup("market", language), "status": "missing_market"}
+
+
 def _answer_forecast(question: str, entities: dict, language: str) -> dict:
+    missing = _missing_followup(entities, language)
+    if missing:
+        return {**missing, "sources": [], "confidence": None}
+
     result = lookup.get_forecast(entities)
     status = result["status"]
 
@@ -52,7 +74,12 @@ def _answer_forecast(question: str, entities: dict, language: str) -> dict:
 
 
 def _answer_compare(question: str, entities: dict, language: str) -> dict:
-    result = lookup.get_cheapest_market(entities.get("commodity"))
+    missing = _missing_followup(entities, language, need_market=False)
+    if missing:
+        return {**missing, "sources": [], "confidence": None}
+
+    direction = router.detect_price_direction(question)
+    result = lookup.get_price_extreme(entities.get("commodity"), direction=direction)
     status = result["status"]
 
     if status != "found":
@@ -64,13 +91,14 @@ def _answer_compare(question: str, entities: dict, language: str) -> dict:
             "confidence": None,
         }
 
-    deterministic = generate.build_cheapest_answer(result, language)
+    deterministic = generate.build_extreme_answer(result, language)
+    label = "Cheapest" if direction != "expensive" else "Most expensive"
     context = (
         f"Commodity: {result['commodity']}\n"
-        f"Cheapest market: {result['cheapest_market']} at {result['cheapest_price_kes']:.2f} KES/kg\n"
+        f"{label} market: {result['extreme_market']} at {result['extreme_price_kes']:.2f} KES/kg\n"
         f"Confidence statement to use verbatim: "
         f"{generate.confidence_words(result['test_mape'], language)}\n"
-        f"All markets ranked by price: "
+        f"All markets ranked by price ({direction} first): "
         + ", ".join(
             f"{row['market']} {row['forecast_price_kes']:.2f} KES/kg"
             for row in result["ranked_markets"]
@@ -95,6 +123,10 @@ def _answer_compare(question: str, entities: dict, language: str) -> dict:
 
 
 def _answer_alert(question: str, entities: dict, language: str) -> dict:
+    missing = _missing_followup(entities, language)
+    if missing:
+        return {**missing, "sources": [], "confidence": None}
+
     result = lookup.get_anomaly(entities)
     status = result["status"]
 
@@ -164,6 +196,10 @@ def _answer_alert(question: str, entities: dict, language: str) -> dict:
 
 
 def _answer_history(question: str, entities: dict, language: str) -> dict:
+    missing = _missing_followup(entities, language)
+    if missing:
+        return {**missing, "sources": [], "confidence": None}
+
     result = lookup.get_historical_price(entities)
     status = result["status"]
 
@@ -188,6 +224,10 @@ def _answer_history(question: str, entities: dict, language: str) -> dict:
 
 
 def _answer_seasonality(question: str, entities: dict, language: str) -> dict:
+    missing = _missing_followup(entities, language)
+    if missing:
+        return {**missing, "sources": [], "confidence": None}
+
     result = lookup.get_seasonality(entities)
     status = result["status"]
 
@@ -228,30 +268,25 @@ def _answer_explain(question: str, language: str) -> dict:
     return {"answer": text, "status": status, "sources": sources, "confidence": None}
 
 
-def answer(question: str) -> dict:
-    """Answer a single question end to end.
+_FOLLOWUP_STATUSES = {"missing_commodity", "missing_market", "missing_both"}
 
-    Returns a dict with keys: answer, intent, language, status, sources,
-    confidence.
-    """
-    language = router.detect_language(question)
-    intent = router.classify_intent(question)
-    entities = lookup.extract_entities(question)
 
+def _dispatch(intent: str, question: str, entities: dict, language: str) -> dict:
     if intent == "explain":
-        result = _answer_explain(question, language)
-    elif intent == "seasonality":
-        result = _answer_seasonality(question, entities, language)
-    elif intent == "history":
-        result = _answer_history(question, entities, language)
-    elif intent == "compare":
-        result = _answer_compare(question, entities, language)
-    elif intent == "alert":
-        result = _answer_alert(question, entities, language)
-    else:
-        result = _answer_forecast(question, entities, language)
+        return _answer_explain(question, language)
+    if intent == "seasonality":
+        return _answer_seasonality(question, entities, language)
+    if intent == "history":
+        return _answer_history(question, entities, language)
+    if intent == "compare":
+        return _answer_compare(question, entities, language)
+    if intent == "alert":
+        return _answer_alert(question, entities, language)
+    return _answer_forecast(question, entities, language)
 
-    return {
+
+def _finalize(intent: str, language: str, entities: dict, result: dict) -> dict:
+    response = {
         "answer": result["answer"],
         "intent": intent,
         "language": language,
@@ -260,3 +295,47 @@ def answer(question: str) -> dict:
         "confidence": result["confidence"],
         "entities": entities,
     }
+    if result["status"] in _FOLLOWUP_STATUSES:
+        # Carried by the caller (e.g. the Chat page) so the *next* message
+        # can be treated as answering this question rather than a fresh one.
+        # Language is carried forward too: a follow-up reply is often just
+        # one or two words ("Nairobi", "maize"), exactly the short text
+        # langdetect is least reliable on, so re-detecting from it alone
+        # risks flipping languages mid-conversation for no real reason.
+        response["pending"] = {"intent": intent, "entities": entities, "language": language}
+    return response
+
+
+def answer(question: str) -> dict:
+    """Answer a single question end to end.
+
+    Returns a dict with keys: answer, intent, language, status, sources,
+    confidence, entities, and -- only when the response is a follow-up
+    question -- pending, which a caller should hand back to continue_answer
+    along with the user's next message.
+    """
+    language = router.detect_language(question)
+    intent = router.classify_intent(question)
+    entities = lookup.extract_entities(question)
+    result = _dispatch(intent, question, entities, language)
+    return _finalize(intent, language, entities, result)
+
+
+def continue_answer(pending: dict, follow_up_text: str) -> dict:
+    """Resume a pending intent after a follow-up question, merging whatever
+    the follow-up message names into the entities that were already known.
+    Only fills gaps -- an entity already resolved from the original question
+    is never overwritten by the follow-up."""
+    intent = pending["intent"]
+    entities = dict(pending["entities"])
+    # Inherit the original question's language rather than re-detecting from
+    # the follow-up alone -- see the comment on `pending` in _finalize.
+    language = pending.get("language") or router.detect_language(follow_up_text)
+
+    new_entities = lookup.extract_entities(follow_up_text)
+    for key in ("commodity", "market", "pricetype"):
+        if not entities.get(key) and new_entities.get(key):
+            entities[key] = new_entities[key]
+
+    result = _dispatch(intent, follow_up_text, entities, language)
+    return _finalize(intent, language, entities, result)

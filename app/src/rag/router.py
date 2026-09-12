@@ -57,6 +57,8 @@ _INTENT_KEYWORDS = {
         "compare", "cheapest", "cheaper", "cheap", "which market", "best price",
         "lowest price", "vs", "versus", "nafuu", "gani ina bei", "gani ni bora",
         "wapi bei", "kati ya",
+        "most expensive", "highest price", "priciest", "dearest", "ghali",
+        "bei ya juu",
     ],
     "alert": [
         "spike", "anomaly", "anomalies", "alert", "unusual", "abnormal",
@@ -105,3 +107,19 @@ def classify_intent(text: str, llm_fallback=None) -> str:
     # No keyword matched and no usable LLM fallback: a bare price question
     # ("maize Nairobi?") is the most common shape, so default to forecast.
     return "forecast"
+
+
+_EXPENSIVE_KEYWORDS = [
+    "most expensive", "highest price", "priciest", "dearest", "expensive",
+    "highest", "ghali", "bei ya juu",
+]
+
+
+def detect_price_direction(text: str) -> str:
+    """For a compare-intent question, is this asking for the cheapest
+    market or the most expensive one? Defaults to cheapest, since that is
+    by far the more common phrasing ("cheapest", "best price", "nafuu")."""
+    lower = text.lower()
+    if any(keyword in lower for keyword in _EXPENSIVE_KEYWORDS):
+        return "expensive"
+    return "cheapest"

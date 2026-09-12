@@ -30,6 +30,8 @@ EXAMPLE_QUESTIONS = [
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
+if "pending_followup" not in st.session_state:
+    st.session_state.pending_followup = None
 
 example_cols = st.columns(len(EXAMPLE_QUESTIONS))
 example_clicked = None
@@ -62,7 +64,13 @@ if user_input:
 
     with st.chat_message("assistant"):
         with st.spinner("Looking this up..."):
-            result = pipeline.answer(user_input)
+            if st.session_state.pending_followup is not None:
+                # This message is answering the follow-up question asked
+                # last turn (e.g. "which market?"), not a fresh question.
+                result = pipeline.continue_answer(st.session_state.pending_followup, user_input)
+            else:
+                result = pipeline.answer(user_input)
+        st.session_state.pending_followup = result.get("pending")
         st.markdown(result["answer"])
         if result.get("confidence"):
             color = CONFIDENCE_COLORS.get(result["confidence"], "#666666")

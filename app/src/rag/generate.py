@@ -49,13 +49,19 @@ def confidence_words(test_mape: float, language: str) -> str:
 # ---------------------------------------------------------------------------
 
 
-def _join(items) -> str:
-    return ", ".join(items)
+def _join(items, limit: int = 15, language: str = "en") -> str:
+    items = list(items)
+    if len(items) <= limit:
+        return ", ".join(items)
+    shown = ", ".join(items[:limit])
+    more = len(items) - limit
+    suffix = f"na nyingine {more}" if language == "sw" else f"and {more} more"
+    return f"{shown}, {suffix}"
 
 
 def _template_no_market(result: dict, language: str) -> str:
     market = (result.get("requested") or {}).get("market")
-    covered = _join(result["available"]["markets"])
+    covered = _join(result["available"]["markets"], language=language)
     if language == "sw":
         return (
             f"Soko '{market or 'hilo'}' halijaandikishwa katika mfumo huu. "
@@ -69,7 +75,7 @@ def _template_no_market(result: dict, language: str) -> str:
 
 def _template_no_commodity(result: dict, language: str) -> str:
     commodity = (result.get("requested") or {}).get("commodity")
-    covered = _join(result["available"]["commodities"])
+    covered = _join(result["available"]["commodities"], language=language)
     if language == "sw":
         return (
             f"Bidhaa '{commodity or 'hiyo'}' haifuatiliwi na mfumo huu. "
@@ -161,6 +167,32 @@ def render_status_message(result: dict, language: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Follow-up questions -- asked when a question is missing a commodity and/or
+# market entirely, rather than dumping the full list of covered options on
+# a question that just didn't name one yet.
+# ---------------------------------------------------------------------------
+
+_FOLLOWUP_QUESTIONS = {
+    "commodity": {
+        "en": "Which commodity would you like to know about?",
+        "sw": "Unauliza kuhusu bidhaa gani?",
+    },
+    "market": {
+        "en": "Which market are you asking about?",
+        "sw": "Unauliza kuhusu soko gani?",
+    },
+    "both": {
+        "en": "Which commodity and which market are you asking about?",
+        "sw": "Unauliza kuhusu bidhaa gani na soko gani?",
+    },
+}
+
+
+def ask_followup(missing: str, language: str) -> str:
+    return _FOLLOWUP_QUESTIONS[missing][language if language == "sw" else "en"]
+
+
+# ---------------------------------------------------------------------------
 # Context builders for the "found" case
 # ---------------------------------------------------------------------------
 
@@ -214,14 +246,15 @@ def build_forecast_answer(result: dict, language: str, anomaly: dict | None = No
     return base
 
 
-def build_cheapest_answer(result: dict, language: str) -> str:
-    market, price = result["cheapest_market"], result["cheapest_price_kes"]
+def build_extreme_answer(result: dict, language: str) -> str:
+    market, price = result["extreme_market"], result["extreme_price_kes"]
     conf = confidence_words(result["test_mape"], language)
+    is_cheapest = result["direction"] != "expensive"
     if language == "sw":
-        return (
-            f"Bei nafuu zaidi ya {result['commodity']} ni {market} kwa {price:.2f} KES/kg. {conf}."
-        )
-    return f"The cheapest market for {result['commodity']} is {market} at {price:.2f} KES/kg. {conf}."
+        label = "nafuu zaidi" if is_cheapest else "ghali zaidi"
+        return f"Soko lenye bei {label} ya {result['commodity']} ni {market} kwa {price:.2f} KES/kg. {conf}."
+    label = "cheapest" if is_cheapest else "most expensive"
+    return f"The {label} market for {result['commodity']} is {market} at {price:.2f} KES/kg. {conf}."
 
 
 def build_volatility_answer(result: dict, language: str) -> str:
