@@ -31,7 +31,7 @@ SWAHILI_COMMODITY_MAP = {
     "maharagwe": "Beans (mixed)",
     "mtama": "Sorghum",
     "unga": "Maize meal",
-    "viazi": "Potatoes",
+    "viazi": "Potatoes (Irish)",  # exact name as monitored in alerts/volatility
 }
 
 # Major Kenyan counties/towns that this system does NOT cover. Listing them
@@ -106,8 +106,18 @@ HISTORICAL_MAX_DATE = HISTORICAL["date"].max()
 COVERED_MARKETS = sorted(FORECASTS["market"].unique().tolist())
 COVERED_COMMODITIES = sorted(FORECASTS["commodity"].unique().tolist())
 
-_ALL_MARKET_CHOICES = COVERED_MARKETS + KNOWN_UNCOVERED_MARKETS
-_ALL_COMMODITY_CHOICES = COVERED_COMMODITIES + KNOWN_UNCOVERED_COMMODITIES
+# Anomaly/volatility monitoring covers a broader set of markets than the
+# deployed-forecast set above -- e.g. Kawangware has an active price alert
+# but no forecast model. Alert-related lookups must be checked against this
+# wider set, not COVERED_MARKETS, or a genuine alert gets reported as an
+# unrecognised market.
+ALERT_MARKETS = sorted(set(ANOMALIES["market"].unique()) | set(VOLATILITY["market"].unique()))
+ALERT_COMMODITIES = sorted(set(ANOMALIES["commodity"].unique()) | set(VOLATILITY["commodity"].unique()))
+
+_ALL_MARKET_CHOICES = sorted(set(COVERED_MARKETS) | set(ALERT_MARKETS) | set(KNOWN_UNCOVERED_MARKETS))
+_ALL_COMMODITY_CHOICES = sorted(
+    set(COVERED_COMMODITIES) | set(ALERT_COMMODITIES) | set(KNOWN_UNCOVERED_COMMODITIES)
+)
 
 # Unreliable series: present in model_metrics.csv but failed the 25% MAPE
 # reliability threshold, so they are not served as live forecasts.
@@ -133,10 +143,25 @@ def _windows(text: str, max_len: int = 3) -> list[str]:
     return out
 
 
+# Common domain words that must never themselves be scored as entity
+# candidates, however high they happen to rank against some real market or
+# commodity name. Found via a real bug: "price" scores 88.9 against "Rice"
+# with plain fuzz.ratio -- comfortably over the 85 threshold -- so almost
+# any question ("what is the price forecast?") silently misread as a
+# question about rice. These are structural words in this domain, not
+# something a question would ever be *naming* as the entity itself.
+_STOPWORDS = {
+    "price", "prices", "priced", "pricing", "cost", "costs", "costing",
+    "market", "markets", "forecast", "forecasts",
+}
+
+
 def _best_fuzzy_match(text: str, choices: list[str], threshold: int = FUZZY_THRESHOLD):
     """Return (matched_choice, score) for the best window-vs-choice match, or (None, 0)."""
     best_choice, best_score = None, 0
     for window in _windows(text):
+        if window.lower() in _STOPWORDS:
+            continue
         for choice in choices:
             score = fuzz.ratio(window.lower(), choice.lower())
             if score > best_score:
@@ -259,6 +284,10 @@ def extract_entities(question: str) -> dict:
 
 def _available() -> dict:
     return {"commodities": COVERED_COMMODITIES, "markets": COVERED_MARKETS}
+
+
+def _alert_available() -> dict:
+    return {"commodities": ALERT_COMMODITIES, "markets": ALERT_MARKETS}
 
 
 def _combos_for_market(market: str) -> list[tuple[str, str]]:
@@ -415,10 +444,14 @@ def get_anomaly(entities: dict) -> dict:
     market = entities.get("market")
     pricetype = entities.get("pricetype")
 
-    if not market or market not in COVERED_MARKETS:
-        return {"status": "no_market", "available": _available()}
-    if not commodity or commodity not in COVERED_COMMODITIES:
-        return {"status": "no_commodity", "available": _available()}
+    # Checked against ALERT_MARKETS/ALERT_COMMODITIES, not the narrower
+    # forecast-deployed COVERED_* sets -- anomaly monitoring runs on more
+    # markets and commodities (e.g. Kawangware, Potatoes (Irish)) than are
+    # ever served as live forecasts.
+    if not market or market not in ALERT_MARKETS:
+        return {"status": "no_market", "available": _alert_available()}
+    if not commodity or commodity not in ALERT_COMMODITIES:
+        return {"status": "no_commodity", "available": _alert_available()}
 
     sub = ANOMALIES[(ANOMALIES["commodity"] == commodity) & (ANOMALIES["market"] == market)]
     if pricetype:
@@ -452,10 +485,10 @@ def get_volatility(entities: dict) -> dict:
     market = entities.get("market")
     pricetype = entities.get("pricetype")
 
-    if not market or market not in COVERED_MARKETS:
-        return {"status": "no_market", "available": _available()}
-    if not commodity or commodity not in COVERED_COMMODITIES:
-        return {"status": "no_commodity", "available": _available()}
+    if not market or market not in ALERT_MARKETS:
+        return {"status": "no_market", "available": _alert_available()}
+    if not commodity or commodity not in ALERT_COMMODITIES:
+        return {"status": "no_commodity", "available": _alert_available()}
 
     sub = VOLATILITY[(VOLATILITY["commodity"] == commodity) & (VOLATILITY["market"] == market)]
     if pricetype:
@@ -487,7 +520,14 @@ def get_volatility(entities: dict) -> dict:
 # ---------------------------------------------------------------------------
 
 
-def get_cheapest_market(commodity: str | None, region: str | None = None, horizon_months: int = 3) -> dict:
+def get_price_extreme(
+    commodity: str | None,
+    region: str | None = None,
+    direction: str = "cheapest",
+    horizon_months: int = 3,
+) -> dict:
+    """Return the cheapest (direction='cheapest') or most expensive
+    (direction='expensive') market for a commodity, plus the full ranking."""
     if not commodity or commodity not in COVERED_COMMODITIES:
         return {"status": "no_commodity", "available": _available()}
 
@@ -504,19 +544,21 @@ def get_cheapest_market(commodity: str | None, region: str | None = None, horizo
             "available": _available(),
         }
 
-    ranked = sub.sort_values("forecast_price_kes")[
+    ascending = direction != "expensive"
+    ranked = sub.sort_values("forecast_price_kes", ascending=ascending)[
         ["market", "region", "pricetype", "forecast_price_kes", "confidence", "test_mape"]
     ].to_dict("records")
 
-    cheapest = ranked[0]
+    extreme = ranked[0]
     return {
         "status": "found",
         "commodity": commodity,
-        "cheapest_market": cheapest["market"],
-        "cheapest_price_kes": float(cheapest["forecast_price_kes"]),
-        "cheapest_pricetype": cheapest["pricetype"],
-        "confidence": cheapest["confidence"],
-        "test_mape": float(cheapest["test_mape"]),
+        "direction": direction,
+        "extreme_market": extreme["market"],
+        "extreme_price_kes": float(extreme["forecast_price_kes"]),
+        "extreme_pricetype": extreme["pricetype"],
+        "confidence": extreme["confidence"],
+        "test_mape": float(extreme["test_mape"]),
         "ranked_markets": ranked,
     }
 
