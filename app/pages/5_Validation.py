@@ -4,7 +4,6 @@ import sys
 from pathlib import Path
 
 import pandas as pd
-import plotly.graph_objects as go
 import streamlit as st
 
 APP_DIR = Path(__file__).resolve().parent.parent
@@ -13,9 +12,11 @@ DATA_DIR = APP_DIR / "data"
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 
-from src.ui import render_footer, render_header  # noqa: E402
+from src.ui import inject_css, sidebar_brand, sidebar_footer, validation_chart  # noqa: E402
 
 st.set_page_config(page_title="Validation | AgriPulse", page_icon="✅", layout="wide")
+inject_css()
+sidebar_brand()
 
 
 @st.cache_data
@@ -34,7 +35,7 @@ def load_archive() -> pd.DataFrame:
 summary = load_summary()
 archive = load_archive()
 
-render_header("Validation Archive", "✅")
+st.subheader("Validation Archive")
 
 st.info(
     "This archive holds series the data provider discontinued -- prices that stopped "
@@ -47,7 +48,7 @@ st.info(
 if archive.empty:
     st.success("No series are currently archived -- every modelled series has recent data.")
     st.divider()
-    render_footer()
+    sidebar_footer()
     st.stop()
 
 overall_median_error = archive["error_pct"].median()
@@ -60,11 +61,13 @@ st.metric(
 
 st.divider()
 
-commodities = sorted(summary["commodity"].unique())
-commodity = st.selectbox("Commodity", commodities)
+with st.sidebar:
+    st.markdown("#### Filters")
+    commodities = sorted(summary["commodity"].unique())
+    commodity = st.selectbox("Commodity", commodities)
 
-markets = sorted(summary.loc[summary["commodity"] == commodity, "market"].unique())
-market = st.selectbox("Market", markets)
+    markets = sorted(summary.loc[summary["commodity"] == commodity, "market"].unique())
+    market = st.selectbox("Market", markets)
 
 series_summary = summary[(summary["commodity"] == commodity) & (summary["market"] == market)]
 
@@ -83,37 +86,11 @@ else:
         (archive["commodity"] == commodity) & (archive["market"] == market)
     ].sort_values("date")
 
-    fig = go.Figure()
-
-    fig.add_trace(
-        go.Scatter(
-            x=series_pairs["date"],
-            y=series_pairs["actual_kes"],
-            name="Actual",
-            mode="lines+markers",
-            line=dict(color="#1a7f37"),
-        )
+    st.subheader(f"{commodity} — {market} ({row['pricetype']}): forecast vs. actual")
+    st.plotly_chart(
+        validation_chart(series_pairs, "actual_kes", "forecast_kes", "date"),
+        width="stretch",
     )
-    fig.add_trace(
-        go.Scatter(
-            x=series_pairs["date"],
-            y=series_pairs["forecast_kes"],
-            name="Forecast",
-            mode="lines+markers",
-            line=dict(color="#ff7f0e", dash="dash"),
-            fill="tonexty",
-            fillcolor="rgba(255,127,14,0.15)",
-        )
-    )
-
-    fig.update_layout(
-        title=f"{commodity} — {market} ({row['pricetype']}): forecast vs. actual",
-        xaxis_title="Date",
-        yaxis_title="Price (KES)",
-        hovermode="x unified",
-    )
-
-    st.plotly_chart(fig, width="stretch")
 
 st.divider()
 st.subheader("All archived series, sorted by median error")
@@ -123,4 +100,4 @@ table = summary[
 ].sort_values("median_error")
 st.dataframe(table, width="stretch", hide_index=True)
 
-render_footer()
+sidebar_footer()

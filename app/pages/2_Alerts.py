@@ -1,4 +1,4 @@
-"""Alerts page: anomaly table and market volatility."""
+"""Alerts page: active price anomaly cards, full monitoring table, volatility."""
 
 import sys
 from pathlib import Path
@@ -12,9 +12,11 @@ DATA_DIR = APP_DIR / "data"
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 
-from src.ui import render_footer, render_header  # noqa: E402
+from src.ui import inject_css, sidebar_brand, sidebar_footer, status_badge  # noqa: E402
 
 st.set_page_config(page_title="Alerts | AgriPulse", page_icon="🚨", layout="wide")
+inject_css()
+sidebar_brand()
 
 
 @st.cache_data
@@ -50,14 +52,14 @@ anomalies["region"] = anomalies["market"].map(market_region_map)
 volatility = volatility.copy()
 volatility["region"] = volatility["region"].replace("—", "Unknown").fillna("Unknown")
 
-render_header("Price Alerts & Volatility", "🚨")
+st.subheader("Price Alerts & Volatility")
 
-regions = sorted(anomalies["region"].dropna().unique())
-commodities = sorted(anomalies["commodity"].unique())
-
-col1, col2 = st.columns(2)
-selected_regions = col1.multiselect("Region", regions)
-selected_commodities = col2.multiselect("Commodity", commodities)
+with st.sidebar:
+    st.markdown("#### Filters")
+    regions = sorted(anomalies["region"].dropna().unique())
+    commodities = sorted(anomalies["commodity"].unique())
+    selected_regions = st.multiselect("Region", regions)
+    selected_commodities = st.multiselect("Commodity", commodities)
 
 filtered = anomalies
 if selected_regions:
@@ -65,12 +67,24 @@ if selected_regions:
 if selected_commodities:
     filtered = filtered[filtered["commodity"].isin(selected_commodities)]
 
-st.subheader("Active alerts")
 active = filtered[filtered["status"] != "NORMAL"]
+st.caption(f"{len(filtered):,} monitored · {len(active):,} flagged")
+
+st.markdown("#### Active alerts")
 if active.empty:
     st.info("No active anomalies for the selected filters.")
 else:
-    st.dataframe(active, width="stretch", hide_index=True)
+    for _, row in active.iterrows():
+        with st.container(border=True):
+            head_col, badge_col = st.columns([4, 1])
+            head_col.markdown(f"**{row['commodity']}** · {row['market']} ({row['pricetype']})")
+            with badge_col:
+                status_badge(row["status"])
+            st.caption(
+                f"Latest: KES {row['latest_price']:.2f} · Normal range: "
+                f"KES {row['normal_low']:.2f}–{row['normal_high']:.2f} · "
+                f"Deviation: {row['deviation_pct']:+.1f}%"
+            )
 
 with st.expander(f"All monitored markets ({len(filtered)})"):
     st.dataframe(filtered, width="stretch", hide_index=True)
@@ -87,4 +101,4 @@ if selected_commodities:
 vol_filtered = vol_filtered.sort_values("current_volatility_pct", ascending=False)
 st.dataframe(vol_filtered, width="stretch", hide_index=True)
 
-render_footer()
+sidebar_footer()

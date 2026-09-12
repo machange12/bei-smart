@@ -1,11 +1,15 @@
-"""Forecast page: historical prices + forecast with confidence band."""
+"""Forecast page: historical prices + forecast with confidence band.
+
+Selection cascades Region -> Market -> Commodity -> Price type -> Horizon,
+each filtered to what the previous choice actually has, so no combination
+in the sidebar can ever resolve to an empty result.
+"""
 
 import json
 import sys
 from pathlib import Path
 
 import pandas as pd
-import plotly.graph_objects as go
 import streamlit as st
 
 APP_DIR = Path(__file__).resolve().parent.parent
@@ -14,9 +18,18 @@ DATA_DIR = APP_DIR / "data"
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 
-from src.ui import confidence_badge, model_provenance_caption, render_footer, render_header  # noqa: E402
+from src.ui import (  # noqa: E402
+    confidence_badge,
+    forecast_chart,
+    inject_css,
+    model_provenance_caption,
+    sidebar_brand,
+    sidebar_footer,
+)
 
 st.set_page_config(page_title="Forecast | AgriPulse", page_icon="📈", layout="wide")
+inject_css()
+sidebar_brand()
 
 
 @st.cache_data
@@ -38,8 +51,6 @@ forecasts_all = load_forecasts()
 historical = load_historical()
 routing = load_routing()
 
-render_header("Price Forecast", "📈")
-
 # The data layer can carry series up to 36 months stale (with confidence
 # capped accordingly -- see model_routing.json), but this page only offers
 # genuinely current series so a user never has to second-guess freshness.
@@ -48,50 +59,49 @@ if "months_stale" in forecasts_all.columns:
 else:
     forecasts = forecasts_all
 
-commodities = sorted(forecasts["commodity"].unique())
-commodity = st.selectbox("Commodity", commodities)
+st.subheader("Price Forecast")
 
-markets = sorted(forecasts.loc[forecasts["commodity"] == commodity, "market"].unique())
-market = st.selectbox("Market", markets)
+with st.sidebar:
+    st.markdown("#### Filters")
 
-pricetypes = sorted(
-    forecasts.loc[
-        (forecasts["commodity"] == commodity) & (forecasts["market"] == market), "pricetype"
-    ].unique()
-)
-pricetype = st.selectbox("Price type", pricetypes)
+    regions = sorted(forecasts["region"].dropna().unique()) if "region" in forecasts.columns else []
+    region = st.selectbox("Region", regions) if regions else None
 
-horizon = st.radio("Horizon (months)", [3, 6, 12], horizontal=True)
+    scoped = forecasts[forecasts["region"] == region] if region else forecasts
 
-subset = forecasts[
-    (forecasts["commodity"] == commodity)
-    & (forecasts["market"] == market)
-    & (forecasts["pricetype"] == pricetype)
-    & (forecasts["horizon_months"] == horizon)
-].sort_values("forecast_date")
+    markets = sorted(scoped["market"].unique())
+    market = st.selectbox("Market", markets)
+    scoped = scoped[scoped["market"] == market]
+
+    commodities = sorted(scoped["commodity"].unique())
+    commodity = st.selectbox("Commodity", commodities)
+    scoped = scoped[scoped["commodity"] == commodity]
+
+    pricetypes = sorted(scoped["pricetype"].unique())
+    pricetype = st.selectbox("Price type", pricetypes)
+    scoped = scoped[scoped["pricetype"] == pricetype]
+
+    horizons = sorted(scoped["horizon_months"].unique())
+    horizon = st.radio("Horizon (months)", horizons, horizontal=True)
+
+subset = scoped[scoped["horizon_months"] == horizon].sort_values("forecast_date")
 
 if subset.empty:
     st.warning("No forecast available for this combination.")
     st.stop()
 
-# Confidence: prefer routing.json, fall back to the CSV's own columns —
+# Confidence: prefer routing.json, fall back to the CSV's own columns --
 # mirrors the API's /forecast reconciliation logic exactly.
 key = f"{commodity}|{market}|{pricetype}"
 route = routing.get(key)
 if route is not None:
     confidence = route["confidence"]
     test_mape = route["test_mape"]
-    confidence_source = "routing"
 else:
     confidence = subset["confidence"].iloc[0]
     test_mape = subset["test_mape"].iloc[0]
-    confidence_source = "csv_fallback"
 
 strategy = subset["strategy"].iloc[0]
-
-confidence_badge(confidence)
-model_provenance_caption(strategy, test_mape)
-st.caption(f"Confidence source: `{confidence_source}`")
 
 hist_subset = historical[
     (historical["commodity"] == commodity)
@@ -99,58 +109,28 @@ hist_subset = historical[
     & (historical["pricetype"] == pricetype)
 ].sort_values("date")
 
-fig = go.Figure()
+last_observed = hist_subset["date"].max()
+last_observed_str = last_observed.strftime("%B %Y") if pd.notna(last_observed) else None
 
-fig.add_trace(
-    go.Scatter(
-        x=hist_subset["date"],
-        y=hist_subset["price_per_kg"],
-        name="Historical price",
-        mode="lines",
-        line=dict(color="#1f77b4"),
-    )
-)
+st.plotly_chart(forecast_chart(hist_subset, subset), width="stretch")
 
-fig.add_trace(
-    go.Scatter(
-        x=subset["forecast_date"],
-        y=subset["forecast_upper"],
-        name="Upper bound",
-        mode="lines",
-        line=dict(width=0),
-        showlegend=False,
-        hoverinfo="skip",
-    )
-)
-fig.add_trace(
-    go.Scatter(
-        x=subset["forecast_date"],
-        y=subset["forecast_lower"],
-        name="Confidence band",
-        mode="lines",
-        line=dict(width=0),
-        fill="tonexty",
-        fillcolor="rgba(255,127,14,0.2)",
-        hoverinfo="skip",
-    )
-)
-fig.add_trace(
-    go.Scatter(
-        x=subset["forecast_date"],
-        y=subset["forecast_price_kes"],
-        name="Forecast",
-        mode="lines+markers",
-        line=dict(color="#ff7f0e"),
-    )
-)
+metric_cols = st.columns(3)
+forecast_at_horizon = subset.iloc[-1]
+current_price = hist_subset["price_per_kg"].iloc[-1] if not hist_subset.empty else None
+delta = None
+if current_price is not None:
+    delta = f"{forecast_at_horizon['forecast_price_kes'] - current_price:+.2f} KES"
 
-fig.update_layout(
-    title=f"{commodity} — {market} ({pricetype})",
-    xaxis_title="Date",
-    yaxis_title="Price (KES)",
-    hovermode="x unified",
+metric_cols[0].metric(
+    f"Forecast at {horizon} months",
+    f"KES {forecast_at_horizon['forecast_price_kes']:.2f}",
+    delta=delta,
 )
+with metric_cols[1]:
+    st.markdown("**Confidence**")
+    confidence_badge(confidence)
+metric_cols[2].metric("Test MAPE", f"{test_mape:.2f}%")
 
-st.plotly_chart(fig, width="stretch")
+model_provenance_caption(strategy, test_mape, last_observed_str)
 
-render_footer()
+sidebar_footer()
