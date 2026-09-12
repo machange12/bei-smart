@@ -1,4 +1,4 @@
-"""Classify page: simple commodity + region form, calling the /classify API endpoint.
+"""Classify page: simple commodity + region form, predicting in-process.
 
 The underlying model needs 13 features (region, county, market, category,
 commodity, season, month, year, rainfall_mm, diesel_price_kes,
@@ -8,19 +8,27 @@ two things that actually vary by question (commodity, region) and fills
 the rest from a representative market per region, the current date, and
 recent historical averages. The "Show what's being sent" expander keeps
 this transparent rather than hiding it outright.
+
+Prediction runs directly in this process (loading the ~13MB classifier
+artifacts once via st.cache_resource) rather than calling out to the
+FastAPI service -- Streamlit Cloud has no way to reach a locally-run API,
+and shipping one extra hosted service just for this one endpoint isn't
+worth it when the artifacts are small enough to ship with the app. The
+FastAPI backend still exposes the same /classify endpoint for local dev
+and any other client that wants it; this page just no longer depends on it
+being up.
 """
 
-import os
 import sys
 from datetime import date
 from pathlib import Path
 
+import joblib
 import pandas as pd
-import requests
 import streamlit as st
 
 APP_DIR = Path(__file__).resolve().parent.parent
-API_BASE_URL = os.environ.get("AGRIPULSE_API_URL", "http://localhost:8000")
+MODELS_DIR = APP_DIR / "models"
 
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
@@ -87,30 +95,49 @@ MONTH_TO_SEASON = {
 DIESEL_PRICE_DEFAULT_KES = 178.26  # recent national average
 
 
-@st.cache_data(ttl=300)
-def fetch_metadata() -> dict | None:
-    try:
-        resp = requests.get(f"{API_BASE_URL}/metadata", timeout=10)
-        resp.raise_for_status()
-        return resp.json()
-    except requests.exceptions.RequestException:
-        return None
+@st.cache_resource
+def load_classifier() -> dict:
+    import json
+
+    metadata = json.loads((MODELS_DIR / "classifier_metadata.json").read_text())
+    return {
+        "metadata": metadata,
+        "encoders": joblib.load(MODELS_DIR / "classifier_encoders.joblib"),
+        "label_encoder": joblib.load(MODELS_DIR / "classifier_label_encoder.joblib"),
+        "xgb_model": joblib.load(MODELS_DIR / "classifier_xgb.joblib"),
+    }
+
+
+def predict(payload: dict, artifacts: dict) -> tuple[str, dict[str, float]]:
+    """Mirrors api/main.py's /classify handler exactly: validate categoricals
+    against valid_values, encode, predict, map probabilities to class names."""
+    metadata = artifacts["metadata"]
+    categorical_features = metadata["categorical_features"]
+
+    X = pd.DataFrame([payload])[metadata["feature_order"]]
+    for col in categorical_features:
+        X[col] = artifacts["encoders"][col].transform(X[col].astype(str))
+
+    xgb_model = artifacts["xgb_model"]
+    label_encoder = artifacts["label_encoder"]
+    pred_idx = xgb_model.predict(X)
+    predicted_class = label_encoder.inverse_transform(pred_idx)[0]
+    proba = xgb_model.predict_proba(X)[0]
+    probabilities = {cls: float(p) for cls, p in zip(label_encoder.classes_, proba)}
+    return predicted_class, probabilities
 
 
 st.subheader("Price Classification")
 st.markdown("Predict whether a price point is cheap, average, or expensive relative to norms.")
 
-metadata = fetch_metadata()
-
-if metadata is None:
-    st.error(
-        f"Cannot reach AgriPulse API at `{API_BASE_URL}`. "
-        "Is it running? (`uvicorn api.main:app --reload`)"
-    )
+try:
+    artifacts = load_classifier()
+except FileNotFoundError as exc:
+    st.error(f"Classifier artifacts missing: {exc}")
     sidebar_footer()
     st.stop()
 
-valid_values = metadata["valid_values"]
+valid_values = artifacts["metadata"]["valid_values"]
 regions = [r for r in valid_values["region"] if r in REGION_DEFAULTS]
 
 with st.form("classify_form"):
@@ -146,38 +173,16 @@ if submitted:
         st.json(payload)
 
     try:
-        resp = requests.post(f"{API_BASE_URL}/classify", json=payload, timeout=10)
-    except requests.exceptions.ConnectionError:
-        st.error(
-            f"Cannot reach AgriPulse API at `{API_BASE_URL}`. "
-            "Is it running? (`uvicorn api.main:app --reload`)"
-        )
+        predicted_class, probabilities = predict(payload, artifacts)
+    except Exception as exc:
+        st.error(f"Prediction failed: {exc}")
         sidebar_footer()
         st.stop()
 
-    if resp.status_code == 200:
-        result = resp.json()
-        st.success(f"Predicted class: **{result['predicted_class']}**")
-        proba_df = pd.DataFrame(
-            {
-                "class": list(result["probabilities"].keys()),
-                "probability": list(result["probabilities"].values()),
-            }
-        ).set_index("class")
-        st.bar_chart(proba_df)
-    elif resp.status_code == 422:
-        body = resp.json()
-        errors = body.get("detail", {}).get("errors", [])
-        if errors:
-            for err in errors:
-                st.error(
-                    f"`{err['field']}` = {err['invalid_value']!r} is not valid. "
-                    f"Allowed values: {', '.join(err['allowed_values'][:10])}"
-                    + ("..." if len(err["allowed_values"]) > 10 else "")
-                )
-        else:
-            st.error(f"Validation error: {body}")
-    else:
-        st.error(f"Unexpected error ({resp.status_code}): {resp.text}")
+    st.success(f"Predicted class: **{predicted_class}**")
+    proba_df = pd.DataFrame(
+        {"class": list(probabilities.keys()), "probability": list(probabilities.values())}
+    ).set_index("class")
+    st.bar_chart(proba_df)
 
 sidebar_footer()

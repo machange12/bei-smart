@@ -4,6 +4,9 @@ plotly
 folium
 streamlit-folium
 requests
+xgboost
+scikit-learn
+joblib
 chromadb
 sentence-transformers
 rapidfuzz
