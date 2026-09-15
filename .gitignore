@@ -14,3 +14,6 @@ __pycache__/
 
 # Regenerable Chroma vector index -- rebuilt from app/data/kb/*.md on first query
 app/data/chroma/
+
+# Large local model artifacts -- not tracked in repo
+models/
