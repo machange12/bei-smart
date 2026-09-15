@@ -1,0 +1,8 @@
+market,pricetype,region,months_stale,n_records,n_models,ensemble_test_mape,reliable
+Busia,Wholesale,Western,40,63,3,13.07,True
+Eldoret,Wholesale,Rift Valley,27,185,3,43.69,False
+Kisumu,Wholesale,Nyanza,2,191,3,18.2,True
+Kitale,Wholesale,Rift Valley,11,79,3,34.56,False
+Kitui,Wholesale,Eastern,10,155,3,28.55,False
+Mombasa,Wholesale,Coast,40,176,3,45.33,False
+Nairobi,Wholesale,Nairobi,19,195,3,21.78,True

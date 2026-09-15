@@ -1,0 +1,104 @@
+commodity,market,pricetype,region,source,n_records,months_stale,selected_model,selection_basis,val_mape,test_mape,prophet_baseline
+Beans (dry),Busia,Wholesale,,FEWS,86,30,chronos,validation,22.16,21.46,24.5
+Beans (dry),Kisumu,Wholesale,Nyanza,FEWS,232,2,chronos,validation,8.32,13.07,11.66
+Beans (dry),Kitale,Wholesale,Rift Valley,FEWS,119,6,chronos,validation,18.52,8.45,24.8
+Beans (dry),Kitui,Wholesale,Eastern,FEWS,101,10,prophet,validation,12.6,17.74,16.16
+Beans (dry),Mombasa,Wholesale,,FEWS,202,10,prophet,validation,13.06,30.69,24.86
+Beans (mixed),Ahero,Retail,Nyanza,FEWS,70,3,chronos,short-series default,,6.49,18.87
+Beans (mixed),Bomet,Retail,Rift Valley,FEWS,87,3,chronos,validation,8.59,7.23,14.98
+Beans (mixed),Butere,Retail,Western,FEWS,86,3,chronos,validation,8.61,25.28,18.91
+Beans (mixed),Eldoret,Retail,Rift Valley,FEWS,77,3,chronos,short-series default,,8.31,13.07
+Beans (mixed),Embu-Mbeere,Retail,Eastern,FEWS,124,2,chronos,validation,7.66,8.08,8.44
+Beans (mixed),Gakoromere,Retail,Eastern,FEWS,88,3,chronos,validation,5.37,4.22,5.46
+Beans (mixed),Gatundu,Retail,Central,FEWS,82,3,chronos,short-series default,,2.99,24.41
+Beans (mixed),Githurai,Retail,Nairobi,FEWS,88,3,chronos,validation,3.8,9.4,11.41
+Beans (mixed),Hola,Retail,Coast,FEWS,80,3,chronos,short-series default,,9.54,10.83
+Beans (mixed),Iciara,Retail,Eastern,FEWS,74,3,chronos,short-series default,,15.88,22.83
+Beans (mixed),Kalundu,Retail,Eastern,FEWS,83,3,chronos,short-series default,,14.05,15.29
+Beans (mixed),Karatina,Retail,Central,FEWS,87,3,sarima,validation,26.22,24.94,9.48
+Beans (mixed),Kerugoya,Retail,Central,FEWS,85,3,chronos,validation,9.49,9.15,10.59
+Beans (mixed),Kiambu,Retail,Central,FEWS,76,3,chronos,short-series default,,3.83,4.87
+Beans (mixed),Kianjai,Retail,Eastern,FEWS,84,3,chronos,validation,35.46,10.15,13.36
+Beans (mixed),Kibuye,Retail,Nyanza,FEWS,71,3,chronos,short-series default,,3.83,4.54
+Beans (mixed),Kilifi,Retail,Coast,FEWS,160,2,sarima,validation,9.25,11.62,13.1
+Beans (mixed),Kimulot,Retail,Rift Valley,FEWS,85,3,chronos,validation,7.11,7.89,8.66
+Beans (mixed),Kipkaren,Retail,Rift Valley,FEWS,89,3,chronos,validation,24.12,13.3,24.85
+Beans (mixed),Kiritiri,Retail,Eastern,FEWS,74,3,chronos,short-series default,,15.92,20.12
+Beans (mixed),Kitale,Retail,Rift Valley,FEWS,84,3,sarima,validation,12.59,11.76,11.12
+Beans (mixed),Kitui,Retail,Eastern,FEWS,246,2,chronos,validation,4.11,7.68,22.08
+Beans (mixed),Lamu,Retail,Coast,FEWS,123,2,chronos,validation,3.66,2.28,4.32
+Beans (mixed),Makueni,Retail,Eastern,FEWS,124,2,chronos,validation,4.83,1.66,5.75
+Beans (mixed),Marsabit,Retail,North Eastern,FEWS,72,2,chronos,short-series default,,7.96,3.64
+Beans (mixed),Mbale,Retail,,FEWS,75,3,chronos,short-series default,,12.61,6.73
+Beans (mixed),Meru,Retail,Eastern,FEWS,135,2,sarima,validation,15.56,14.3,20.88
+Beans (mixed),Migori,Retail,Nyanza,FEWS,78,3,chronos,short-series default,,3.33,23.61
+Beans (mixed),Mulot,Retail,Rift Valley,FEWS,85,3,prophet,validation,26.87,13.57,19.9
+Beans (mixed),Mumias,Retail,Western,FEWS,85,3,sarima,validation,9.7,27.08,8.59
+Beans (mixed),Mwembe Tayari,Retail,,FEWS,60,4,chronos,short-series default,,16.16,7.68
+Beans (mixed),Nyabite,Retail,,FEWS,61,11,chronos,short-series default,,10.4,12.05
+Beans (mixed),Nyeri,Retail,Central,FEWS,87,3,chronos,validation,12.46,5.73,15.39
+Beans (mixed),Nyeri-Kieni,Retail,Central,FEWS,124,2,prophet,validation,6.59,10.31,9.19
+Beans (mixed),Ol Kalou,Retail,,FEWS,60,3,chronos,short-series default,,7.92,19.32
+Beans (mixed),Runyenjes,Retail,Eastern,FEWS,82,3,chronos,short-series default,,19.25,14.73
+Beans (mixed),Siakago,Retail,Eastern,FEWS,80,3,chronos,short-series default,,11.39,11.5
+Beans (mixed),Siaya,Retail,,FEWS,61,3,chronos,short-series default,,14.35,13.65
+Beans (mixed),Sotik,Retail,Rift Valley,FEWS,86,4,chronos,validation,5.65,6.85,7.35
+Beans (mixed),Taita Taveta,Retail,Coast,FEWS,160,2,sarima,validation,8.22,6.75,9.09
+Beans (mixed),Thika,Retail,Central,FEWS,85,3,chronos,validation,5.98,4.44,5.7
+Beans (mixed),Turbo,Retail,Rift Valley,FEWS,88,3,sarima,validation,23.62,19.78,21.23
+Beans (mixed),Voi,Retail,,FEWS,61,3,chronos,short-series default,,9.29,15.17
+Beans (mixed),Wote,Retail,Eastern,FEWS,84,3,chronos,validation,8.5,3.73,4.72
+Maize,Baringo,Retail,Eastern,FEWS,220,2,chronos,validation,22.29,9.13,19.58
+Maize,Bomet,Retail,Rift Valley,FEWS,87,3,chronos,validation,41.82,6.2,11.24
+Maize,Busia,Wholesale,,FEWS,92,30,sarima,validation,34.34,26.0,19.88
+Maize,Eldoret,Retail,Rift Valley,FEWS,74,3,chronos,short-series default,,15.36,15.06
+Maize,Embu-Mbeere,Retail,Eastern,FEWS,220,2,chronos,validation,30.2,24.53,12.39
+Maize,Garissa,Retail,North Eastern,FEWS,247,2,prophet,validation,4.13,11.84,11.33
+Maize,Gatundu,Retail,Central,FEWS,79,3,chronos,short-series default,,10.6,15.07
+Maize,Githurai,Retail,Nairobi,FEWS,85,3,chronos,validation,39.89,20.63,9.42
+Maize,Hola,Retail,Coast,FEWS,64,3,chronos,short-series default,,4.94,7.21
+Maize,Iciara,Retail,Eastern,FEWS,74,3,chronos,short-series default,,21.37,13.42
+Maize,Isiolo,Retail,Eastern,FEWS,220,2,chronos,validation,11.92,7.91,12.05
+Maize,Kajiado,Retail,Rift Valley,FEWS,223,2,sarima,validation,6.17,3.22,8.03
+Maize,Kapsabet,Retail,Rift Valley,FEWS,87,3,sarima,validation,10.62,11.66,6.36
+Maize,Karatina,Retail,Central,FEWS,88,3,chronos,validation,38.26,6.27,6.26
+Maize,Kianjai,Retail,Eastern,FEWS,72,3,chronos,short-series default,,10.16,21.72
+Maize,Kiboswa,Retail,,FEWS,71,3,chronos,short-series default,,10.99,11.05
+Maize,Kilifi,Retail,Coast,FEWS,220,2,sarima,validation,5.44,8.21,15.88
+Maize,Kimulot,Retail,Rift Valley,FEWS,84,3,chronos,validation,45.07,14.09,15.25
+Maize,Kipkaren,Retail,Rift Valley,FEWS,89,3,chronos,validation,17.05,20.28,17.3
+Maize,Kiritiri,Retail,Eastern,FEWS,62,3,chronos,short-series default,,15.52,17.57
+Maize,Kisumu,Wholesale,Nyanza,FEWS,236,2,chronos,validation,12.03,8.62,9.7
+Maize,Kitale,Retail,Rift Valley,FEWS,76,3,chronos,short-series default,,15.85,16.98
+Maize,Kitui,Retail,Eastern,FEWS,247,2,sarima,validation,15.56,5.52,5.65
+Maize,Laikipia,Retail,Rift Valley,FEWS,220,2,chronos,validation,14.82,17.07,19.0
+Maize,Lamu,Retail,Coast,FEWS,220,2,sarima,validation,5.93,4.31,8.71
+Maize,Machakos Town,Retail,,FEWS,63,3,chronos,short-series default,,17.81,17.42
+Maize,Makueni,Retail,Eastern,FEWS,220,2,chronos,validation,10.54,6.23,8.58
+Maize,Makuyu,Retail,,FEWS,66,3,chronos,short-series default,,9.78,4.84
+Maize,Mandera,Retail,North Eastern,FEWS,220,2,prophet,validation,3.41,10.58,11.01
+Maize,Marsabit,Retail,North Eastern,FEWS,220,2,chronos,validation,4.84,9.03,17.55
+Maize,Meru,Retail,Eastern,FEWS,220,2,sarima,validation,12.04,13.32,15.66
+Maize,Migori,Retail,Nyanza,FEWS,83,3,chronos,short-series default,,26.19,16.67
+Maize,Mkunguni,Retail,,FEWS,66,3,chronos,short-series default,,4.66,20.5
+Maize,Mombasa,Wholesale,,FEWS,215,10,sarima,validation,33.22,18.61,17.17
+Maize,Mulot,Retail,Rift Valley,FEWS,85,3,chronos,validation,30.58,18.95,16.12
+Maize,Mwembe Tayari,Retail,,FEWS,69,3,chronos,short-series default,,10.18,9.09
+Maize,Nairobi,Wholesale,Nairobi,FEWS,243,2,chronos,validation,15.26,13.83,13.79
+Maize,Nakuru Town,Retail,,FEWS,65,3,chronos,short-series default,,1.57,11.38
+Maize,Narok,Retail,Rift Valley,FEWS,220,2,chronos,validation,15.5,10.98,10.74
+Maize,Nyeri,Retail,Central,FEWS,76,3,chronos,short-series default,,6.67,24.52
+Maize,Nyeri-Kieni,Retail,Central,FEWS,220,2,chronos,validation,10.62,8.59,19.37
+Maize,Ol Kalou,Retail,,FEWS,67,3,chronos,short-series default,,30.73,9.11
+Maize,Runyenjes,Retail,Eastern,FEWS,81,3,chronos,short-series default,,25.0,11.32
+Maize,Samburu,Retail,Central,FEWS,220,2,chronos,validation,9.18,9.62,14.6
+Maize,Siakago,Retail,Eastern,FEWS,79,3,chronos,short-series default,,16.29,10.7
+Maize,Taita Taveta,Retail,Coast,FEWS,220,2,chronos,validation,12.77,2.4,14.56
+Maize,Tana River,Retail,Coast,FEWS,220,2,chronos,validation,4.18,2.68,20.53
+Maize,Tharaka Nithi,Retail,Eastern,FEWS,220,2,sarima,validation,12.7,17.27,13.9
+Maize,Turbo,Retail,Rift Valley,FEWS,88,3,chronos,validation,12.36,10.32,6.29
+Maize,Turkana,Retail,Rift Valley,FEWS,220,2,sarima,validation,5.93,3.77,12.64
+Maize,Wajir,Retail,North Eastern,FEWS,220,2,sarima,validation,4.11,8.34,17.45
+Maize,Wote,Retail,Eastern,FEWS,71,3,chronos,short-series default,,10.71,11.79
+Sorghum,Nairobi,Wholesale,Nairobi,FEWS,195,19,chronos,validation,17.19,24.49,16.56
+Maize meal,Nairobi,Retail,,FAO_GIEWS,231,4,chronos,validation,30.56,12.41,20.02
