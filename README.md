@@ -41,6 +41,7 @@ bei-smart/
 | James Wakhu 
 | Esther 
 | Mohamed Abdirahman 
+| Marren ojode
 
 ## Deliverables
 
