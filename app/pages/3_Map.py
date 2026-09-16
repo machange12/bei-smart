@@ -27,7 +27,7 @@ sidebar_brand()
 @st.cache_data
 def load_markets() -> pd.DataFrame:
     historical = pd.read_csv(
-        DATA_DIR / "bei_smart_forecasting_final.csv",
+        DATA_DIR / "bei_smart_forecasting_chained.csv",
         usecols=["market", "latitude", "longitude", "admin1"],
     )
     return (

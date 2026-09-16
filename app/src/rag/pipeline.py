@@ -208,7 +208,7 @@ def _answer_history(question: str, entities: dict, language: str) -> dict:
         return {
             "answer": text,
             "status": status,
-            "sources": ["bei_smart_forecasting_final.csv"],
+            "sources": ["bei_smart_forecasting_chained.csv"],
             "confidence": None,
         }
 
@@ -218,7 +218,7 @@ def _answer_history(question: str, entities: dict, language: str) -> dict:
     return {
         "answer": text,
         "status": status,
-        "sources": ["bei_smart_forecasting_final.csv"],
+        "sources": ["bei_smart_forecasting_chained.csv"],
         "confidence": None,
     }
 
@@ -236,7 +236,7 @@ def _answer_seasonality(question: str, entities: dict, language: str) -> dict:
         return {
             "answer": text,
             "status": status,
-            "sources": ["bei_smart_forecasting_final.csv"],
+            "sources": ["bei_smart_forecasting_chained.csv"],
             "confidence": None,
         }
 
@@ -255,7 +255,7 @@ def _answer_seasonality(question: str, entities: dict, language: str) -> dict:
     return {
         "answer": text,
         "status": status,
-        "sources": ["bei_smart_forecasting_final.csv"],
+        "sources": ["bei_smart_forecasting_chained.csv"],
         "confidence": None,
     }
 

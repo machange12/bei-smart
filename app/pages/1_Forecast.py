@@ -39,7 +39,7 @@ def load_forecasts() -> pd.DataFrame:
 
 @st.cache_data
 def load_historical() -> pd.DataFrame:
-    return pd.read_csv(DATA_DIR / "bei_smart_forecasting_final.csv", parse_dates=["date"])
+    return pd.read_csv(DATA_DIR / "bei_smart_forecasting_chained.csv", parse_dates=["date"])
 
 
 @st.cache_data

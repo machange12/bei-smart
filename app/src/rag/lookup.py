@@ -89,7 +89,7 @@ def _load():
     volatility = pd.read_csv(DATA_DIR / "market_volatility.csv")
     model_metrics = pd.read_csv(DATA_DIR / "model_metrics.csv")
     historical_full = pd.read_csv(
-        DATA_DIR / "bei_smart_forecasting_final.csv", parse_dates=["date"]
+        DATA_DIR / "bei_smart_forecasting_chained.csv", parse_dates=["date"]
     )
     market_region_map = (
         historical_full.dropna(subset=["admin1"])
@@ -566,7 +566,7 @@ def get_price_extreme(
 # ---------------------------------------------------------------------------
 # Historical (past) price lookup -- separate from get_forecast, which only
 # ever reads production_forecasts.csv (future). This reads the actual
-# observed price series in bei_smart_forecasting_final.csv.
+# observed price series in bei_smart_forecasting_chained.csv.
 # ---------------------------------------------------------------------------
 
 

@@ -32,7 +32,7 @@ def load_volatility() -> pd.DataFrame:
 @st.cache_data
 def load_market_region_map() -> dict:
     historical = pd.read_csv(
-        DATA_DIR / "bei_smart_forecasting_final.csv", usecols=["market", "admin1"]
+        DATA_DIR / "bei_smart_forecasting_chained.csv", usecols=["market", "admin1"]
     )
     return (
         historical.dropna(subset=["admin1"])
