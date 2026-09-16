@@ -1,0 +1,260 @@
+commodity,pricetype,lag_months,correlation,observations,series
+Beans,Wholesale,0,-0.057832445739741244,163,Beans - Wholesale
+Beans,Wholesale,1,-0.059889423349206355,163,Beans - Wholesale
+Beans,Wholesale,2,-0.11356185273044007,163,Beans - Wholesale
+Beans,Wholesale,3,-0.17379374545727322,163,Beans - Wholesale
+Beans,Wholesale,4,-0.23778711889922696,163,Beans - Wholesale
+Beans,Wholesale,5,-0.2598781736673557,163,Beans - Wholesale
+Beans,Wholesale,6,-0.23319652088905254,163,Beans - Wholesale
+Beans (dolichos),Wholesale,0,-0.0709581196276587,42,Beans (dolichos) - Wholesale
+Beans (dolichos),Wholesale,1,-0.14446100573577728,42,Beans (dolichos) - Wholesale
+Beans (dolichos),Wholesale,2,-0.19173426004393734,42,Beans (dolichos) - Wholesale
+Beans (dolichos),Wholesale,3,-0.14356018465797807,42,Beans (dolichos) - Wholesale
+Beans (dolichos),Wholesale,4,-0.1567166310740575,42,Beans (dolichos) - Wholesale
+Beans (dolichos),Wholesale,5,-0.1994513036523796,42,Beans (dolichos) - Wholesale
+Beans (dolichos),Wholesale,6,-0.08305887312405497,42,Beans (dolichos) - Wholesale
+Beans (dry),Retail,0,-0.055581331792075875,215,Beans (dry) - Retail
+Beans (dry),Retail,1,-0.05898570831047319,215,Beans (dry) - Retail
+Beans (dry),Retail,2,-0.09565474324346115,215,Beans (dry) - Retail
+Beans (dry),Retail,3,-0.1700232364441821,215,Beans (dry) - Retail
+Beans (dry),Retail,4,-0.2153495410637946,215,Beans (dry) - Retail
+Beans (dry),Retail,5,-0.24354939359370797,215,Beans (dry) - Retail
+Beans (dry),Retail,6,-0.2689491363368195,215,Beans (dry) - Retail
+Beans (dry),Wholesale,0,0.06322717369554272,159,Beans (dry) - Wholesale
+Beans (dry),Wholesale,1,-0.01977736783767634,159,Beans (dry) - Wholesale
+Beans (dry),Wholesale,2,-0.05396464670529523,159,Beans (dry) - Wholesale
+Beans (dry),Wholesale,3,-0.10496854009950139,159,Beans (dry) - Wholesale
+Beans (dry),Wholesale,4,-0.16557746739953963,159,Beans (dry) - Wholesale
+Beans (dry),Wholesale,5,-0.16997090897860884,159,Beans (dry) - Wholesale
+Beans (dry),Wholesale,6,-0.13634084933355284,159,Beans (dry) - Wholesale
+Beans (rosecoco),Wholesale,0,0.3293628742319804,37,Beans (rosecoco) - Wholesale
+Beans (rosecoco),Wholesale,1,0.19560570380205272,37,Beans (rosecoco) - Wholesale
+Beans (rosecoco),Wholesale,2,0.10026955642212004,37,Beans (rosecoco) - Wholesale
+Beans (rosecoco),Wholesale,3,-0.006996675435287135,36,Beans (rosecoco) - Wholesale
+Beans (rosecoco),Wholesale,4,-0.08665758553261385,36,Beans (rosecoco) - Wholesale
+Beans (rosecoco),Wholesale,5,-0.14683756721331215,36,Beans (rosecoco) - Wholesale
+Beans (rosecoco),Wholesale,6,-0.19499233243578712,36,Beans (rosecoco) - Wholesale
+Beans (yellow),Wholesale,0,-0.3391485436401516,28,Beans (yellow) - Wholesale
+Beans (yellow),Wholesale,1,-0.4153065637760144,28,Beans (yellow) - Wholesale
+Beans (yellow),Wholesale,2,-0.40875641812565033,28,Beans (yellow) - Wholesale
+Beans (yellow),Wholesale,3,-0.36083839765288994,28,Beans (yellow) - Wholesale
+Beans (yellow),Wholesale,4,-0.42648265537247126,28,Beans (yellow) - Wholesale
+Beans (yellow),Wholesale,5,-0.4314525532781047,28,Beans (yellow) - Wholesale
+Beans (yellow),Wholesale,6,-0.3356030337713244,28,Beans (yellow) - Wholesale
+Bread,Retail,0,-0.11553059745068427,166,Bread - Retail
+Bread,Retail,1,-0.10173492476399537,166,Bread - Retail
+Bread,Retail,2,-0.04763567490020696,166,Bread - Retail
+Bread,Retail,3,0.016639429006548467,166,Bread - Retail
+Bread,Retail,4,0.005193696591200797,166,Bread - Retail
+Bread,Retail,5,0.0020567065321026277,166,Bread - Retail
+Bread,Retail,6,0.038792594468185004,166,Bread - Retail
+Cabbage,Wholesale,0,0.18460375007345742,45,Cabbage - Wholesale
+Cabbage,Wholesale,1,0.06034817412209697,45,Cabbage - Wholesale
+Cabbage,Wholesale,2,-0.06702526794172996,45,Cabbage - Wholesale
+Cabbage,Wholesale,3,0.144329614968166,45,Cabbage - Wholesale
+Cabbage,Wholesale,4,0.1336337946819654,45,Cabbage - Wholesale
+Cabbage,Wholesale,5,-0.006708263189556472,45,Cabbage - Wholesale
+Cabbage,Wholesale,6,-0.07973066527331689,45,Cabbage - Wholesale
+Cowpeas,Wholesale,0,-0.1500665544563644,47,Cowpeas - Wholesale
+Cowpeas,Wholesale,1,-0.1864362056824605,47,Cowpeas - Wholesale
+Cowpeas,Wholesale,2,-0.17058366863085317,47,Cowpeas - Wholesale
+Cowpeas,Wholesale,3,-0.32789910747101475,47,Cowpeas - Wholesale
+Cowpeas,Wholesale,4,-0.47398327934180495,47,Cowpeas - Wholesale
+Cowpeas,Wholesale,5,-0.24461076615783453,47,Cowpeas - Wholesale
+Cowpeas,Wholesale,6,-0.24547754953030304,47,Cowpeas - Wholesale
+Kale,Wholesale,0,-0.2095368660295013,49,Kale - Wholesale
+Kale,Wholesale,1,-0.39679955773423764,49,Kale - Wholesale
+Kale,Wholesale,2,-0.3167681751936551,49,Kale - Wholesale
+Kale,Wholesale,3,-0.024520588881226556,49,Kale - Wholesale
+Kale,Wholesale,4,0.12690151640049893,49,Kale - Wholesale
+Kale,Wholesale,5,-0.1346331337349712,49,Kale - Wholesale
+Kale,Wholesale,6,0.02160460973820949,49,Kale - Wholesale
+Maize,Retail,0,0.0719407100080406,47,Maize - Retail
+Maize,Retail,1,0.06736471689934091,47,Maize - Retail
+Maize,Retail,2,0.042169907073496424,47,Maize - Retail
+Maize,Retail,3,-0.01836812276257202,47,Maize - Retail
+Maize,Retail,4,-0.06252722104859754,47,Maize - Retail
+Maize,Retail,5,-0.1379385334413703,47,Maize - Retail
+Maize,Retail,6,-0.24289358118163817,47,Maize - Retail
+Maize,Wholesale,0,-0.03735050355305594,183,Maize - Wholesale
+Maize,Wholesale,1,-0.08016525733647209,183,Maize - Wholesale
+Maize,Wholesale,2,-0.14311348836645227,183,Maize - Wholesale
+Maize,Wholesale,3,-0.19548131124041412,183,Maize - Wholesale
+Maize,Wholesale,4,-0.214743761559953,183,Maize - Wholesale
+Maize,Wholesale,5,-0.25764269732802497,183,Maize - Wholesale
+Maize,Wholesale,6,-0.3098721591984613,183,Maize - Wholesale
+Maize (white),Retail,0,-0.13105396611494907,168,Maize (white) - Retail
+Maize (white),Retail,1,-0.17042810947188952,168,Maize (white) - Retail
+Maize (white),Retail,2,-0.15911275723836438,168,Maize (white) - Retail
+Maize (white),Retail,3,-0.22784671591560754,168,Maize (white) - Retail
+Maize (white),Retail,4,-0.2138697736536267,168,Maize (white) - Retail
+Maize (white),Retail,5,-0.23464138460512332,168,Maize (white) - Retail
+Maize (white),Retail,6,-0.24407516135009144,168,Maize (white) - Retail
+Maize (white),Wholesale,0,-0.004164726920228215,159,Maize (white) - Wholesale
+Maize (white),Wholesale,1,-0.0438331709459305,159,Maize (white) - Wholesale
+Maize (white),Wholesale,2,-0.09252579241099204,159,Maize (white) - Wholesale
+Maize (white),Wholesale,3,-0.13894637675456883,159,Maize (white) - Wholesale
+Maize (white),Wholesale,4,-0.16124394857827154,159,Maize (white) - Wholesale
+Maize (white),Wholesale,5,-0.20572428342264001,159,Maize (white) - Wholesale
+Maize (white),Wholesale,6,-0.25940895965683863,159,Maize (white) - Wholesale
+"Maize (white, dry)",Wholesale,0,-0.1500089566468599,54,"Maize (white, dry) - Wholesale"
+"Maize (white, dry)",Wholesale,1,-0.21436924519678197,54,"Maize (white, dry) - Wholesale"
+"Maize (white, dry)",Wholesale,2,-0.23659273396419578,54,"Maize (white, dry) - Wholesale"
+"Maize (white, dry)",Wholesale,3,-0.24992944397282973,54,"Maize (white, dry) - Wholesale"
+"Maize (white, dry)",Wholesale,4,-0.2590462851106424,54,"Maize (white, dry) - Wholesale"
+"Maize (white, dry)",Wholesale,5,-0.3346314068396935,54,"Maize (white, dry) - Wholesale"
+"Maize (white, dry)",Wholesale,6,-0.24712452724456824,54,"Maize (white, dry) - Wholesale"
+Maize flour,Retail,0,-0.023049005644854095,51,Maize flour - Retail
+Maize flour,Retail,1,-0.07823580656219847,51,Maize flour - Retail
+Maize flour,Retail,2,-0.05172776318224423,51,Maize flour - Retail
+Maize flour,Retail,3,-0.1382400504694792,51,Maize flour - Retail
+Maize flour,Retail,4,-0.13106596995537967,51,Maize flour - Retail
+Maize flour,Retail,5,-0.23862449431828664,51,Maize flour - Retail
+Maize flour,Retail,6,-0.35559668644593667,51,Maize flour - Retail
+Meat (beef),Retail,0,-0.03619792226828112,36,Meat (beef) - Retail
+Meat (beef),Retail,1,0.30382135178193065,36,Meat (beef) - Retail
+Meat (beef),Retail,2,-0.22032505213564824,36,Meat (beef) - Retail
+Meat (beef),Retail,3,-0.014432203039751658,36,Meat (beef) - Retail
+Meat (beef),Retail,4,-0.09617967876664762,36,Meat (beef) - Retail
+Meat (beef),Retail,5,0.07411902678104866,36,Meat (beef) - Retail
+Meat (beef),Retail,6,-0.02149819142612222,36,Meat (beef) - Retail
+Meat (camel),Retail,0,0.07765450732489827,47,Meat (camel) - Retail
+Meat (camel),Retail,1,0.1386208341945209,47,Meat (camel) - Retail
+Meat (camel),Retail,2,0.14352305697830872,47,Meat (camel) - Retail
+Meat (camel),Retail,3,0.004459679475450837,47,Meat (camel) - Retail
+Meat (camel),Retail,4,-0.22062103894726923,47,Meat (camel) - Retail
+Meat (camel),Retail,5,-0.13201400357131085,47,Meat (camel) - Retail
+Meat (camel),Retail,6,0.05953217908123197,47,Meat (camel) - Retail
+Meat (goat),Retail,0,-0.030516529932611544,47,Meat (goat) - Retail
+Meat (goat),Retail,1,0.07216940047118126,47,Meat (goat) - Retail
+Meat (goat),Retail,2,-0.011553278089051487,47,Meat (goat) - Retail
+Meat (goat),Retail,3,-0.06301131973038782,47,Meat (goat) - Retail
+Meat (goat),Retail,4,0.04663474812372776,47,Meat (goat) - Retail
+Meat (goat),Retail,5,-0.11922540503420302,47,Meat (goat) - Retail
+Meat (goat),Retail,6,-0.14062358870697694,47,Meat (goat) - Retail
+Milk (UHT),Retail,0,0.13739014467343408,45,Milk (UHT) - Retail
+Milk (UHT),Retail,1,0.032462716524910916,45,Milk (UHT) - Retail
+Milk (UHT),Retail,2,-0.1885979383310556,45,Milk (UHT) - Retail
+Milk (UHT),Retail,3,-0.12910187389019606,45,Milk (UHT) - Retail
+Milk (UHT),Retail,4,-0.2945207392501807,45,Milk (UHT) - Retail
+Milk (UHT),Retail,5,-0.2370721255451009,45,Milk (UHT) - Retail
+Milk (UHT),Retail,6,-0.39154046127382564,45,Milk (UHT) - Retail
+"Milk (camel, fresh)",Retail,0,0.1766432222345921,44,"Milk (camel, fresh) - Retail"
+"Milk (camel, fresh)",Retail,1,0.06586452925778467,44,"Milk (camel, fresh) - Retail"
+"Milk (camel, fresh)",Retail,2,0.06785727970689984,44,"Milk (camel, fresh) - Retail"
+"Milk (camel, fresh)",Retail,3,0.1321307327233106,44,"Milk (camel, fresh) - Retail"
+"Milk (camel, fresh)",Retail,4,0.16044220568526507,44,"Milk (camel, fresh) - Retail"
+"Milk (camel, fresh)",Retail,5,0.1325495867079625,44,"Milk (camel, fresh) - Retail"
+"Milk (camel, fresh)",Retail,6,0.1712735273829062,44,"Milk (camel, fresh) - Retail"
+"Milk (cow, pasteurized)",Retail,0,-0.017329902169069048,172,"Milk (cow, pasteurized) - Retail"
+"Milk (cow, pasteurized)",Retail,1,-0.03664549667196717,172,"Milk (cow, pasteurized) - Retail"
+"Milk (cow, pasteurized)",Retail,2,-0.04757811245877997,172,"Milk (cow, pasteurized) - Retail"
+"Milk (cow, pasteurized)",Retail,3,-0.09853179845327173,172,"Milk (cow, pasteurized) - Retail"
+"Milk (cow, pasteurized)",Retail,4,-0.09184777054021356,172,"Milk (cow, pasteurized) - Retail"
+"Milk (cow, pasteurized)",Retail,5,-0.07263597216549365,172,"Milk (cow, pasteurized) - Retail"
+"Milk (cow, pasteurized)",Retail,6,-0.04996953237075672,172,"Milk (cow, pasteurized) - Retail"
+Oil (vegetable),Retail,0,-0.08137286012959338,226,Oil (vegetable) - Retail
+Oil (vegetable),Retail,1,-0.07335509892151884,226,Oil (vegetable) - Retail
+Oil (vegetable),Retail,2,-0.03141884742384056,226,Oil (vegetable) - Retail
+Oil (vegetable),Retail,3,-0.04306248889013641,226,Oil (vegetable) - Retail
+Oil (vegetable),Retail,4,-0.05824782450106794,226,Oil (vegetable) - Retail
+Oil (vegetable),Retail,5,-0.0759252048963872,226,Oil (vegetable) - Retail
+Oil (vegetable),Retail,6,-0.09477778589620621,226,Oil (vegetable) - Retail
+Onions (dry),Wholesale,0,0.02964948850544399,49,Onions (dry) - Wholesale
+Onions (dry),Wholesale,1,0.13990166512772115,49,Onions (dry) - Wholesale
+Onions (dry),Wholesale,2,0.026927583163082403,49,Onions (dry) - Wholesale
+Onions (dry),Wholesale,3,0.02509740264674634,49,Onions (dry) - Wholesale
+Onions (dry),Wholesale,4,-0.06550764908748526,49,Onions (dry) - Wholesale
+Onions (dry),Wholesale,5,0.0763706677484739,49,Onions (dry) - Wholesale
+Onions (dry),Wholesale,6,-0.027349550169654048,49,Onions (dry) - Wholesale
+Potatoes (Irish),Retail,0,0.02051586099042642,51,Potatoes (Irish) - Retail
+Potatoes (Irish),Retail,1,0.04327622687563336,51,Potatoes (Irish) - Retail
+Potatoes (Irish),Retail,2,-0.08564458846803505,51,Potatoes (Irish) - Retail
+Potatoes (Irish),Retail,3,-0.17993020072732147,51,Potatoes (Irish) - Retail
+Potatoes (Irish),Retail,4,-0.4445790647670937,51,Potatoes (Irish) - Retail
+Potatoes (Irish),Retail,5,-0.36435485943321555,51,Potatoes (Irish) - Retail
+Potatoes (Irish),Retail,6,-0.11610808465259145,51,Potatoes (Irish) - Retail
+Potatoes (Irish),Wholesale,0,-0.07623966708683541,158,Potatoes (Irish) - Wholesale
+Potatoes (Irish),Wholesale,1,-0.056372766403280254,158,Potatoes (Irish) - Wholesale
+Potatoes (Irish),Wholesale,2,-0.030446479934768154,158,Potatoes (Irish) - Wholesale
+Potatoes (Irish),Wholesale,3,-0.026987814579780108,158,Potatoes (Irish) - Wholesale
+Potatoes (Irish),Wholesale,4,0.02539053702357358,158,Potatoes (Irish) - Wholesale
+Potatoes (Irish),Wholesale,5,0.13997949705062138,158,Potatoes (Irish) - Wholesale
+Potatoes (Irish),Wholesale,6,0.23195113365939918,158,Potatoes (Irish) - Wholesale
+"Potatoes (Irish, red)",Wholesale,0,-0.02181765434052767,41,"Potatoes (Irish, red) - Wholesale"
+"Potatoes (Irish, red)",Wholesale,1,-0.08862040142925239,41,"Potatoes (Irish, red) - Wholesale"
+"Potatoes (Irish, red)",Wholesale,2,0.177852673109012,41,"Potatoes (Irish, red) - Wholesale"
+"Potatoes (Irish, red)",Wholesale,3,0.14925168535765773,41,"Potatoes (Irish, red) - Wholesale"
+"Potatoes (Irish, red)",Wholesale,4,0.23657353254761412,41,"Potatoes (Irish, red) - Wholesale"
+"Potatoes (Irish, red)",Wholesale,5,0.26077768057741285,41,"Potatoes (Irish, red) - Wholesale"
+"Potatoes (Irish, red)",Wholesale,6,0.10236281940559186,41,"Potatoes (Irish, red) - Wholesale"
+"Potatoes (Irish, white)",Wholesale,0,-0.3029338712207137,52,"Potatoes (Irish, white) - Wholesale"
+"Potatoes (Irish, white)",Wholesale,1,-0.34196685596670584,52,"Potatoes (Irish, white) - Wholesale"
+"Potatoes (Irish, white)",Wholesale,2,-0.2084162321239685,52,"Potatoes (Irish, white) - Wholesale"
+"Potatoes (Irish, white)",Wholesale,3,-0.12298252811737817,52,"Potatoes (Irish, white) - Wholesale"
+"Potatoes (Irish, white)",Wholesale,4,-0.13324275220370516,52,"Potatoes (Irish, white) - Wholesale"
+"Potatoes (Irish, white)",Wholesale,5,-0.13853517313138777,52,"Potatoes (Irish, white) - Wholesale"
+"Potatoes (Irish, white)",Wholesale,6,-0.05556216198777897,52,"Potatoes (Irish, white) - Wholesale"
+Rice,Retail,0,0.22903835146714116,51,Rice - Retail
+Rice,Retail,1,0.2118736361645117,51,Rice - Retail
+Rice,Retail,2,0.140770255635027,51,Rice - Retail
+Rice,Retail,3,0.08212537032791216,51,Rice - Retail
+Rice,Retail,4,-0.06609707656366787,51,Rice - Retail
+Rice,Retail,5,-0.18260434114115784,51,Rice - Retail
+Rice,Retail,6,-0.21052711329296062,51,Rice - Retail
+Rice (aromatic),Wholesale,0,-0.19345428599035455,40,Rice (aromatic) - Wholesale
+Rice (aromatic),Wholesale,1,-0.25129109829857466,40,Rice (aromatic) - Wholesale
+Rice (aromatic),Wholesale,2,-0.29686539260732764,40,Rice (aromatic) - Wholesale
+Rice (aromatic),Wholesale,3,-0.16378137065594223,40,Rice (aromatic) - Wholesale
+Rice (aromatic),Wholesale,4,-0.2346228947773473,40,Rice (aromatic) - Wholesale
+Rice (aromatic),Wholesale,5,-0.2817107649038915,40,Rice (aromatic) - Wholesale
+Rice (aromatic),Wholesale,6,-0.20922514125203986,40,Rice (aromatic) - Wholesale
+Salt,Retail,0,-0.35751051311081233,50,Salt - Retail
+Salt,Retail,1,0.0016227161972500314,50,Salt - Retail
+Salt,Retail,2,-0.15416565032958732,50,Salt - Retail
+Salt,Retail,3,-0.14790392324634016,50,Salt - Retail
+Salt,Retail,4,0.015227741326024892,50,Salt - Retail
+Salt,Retail,5,-0.229888732607296,50,Salt - Retail
+Salt,Retail,6,-0.09080706952592535,50,Salt - Retail
+Sorghum,Retail,0,0.07134761721958643,44,Sorghum - Retail
+Sorghum,Retail,1,0.1183716405124605,44,Sorghum - Retail
+Sorghum,Retail,2,0.14891838271992805,44,Sorghum - Retail
+Sorghum,Retail,3,0.2667418484500499,44,Sorghum - Retail
+Sorghum,Retail,4,0.2047378779962802,44,Sorghum - Retail
+Sorghum,Retail,5,0.1831185075313884,44,Sorghum - Retail
+Sorghum,Retail,6,-0.048884299764494536,44,Sorghum - Retail
+Sorghum,Wholesale,0,-0.0357003938260822,159,Sorghum - Wholesale
+Sorghum,Wholesale,1,-0.12600348641484083,159,Sorghum - Wholesale
+Sorghum,Wholesale,2,-0.17707968499373736,159,Sorghum - Wholesale
+Sorghum,Wholesale,3,-0.15014188458346125,159,Sorghum - Wholesale
+Sorghum,Wholesale,4,-0.17851243530335048,159,Sorghum - Wholesale
+Sorghum,Wholesale,5,-0.25450067610779115,159,Sorghum - Wholesale
+Sorghum,Wholesale,6,-0.1948881755556364,159,Sorghum - Wholesale
+Sorghum (white),Wholesale,0,-0.43782319682389825,27,Sorghum (white) - Wholesale
+Sorghum (white),Wholesale,1,-0.35680854140088464,27,Sorghum (white) - Wholesale
+Sorghum (white),Wholesale,2,-0.19461153264423522,27,Sorghum (white) - Wholesale
+Sorghum (white),Wholesale,3,-0.005090710353535488,27,Sorghum (white) - Wholesale
+Sorghum (white),Wholesale,4,-0.20320909590201028,27,Sorghum (white) - Wholesale
+Sorghum (white),Wholesale,5,-0.2840732084546796,27,Sorghum (white) - Wholesale
+Sorghum (white),Wholesale,6,-0.1308950374398391,27,Sorghum (white) - Wholesale
+Sugar,Retail,0,0.30952397784281327,51,Sugar - Retail
+Sugar,Retail,1,0.25630756557397066,51,Sugar - Retail
+Sugar,Retail,2,0.1805005457625888,51,Sugar - Retail
+Sugar,Retail,3,0.042150794947771665,51,Sugar - Retail
+Sugar,Retail,4,-0.1368999042763175,51,Sugar - Retail
+Sugar,Retail,5,-0.20320893527223108,51,Sugar - Retail
+Sugar,Retail,6,-0.27723360538127867,51,Sugar - Retail
+Tomatoes,Wholesale,0,0.07450482608544964,53,Tomatoes - Wholesale
+Tomatoes,Wholesale,1,0.22340544005929344,53,Tomatoes - Wholesale
+Tomatoes,Wholesale,2,-0.035820279171080445,53,Tomatoes - Wholesale
+Tomatoes,Wholesale,3,0.06379138084906782,53,Tomatoes - Wholesale
+Tomatoes,Wholesale,4,0.06119777521296237,53,Tomatoes - Wholesale
+Tomatoes,Wholesale,5,-0.06728839870659352,53,Tomatoes - Wholesale
+Tomatoes,Wholesale,6,-0.05066823269638959,53,Tomatoes - Wholesale
+Wheat flour,Retail,0,0.01566548658560539,50,Wheat flour - Retail
+Wheat flour,Retail,1,0.067862358284084,50,Wheat flour - Retail
+Wheat flour,Retail,2,0.04184691181331163,50,Wheat flour - Retail
+Wheat flour,Retail,3,-0.1339119078289647,50,Wheat flour - Retail
+Wheat flour,Retail,4,-0.12660968844963663,50,Wheat flour - Retail
+Wheat flour,Retail,5,-0.16985432999236277,50,Wheat flour - Retail
+Wheat flour,Retail,6,-0.29921629008580347,50,Wheat flour - Retail

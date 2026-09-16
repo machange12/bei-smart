@@ -1,0 +1,30 @@
+commodity,market,pricetype,prophet,sarima,chronos,best
+Maize,Nairobi,Wholesale,12.13,15.99,11.5,chronos
+Maize,Nakuru,Wholesale,9.9,14.34,6.23,chronos
+Maize,Mombasa,Wholesale,15.59,20.65,9.73,chronos
+Maize,Kisumu,Wholesale,16.45,16.54,23.86,prophet
+Maize,Kitui,Retail,7.46,6.83,8.02,sarima
+Maize,Meru,Retail,12.85,11.72,10.17,chronos
+Maize,Makueni,Retail,4.06,2.59,3.45,sarima
+Maize,Wajir,Retail,13.45,5.91,9.75,sarima
+Maize,Mandera,Retail,11.35,10.45,6.46,chronos
+Maize,Marsabit,Retail,15.54,3.92,6.84,sarima
+Maize,Isiolo,Retail,10.43,10.47,8.44,chronos
+Beans,Nairobi,Wholesale,18.83,11.86,10.2,chronos
+Beans,Nakuru,Wholesale,13.48,3.72,12.38,sarima
+Beans,Kisumu,Wholesale,9.26,9.29,9.66,prophet
+Beans,Eldoret,Wholesale,24.23,23.87,10.02,chronos
+Beans (dry),Nairobi,Wholesale,20.09,23.49,19.87,chronos
+Beans (dry),Nakuru,Wholesale,24.62,20.01,16.07,chronos
+Beans (dry),Nakuru,Retail,15.17,3.36,2.13,chronos
+Beans (dry),Kisumu,Wholesale,13.92,11.22,15.36,sarima
+Beans (dry),Kitui,Retail,9.58,5.42,14.69,sarima
+Beans (dry),Eldoret,Wholesale,6.84,5.95,6.75,sarima
+Beans (mixed),Kitui,Retail,16.29,10.69,10.29,chronos
+Beans (mixed),Meru,Retail,21.7,26.33,23.62,prophet
+Beans (mixed),Makueni,Retail,4.23,3.2,11.23,sarima
+Sorghum,Nairobi,Wholesale,24.84,34.82,32.93,prophet
+Sorghum,Nakuru,Wholesale,18.68,14.65,15.9,sarima
+Sorghum,Kisumu,Wholesale,23.19,12.58,12.92,sarima
+Sorghum,Eldoret,Wholesale,22.42,8.31,6.64,chronos
+Maize meal,Nairobi,Retail,20.02,13.14,13.53,sarima

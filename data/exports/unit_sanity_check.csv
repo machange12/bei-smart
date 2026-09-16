@@ -1,0 +1,5 @@
+commodity,n_flagged,n_total,band_low,band_high
+Maize,1113,11592,25,90
+Sorghum,179,1193,25,90
+Beans (mixed),746,6522,60,180
+Beans (dry),355,1324,60,180

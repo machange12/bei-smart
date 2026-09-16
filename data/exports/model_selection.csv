@@ -1,0 +1,19 @@
+commodity,market,pricetype,region,selected_model,val_mape,test_mape,prophet_baseline
+Maize,Nairobi,Wholesale,Nairobi,chronos,12.05,15.37,13.51
+Maize,Mombasa,Wholesale,Coast,sarima,33.22,18.61,17.2
+Maize,Kisumu,Wholesale,Nyanza,sarima,13.25,7.85,9.88
+Maize,Kitui,Retail,Eastern,chronos,13.7,5.83,5.65
+Maize,Meru,Retail,Eastern,sarima,12.04,13.32,15.66
+Maize,Makueni,Retail,Eastern,chronos,7.5,11.11,8.58
+Maize,Wajir,Retail,North Eastern,sarima,4.11,8.34,17.45
+Maize,Mandera,Retail,North Eastern,prophet,3.41,10.58,11.01
+Maize,Marsabit,Retail,North Eastern,sarima,8.03,4.73,17.55
+Maize,Isiolo,Retail,Eastern,chronos,12.02,8.51,12.05
+Beans (dry),Mombasa,Wholesale,Coast,chronos,12.43,30.14,24.2
+Beans (dry),Kisumu,Wholesale,Nyanza,chronos,8.28,14.79,11.58
+Beans (dry),Kitui,Wholesale,Eastern,prophet,12.6,17.74,16.16
+Beans (mixed),Kitui,Retail,Eastern,chronos,3.4,5.08,22.08
+Beans (mixed),Meru,Retail,Eastern,chronos,14.71,23.12,20.88
+Beans (mixed),Makueni,Retail,Eastern,chronos,4.86,2.09,5.75
+Sorghum,Nairobi,Wholesale,Nairobi,chronos,15.39,24.94,17.1
+Maize meal,Nairobi,Retail,Nairobi,chronos,30.44,12.73,20.02

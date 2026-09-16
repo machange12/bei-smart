@@ -1,0 +1,6 @@
+commodity,market,pricetype,region,n_months,median_error,mean_error,period_start,period_end,series_ended
+Beans (dry),Kitui,Wholesale,Eastern,12,5.6,8.14,2022-12-01,2025-11-01,2025-11-01
+Beans (dry),Isiolo,Wholesale,Eastern,12,10.6,13.98,2019-08-01,2022-06-01,2022-06-01
+Maize,Mombasa,Wholesale,Coast,12,17.2,17.49,2023-01-01,2025-11-01,2025-11-01
+Sorghum,Nairobi,Wholesale,Nairobi,12,26.9,26.39,2022-04-01,2025-02-01,2025-02-01
+Beans (dry),Mombasa,Wholesale,Coast,12,34.65,29.88,2022-04-01,2025-11-01,2025-11-01
