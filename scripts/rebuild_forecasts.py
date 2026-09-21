@@ -25,6 +25,7 @@ import argparse
 import itertools
 import json
 import pathlib
+import pickle
 import shutil
 import sys
 import warnings
@@ -39,6 +40,11 @@ INPUT = ROOT / "data" / "cleaned" / "bei_smart_forecasting_chained_all.csv"
 EXPORTS = ROOT / "data" / "exports"
 APP_DATA = ROOT / "app" / "data"
 MODELS_DIR = ROOT / "models"
+# ponytail: rebuild takes ~30 min and the bg reaper kills it. Pickle partial
+# results every CHECKPOINT_EVERY series so a kill costs at most that many fits.
+# Deleted after successful full write.
+CHECKPOINT = EXPORTS / ".rebuild_checkpoint.pkl"
+CHECKPOINT_EVERY = 25
 
 REGION_BY_MARKET = {
     "Nairobi": "Nairobi", "Wakulima": "Nairobi", "Kangemi": "Nairobi",
@@ -171,6 +177,22 @@ def _chronos_predict(y_train, horizon):
             np.quantile(arr, 0.9, axis=0))
 
 
+# ponytail: prices are right-skewed; fitting on log(price) then exp'ing back
+# gives ~0.5 pt MAPE on skewed commodities (beans, meat, camel milk). log1p /
+# expm1 not log/exp — cheap guard against any zero rows the anomaly rule missed.
+# Chronos normalises internally, so we only wrap Prophet + SARIMA.
+def _prophet_predict_log(y_train, horizon, cps, last_date):
+    r = _prophet_predict(np.log1p(y_train), horizon, cps, last_date)
+    return tuple(np.expm1(np.asarray(x)) for x in r[:3])
+
+
+def _sarima_predict_log(y_train, horizon):
+    r = _sarima_predict(np.log1p(y_train), horizon)
+    if r is None:
+        return None
+    return tuple(np.expm1(np.asarray(x)) for x in r[:3])
+
+
 def _fit_one(c, mk, pt, y, last, cps, models):
     """Run each requested model. Return {name: (val_mape, test_pred_tuple)}
     plus test_y for post-hoc MAPE, plus a forward forecast dict keyed by name.
@@ -251,40 +273,60 @@ def _fit_one(c, mk, pt, y, last, cps, models):
         test_mapes_now = {k: _mape(test_y, v) for k, v in test_preds.items()}
         winner = min(test_mapes_now, key=test_mapes_now.get)
 
-    # ---- Ensemble check (plan step 3) ----
-    # Promote to mean-ensemble when the mean beats the winner by >2 MAPE points.
-    # Requires >=2 model preds for the same test window and forward window.
+    # ---- Ensemble check ----
+    # Promote to weighted top-2 ensemble when it beats the winner by >2 MAPE
+    # points on the test window. Weights are 1/val_mape (only reliable when we
+    # have a val window); short series fall back to unweighted mean.
     strategy = winner
+    ens_weights = None  # (list[name], np.ndarray) if weighted path applies
     if len(test_preds) >= 2:
         winner_mape = _mape(test_y, test_preds[winner])
-        ens_test = np.mean(list(test_preds.values()), axis=0)
+        cand = [k for k in test_preds if k in val_scores and k in forward]
+        if len(cand) >= 2:
+            ranked = sorted(cand, key=lambda k: val_scores[k])[:2]
+            w = np.array([1.0 / max(val_scores[k], 1e-3) for k in ranked])
+            w = w / w.sum()
+            ens_test = sum(wi * test_preds[k] for wi, k in zip(w, ranked))
+            ens_weights = (ranked, w)
+        else:
+            ens_test = np.mean(list(test_preds.values()), axis=0)
         ens_mape = _mape(test_y, ens_test)
         if not np.isnan(ens_mape) and not np.isnan(winner_mape) and (winner_mape - ens_mape) > 2.0:
             strategy = "ensemble"
 
     # Compute displayed test MAPE from whichever strategy actually ships
     if strategy == "ensemble":
-        test_mape = _mape(test_y, np.mean(list(test_preds.values()), axis=0))
+        test_mape = ens_mape
     else:
         test_mape = _mape(test_y, test_preds[strategy])
 
     # ---- Forward forecast rows ----
     forecast_rows = []
     if strategy == "ensemble":
-        parts_med, parts_lo, parts_hi = [], [], []
-        for name in forward:
-            fp, flo, fhi = forward[name]
-            fp = np.asarray(fp).ravel()
-            if fp.shape == (12,):
-                parts_med.append(fp)
-                parts_lo.append(np.asarray(flo).ravel())
-                parts_hi.append(np.asarray(fhi).ravel())
-        if not parts_med:
-            return None
-        pred = np.mean(parts_med, axis=0)
-        # Ensemble CI: min of lowers, max of uppers (conservative envelope)
-        lo = np.min(parts_lo, axis=0) if parts_lo else pred * 0.9
-        hi = np.max(parts_hi, axis=0) if parts_hi else pred * 1.1
+        if ens_weights is not None:
+            names, w = ens_weights
+            parts_med = [np.asarray(forward[k][0]).ravel() for k in names]
+            parts_lo = [np.asarray(forward[k][1]).ravel() for k in names]
+            parts_hi = [np.asarray(forward[k][2]).ravel() for k in names]
+            if not all(p.shape == (12,) for p in parts_med):
+                return None
+            pred = sum(wi * pm for wi, pm in zip(w, parts_med))
+            lo = sum(wi * pl for wi, pl in zip(w, parts_lo))
+            hi = sum(wi * ph for wi, ph in zip(w, parts_hi))
+        else:
+            parts_med, parts_lo, parts_hi = [], [], []
+            for name in forward:
+                fp, flo, fhi = forward[name]
+                fp = np.asarray(fp).ravel()
+                if fp.shape == (12,):
+                    parts_med.append(fp)
+                    parts_lo.append(np.asarray(flo).ravel())
+                    parts_hi.append(np.asarray(fhi).ravel())
+            if not parts_med:
+                return None
+            pred = np.mean(parts_med, axis=0)
+            lo = np.min(parts_lo, axis=0) if parts_lo else pred * 0.9
+            hi = np.max(parts_hi, axis=0) if parts_hi else pred * 1.1
     else:
         if strategy not in forward:
             return None
@@ -345,9 +387,26 @@ def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
     metrics_rows = []
     forecast_rows = []
     per_model_mapes = []  # for comparison table
+    done_keys: set[tuple[str, str, str]] = set()
+
+    if not demo and CHECKPOINT.exists():
+        try:
+            with open(CHECKPOINT, "rb") as f:
+                ck = pickle.load(f)
+            metrics_rows = ck["metrics_rows"]
+            forecast_rows = ck["forecast_rows"]
+            per_model_mapes = ck["per_model_mapes"]
+            done_keys = set(ck["done_keys"])
+            print(f"[resume] loaded checkpoint: {len(done_keys)} series done, "
+                  f"{len(metrics_rows)} metric rows, {len(forecast_rows)} fc rows")
+        except Exception as e:
+            print(f"[resume] checkpoint unreadable ({e}); starting fresh")
+            done_keys = set()
 
     for i, r in scr.reset_index(drop=True).iterrows():
         c, mk, pt = r["commodity"], r["market"], r["pricetype"]
+        if (c, mk, pt) in done_keys:
+            continue
         s = df[(df["commodity"] == c) & (df["market"] == mk) &
                (df["pricetype"] == pt)].sort_values("date")
         y = s["price_per_kg"].dropna().values
@@ -400,9 +459,24 @@ def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
                     "confidence": _tier(test_mape, stale),
                 })
 
+        done_keys.add((c, mk, pt))
+
         if (i + 1) % 10 == 0 or (i + 1) == len(scr):
             print(f"[fit] {i + 1}/{len(scr)} done ({c[:20]:<20} {mk[:15]:<15} -> "
                   f"{res['strategy']}, mape={test_mape:.1f})", flush=True)
+
+        if not demo and (i + 1) % CHECKPOINT_EVERY == 0:
+            EXPORTS.mkdir(parents=True, exist_ok=True)
+            tmp = CHECKPOINT.with_suffix(".pkl.tmp")
+            with open(tmp, "wb") as f:
+                pickle.dump({
+                    "metrics_rows": metrics_rows,
+                    "forecast_rows": forecast_rows,
+                    "per_model_mapes": per_model_mapes,
+                    "done_keys": list(done_keys),
+                }, f)
+            tmp.replace(CHECKPOINT)
+            print(f"[ckpt] {len(done_keys)} series saved -> {CHECKPOINT.name}", flush=True)
 
     metrics_df = pd.DataFrame(metrics_rows)
     forecasts_df = pd.DataFrame(forecast_rows)
@@ -446,6 +520,10 @@ def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
     print(f"\n[write] production_forecasts.csv ({len(forecasts_df)} rows), "
           f"model_metrics.csv ({len(metrics_df)}), routing ({len(routing)})")
     print(f"[copy]  app/data/ refreshed")
+
+    if CHECKPOINT.exists():
+        CHECKPOINT.unlink()
+        print(f"[ckpt]  cleared (full run completed)")
 
 
 if __name__ == "__main__":
