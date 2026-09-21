@@ -5,6 +5,12 @@ venv_app/
 __pycache__/
 *.pyc
 
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Graphify tool output
+graphify-out/
+
 # Secrets -- never commit actual API keys, see .env.example for the template
 .env
 
@@ -17,3 +23,8 @@ app/data/chroma/
 
 # Large local model artifacts -- not tracked in repo
 models/
+
+# Scraper caches + raw pulls -- regenerable via scripts/scrape_*.py
+data/raw/_kamis_cache/
+data/raw/kamis_prices.csv
+data/raw/_knbs_sample.pdf
