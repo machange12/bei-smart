@@ -61,6 +61,7 @@ app/                     Streamlit dashboard (entry point: app/streamlit_app.py)
 api/                     optional FastAPI backend over the same exports
 scripts/                 the monthly pipeline, in run order:
   scrape_kamis.py          KAMIS prices (merges into history, --discover finds new products)
+  kamis_local_push.ps1     monthly KAMIS pull + push from a Kenyan machine (scheduled task)
   ingest_fpma.py           FAO GIEWS FPMA prices
   fetch_external_features.py  ONI, grain futures, KES/USD, EPRA fuel
   build_chained_all.py     stitch every source into one monthly chain
@@ -101,6 +102,12 @@ python scripts/rebuild_anomalies.py && python scripts/rebuild_forecasts.py
 ```
 
 Most scripts have a `--demo` self-check.
+
+**KAMIS is pulled from Kenya, not GitHub.** The KAMIS site refuses GitHub's runners, so a Windows scheduled task (`bei-smart KAMIS pull`, the 4th of each month at 10:00) scrapes the last 3 months and pushes them before the cloud run on the 5th. To run it by hand:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\kamis_local_push.ps1
+```
 
 ## Data sources
 
