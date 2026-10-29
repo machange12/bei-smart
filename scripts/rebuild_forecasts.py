@@ -3,10 +3,9 @@
 Reads data/cleaned/bei_smart_forecasting_chained_all.csv (WFP+FEWS+KAMIS
 stitched by scripts/build_chained_all.py), screens series with the same
 gates as the notebook (min-obs, freshness, missing-share, cv), fits
-Prophet + SARIMA + Chronos per series, selects the winner on a 12-month
-validation window, promotes to ensemble where the mean beats the winner
-by >2 MAPE points (generalising the notebook's Sorghum-only rule from
-plan Step 3), and writes production_forecasts.csv / model_metrics.csv /
+Prophet + SARIMA + Chronos per series, and ships a weighted top-2 ensemble
+(by 12-month validation MAPE) for long series and Chronos zero-shot for short
+ones -- the test window only scores, never selects. Writes production_forecasts.csv / model_metrics.csv /
 model_routing.json in data/exports/ and app/data/.
 
 Gate default is 36 obs so KAMIS-plateau commodities (Beef, Milk, Cassava,
@@ -96,7 +95,7 @@ COUNTY_TO_REGION = {k: r for r, ks in {
 # name; build_chained_all strips "(Kakuma)"/"(Daadab)", leaving bare
 # "Ethiopia" / "Hongkong" / "Mogadishu" (Kakuma camp markets), so list those too.
 SETTLEMENT_RE = re.compile(
-    r"^(kakuma|kalobeyei|dadaab|daadab|hagadera|ifo|dagahaley|"
+    r"^(kakuma(?! modern)|kalobeyei|dadaab|daadab|hagadera|ifo|dagahaley|"
     r"ethiopia|hongkong|mogadishu)\b|\((kakuma|daadab|dadaab)\)",
     re.IGNORECASE,
 )
@@ -222,8 +221,8 @@ def _fit_one(c, mk, pt, y, last, cps, models):
 
     Split scheme (matches notebook cell 57):
       - if n >= 84: train / val / test = n-24 / 12 / 12 -> validation-selected
-      - if 24 <= n < 84: train / test = n-12 / 12 -> can't do val selection,
-        pick model with best test MAPE only (Prophet-first fallback)
+      - if 24 <= n < 84: train / test = n-12 / 12 -> no val window, so ship Chronos
+        zero-shot (test only scores, never selects)
     """
     y = np.asarray(y, float)
     n = len(y)
@@ -288,34 +287,36 @@ def _fit_one(c, mk, pt, y, last, cps, models):
         return None
 
     # ---- Selection ----
-    # Prefer validation-selected if we have enough history; fall back to
-    # test-MAPE selection for shorter series.
-    if val_scores:
-        winner = min(val_scores, key=val_scores.get)
-    else:
-        test_mapes_now = {k: _mape(test_y, v) for k, v in test_preds.items()}
-        winner = min(test_mapes_now, key=test_mapes_now.get)
-
-    # ---- Ensemble check ----
-    # Promote to weighted top-2 ensemble when it beats the winner by >2 MAPE
-    # points on the test window. Weights are 1/val_mape (only reliable when we
-    # have a val window); short series fall back to unweighted mean.
-    strategy = winner
+    # The test window never picks the model, so the reported test MAPE is an
+    # honest holdout score (experiments/exp2: always-ensemble beat single-model
+    # selection on 22/27 long series, median 8.69% vs 11.52%).
+    #  - val window: weighted top-2 ensemble by 1/val_mape (or the lone val winner)
+    #  - no val window: Chronos zero-shot -- nothing is fitted, so nothing can
+    #    overfit a short history (exp4: median 12.1% vs 13.2% equal-weight mean,
+    #    39/40 under the 25% gate); mean of the rest only if Chronos failed
     ens_weights = None  # (list[name], np.ndarray) if weighted path applies
-    if len(test_preds) >= 2:
-        winner_mape = _mape(test_y, test_preds[winner])
-        cand = [k for k in test_preds if k in val_scores and k in forward]
-        if len(cand) >= 2:
-            ranked = sorted(cand, key=lambda k: val_scores[k])[:2]
-            w = np.array([1.0 / max(val_scores[k], 1e-3) for k in ranked])
-            w = w / w.sum()
-            ens_test = sum(wi * test_preds[k] for wi, k in zip(w, ranked))
-            ens_weights = (ranked, w)
-        else:
-            ens_test = np.mean(list(test_preds.values()), axis=0)
+    cand = [k for k in test_preds if k in val_scores and k in forward]
+    usable = [k for k in test_preds if k in forward]
+    if len(cand) >= 2:
+        ranked = sorted(cand, key=lambda k: val_scores[k])[:2]
+        w = np.array([1.0 / max(val_scores[k], 1e-3) for k in ranked])
+        w = w / w.sum()
+        ens_test = sum(wi * test_preds[k] for wi, k in zip(w, ranked))
+        ens_weights = (ranked, w)
+        strategy = "ensemble"
+    elif cand:
+        strategy = cand[0]
+    elif "chronos" in usable:
+        strategy = "chronos"
+    elif len(usable) >= 2:
+        ens_test = np.mean([test_preds[k] for k in usable], axis=0)
+        strategy = "ensemble"
+    elif usable:
+        strategy = usable[0]
+    else:
+        return None
+    if strategy == "ensemble":
         ens_mape = _mape(test_y, ens_test)
-        if not np.isnan(ens_mape) and not np.isnan(winner_mape) and (winner_mape - ens_mape) > 2.0:
-            strategy = "ensemble"
 
     # Compute displayed test MAPE from whichever strategy actually ships
     if strategy == "ensemble":
@@ -338,7 +339,7 @@ def _fit_one(c, mk, pt, y, last, cps, models):
             hi = sum(wi * ph for wi, ph in zip(w, parts_hi))
         else:
             parts_med, parts_lo, parts_hi = [], [], []
-            for name in forward:
+            for name in usable:
                 fp, flo, fhi = forward[name]
                 fp = np.asarray(fp).ravel()
                 if fp.shape == (12,):
