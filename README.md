@@ -2,7 +2,7 @@
 
 Forecasts of Kenyan food and livestock prices market by market, alerts when a price jumps or crashes, and a chatbot that answers in English or Kiswahili. Built as a Moringa School data science capstone.
 
-**Live app:** <add streamlit.app URL>
+**Live app:** https://machange12-bei-smart-appstreamlit-app-egru1z.streamlit.app/
 
 ## Live numbers
 
@@ -123,7 +123,7 @@ Python, pandas · statsmodels (SARIMA), Prophet, Amazon Chronos-Bolt · XGBoost 
 
 ## Deliverables
 
-CRISP-DM data report (`reports/`) · notebooks · this repository · slide deck · Trello board: [add link] · deployment: [add link]
+CRISP-DM data report (`reports/`) · notebooks · this repository · slide deck · Trello board: [add link] · deployment: [https://machange12-bei-smart-appstreamlit-app-egru1z.streamlit.app/](https://machange12-bei-smart-appstreamlit-app-egru1z.streamlit.app/)
 
 ## Acknowledgements
 
