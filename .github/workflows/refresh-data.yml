@@ -56,7 +56,12 @@ jobs:
       - name: Scrape KAMIS (last 3 months, merged into history)
         timeout-minutes: 60       # never let the scrape eat the forecast budget
         continue-on-error: true   # falls back to the committed history
-        run: python scripts/scrape_kamis.py --discover --months-back 3 --workers 6 --max-minutes 40
+        run: |
+          # kamis.kilimo.go.ke refuses connections from GitHub's runners (works from Kenya);
+          # probe once instead of burning 40 min on connect timeouts. Laptop pushes KAMIS instead.
+          curl -s -o /dev/null --max-time 20 https://kamis.kilimo.go.ke/ \
+            || { echo "::warning::KAMIS unreachable from this runner; using committed history"; exit 0; }
+          python scripts/scrape_kamis.py --discover --months-back 3 --workers 6 --max-minutes 40
 
       - name: Build chain
         run: python scripts/build_chained_all.py
