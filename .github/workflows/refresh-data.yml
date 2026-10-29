@@ -56,7 +56,7 @@ jobs:
       - name: Scrape KAMIS (last 3 months, merged into history)
         timeout-minutes: 60       # never let the scrape eat the forecast budget
         continue-on-error: true   # falls back to the committed history
-        run: python scripts/scrape_kamis.py --discover --months-back 3
+        run: python scripts/scrape_kamis.py --discover --months-back 3 --workers 6 --max-minutes 40
 
       - name: Build chain
         run: python scripts/build_chained_all.py

@@ -32,6 +32,7 @@ import pathlib
 import re
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 from typing import Iterable
 
 import pandas as pd
@@ -212,18 +213,6 @@ def _fetch_product_month(product_id: int, year: int, month: int, sleep: float = 
         return pd.DataFrame()
 
 
-def _fetch_product_year(product_id: int, year: int, sleep: float = 1.0,
-                        only: set[tuple[int, int]] | None = None) -> pd.DataFrame:
-    """Concat the monthly pulls for one (product, year); `only` limits to those (year, month)s."""
-    parts = []
-    for m in range(1, 13):
-        if only is not None and (year, m) not in only:
-            continue
-        try:
-            parts.append(_fetch_product_month(product_id, year, m, sleep=sleep))
-        except requests.HTTPError as e:
-            print(f"[warn]   {year}-{m:02d}: HTTP {e.response.status_code}", file=sys.stderr)
-    return pd.concat(parts, ignore_index=True) if parts else pd.DataFrame()
 
 
 def _to_long(daily: pd.DataFrame, canonical_name: str) -> pd.DataFrame:
@@ -264,25 +253,42 @@ def _to_long(daily: pd.DataFrame, canonical_name: str) -> pd.DataFrame:
 
 
 def scrape(product_ids: Iterable[int], years: Iterable[int], sleep: float = 1.0,
-           only: set[tuple[int, int]] | None = None) -> pd.DataFrame:
+           only: set[tuple[int, int]] | None = None, workers: int = 1,
+           deadline: float | None = None) -> pd.DataFrame:
+    """`workers` parallel requests; past `deadline` (time.monotonic) remaining months are skipped
+    so a slow KAMIS day still saves what was fetched instead of dying at the CI step timeout."""
+    tasks = [(pid, y, m) for pid in product_ids for y in years for m in range(1, 13)
+             if only is None or (y, m) in only]
+
+    def fetch(task):
+        if deadline is not None and time.monotonic() > deadline:
+            return task, None
+        try:
+            return task, _fetch_product_month(*task, sleep=sleep)
+        except Exception as e:
+            print(f"[warn] product {task[0]} {task[1]}-{task[2]:02d}: {e}", file=sys.stderr)
+            return task, pd.DataFrame()
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        results = list(ex.map(fetch, tasks))
+    skipped = sum(r is None for _, r in results)
+    if skipped:
+        print(f"[deadline] skipped {skipped}/{len(tasks)} months; they'll be fetched next run", file=sys.stderr)
+    by_year: dict[tuple[int, int], list[pd.DataFrame]] = {}
+    for (pid, y, _), r in results:
+        if r is not None:
+            by_year.setdefault((pid, y), []).append(r)
+
     frames = []
-    for pid in product_ids:
+    for (pid, year), parts in by_year.items():
         name = PRODUCTS.get(pid, f"product_{pid}")
-        for year in years:
-            try:
-                raw = _fetch_product_year(pid, year, sleep=sleep, only=only)
-            except requests.HTTPError as e:
-                print(f"[warn] {name} {year}: HTTP {e.response.status_code}", file=sys.stderr)
-                continue
-            except Exception as e:
-                print(f"[warn] {name} {year}: {e}", file=sys.stderr)
-                continue
-            long = _to_long(raw, name)
-            if not long.empty:
-                frames.append(long)
-                print(f"[ok]   {name:<28} {year}: {len(raw):5d} daily -> {len(long):5d} monthly rows")
-            else:
-                print(f"[skip] {name:<28} {year}: empty")
+        raw = pd.concat(parts, ignore_index=True)
+        long = _to_long(raw, name)
+        if not long.empty:
+            frames.append(long)
+            print(f"[ok]   {name:<28} {year}: {len(raw):5d} daily -> {len(long):5d} monthly rows")
+        else:
+            print(f"[skip] {name:<28} {year}: empty")
     if not frames:
         return pd.DataFrame()
     out = pd.concat(frames, ignore_index=True)
@@ -322,7 +328,11 @@ if __name__ == "__main__":
                          "a clean runner has no cache, so whole years take hours")
     ap.add_argument("--discover", action="store_true",
                     help="also scrape (full history) any live product not in PRODUCTS/SKIPPED_IDS")
+    ap.add_argument("--workers", type=int, default=1, help="parallel requests")
+    ap.add_argument("--max-minutes", type=float, default=None,
+                    help="stop fetching after this long and save what was pulled")
     args = ap.parse_args()
+    deadline = time.monotonic() + args.max_minutes * 60 if args.max_minutes else None
 
     if args.demo:
         demo()
@@ -337,7 +347,8 @@ if __name__ == "__main__":
         recent = pd.period_range(end=pd.Timestamp.now().to_period("M"), periods=args.months_back, freq="M")
         only = {(p.year, p.month) for p in recent}
         args.years = sorted({y for y, _ in only})
-    df = scrape(args.products, args.years, sleep=args.sleep, only=only)
+    df = scrape(args.products, args.years, sleep=args.sleep, only=only,
+                workers=args.workers, deadline=deadline)
     if args.discover:
         new = {p: n for p, n in _live_products().items()
                if p not in PRODUCTS and p not in SKIPPED_IDS}
@@ -347,7 +358,8 @@ if __name__ == "__main__":
             # ponytail: new products get full history so they can clear the
             # forecaster's 36-obs gate; add them to PRODUCTS (or SKIPPED_IDS) by hand later.
             df = pd.concat([df, scrape(new, range(2015, pd.Timestamp.now().year + 1),
-                                       sleep=args.sleep)], ignore_index=True)
+                                       sleep=args.sleep, workers=args.workers,
+                                       deadline=deadline)], ignore_index=True)
     # Merge into existing pull: freshly scraped rows win, years not re-scraped
     # survive, and a KAMIS outage can't wipe history (CI scrapes recent years only).
     if OUT.exists():
