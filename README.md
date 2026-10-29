@@ -117,7 +117,7 @@ Python, pandas · statsmodels (SARIMA), Prophet, Amazon Chronos-Bolt · XGBoost 
 | Mathews Machanje |
 | Millicent Onchari |
 | James Wakhu |
-| Esther |
+| Esther Muchoki |
 | Mohamed Abdirahman |
 | Marren Ojode |
 
