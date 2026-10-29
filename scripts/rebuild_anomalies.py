@@ -1,12 +1,12 @@
 """Rebuild price_anomalies.csv from the widened chained dataset.
 
-Ports the IQR-band rule from notebooks/modeling/forecast_model_clean.ipynb so
+Ports the IQR-band rule from notebooks/modeling/03_forecasting.ipynb so
 the anomaly file re-runs whenever the chain is rebuilt (the old file lagged
 the widening, leaving 211/297 map markers grey).
 
 Rule per (commodity, market, pricetype):
   - need n >= 24 monthly obs and staleness <= 12 months
-  - build IQR band from the 36 months before the latest: lower = max(Q1 - 1.5*IQR, 0), upper = Q3 + 1.5*IQR
+  - build IQR band from the 36 months before the latest (at least +/-10% of median): lower = max(Q1 - 1.5*IQR, 0), upper = Q3 + 1.5*IQR
   - skip flat / zero-variance series
   - status: SPIKE if latest > upper, CRASH if < lower, else NORMAL
 
@@ -27,6 +27,7 @@ APP_DATA = ROOT / "app" / "data"
 # Band window: over 10-20 years of trending prices the IQR spans 0-235 KES and
 # flags nothing; 3 years tracks the current price level.
 BAND_MONTHS = 36
+MIN_BAND = 0.10
 
 
 def build(df: pd.DataFrame) -> pd.DataFrame:
@@ -48,8 +49,11 @@ def build(df: pd.DataFrame) -> pd.DataFrame:
         if iqr <= 0 or hist.std() == 0:
             continue
 
-        lower = max(q1 - 1.5 * iqr, 0.0)
-        upper = q3 + 1.5 * iqr
+        # Flat KAMIS series give a band a few shillings wide, so a 5% wobble
+        # reads as a CRASH. Every band spans at least +/-10% of the median.
+        med = hist.median()
+        lower = max(min(q1 - 1.5 * iqr, med * (1 - MIN_BAND)), 0.0)
+        upper = max(q3 + 1.5 * iqr, med * (1 + MIN_BAND))
         latest = g.iloc[-1]
         price = float(latest["price_per_kg"])
 

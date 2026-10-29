@@ -70,6 +70,9 @@ jobs:
       - name: Rebuild forecasts
         run: python scripts/rebuild_forecasts.py
 
+      - name: Update README numbers
+        run: python scripts/update_readme_stats.py
+
       - uses: actions/upload-artifact@v4
         with:
           name: model-metrics
@@ -81,7 +84,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add app/data data/exports data/cleaned/bei_smart_forecasting_chained_all.csv \
                   data/external data/raw/kamis_prices.csv data/raw/wfp_food_prices_ken.csv \
-                  data/raw/fews_kenya_full.csv data/raw/new_sources/fpma_kenya_long.csv
+                  data/raw/fews_kenya_full.csv data/raw/new_sources/fpma_kenya_long.csv README.md
           git diff --cached --quiet && { echo "no changes"; exit 0; }
           git commit -m "data: monthly refresh $(date +%Y-%m-%d)"
           git pull --rebase origin main   # code may have landed during the long rebuild

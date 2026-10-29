@@ -1,6 +1,6 @@
 """Stitch WFP + FEWS + KAMIS into one long-format monthly modelling table.
 
-Mirrors the section-18 chain logic in `notebooks/modeling/forecast_model_clean.ipynb`
+Mirrors the section-18 chain logic in `notebooks/modeling/03_forecasting.ipynb`
 that produced `data/cleaned/bei_smart_forecasting_chained.csv` for four products,
 and applies it across every commodity in every source.
 

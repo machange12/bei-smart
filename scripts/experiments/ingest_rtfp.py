@@ -14,9 +14,9 @@ Output: data/raw/new_sources/rtfp_kenya_long.csv
     source, market, admin_1, commodity, pricetype, unit, currency, date, price, estimated
 
 Run:
-    python scripts/ingest_rtfp.py                # download + write
-    python scripts/ingest_rtfp.py --no-download  # reuse cached raw CSV
-    python scripts/ingest_rtfp.py --demo         # tiny self-check, no network/write
+    python scripts/experiments/ingest_rtfp.py                # download + write
+    python scripts/experiments/ingest_rtfp.py --no-download  # reuse cached raw CSV
+    python scripts/experiments/ingest_rtfp.py --demo         # tiny self-check, no network/write
 """
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ import sys
 import pandas as pd
 import requests
 
-ROOT = pathlib.Path(__file__).resolve().parents[1]
+ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_chained_all import _canonical, _norm_market  # noqa: E402
 

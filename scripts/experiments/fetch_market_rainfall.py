@@ -18,7 +18,7 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[2]
 SOURCE = REPO_ROOT / "data" / "cleaned" / "bei_smart_forecasting_v3.csv"
 OUT_DIR = REPO_ROOT / "data" / "raw"
 OUT_FILE = OUT_DIR / "rainfall_by_market_nasapower.csv"

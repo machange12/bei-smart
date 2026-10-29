@@ -13,7 +13,7 @@ from statsmodels.tsa.statespace.sarimax import SARIMAX
 warnings.filterwarnings("ignore")
 sns.set_style("whitegrid")
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DATA_PATH = ROOT / "data" / "cleaned" / "bei_smart_forecasting.csv"
 EXPORT_DIR = ROOT / "data" / "exports"
 EXPORT_DIR.mkdir(parents=True, exist_ok=True)

@@ -75,7 +75,8 @@ st.markdown("#### Active alerts")
 if active.empty:
     st.info("No active anomalies for the selected filters.")
 else:
-    for _, row in active.iterrows():
+    # Biggest moves first, so the top of the page is what matters.
+    for _, row in active.sort_values("deviation_pct", ascending=False).iterrows():
         with st.container(border=True):
             head_col, badge_col = st.columns([4, 1])
             head_col.markdown(f"**{row['commodity']}** · {row['market']} ({row['pricetype']})")
@@ -84,7 +85,7 @@ else:
             st.caption(
                 f"Latest: KES {row['latest_price']:.2f} · Normal range: "
                 f"KES {row['normal_low']:.2f}–{row['normal_high']:.2f} · "
-                f"Deviation: {row['deviation_pct']:+.1f}%"
+                f"{row['deviation_pct']:.1f}% {'above' if row['status'] == 'SPIKE' else 'below'} the normal range"
             )
 
 with st.expander(f"All monitored markets ({len(filtered)})"):
