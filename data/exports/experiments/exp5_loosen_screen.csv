@@ -1,0 +1,275 @@
+commodity,market,pricetype,n,missing_pct,cv,fails,chronos_mape
+Beans (dolichos),Kangemi,Wholesale,42,36.4,27.9,gaps,67.95
+Beans (mixed),Bondo,Retail,55,46.1,30.1,gaps,21.43
+Beans (mixed),Bumala,Retail,47,52.0,28.2,gaps,15.99
+Beans (mixed),Bungoma,Retail,47,51.0,24.9,gaps,15.02
+Beans (mixed),Burma,Retail,46,54.9,21.7,gaps,3.64
+Beans (mixed),Busia,Retail,57,41.8,30.1,gaps,5.61
+Beans (mixed),Daraja Mbili,Retail,64,36.6,42.2,gaps,17.66
+Beans (mixed),Embu,Retail,78,25.7,30.7,gaps,13.97
+Beans (mixed),Embu,Wholesale,39,40.0,26.1,gaps,33.08
+Beans (mixed),Garissa,Retail,49,44.9,26.5,gaps,12.31
+Beans (mixed),Gikomba,Retail,45,55.4,28.1,gaps,10.76
+Beans (mixed),Homabay,Retail,37,61.5,21.4,gaps,8.64
+Beans (mixed),Isiolo,Retail,42,57.6,34.6,gaps,5.58
+Beans (mixed),Iten,Retail,67,33.0,31.0,gaps,20.68
+Beans (mixed),Kabarnet,Retail,73,25.5,30.1,gaps,34.54
+Beans (mixed),Kangemi,Retail,46,54.5,27.1,gaps,7.12
+Beans (mixed),Kawangware,Retail,42,60.0,32.4,gaps,29.24
+Beans (mixed),Kayole,Retail,47,34.7,21.8,gaps,3.57
+Beans (mixed),Kiboswa,Retail,70,31.4,27.7,gaps,3.75
+Beans (mixed),Kiriaini,Retail,44,53.2,23.1,gaps,24.58
+Beans (mixed),Korokocho,Retail,49,51.5,30.0,gaps,11.09
+Beans (mixed),Kwale,Retail,76,25.5,32.7,gaps,4.04
+Beans (mixed),Lodwar,Retail,69,32.4,29.3,gaps,14.0
+Beans (mixed),Machakos,Retail,63,37.6,37.6,gaps,18.57
+Beans (mixed),Makutano,Retail,47,28.8,19.0,gaps,12.8
+Beans (mixed),Makuyu,Retail,70,29.3,26.2,gaps,17.86
+Beans (mixed),Mkunguni,Retail,56,37.8,25.8,gaps,11.88
+Beans (mixed),Mwembe Tayari,Retail,60,40.6,19.7,gaps,17.62
+Beans (mixed),Nairobi,Wholesale,52,8.8,276.0,volatility,20.04
+Beans (mixed),Nakuru,Retail,75,26.5,37.4,gaps,2.19
+Beans (mixed),Nyabite,Retail,61,32.2,29.1,gaps,6.25
+Beans (mixed),Nyahururu,Retail,68,29.9,19.9,gaps,8.58
+Beans (mixed),Ol Kalou,Retail,60,40.6,37.8,gaps,13.82
+Beans (mixed),Siaya,Retail,62,39.2,34.5,gaps,15.47
+Beans (mixed),Soko Mjinga,Retail,39,60.6,32.3,gaps,11.39
+Beans (mixed),Toi,Retail,43,56.6,21.9,gaps,2.99
+Beans (mixed),Voi,Retail,61,36.5,21.3,gaps,13.65
+Beans (rosecoco),Kitale,Wholesale,119,34.3,37.7,gaps,9.15
+Beans (rosecoco),Kitui,Wholesale,102,42.4,25.2,gaps,12.92
+Beans (rosecoco),Nairobi,Wholesale,294,-18.1,87.0,volatility,5.81
+Beans (yellow),Eldoret,Wholesale,46,33.3,24.1,gaps,9.44
+Beans (yellow),Nairobi,Wholesale,52,8.8,142.3,volatility,20.82
+Beans (yellow-green),Eldoret,Retail,43,33.8,25.0,gaps,5.74
+Beans (yellow-green),Eldoret,Wholesale,43,33.8,24.8,gaps,10.6
+Beans (yellow-green),Embu,Retail,39,40.0,22.8,gaps,14.43
+Beans (yellow-green),Embu,Wholesale,39,40.0,23.9,gaps,18.4
+Beans (yellow-green),Holo,Retail,42,35.4,12.9,gaps,11.83
+Beans (yellow-green),Holo,Wholesale,42,35.4,22.2,gaps,8.98
+Beans (yellow-green),Kangemi,Retail,46,28.1,18.4,gaps,20.77
+Beans (yellow-green),Kangemi,Wholesale,46,29.2,294.8,both,24.74
+Beans (yellow-green),Kawangware,Retail,42,35.4,19.1,gaps,12.54
+Beans (yellow-green),Kawangware,Wholesale,40,38.5,17.7,gaps,20.51
+Beans (yellow-green),Kerugoya,Retail,47,27.7,26.0,gaps,11.3
+Beans (yellow-green),Kerugoya,Wholesale,47,27.7,30.5,gaps,8.22
+Beans (yellow-green),Mabera,Retail,40,38.5,23.4,gaps,15.42
+Beans (yellow-green),Mabera,Wholesale,36,44.6,27.8,gaps,23.25
+Beans (yellow-green),Mwingi,Retail,39,31.6,20.4,gaps,11.03
+Beans (yellow-green),Mwingi,Wholesale,39,31.6,22.4,gaps,10.09
+Beans red haricot (wairimu),Embu,Retail,43,33.8,22.0,gaps,22.32
+Beans red haricot (wairimu),Embu,Wholesale,43,33.8,23.1,gaps,28.51
+Beans red haricot (wairimu),Kagio,Retail,44,32.3,24.8,gaps,8.59
+Beans red haricot (wairimu),Kagio,Wholesale,44,32.3,23.9,gaps,27.27
+Beans red haricot (wairimu),Kangemi,Retail,46,29.2,21.0,gaps,14.06
+Beans red haricot (wairimu),Kangemi,Wholesale,46,29.2,21.8,gaps,22.31
+Beans red haricot (wairimu),Kawangware,Retail,39,40.0,22.6,gaps,36.66
+Beans red haricot (wairimu),Kawangware,Wholesale,37,43.1,21.1,gaps,41.59
+Beans red haricot (wairimu),Kerugoya,Retail,47,27.7,23.6,gaps,8.44
+Beans red haricot (wairimu),Kerugoya,Wholesale,47,27.7,27.7,gaps,8.38
+Beans red haricot (wairimu),Kibuye,Retail,48,26.2,21.7,gaps,17.78
+Beans red haricot (wairimu),Makutano Kirinyaga,Retail,47,27.7,17.7,gaps,10.05
+Beans red haricot (wairimu),Makutano Kirinyaga,Wholesale,47,27.7,20.6,gaps,10.83
+Beans rosecoco,Embu,Retail,37,43.1,25.0,gaps,18.74
+Beans rosecoco,Embu,Wholesale,37,43.1,23.8,gaps,14.27
+Beans rosecoco,Holo,Retail,39,40.0,13.0,gaps,12.79
+Beans rosecoco,Holo,Wholesale,39,40.0,16.6,gaps,8.9
+Beans rosecoco,Kagio,Retail,43,31.7,26.3,gaps,11.32
+Beans rosecoco,Kagio,Wholesale,43,31.7,19.3,gaps,8.49
+Beans rosecoco,Kangemi,Retail,38,40.6,20.7,gaps,33.58
+Beans rosecoco,Katito,Retail,41,35.9,14.5,gaps,6.36
+Beans rosecoco,Katito,Wholesale,41,35.9,21.7,gaps,11.14
+Beans rosecoco,Kawangware,Retail,42,35.4,15.3,gaps,8.76
+Beans rosecoco,Kawangware,Wholesale,40,38.5,15.9,gaps,10.71
+Beans rosecoco,Kerugoya,Retail,45,26.2,17.1,gaps,4.22
+Beans rosecoco,Kerugoya,Wholesale,45,26.2,20.5,gaps,3.34
+Beans rosecoco,Kisasi,Retail,36,29.4,12.3,gaps,12.83
+Beans rosecoco,Kisasi,Wholesale,36,29.4,14.4,gaps,14.33
+Beans rosecoco,Kitale Municipality,Retail,40,27.3,27.5,gaps,8.46
+Beans rosecoco,Kitale Municipality,Wholesale,40,27.3,33.5,gaps,13.36
+Beans rosecoco,Mabera,Retail,38,41.5,21.7,gaps,10.62
+Beans rosecoco,Muhoroni,Retail,48,26.2,91.9,both,20.19
+Beans rosecoco,Muhoroni,Wholesale,48,26.2,24.2,gaps,6.66
+Beans rosecoco,Ngurubani,Retail,38,41.5,23.3,gaps,22.97
+Beans rosecoco,Ngurubani,Wholesale,38,41.5,22.6,gaps,5.53
+Cabbages,Kathonzweni,Wholesale,39,38.1,21.5,gaps,27.14
+Cassava,Kisumu,Wholesale,111,49.3,71.9,both,108.47
+Cassava,Kitale,Wholesale,117,35.4,70.4,both,24.66
+Cassava,Kitui,Wholesale,112,48.9,63.6,both,25.14
+Cassava,Nairobi,Wholesale,132,39.2,58.8,gaps,23.41
+Cassava,Taveta,Wholesale,81,63.3,47.4,gaps,9.8
+Cowpeas,Kisumu,Wholesale,113,48.4,35.7,gaps,22.49
+Cowpeas,Kitale,Wholesale,102,43.6,36.3,gaps,8.16
+Cowpeas,Kitui,Wholesale,94,57.1,35.5,gaps,35.2
+Cowpeas,Nairobi,Wholesale,131,41.0,26.4,gaps,18.73
+Finger millet,Embu,Retail,38,41.5,13.3,gaps,15.64
+Finger millet,Embu,Wholesale,38,41.5,16.9,gaps,24.43
+Finger millet,Kagio,Retail,47,26.6,14.9,gaps,12.6
+Finger millet,Kagio,Wholesale,47,26.6,16.5,gaps,11.73
+Finger millet,Kapkwen,Retail,36,40.0,361.7,both,30.6
+Finger millet,Kapkwen,Wholesale,36,40.0,29.4,gaps,21.08
+Finger millet,Kimilili,Retail,36,43.8,130.0,both,30.69
+Finger millet,Kimilili,Wholesale,36,43.8,27.6,gaps,25.2
+Finger millet,Kisasi,Retail,39,25.0,12.5,gaps,6.88
+Finger millet,Kisasi,Wholesale,39,25.0,10.8,gaps,9.69
+Finger millet,Kutus,Retail,45,28.6,22.8,gaps,20.41
+Finger millet,Kutus,Wholesale,45,28.6,21.9,gaps,15.54
+Finger millet,Mabera,Retail,39,40.0,23.1,gaps,58.37
+Finger millet,Mabera,Wholesale,36,44.6,19.5,gaps,35.16
+Green grams,Kisumu,Wholesale,143,35.6,28.7,gaps,8.05
+Green grams,Kitale,Wholesale,117,35.4,21.2,gaps,8.4
+Green grams,Kitui,Wholesale,108,50.7,28.6,gaps,27.01
+Green grams,Nairobi,Wholesale,156,29.7,22.5,gaps,23.9
+Green grams,Taveta,Wholesale,59,72.2,34.5,gaps,43.55
+Green maize,Embu,Retail,43,33.8,28.7,gaps,43.07
+Green maize,Embu,Wholesale,43,33.8,30.2,gaps,48.13
+Green maize,Gakoromone,Retail,44,30.2,33.6,gaps,20.77
+Green maize,Gakoromone,Wholesale,44,30.2,38.4,gaps,32.94
+Green maize,Kerugoya,Retail,41,31.7,26.2,gaps,14.13
+Green maize,Kerugoya,Wholesale,41,31.7,29.7,gaps,18.19
+Green maize,Kibuye,Retail,41,36.9,23.9,gaps,3.49
+Green maize,Kirwara,Retail,37,31.5,15.3,gaps,18.53
+Green maize,Kitale Municipality,Retail,41,25.5,30.2,gaps,37.2
+Green maize,Kitale Municipality,Wholesale,41,25.5,38.0,gaps,40.19
+Green maize,Makutano Kirinyaga,Retail,47,26.6,28.4,gaps,13.83
+Green maize,Makutano Kirinyaga,Wholesale,47,26.6,28.3,gaps,17.48
+Green maize,Wundanyi,Retail,46,25.8,25.3,gaps,17.38
+Ground nuts,Eldoret,Retail,37,43.1,20.9,gaps,15.47
+Ground nuts,Eldoret,Wholesale,37,43.1,19.9,gaps,20.08
+Ground nuts,Embu,Retail,43,33.8,23.1,gaps,20.92
+Ground nuts,Embu,Wholesale,43,33.8,21.5,gaps,18.7
+Ground nuts,Holo,Retail,39,40.0,7.4,gaps,4.79
+Ground nuts,Holo,Wholesale,39,40.0,14.0,gaps,5.48
+Ground nuts,Kangemi,Retail,47,27.7,15.7,gaps,13.72
+Ground nuts,Kangemi,Wholesale,43,32.8,19.5,gaps,11.52
+Ground nuts,Katito,Retail,47,26.6,15.1,gaps,2.53
+Ground nuts,Katito,Wholesale,47,26.6,20.2,gaps,12.51
+Ground nuts,Kimilili,Retail,36,43.8,17.4,gaps,25.29
+Ground nuts,Kimilili,Wholesale,36,43.8,17.7,gaps,24.98
+Ground nuts,Muhoroni,Retail,48,26.2,26.5,gaps,9.64
+Ground nuts,Muhoroni,Wholesale,46,29.2,24.7,gaps,8.54
+Kales,Kibuye,Wholesale,40,38.5,44.3,gaps,50.23
+Maize,Bondo,Retail,56,45.1,32.2,gaps,9.36
+Maize,Bumala,Retail,63,35.7,27.3,gaps,15.37
+Maize,Bungoma,Retail,62,35.4,35.3,gaps,22.2
+Maize,Burma,Retail,46,54.9,41.4,gaps,60.73
+Maize,Chebunyo,Retail,44,30.2,29.4,gaps,15.13
+Maize,Chebunyo,Wholesale,44,30.2,28.8,gaps,22.04
+Maize,Daraja Mbili,Retail,73,27.7,29.5,gaps,16.23
+Maize,Embu,Wholesale,43,33.8,31.3,gaps,49.91
+Maize,Gikomba,Retail,60,40.6,41.0,gaps,12.33
+Maize,Holo,Retail,39,40.0,24.1,gaps,15.01
+Maize,Holo,Wholesale,39,40.0,32.5,gaps,45.08
+Maize,Iten,Retail,66,34.0,41.3,gaps,10.55
+Maize,Kabarnet,Retail,73,25.5,37.3,gaps,10.54
+Maize,Kangemi,Retail,69,33.7,41.2,gaps,39.38
+Maize,Kathonzweni,Wholesale,42,33.3,29.4,gaps,22.16
+Maize,Kawangware,Retail,64,39.0,20.2,gaps,16.89
+Maize,Kawangware,Wholesale,38,41.5,20.2,gaps,19.73
+Maize,Kayole,Retail,46,36.1,23.7,gaps,13.51
+Maize,Kerugoya,Wholesale,44,32.3,28.2,gaps,25.81
+Maize,Kiambu,Retail,64,34.7,34.3,gaps,86.88
+Maize,Kianjai,Retail,72,28.7,33.0,gaps,6.44
+Maize,Kiboswa,Retail,71,30.4,29.6,gaps,7.27
+Maize,Kiriaini,Retail,43,54.3,39.5,gaps,34.37
+Maize,Kitale,Retail,76,25.5,33.6,gaps,10.3
+Maize,Kitale,Wholesale,119,34.3,40.6,gaps,10.97
+Maize,Kitale Municipality,Retail,38,35.6,32.5,gaps,38.42
+Maize,Kitale Municipality,Wholesale,38,35.6,25.6,gaps,27.57
+Maize,Kitui,Wholesale,142,35.2,33.2,gaps,16.23
+Maize,Korokocho,Retail,40,60.4,35.0,gaps,12.06
+Maize,Mabera,Retail,40,38.5,34.3,gaps,29.43
+Maize,Mabera,Wholesale,40,38.5,34.3,gaps,26.18
+Maize,Machakos,Retail,70,30.7,24.2,gaps,13.36
+Maize,Makutano,Retail,42,36.4,27.9,gaps,19.74
+Maize,Makutano Kirinyaga,Retail,47,27.7,36.9,gaps,16.55
+Maize,Makutano Kirinyaga,Wholesale,47,27.7,34.5,gaps,11.72
+Maize,Makuyu,Retail,66,32.7,33.0,gaps,15.08
+Maize,Mkunguni,Retail,66,26.7,31.9,gaps,9.19
+Maize,Mogogosiek,Retail,38,39.7,26.5,gaps,11.52
+Maize,Mogogosiek,Wholesale,38,39.7,30.6,gaps,17.63
+Maize,Mulot,Wholesale,47,26.6,27.1,gaps,19.86
+Maize,Muthithi,Retail,46,51.1,38.2,gaps,16.39
+Maize,Mwembe Tayari,Retail,69,32.4,14.6,gaps,12.55
+Maize,Mwingi,Retail,39,31.6,21.8,gaps,12.96
+Maize,Mwingi,Wholesale,39,31.6,26.4,gaps,11.03
+Maize,Nairobi,Wholesale,294,-18.1,98.0,volatility,16.13
+Maize,Nyabite,Retail,61,31.5,33.5,gaps,8.05
+Maize,Nyahururu,Retail,72,25.8,24.4,gaps,14.43
+Maize,Ol Kalou,Retail,67,33.7,21.9,gaps,30.18
+Maize,Siaya,Retail,73,28.4,28.0,gaps,3.6
+Maize,Soko Mjinga,Retail,48,51.0,27.0,gaps,35.46
+Maize,Taveta,Wholesale,89,60.3,34.1,gaps,31.72
+Maize,Toi,Retail,44,55.6,21.3,gaps,10.58
+Maize,Voi,Retail,54,45.5,27.6,gaps,16.4
+Maize,Wote,Retail,71,26.8,31.3,gaps,11.36
+Maize flour,Kibuye,Retail,48,26.2,22.7,gaps,23.03
+Onions,Kangemi,Wholesale,37,40.3,33.7,gaps,19.62
+Onions,Kathonzweni,Wholesale,40,36.5,47.1,gaps,34.99
+Pearl rush millet,Chuka,Wholesale,46,13.2,117.9,volatility,59.32
+Pearl rush millet,Embu,Retail,41,36.9,32.7,gaps,16.06
+Pearl rush millet,Embu,Wholesale,41,36.9,35.9,gaps,23.21
+Pearl rush millet,Kagio,Retail,45,29.7,28.6,gaps,27.02
+Pearl rush millet,Kagio,Wholesale,45,29.7,34.8,gaps,35.69
+Peas (dry),Chuka,Wholesale,45,13.5,72.2,volatility,28.14
+Peas (dry),Kerugoya,Retail,37,26.0,10.5,gaps,14.24
+Peas (dry),Kerugoya,Wholesale,37,26.0,8.7,gaps,6.17
+Peas (dry),Nkubu,Retail,44,26.7,17.3,gaps,4.01
+Peas (dry),Nkubu,Wholesale,44,26.7,14.9,gaps,2.2
+Potatoes (Irish),Eldoret,Wholesale,251,-1.2,71.0,volatility,11.78
+Potatoes (Irish),Kathonzweni,Wholesale,38,37.7,18.4,gaps,20.68
+Potatoes (Irish),Kibuye,Wholesale,43,33.8,33.8,gaps,18.52
+Potatoes (Irish),Kisumu,Wholesale,266,-6.8,73.7,volatility,35.51
+Rice,Embu,Retail,43,33.8,12.9,gaps,4.43
+Rice,Embu,Wholesale,43,33.8,12.9,gaps,6.35
+Rice,Holo,Retail,37,43.1,18.5,gaps,3.36
+Rice,Holo,Wholesale,37,43.1,25.1,gaps,7.57
+Rice,Kangemi,Retail,49,29.0,25.4,gaps,9.04
+Rice,Kangemi,Wholesale,49,25.8,11.2,gaps,7.56
+Rice,Katito,Retail,48,25.0,26.0,gaps,4.6
+Rice,Katito,Wholesale,48,25.0,21.5,gaps,7.84
+Rice,Kawangware,Wholesale,39,40.0,13.9,gaps,4.88
+Rice,Kerugoya,Retail,46,29.2,14.4,gaps,1.15
+Rice,Kerugoya,Wholesale,46,29.2,14.1,gaps,2.26
+Rice,Mabera,Retail,39,40.0,23.4,gaps,18.69
+Rice,Makutano Kirinyaga,Retail,38,41.5,7.5,gaps,5.13
+Rice,Makutano Kirinyaga,Wholesale,38,41.5,7.2,gaps,4.98
+Rice,Maua,Retail,39,25.0,13.8,gaps,3.86
+Rice,Maua,Wholesale,39,25.0,15.6,gaps,4.54
+Rice (paddy),Kibuye,Retail,37,30.2,16.1,gaps,9.86
+Sorghum,Eldoret,Retail,38,41.5,27.4,gaps,19.91
+Sorghum,Embu,Retail,41,36.9,12.5,gaps,10.24
+Sorghum,Embu,Wholesale,41,36.9,372.8,both,42.7
+Sorghum,Kagio,Retail,41,31.7,15.5,gaps,7.89
+Sorghum,Kagio,Wholesale,41,31.7,22.1,gaps,14.23
+Sorghum,Kapkwen,Retail,37,35.1,30.5,gaps,28.99
+Sorghum,Kapkwen,Wholesale,37,35.1,38.6,gaps,46.84
+Sorghum,Kitale,Wholesale,79,55.1,37.5,gaps,35.03
+Sorghum,Kitui,Wholesale,166,30.5,38.7,gaps,38.51
+Sorghum,Mabera,Retail,39,40.0,33.5,gaps,43.86
+Sorghum,Mabera,Wholesale,36,44.6,33.9,gaps,27.59
+Sorghum,Makutano Kirinyaga,Retail,38,41.5,33.8,gaps,13.96
+Sorghum,Makutano Kirinyaga,Wholesale,38,41.5,36.7,gaps,14.42
+Sorghum,Taveta,Wholesale,54,75.7,43.4,gaps,21.31
+Sweet potatoes,Kisumu,Wholesale,141,36.5,34.2,gaps,29.17
+Sweet potatoes,Kitale,Wholesale,124,31.5,61.3,both,21.82
+Sweet potatoes,Kitui,Wholesale,110,48.6,19.5,gaps,12.83
+Sweet potatoes,Nairobi,Wholesale,156,27.8,30.0,gaps,25.65
+Sweet potatoes,Taveta,Wholesale,85,61.2,40.6,gaps,4.73
+Tomatoes,Kangemi,Wholesale,40,38.5,23.6,gaps,19.27
+Tomatoes,Kathonzweni,Wholesale,39,38.1,27.5,gaps,30.87
+Tomatoes,Kibuye,Wholesale,45,30.8,29.9,gaps,23.99
+Wheat,Eldoret,Retail,38,41.5,26.2,gaps,7.92
+Wheat,Eldoret,Wholesale,143,35.0,47.3,gaps,5.36
+Wheat,Kagio,Retail,36,40.0,16.2,gaps,17.86
+Wheat,Kagio,Wholesale,36,40.0,17.4,gaps,18.22
+Wheat,Kitale,Wholesale,76,58.0,52.0,gaps,27.63
+Wheat,Nairobi,Wholesale,50,76.2,26.8,gaps,17.42
+Wheat,Taveta,Wholesale,36,83.2,32.3,gaps,30.65
+Wheat flour,Ahero,Retail,39,36.1,27.8,gaps,21.98
+Wheat flour,Ahero,Wholesale,39,36.1,25.6,gaps,19.5
+Wheat flour,Kibuye,Retail,45,28.6,14.7,gaps,4.8
+White sorghum,Embu,Retail,42,35.4,15.8,gaps,11.13
+White sorghum,Embu,Wholesale,42,35.4,17.6,gaps,21.6
+White sorghum,Kutus,Retail,40,37.5,17.4,gaps,14.48
+White sorghum,Kutus,Wholesale,40,37.5,19.2,gaps,14.46

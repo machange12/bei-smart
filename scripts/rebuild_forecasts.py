@@ -100,7 +100,6 @@ SETTLEMENT_RE = re.compile(
     re.IGNORECASE,
 )
 
-ANCHOR = pd.Period("2026-09", "M")
 
 # Chronos pipeline is loaded lazily and once (per process).
 _CHRONOS = None
@@ -127,13 +126,14 @@ def screen(df: pd.DataFrame, min_obs: int) -> pd.DataFrame:
     print(f"[screen] excluding {df.loc[settle, 'market'].nunique()} settlement "
           f"markets ({int(settle.sum()):,} rows)")
     df = df[~settle]
+    anchor = df["date"].max().to_period("M")  # latest month in the data, not a fixed date
     rows = []
     for (c, mk, pt), g in df.groupby(["commodity", "market", "pricetype"]):
         g = g.sort_values("date")
         n = len(g)
         if n < min_obs:
             continue
-        stale = (ANCHOR - g["date"].max().to_period("M")).n
+        stale = (anchor - g["date"].max().to_period("M")).n
         if stale > 12:
             continue
         span = (g["date"].max().to_period("M") - g["date"].min().to_period("M")).n + 1
