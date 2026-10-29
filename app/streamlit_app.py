@@ -12,6 +12,7 @@ DATA_DIR = APP_DIR / "data"
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 
+from src.units import unit_label  # noqa: E402
 from src.ui import SERIES_KEY, inject_css, latest_prices, render_hero, sidebar_brand, sidebar_footer  # noqa: E402
 
 st.set_page_config(page_title="AgriPulse", page_icon="🌾", layout="wide")
@@ -66,7 +67,7 @@ def sell_card():
         return None
     return ("📈 Best time & place to sell", f"+{best['rise']:.0f}%",
             f"{series_name(best)} expected to rise from KES {best['price_per_kg']:.0f} to "
-            f"{best['forecast_price_kes']:.0f}/kg by {best['forecast_date']:%b %Y} · {best['confidence']} confidence")
+            f"{best['forecast_price_kes']:.0f}/{unit_label(best['commodity'])} by {best['forecast_date']:%b %Y} · {best['confidence']} confidence")
 
 
 def alerts_card():
@@ -88,7 +89,7 @@ def buy_card():
     nxt = maize[maize["forecast_date"] == maize["forecast_date"].min()]
     row = nxt.sort_values("forecast_price_kes").iloc[0]
     where = f"{row['market']} ({row['region']})" if "region" in row and pd.notna(row["region"]) else row["market"]
-    return ("🛒 Cheapest maize to buy", f"KES {row['forecast_price_kes']:.0f}/kg",
+    return ("🛒 Cheapest maize to buy", f"KES {row['forecast_price_kes']:.0f}/{unit_label(row['commodity'])}",
             f"{where} retail, forecast for {row['forecast_date']:%b %Y}")
 
 

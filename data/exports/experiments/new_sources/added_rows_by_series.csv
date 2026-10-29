@@ -1,0 +1,41 @@
+commodity,market,pricetype,source,rows,first,last
+Beans (dry),Embu-Mbeere,Retail,WB_RTFP,90,2016-01-01,2026-05-01
+Beans (dry),Kakuma 2,Retail,WB_RTFP,20,2021-05-01,2026-08-01
+Beans (dry),Kilifi,Retail,WB_RTFP,55,2013-01-01,2026-05-01
+Beans (dry),Kitui,Retail,WB_RTFP,45,2007-01-01,2026-05-01
+Beans (dry),Kwale,Retail,WB_RTFP,56,2018-01-01,2023-01-01
+Beans (dry),Lamu,Retail,WB_RTFP,90,2016-01-01,2026-05-01
+Beans (dry),Makueni,Retail,WB_RTFP,90,2016-01-01,2026-05-01
+Beans (dry),Marsabit,Retail,WB_RTFP,29,2020-08-01,2026-05-01
+Beans (dry),Meru,Retail,WB_RTFP,102,2015-01-01,2026-05-01
+Beans (dry),Taita Taveta,Retail,WB_RTFP,126,2013-01-01,2026-05-01
+Beans (mixed),Embu-Mbeere,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Beans (mixed),Kilifi,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Beans (mixed),Kitui,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Beans (mixed),Lamu,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Beans (mixed),Makueni,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Beans (mixed),Marsabit,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Beans (mixed),Meru,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Beans (mixed),Taita Taveta,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Bread,Nairobi,Retail,FAO_FPMA,249,2005-01-01,2026-09-01
+Maize,Embu-Mbeere,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Garissa,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Hola,Retail,WB_RTFP,79,2010-01-01,2022-12-01
+Maize,Isiolo,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Kilifi,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Kitui,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Kwale,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Lamu,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Lodwar,Retail,WB_RTFP,24,2009-12-01,2026-03-01
+Maize,Makueni,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Mandera,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Mandera,Retail,WB_RTFP,6,2007-01-01,2020-07-01
+Maize,Marigat,Retail,WB_RTFP,4,2016-04-01,2019-03-01
+Maize,Marsabit,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Meru,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Taita Taveta,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Tana River,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Tharaka Nithi,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Turkana,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize,Wajir,Retail,FAO_FPMA,2,2026-08-01,2026-09-01
+Maize meal,Nairobi,Retail,FAO_FPMA,2,2026-08-01,2026-09-01

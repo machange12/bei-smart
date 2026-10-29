@@ -80,7 +80,7 @@ Last updated: 2026-10-29
 
 **Not a hard ceiling.** Two remaining levers ranked by ROI:
 
-1. **NAFIS scraper** (nafis.go.ke) — half-day work, expected +20-50 new series (mostly fresh produce, some livestock). Structurally similar to KAMIS. **Best next dig.**
+1. ~~NAFIS scraper~~ — **dead**: nafis.go.ke no longer resolves (last archived 2021-01); it was a blog of image tables for 5 big markets already covered by FEWS.
 2. **Chronos-Bolt-base swap** — 200MB download, 2× rebuild time, priors say +0.5-1 pt median MAPE. Cheap ceiling test once running.
 
 Ruled out this pass:
@@ -102,7 +102,7 @@ Uncommitted git state at time of writing: modified pipeline scripts + regenerate
 ## Next session — pick one
 
 - **A. Full rebuild to land the maize merge** — `build_chained_all → enrich_chain → rebuild_anomalies → rebuild_forecasts` (or trigger the workflow); then re-check counts and commit. Also refreshes `app/data/bei_smart_forecasting_chained.csv`.
-- **B. Ship NAFIS scraper** — model on `scrape_kamis.py`, cache per (commodity, month), emit long-format rows in the chain schema, add to the workflow.
+- **B. ~~NAFIS~~** — dead (see above). New-source review 2026-10-29 (scripts/experiments/exp6_new_sources.py): World Bank RTFP = copies of our FEWS/WFP + ML estimates (not integrated); FAO FPMA = FEWS mirror, integrated at lowest priority (adds Nairobi bread); NDMA = county averages upstream of FEWS (skip); KAMIS has nothing before 2021-05.
 - **C. Try Chronos-Bolt-base** — `rebuild_forecasts.py --chronos-model amazon/chronos-bolt-base`, measure with `diff_mape.py`.
 - Add the live Streamlit URL to README.
 
@@ -133,3 +133,10 @@ venv/Scripts/python.exe scripts/diff_mape.py
 # Serve dashboard
 venv/Scripts/python.exe -m streamlit run app/streamlit_app.py
 ```
+
+## 2026-10-29 (late) — new sources + goats
+- **Goats (KES per head)**: FEWS `ea` rows kept (`PER_HEAD` in build_chained_all.py, `unit="HEAD"`); exp6: 20/22 county series served at median 6.2% MAPE. App/chatbot label via `app/src/units.py::unit_label` ("head"/"kichwa").
+- **FEWS refresh**: workflow now re-downloads FEWS from fdw.fews.net each month (it was never refreshed; file had stopped at 2026-07).
+- **FAO FPMA**: `scripts/ingest_fpma.py --refresh` in the workflow; `load_fpma()` at lowest SOURCE_PRIORITY.
+- Workflow commit step does `git pull --rebase` before pushing so code pushes during a long rebuild don't reject the bot's push.
+- Needs one full workflow run to put goats/bread/fresh FEWS into app/data.

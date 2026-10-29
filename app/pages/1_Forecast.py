@@ -20,6 +20,7 @@ DATA_DIR = APP_DIR / "data"
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 
+from src.units import unit_label  # noqa: E402
 from src.ui import (  # noqa: E402
     confidence_badge,
     forecast_chart,
@@ -151,7 +152,7 @@ if current_price is not None:
 
 metric_cols[0].metric(
     f"Forecast at {horizon} months",
-    f"KES {forecast_at_horizon['forecast_price_kes']:.2f}",
+    f"KES {forecast_at_horizon['forecast_price_kes']:.2f}/{unit_label(commodity)}",
     delta=delta,
 )
 with metric_cols[1]:

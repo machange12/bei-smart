@@ -1,0 +1,27 @@
+commodity,market,pricetype,class,failed_before,rescue_source,n,first,last,stale,missing_pct,cv,test_new_src,test_orig_src,rows_new_src,strategy,test_mape,served,confidence,new_market,new_commodity,track
+Beans (dry),Kilifi,Retail,c_fresher,stale>12,WB_RTFP,126,2013-01,2026-05,4,21.7,22.9,12,0,55,ensemble,24.19,True,low,False,False,per_kg
+Beans (dry),Kitui,Retail,c_fresher,stale>12,WB_RTFP,209,2006-02,2026-05,4,14.3,31.8,12,0,45,ensemble,30.4,False,,False,False,per_kg
+Beans (dry),Taita Taveta,Retail,a_new_series,absent,WB_RTFP,126,2013-01,2026-05,4,21.7,20.9,12,0,126,ensemble,16.93,True,medium,False,False,per_kg
+Bread,Nairobi,Retail,a_new_series,absent,FAO_FPMA,249,2005-01,2026-09,0,4.6,26.1,12,0,249,ensemble,3.08,True,high,False,True,per_kg
+Goats,Baringo,Retail,goats_per_head,absent,,220,2008-01,2026-07,2,1.3,37.2,0,12,0,ensemble,3.36,True,high,False,True,per_head
+Goats,Embu-Mbeere,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,44.9,2,10,2,ensemble,7.98,True,high,False,True,per_head
+Goats,Garissa,Retail,goats_per_head,absent,FAO_FPMA,249,2006-01,2026-09,0,0.0,45.0,2,10,2,ensemble,10.54,True,medium,False,True,per_head
+Goats,Isiolo,Retail,goats_per_head,absent,FAO_FPMA,249,2006-01,2026-09,0,0.0,50.8,2,10,2,ensemble,3.98,True,high,False,True,per_head
+Goats,Kajiado,Retail,goats_per_head,absent,,220,2008-01,2026-07,2,1.3,55.5,0,12,0,ensemble,6.57,True,high,False,True,per_head
+Goats,Kilifi,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,50.1,2,10,2,ensemble,5.04,True,high,False,True,per_head
+Goats,Kitui,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,38.0,2,10,2,ensemble,7.05,True,high,False,True,per_head
+Goats,Kwale,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,59.8,2,10,2,ensemble,24.48,True,low,False,True,per_head
+Goats,Laikipia,Retail,goats_per_head,absent,,220,2008-01,2026-07,2,1.3,46.1,0,12,0,ensemble,4.64,True,high,False,True,per_head
+Goats,Lamu,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,42.9,2,10,2,ensemble,6.53,True,high,False,True,per_head
+Goats,Makueni,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,39.1,2,10,2,ensemble,7.34,True,high,False,True,per_head
+Goats,Mandera,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,49.0,2,10,2,ensemble,34.32,False,,False,True,per_head
+Goats,Marsabit,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,49.3,2,10,2,ensemble,5.57,True,high,False,True,per_head
+Goats,Meru,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,37.8,2,10,2,ensemble,32.76,False,,False,True,per_head
+Goats,Narok,Retail,goats_per_head,absent,,221,2008-01,2026-07,2,0.9,39.9,0,12,0,ensemble,5.35,True,high,False,True,per_head
+Goats,Samburu,Retail,goats_per_head,absent,,220,2008-01,2026-07,2,1.3,41.7,0,12,0,ensemble,3.09,True,high,False,True,per_head
+Goats,Taita Taveta,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,42.2,2,10,2,ensemble,9.13,True,high,False,True,per_head
+Goats,Tana River,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,37.9,2,10,2,ensemble,5.89,True,high,False,True,per_head
+Goats,Tharaka Nithi,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,52.8,2,10,2,ensemble,17.46,True,medium,False,True,per_head
+Goats,Turkana,Retail,goats_per_head,absent,FAO_FPMA,249,2006-01,2026-09,0,0.0,45.5,2,10,2,ensemble,4.92,True,high,False,True,per_head
+Goats,Wajir,Retail,goats_per_head,absent,FAO_FPMA,222,2008-01,2026-09,0,1.3,43.1,2,10,2,ensemble,18.09,True,medium,False,True,per_head
+Goats,West Pokot,Retail,goats_per_head,absent,,220,2008-01,2026-07,2,1.3,38.3,0,12,0,ensemble,5.63,True,high,False,True,per_head

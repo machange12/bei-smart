@@ -35,6 +35,21 @@ jobs:
           curl -sfL "$url" -o /tmp/wfp.csv
           test -s /tmp/wfp.csv && mv /tmp/wfp.csv data/raw/wfp_food_prices_ken.csv
 
+      - name: Fetch FEWS NET (public API)
+        continue-on-error: true   # falls back to the committed copy
+        run: |
+          curl -sfL --max-time 900 \
+            "https://fdw.fews.net/api/marketpricefacts.csv?country_code=KE&start_date=2006-01-01&end_date=$(date +%Y-12-31)" \
+            -o /tmp/fews.csv
+          # guard: right header and not a truncated pull (>= 95% of current rows)
+          head -1 /tmp/fews.csv | grep -q period_date
+          test $(wc -l < /tmp/fews.csv) -ge $(( $(wc -l < data/raw/fews_kenya_full.csv) * 95 / 100 ))
+          mv /tmp/fews.csv data/raw/fews_kenya_full.csv
+
+      - name: Fetch FAO FPMA
+        continue-on-error: true   # falls back to the committed copy
+        run: python scripts/ingest_fpma.py --refresh
+
       - name: Fetch external features
         run: python scripts/fetch_external_features.py
 
@@ -63,7 +78,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add app/data data/exports data/cleaned/bei_smart_forecasting_chained_all.csv \
-                  data/external data/raw/kamis_prices.csv data/raw/wfp_food_prices_ken.csv
+                  data/external data/raw/kamis_prices.csv data/raw/wfp_food_prices_ken.csv \
+                  data/raw/fews_kenya_full.csv data/raw/new_sources/fpma_kenya_long.csv
           git diff --cached --quiet && { echo "no changes"; exit 0; }
           git commit -m "data: monthly refresh $(date +%Y-%m-%d)"
+          git pull --rebase origin main   # code may have landed during the long rebuild
           git push

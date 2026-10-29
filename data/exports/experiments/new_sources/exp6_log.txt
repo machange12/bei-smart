@@ -1,0 +1,225 @@
+11:56:31 - cmdstanpy - INFO - Chain [1] start processing
+11:56:31 - cmdstanpy - INFO - Chain [1] done processing
+11:56:31 - cmdstanpy - INFO - Chain [1] start processing
+11:56:31 - cmdstanpy - INFO - Chain [1] done processing
+11:56:32 - cmdstanpy - INFO - Chain [1] start processing
+11:56:32 - cmdstanpy - INFO - Chain [1] done processing
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[aug] +1,115 rows ({'WB_RTFP': 816, 'FAO_FPMA': 299}), anchor 2026-09
+[screen] excluding 12 settlement markets (4,786 rows)
+[screen] excluding 12 settlement markets (4,806 rows)
+Loading weights:   0%|          | 0/143 [00:00<?, ?it/s]Loading weights:  67%|██████▋   | 96/143 [00:00<00:00, 952.87it/s]Loading weights: 100%|██████████| 143/143 [00:00<00:00, 1015.11it/s]
+[fit] 1/4 ('Beans (dry)', 'Kilifi', 'Retail') c_fresher -> ensemble 24.19
+11:57:14 - cmdstanpy - INFO - Chain [1] start processing
+11:57:14 - cmdstanpy - INFO - Chain [1] done processing
+11:57:14 - cmdstanpy - INFO - Chain [1] start processing
+11:57:15 - cmdstanpy - INFO - Chain [1] done processing
+11:57:15 - cmdstanpy - INFO - Chain [1] start processing
+11:57:15 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 2/4 ('Beans (dry)', 'Kitui', 'Retail') c_fresher -> ensemble 30.4
+11:57:37 - cmdstanpy - INFO - Chain [1] start processing
+11:57:37 - cmdstanpy - INFO - Chain [1] done processing
+11:57:38 - cmdstanpy - INFO - Chain [1] start processing
+11:57:38 - cmdstanpy - INFO - Chain [1] done processing
+11:57:38 - cmdstanpy - INFO - Chain [1] start processing
+11:57:38 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 3/4 ('Beans (dry)', 'Taita Taveta', 'Retail') a_new_series -> ensemble 16.93
+11:57:46 - cmdstanpy - INFO - Chain [1] start processing
+11:57:46 - cmdstanpy - INFO - Chain [1] done processing
+11:57:46 - cmdstanpy - INFO - Chain [1] start processing
+11:57:47 - cmdstanpy - INFO - Chain [1] done processing
+11:57:47 - cmdstanpy - INFO - Chain [1] start processing
+11:57:47 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 4/4 ('Bread', 'Nairobi', 'Retail') a_new_series -> ensemble 3.08
+11:58:05 - cmdstanpy - INFO - Chain [1] start processing
+11:58:05 - cmdstanpy - INFO - Chain [1] done processing
+11:58:06 - cmdstanpy - INFO - Chain [1] start processing
+11:58:06 - cmdstanpy - INFO - Chain [1] done processing
+11:58:06 - cmdstanpy - INFO - Chain [1] start processing
+11:58:06 - cmdstanpy - INFO - Chain [1] done processing
+[screen] excluding 0 settlement markets (0 rows)
+[fit] 1/22 ('Goats', 'Baringo', 'Retail') a_new_series -> ensemble 3.36
+11:58:28 - cmdstanpy - INFO - Chain [1] start processing
+11:58:28 - cmdstanpy - INFO - Chain [1] done processing
+11:58:28 - cmdstanpy - INFO - Chain [1] start processing
+11:58:29 - cmdstanpy - INFO - Chain [1] done processing
+11:58:29 - cmdstanpy - INFO - Chain [1] start processing
+11:58:29 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 2/22 ('Goats', 'Embu-Mbeere', 'Retail') a_new_series -> ensemble 7.98
+11:58:51 - cmdstanpy - INFO - Chain [1] start processing
+11:58:51 - cmdstanpy - INFO - Chain [1] done processing
+11:58:52 - cmdstanpy - INFO - Chain [1] start processing
+11:58:52 - cmdstanpy - INFO - Chain [1] done processing
+11:58:52 - cmdstanpy - INFO - Chain [1] start processing
+11:58:52 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 3/22 ('Goats', 'Garissa', 'Retail') a_new_series -> ensemble 10.54
+11:59:16 - cmdstanpy - INFO - Chain [1] start processing
+11:59:16 - cmdstanpy - INFO - Chain [1] done processing
+11:59:17 - cmdstanpy - INFO - Chain [1] start processing
+11:59:17 - cmdstanpy - INFO - Chain [1] done processing
+11:59:17 - cmdstanpy - INFO - Chain [1] start processing
+11:59:17 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 4/22 ('Goats', 'Isiolo', 'Retail') a_new_series -> ensemble 3.98
+11:59:43 - cmdstanpy - INFO - Chain [1] start processing
+11:59:43 - cmdstanpy - INFO - Chain [1] done processing
+11:59:44 - cmdstanpy - INFO - Chain [1] start processing
+11:59:44 - cmdstanpy - INFO - Chain [1] done processing
+11:59:44 - cmdstanpy - INFO - Chain [1] start processing
+11:59:44 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+[fit] 5/22 ('Goats', 'Kajiado', 'Retail') a_new_series -> ensemble 6.57
+12:00:14 - cmdstanpy - INFO - Chain [1] start processing
+12:00:14 - cmdstanpy - INFO - Chain [1] done processing
+12:00:14 - cmdstanpy - INFO - Chain [1] start processing
+12:00:14 - cmdstanpy - INFO - Chain [1] done processing
+12:00:15 - cmdstanpy - INFO - Chain [1] start processing
+12:00:15 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 6/22 ('Goats', 'Kilifi', 'Retail') a_new_series -> ensemble 4.08
+12:00:36 - cmdstanpy - INFO - Chain [1] start processing
+12:00:36 - cmdstanpy - INFO - Chain [1] done processing
+12:00:37 - cmdstanpy - INFO - Chain [1] start processing
+12:00:37 - cmdstanpy - INFO - Chain [1] done processing
+12:00:37 - cmdstanpy - INFO - Chain [1] start processing
+12:00:37 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 7/22 ('Goats', 'Kitui', 'Retail') a_new_series -> ensemble 7.05
+12:00:58 - cmdstanpy - INFO - Chain [1] start processing
+12:00:58 - cmdstanpy - INFO - Chain [1] done processing
+12:00:59 - cmdstanpy - INFO - Chain [1] start processing
+12:00:59 - cmdstanpy - INFO - Chain [1] done processing
+12:00:59 - cmdstanpy - INFO - Chain [1] start processing
+12:00:59 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 8/22 ('Goats', 'Kwale', 'Retail') a_new_series -> ensemble 24.48
+12:01:27 - cmdstanpy - INFO - Chain [1] start processing
+12:01:27 - cmdstanpy - INFO - Chain [1] done processing
+12:01:28 - cmdstanpy - INFO - Chain [1] start processing
+12:01:28 - cmdstanpy - INFO - Chain [1] done processing
+12:01:28 - cmdstanpy - INFO - Chain [1] start processing
+12:01:28 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 9/22 ('Goats', 'Laikipia', 'Retail') a_new_series -> ensemble 4.64
+12:01:49 - cmdstanpy - INFO - Chain [1] start processing
+12:01:49 - cmdstanpy - INFO - Chain [1] done processing
+12:01:50 - cmdstanpy - INFO - Chain [1] start processing
+12:01:50 - cmdstanpy - INFO - Chain [1] done processing
+12:01:50 - cmdstanpy - INFO - Chain [1] start processing
+12:01:50 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 10/22 ('Goats', 'Lamu', 'Retail') a_new_series -> ensemble 6.53
+12:02:11 - cmdstanpy - INFO - Chain [1] start processing
+12:02:11 - cmdstanpy - INFO - Chain [1] done processing
+12:02:11 - cmdstanpy - INFO - Chain [1] start processing
+12:02:11 - cmdstanpy - INFO - Chain [1] done processing
+12:02:12 - cmdstanpy - INFO - Chain [1] start processing
+12:02:12 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 11/22 ('Goats', 'Makueni', 'Retail') a_new_series -> ensemble 7.34
+12:02:36 - cmdstanpy - INFO - Chain [1] start processing
+12:02:36 - cmdstanpy - INFO - Chain [1] done processing
+12:02:36 - cmdstanpy - INFO - Chain [1] start processing
+12:02:36 - cmdstanpy - INFO - Chain [1] done processing
+12:02:37 - cmdstanpy - INFO - Chain [1] start processing
+12:02:37 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 12/22 ('Goats', 'Mandera', 'Retail') a_new_series -> ensemble 34.32
+12:03:00 - cmdstanpy - INFO - Chain [1] start processing
+12:03:00 - cmdstanpy - INFO - Chain [1] done processing
+12:03:00 - cmdstanpy - INFO - Chain [1] start processing
+12:03:00 - cmdstanpy - INFO - Chain [1] done processing
+12:03:01 - cmdstanpy - INFO - Chain [1] start processing
+12:03:01 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+[fit] 13/22 ('Goats', 'Marsabit', 'Retail') a_new_series -> ensemble 5.57
+12:03:26 - cmdstanpy - INFO - Chain [1] start processing
+12:03:26 - cmdstanpy - INFO - Chain [1] done processing
+12:03:26 - cmdstanpy - INFO - Chain [1] start processing
+12:03:26 - cmdstanpy - INFO - Chain [1] done processing
+12:03:27 - cmdstanpy - INFO - Chain [1] start processing
+12:03:27 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 14/22 ('Goats', 'Meru', 'Retail') a_new_series -> ensemble 32.76
+12:03:50 - cmdstanpy - INFO - Chain [1] start processing
+12:03:50 - cmdstanpy - INFO - Chain [1] done processing
+12:03:51 - cmdstanpy - INFO - Chain [1] start processing
+12:03:51 - cmdstanpy - INFO - Chain [1] done processing
+12:03:51 - cmdstanpy - INFO - Chain [1] start processing
+12:03:52 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 15/22 ('Goats', 'Narok', 'Retail') a_new_series -> ensemble 5.35
+12:04:19 - cmdstanpy - INFO - Chain [1] start processing
+12:04:19 - cmdstanpy - INFO - Chain [1] done processing
+12:04:20 - cmdstanpy - INFO - Chain [1] start processing
+12:04:20 - cmdstanpy - INFO - Chain [1] done processing
+12:04:20 - cmdstanpy - INFO - Chain [1] start processing
+12:04:20 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 16/22 ('Goats', 'Samburu', 'Retail') a_new_series -> ensemble 3.09
+12:04:43 - cmdstanpy - INFO - Chain [1] start processing
+12:04:43 - cmdstanpy - INFO - Chain [1] done processing
+12:04:44 - cmdstanpy - INFO - Chain [1] start processing
+12:04:44 - cmdstanpy - INFO - Chain [1] done processing
+12:04:44 - cmdstanpy - INFO - Chain [1] start processing
+12:04:44 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 17/22 ('Goats', 'Taita Taveta', 'Retail') a_new_series -> ensemble 9.13
+12:05:06 - cmdstanpy - INFO - Chain [1] start processing
+12:05:06 - cmdstanpy - INFO - Chain [1] done processing
+12:05:07 - cmdstanpy - INFO - Chain [1] start processing
+12:05:07 - cmdstanpy - INFO - Chain [1] done processing
+12:05:07 - cmdstanpy - INFO - Chain [1] start processing
+12:05:07 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 18/22 ('Goats', 'Tana River', 'Retail') a_new_series -> ensemble 5.89
+12:05:30 - cmdstanpy - INFO - Chain [1] start processing
+12:05:30 - cmdstanpy - INFO - Chain [1] done processing
+12:05:31 - cmdstanpy - INFO - Chain [1] start processing
+12:05:31 - cmdstanpy - INFO - Chain [1] done processing
+12:05:31 - cmdstanpy - INFO - Chain [1] start processing
+12:05:32 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 19/22 ('Goats', 'Tharaka Nithi', 'Retail') a_new_series -> ensemble 17.46
+12:05:54 - cmdstanpy - INFO - Chain [1] start processing
+12:05:54 - cmdstanpy - INFO - Chain [1] done processing
+12:05:55 - cmdstanpy - INFO - Chain [1] start processing
+12:05:55 - cmdstanpy - INFO - Chain [1] done processing
+12:05:55 - cmdstanpy - INFO - Chain [1] start processing
+12:05:55 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+[fit] 20/22 ('Goats', 'Turkana', 'Retail') a_new_series -> ensemble 4.92
+12:06:30 - cmdstanpy - INFO - Chain [1] start processing
+12:06:30 - cmdstanpy - INFO - Chain [1] done processing
+12:06:31 - cmdstanpy - INFO - Chain [1] start processing
+12:06:31 - cmdstanpy - INFO - Chain [1] done processing
+12:06:31 - cmdstanpy - INFO - Chain [1] start processing
+12:06:31 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 21/22 ('Goats', 'Wajir', 'Retail') a_new_series -> ensemble 18.09
+12:07:00 - cmdstanpy - INFO - Chain [1] start processing
+12:07:00 - cmdstanpy - INFO - Chain [1] done processing
+12:07:00 - cmdstanpy - INFO - Chain [1] start processing
+12:07:00 - cmdstanpy - INFO - Chain [1] done processing
+12:07:01 - cmdstanpy - INFO - Chain [1] start processing
+12:07:01 - cmdstanpy - INFO - Chain [1] done processing
+[fit] 22/22 ('Goats', 'West Pokot', 'Retail') a_new_series -> ensemble 5.63
+      commodity         market pricetype           class failed_before rescue_source    n     last  stale  missing_pct    cv  test_new_src  test_orig_src  rows_new_src  strategy  test_mape  served confidence  new_market  new_commodity     track
+0   Beans (dry)         Kilifi    Retail       c_fresher      stale>12       WB_RTFP  126  2026-05      4         21.7  22.9            12              0            55  ensemble      24.19    True        low       False          False    per_kg
+1   Beans (dry)          Kitui    Retail       c_fresher      stale>12       WB_RTFP  209  2026-05      4         14.3  31.8            12              0            45  ensemble      30.40   False        NaN       False          False    per_kg
+2   Beans (dry)   Taita Taveta    Retail    a_new_series        absent       WB_RTFP  126  2026-05      4         21.7  20.9            12              0           126  ensemble      16.93    True     medium       False          False    per_kg
+3         Bread        Nairobi    Retail    a_new_series        absent      FAO_FPMA  249  2026-09      0          4.6  26.1            12              0           249  ensemble       3.08    True       high       False           True    per_kg
+4         Goats        Baringo    Retail  goats_per_head        absent                220  2026-07      2          1.3  37.2             0             12             0  ensemble       3.36    True       high       False           True  per_head
+5         Goats    Embu-Mbeere    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  44.9             2             10             2  ensemble       7.98    True       high       False           True  per_head
+6         Goats        Garissa    Retail  goats_per_head        absent      FAO_FPMA  249  2026-09      0          0.0  45.0             2             10             2  ensemble      10.54    True     medium       False           True  per_head
+7         Goats         Isiolo    Retail  goats_per_head        absent      FAO_FPMA  249  2026-09      0          0.0  50.8             2             10             2  ensemble       3.98    True       high       False           True  per_head
+8         Goats        Kajiado    Retail  goats_per_head        absent                220  2026-07      2          1.3  55.5             0             12             0  ensemble       6.57    True       high       False           True  per_head
+9         Goats         Kilifi    Retail  goats_per_head        absent      FAO_FPMA  192  2026-09      0          4.5  44.2            12              0           192  ensemble       4.08    True       high       False           True  per_head
+10        Goats          Kitui    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  38.0             2             10             2  ensemble       7.05    True       high       False           True  per_head
+11        Goats          Kwale    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  59.8             2             10             2  ensemble      24.48    True        low       False           True  per_head
+12        Goats       Laikipia    Retail  goats_per_head        absent                220  2026-07      2          1.3  46.1             0             12             0  ensemble       4.64    True       high       False           True  per_head
+13        Goats           Lamu    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  42.9             2             10             2  ensemble       6.53    True       high       False           True  per_head
+14        Goats        Makueni    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  39.1             2             10             2  ensemble       7.34    True       high       False           True  per_head
+15        Goats        Mandera    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  49.0             2             10             2  ensemble      34.32   False        NaN       False           True  per_head
+16        Goats       Marsabit    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  49.3             2             10             2  ensemble       5.57    True       high       False           True  per_head
+17        Goats           Meru    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  37.8             2             10             2  ensemble      32.76   False        NaN       False           True  per_head
+18        Goats          Narok    Retail  goats_per_head        absent                221  2026-07      2          0.9  39.9             0             12             0  ensemble       5.35    True       high       False           True  per_head
+19        Goats        Samburu    Retail  goats_per_head        absent                220  2026-07      2          1.3  41.7             0             12             0  ensemble       3.09    True       high       False           True  per_head
+20        Goats   Taita Taveta    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  42.2             2             10             2  ensemble       9.13    True       high       False           True  per_head
+21        Goats     Tana River    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  37.9             2             10             2  ensemble       5.89    True       high       False           True  per_head
+22        Goats  Tharaka Nithi    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  52.8             2             10             2  ensemble      17.46    True     medium       False           True  per_head
+23        Goats        Turkana    Retail  goats_per_head        absent      FAO_FPMA  249  2026-09      0          0.0  45.5             2             10             2  ensemble       4.92    True       high       False           True  per_head
+24        Goats          Wajir    Retail  goats_per_head        absent      FAO_FPMA  222  2026-09      0          1.3  43.1             2             10             2  ensemble      18.09    True     medium       False           True  per_head
+25        Goats     West Pokot    Retail  goats_per_head        absent                220  2026-07      2          1.3  38.3             0             12             0  ensemble       5.63    True       high       False           True  per_head

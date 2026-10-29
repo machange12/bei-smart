@@ -10,6 +10,7 @@ it never supplies a number of its own.
 from __future__ import annotations
 
 from . import generate, lookup, router, vectorstore
+from src.units import unit_label
 
 
 def _confidence_label(status: str, test_mape: float | None) -> str | None:
@@ -95,12 +96,12 @@ def _answer_compare(question: str, entities: dict, language: str) -> dict:
     label = "Cheapest" if direction != "expensive" else "Most expensive"
     context = (
         f"Commodity: {result['commodity']}\n"
-        f"{label} market: {result['extreme_market']} at {result['extreme_price_kes']:.2f} KES/kg\n"
+        f"{label} market: {result['extreme_market']} at {result['extreme_price_kes']:.2f} KES/{unit_label(result['commodity'])}\n"
         f"Confidence statement to use verbatim: "
         f"{generate.confidence_words(result['test_mape'], language)}\n"
         f"All markets ranked by price ({direction} first): "
         + ", ".join(
-            f"{row['market']} {row['forecast_price_kes']:.2f} KES/kg"
+            f"{row['market']} {row['forecast_price_kes']:.2f} KES/{unit_label(result['commodity'])}"
             for row in result["ranked_markets"]
         )
     )
@@ -110,7 +111,7 @@ def _answer_compare(question: str, entities: dict, language: str) -> dict:
             if row["market"] == named_market:
                 context += (
                     f"\nSpecifically named market: {named_market} at "
-                    f"{row['forecast_price_kes']:.2f} KES/kg"
+                    f"{row['forecast_price_kes']:.2f} KES/{unit_label(result['commodity'])}"
                 )
                 break
     text = generate.generate_from_context(context, question, language, deterministic)
@@ -180,7 +181,7 @@ def _answer_alert(question: str, entities: dict, language: str) -> dict:
     deterministic = generate.build_anomaly_answer(result, language)
     context = (
         f"Commodity: {result['commodity']}\nMarket: {result['market']}\n"
-        f"Pricetype: {result['pricetype']}\nLatest price: {result['latest_price']:.2f} KES/kg\n"
+        f"Pricetype: {result['pricetype']}\nLatest price: {result['latest_price']:.2f} KES/{unit_label(result['commodity'])}\n"
         f"Anomaly status: {result['anomaly_status']}\n"
     )
     if volatility.get("status") == "found":
@@ -245,9 +246,9 @@ def _answer_seasonality(question: str, entities: dict, language: str) -> dict:
         f"Commodity: {result['commodity']}\nMarket: {result['market']}\n"
         f"Pricetype: {result['pricetype']}\n"
         f"Best month to sell (highest average price): month {result['best_month']}, "
-        f"avg {result['best_month_avg_price']:.2f} KES/kg\n"
+        f"avg {result['best_month_avg_price']:.2f} KES/{unit_label(result['commodity'])}\n"
         f"Worst month to sell (lowest average price): month {result['worst_month']}, "
-        f"avg {result['worst_month_avg_price']:.2f} KES/kg\n"
+        f"avg {result['worst_month_avg_price']:.2f} KES/{unit_label(result['commodity'])}\n"
         f"Based on {result['n_years']} years of history. This is a seasonal pattern from "
         f"actual past prices, not a forecast -- do not attach a confidence statement."
     )

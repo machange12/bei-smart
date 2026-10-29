@@ -15,6 +15,7 @@ from __future__ import annotations
 
 from . import llm
 from .lookup import MONTH_NAMES_EN, MONTH_NAMES_SW
+from src.units import unit_label
 
 SYSTEM_PROMPT = """You are the AgriPulse assistant, answering questions about Kenyan food prices.
 
@@ -204,7 +205,7 @@ def forecast_context(result: dict, language: str) -> str:
         f"Market: {result['market']}",
         f"Pricetype: {result['pricetype']}",
         f"Horizon: {result['horizon_months']} months",
-        f"Forecast price: {result['forecast_price_kes']:.2f} KES/kg "
+        f"Forecast price: {result['forecast_price_kes']:.2f} KES/{unit_label(result['commodity'], language)} "
         f"(range {result['forecast_lower']:.2f}-{result['forecast_upper']:.2f})",
         f"Confidence statement to use verbatim: {conf_words}",
     ]
@@ -227,7 +228,7 @@ def build_forecast_answer(result: dict, language: str, anomaly: dict | None = No
     against conceptually."""
     conf = confidence_words(result["test_mape"], language)
     price = result["forecast_price_kes"]
-    unit = "KES/kg"
+    unit = f"KES/{unit_label(result['commodity'], language)}"
 
     if language == "sw":
         base = (
@@ -252,9 +253,9 @@ def build_extreme_answer(result: dict, language: str) -> str:
     is_cheapest = result["direction"] != "expensive"
     if language == "sw":
         label = "nafuu zaidi" if is_cheapest else "ghali zaidi"
-        return f"Soko lenye bei {label} ya {result['commodity']} ni {market} kwa {price:.2f} KES/kg. {conf}."
+        return f"Soko lenye bei {label} ya {result['commodity']} ni {market} kwa {price:.2f} KES/{unit_label(result['commodity'], language)}. {conf}."
     label = "cheapest" if is_cheapest else "most expensive"
-    return f"The {label} market for {result['commodity']} is {market} at {price:.2f} KES/kg. {conf}."
+    return f"The {label} market for {result['commodity']} is {market} at {price:.2f} KES/{unit_label(result['commodity'], language)}. {conf}."
 
 
 def build_volatility_answer(result: dict, language: str) -> str:
@@ -278,20 +279,20 @@ def build_anomaly_answer(result: dict, language: str) -> str:
         if status == "NORMAL":
             return (
                 f"Bei ya {result['commodity']} {result['market']} ({result['pricetype']}) ni "
-                f"{price:.2f} KES/kg, ambayo ni ya kawaida."
+                f"{price:.2f} KES/{unit_label(result['commodity'], language)}, ambayo ni ya kawaida."
             )
         return (
             f"Bei ya {result['commodity']} {result['market']} ({result['pricetype']}) ni "
-            f"{price:.2f} KES/kg. Bei hii si ya kawaida (SPIKE)."
+            f"{price:.2f} KES/{unit_label(result['commodity'], language)}. Bei hii si ya kawaida (SPIKE)."
         )
     if status == "NORMAL":
         return (
             f"The price of {result['commodity']} in {result['market']} ({result['pricetype']}) "
-            f"is {price:.2f} KES/kg, which is within its normal range."
+            f"is {price:.2f} KES/{unit_label(result['commodity'], language)}, which is within its normal range."
         )
     return (
         f"The price of {result['commodity']} in {result['market']} ({result['pricetype']}) is "
-        f"{price:.2f} KES/kg. This is currently unusual (flagged as a SPIKE)."
+        f"{price:.2f} KES/{unit_label(result['commodity'], language)}. This is currently unusual (flagged as a SPIKE)."
     )
 
 
@@ -328,7 +329,7 @@ def historical_context(result: dict, language: str) -> str:
         f"Market: {result['market']}",
         f"Pricetype: {result['pricetype']}",
         f"Date of this actual observation: {result['date']}",
-        f"Observed price: {result['price_per_kg']:.2f} KES/kg",
+        f"Observed price: {result['price_per_kg']:.2f} KES/{unit_label(result['commodity'], language)}",
         "This is an actual recorded price, not a forecast -- do not attach a confidence statement to it.",
     ]
     return "\n".join(lines)
@@ -341,20 +342,20 @@ def build_history_answer(result: dict, language: str) -> str:
         if result["is_exact_period"]:
             return (
                 f"Bei ya {result['commodity']} {result['market']} ({result['pricetype']}) "
-                f"mnamo {date_str} ilikuwa KES {price:.2f}/kg."
+                f"mnamo {date_str} ilikuwa KES {price:.2f}/{unit_label(result['commodity'], language)}."
             )
         return (
             f"Bei ya mwisho iliyorekodiwa ya {result['commodity']} {result['market']} "
-            f"({result['pricetype']}) ilikuwa KES {price:.2f}/kg, mnamo {date_str}."
+            f"({result['pricetype']}) ilikuwa KES {price:.2f}/{unit_label(result['commodity'], language)}, mnamo {date_str}."
         )
     if result["is_exact_period"]:
         return (
             f"The price of {result['commodity']} in {result['market']} ({result['pricetype']}) "
-            f"in {date_str} was KES {price:.2f}/kg."
+            f"in {date_str} was KES {price:.2f}/{unit_label(result['commodity'], language)}."
         )
     return (
         f"The most recently recorded price of {result['commodity']} in {result['market']} "
-        f"({result['pricetype']}) was KES {price:.2f}/kg, as of {date_str}."
+        f"({result['pricetype']}) was KES {price:.2f}/{unit_label(result['commodity'], language)}, as of {date_str}."
     )
 
 
@@ -364,14 +365,14 @@ def build_seasonality_answer(result: dict, language: str) -> str:
     if language == "sw":
         return (
             f"Kwa {result['commodity']} {result['market']} ({result['pricetype']}), bei huwa "
-            f"juu zaidi mnamo {best_name} (wastani KES {result['best_month_avg_price']:.2f}/kg) "
-            f"na chini zaidi mnamo {worst_name} (wastani KES {result['worst_month_avg_price']:.2f}/kg), "
+            f"juu zaidi mnamo {best_name} (wastani KES {result['best_month_avg_price']:.2f}/{unit_label(result['commodity'], language)}) "
+            f"na chini zaidi mnamo {worst_name} (wastani KES {result['worst_month_avg_price']:.2f}/{unit_label(result['commodity'], language)}), "
             f"kulingana na miaka {result['n_years']} ya data. {best_name} ndio wakati mzuri zaidi wa kuuza."
         )
     return (
         f"For {result['commodity']} in {result['market']} ({result['pricetype']}), prices are "
-        f"typically highest in {best_name} (averaging KES {result['best_month_avg_price']:.2f}/kg) "
-        f"and lowest in {worst_name} (averaging KES {result['worst_month_avg_price']:.2f}/kg), "
+        f"typically highest in {best_name} (averaging KES {result['best_month_avg_price']:.2f}/{unit_label(result['commodity'], language)}) "
+        f"and lowest in {worst_name} (averaging KES {result['worst_month_avg_price']:.2f}/{unit_label(result['commodity'], language)}), "
         f"based on {result['n_years']} years of data. {best_name} is the best time to sell."
     )
 

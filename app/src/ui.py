@@ -15,6 +15,8 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
+from src.units import unit_label
+
 APP_NAME = "AgriPulse"
 APP_TAGLINE = "Kenya food price forecasting and market intelligence."
 
@@ -43,6 +45,7 @@ DATA_SOURCES = (
     "WFP (via HDX)",
     "KAMIS (Kenya Ministry of Agriculture)",
     "KNBS",
+    "FAO GIEWS FPMA",
     "ERA5 (via the World Bank Climate Change Knowledge Portal)",
 )
 
@@ -362,6 +365,7 @@ def forecast_chart(history: pd.DataFrame, forecast: pd.DataFrame) -> go.Figure:
     yellow forecast line, shaded confidence band, horizontal gridlines only.
     No title inside the figure -- callers use st.subheader above it instead
     so typography stays consistent with the rest of the page."""
+    unit = unit_label(forecast["commodity"].iloc[0]) if "commodity" in forecast and len(forecast) else "kg"
     fig = go.Figure()
 
     fig.add_trace(
@@ -415,7 +419,7 @@ def forecast_chart(history: pd.DataFrame, forecast: pd.DataFrame) -> go.Figure:
         margin=dict(t=10, b=10, l=10, r=10),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0),
         xaxis=dict(showgrid=False, title=None),
-        yaxis=dict(showgrid=True, gridcolor=GREY, title="Price (KES)"),
+        yaxis=dict(showgrid=True, gridcolor=GREY, title=f"Price (KES/{unit})"),
         plot_bgcolor="white",
         paper_bgcolor="white",
     )

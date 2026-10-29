@@ -35,6 +35,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 WFP = ROOT / "data" / "raw" / "wfp_food_prices_ken.csv"
 FEWS = ROOT / "data" / "raw" / "fews_kenya_full.csv"
 KAMIS = ROOT / "data" / "raw" / "kamis_prices.csv"
+FPMA = ROOT / "data" / "raw" / "new_sources" / "fpma_kenya_long.csv"
 OUT = ROOT / "data" / "cleaned" / "bei_smart_forecasting_chained_all.csv"
 
 SCHEMA = [
@@ -44,7 +45,12 @@ SCHEMA = [
 
 # Priority: earlier = wins on conflict. Matches existing chained CSV where
 # a (commodity, market, pricetype, date) row's `source` reflects who won.
-SOURCE_PRIORITY = ["WFP_SUPP", "FEWS", "WFP", "KAMIS", "KNBS"]
+# FAO_FPMA last: it mirrors FEWS, so it only fills months FEWS hasn't published yet.
+SOURCE_PRIORITY = ["WFP_SUPP", "FEWS", "WFP", "KAMIS", "KNBS", "FAO_FPMA"]
+
+# Priced per animal, not per kg. Their price_per_kg column holds KES/head and
+# rows carry unit="HEAD" so the app can label them.
+PER_HEAD = {"Goats"}
 
 # WFP ships some prices as "per 90 KG bag" or "per 50 KG bag" — normalize to
 # KES/KG. Litres left alone (oils/kerosene use volume and don't compare to
@@ -273,6 +279,8 @@ def load_fews() -> pd.DataFrame:
             return None
         return float(m.group(1)) if m.group(1) else 1.0
     df["kg_per_unit"] = unit_norm.map(_kg)
+    df["_head"] = unit_norm.eq("ea") & df["product"].map(_canonical).isin(PER_HEAD)
+    df.loc[df["_head"], "kg_per_unit"] = 1.0  # one animal
     df = df[df["kg_per_unit"].notna()].copy()
     df["price_per_kg"] = df["value"] / df["kg_per_unit"]
     df["commodity"] = df["product"].map(_canonical)
@@ -283,7 +291,7 @@ def load_fews() -> pd.DataFrame:
         "admin1", "latitude", "longitude",
     ]].copy()
     out["source"] = "FEWS"
-    out["unit"] = "KG"
+    out["unit"] = np.where(df["_head"], "HEAD", "KG")
     out["category"] = np.nan  # not present in FEWS
     return out
 
@@ -360,10 +368,25 @@ def load_knbs_retail() -> pd.DataFrame:
     )
 
 
+def load_fpma() -> pd.DataFrame:
+    """FAO GIEWS FPMA (scripts/ingest_fpma.py). Mostly a FEWS mirror that
+    publishes a month or two sooner; also the only source of Nairobi bread."""
+    if not FPMA.exists():
+        print(f"[info] {FPMA.relative_to(ROOT)} not found - run scripts/ingest_fpma.py first")
+        return pd.DataFrame(columns=SCHEMA)
+    df = pd.read_csv(FPMA, parse_dates=["date"])
+    df = df[df["unit"].eq("KG") & df["market"].ne("National Average")]
+    out = df.rename(columns={"admin_1": "admin1", "price": "price_per_kg"})
+    out["source"] = "FAO_FPMA"
+    out["latitude"] = out["longitude"] = out["category"] = np.nan
+    return out[SCHEMA].reset_index(drop=True)
+
+
 def stitch(wfp: pd.DataFrame, fews: pd.DataFrame, kamis: pd.DataFrame,
            wfp_supp: pd.DataFrame | None = None,
-           knbs: pd.DataFrame | None = None) -> pd.DataFrame:
-    parts = [p for p in [wfp, fews, kamis, wfp_supp, knbs] if p is not None]
+           knbs: pd.DataFrame | None = None,
+           fpma: pd.DataFrame | None = None) -> pd.DataFrame:
+    parts = [p for p in [wfp, fews, kamis, wfp_supp, knbs, fpma] if p is not None]
     all_ = pd.concat(parts, ignore_index=True)
     all_ = all_[all_["price_per_kg"].gt(0)]
     # Priority: FEWS first, WFP second, KAMIS third. Keep first per group.
@@ -395,7 +418,7 @@ def demo() -> None:
     for name, part in (("WFP", wfp), ("FEWS", fews), ("KAMIS", kamis),
                        ("WFP_SUPP", supp), ("KNBS", knbs)):
         assert list(part.columns) == SCHEMA if not part.empty else True, f"{name} schema drift"
-    out = stitch(wfp, fews, kamis, supp, knbs)
+    out = stitch(wfp, fews, kamis, supp, knbs, load_fpma())
     assert not out.empty, "stitcher produced empty output"
     assert list(out.columns) == SCHEMA, "output schema drift"
     assert out["price_per_kg"].gt(0).all()
@@ -415,8 +438,9 @@ if __name__ == "__main__":
     kamis = load_kamis(); print(f"[load] KAMIS      {len(kamis):>7,} rows")
     supp = load_wholesale_supplement(); print(f"[load] WFP_SUPP   {len(supp):>7,} rows")
     knbs = load_knbs_retail();          print(f"[load] KNBS       {len(knbs):>7,} rows")
+    fpma = load_fpma();                 print(f"[load] FAO_FPMA   {len(fpma):>7,} rows")
 
-    out = stitch(wfp, fews, kamis, supp, knbs)
+    out = stitch(wfp, fews, kamis, supp, knbs, fpma)
     report(out)
 
     if args.demo:

@@ -30,3 +30,7 @@ data/raw/_knbs_sample.pdf
 
 # Experiment chain snapshot (23 MB, regenerable)
 data/exports/experiments/chain_snapshot.csv
+
+# New-source pulls: raw caches are regenerable; only the FPMA long CSV is a pipeline input
+data/raw/new_sources/_*/
+data/raw/new_sources/rtfp_kenya_long.csv

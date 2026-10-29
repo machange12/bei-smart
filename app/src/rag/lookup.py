@@ -32,6 +32,8 @@ SWAHILI_COMMODITY_MAP = {
     "mtama": "Sorghum",
     "unga": "Maize meal",
     "viazi": "Potatoes (Irish)",  # exact name as monitored in alerts/volatility
+    "mbuzi": "Goats",  # priced per animal (src/units.py)
+    "mkate": "Bread",
 }
 
 # Major Kenyan counties/towns that this system does NOT cover. Listing them
