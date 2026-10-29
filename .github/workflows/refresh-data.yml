@@ -39,7 +39,7 @@ jobs:
         run: python scripts/fetch_external_features.py
 
       - name: Scrape KAMIS (recent years, merged into history)
-        run: python scripts/scrape_kamis.py --years $(date -d '-2 months' +%Y) $(date +%Y)
+        run: python scripts/scrape_kamis.py --discover --years $(date -d '-2 months' +%Y) $(date +%Y)
 
       - name: Build chain
         run: python scripts/build_chained_all.py

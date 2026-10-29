@@ -114,9 +114,24 @@ PRODUCTS = {
     212: "Honey",             218: "Tea",             219: "Coffee",
 }
 
+# On the site but deliberately not scraped (numeric placeholders, obscure fish,
+# hides/skins, fertilizer, cotton). `--discover` picks up anything not here or in PRODUCTS.
+SKIPPED_IDS = {
+    10, 50, 79, 81, 82, 83, 84, 85, 86, 87, 89, 90, 91, 93, 94, 95, 96, 100, 102,
+    103, 107, 108, 109, 111, 112, 113, 114, 115, 117, 190, 191, 192, 193, 194, 195,
+    196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 213, 214, 215, 216,
+    217, 223, 224, 247, 248, 261, 500, 1500, 3000,
+}
+
 # strings like "42.22/Kg" or "3,500.00/Bag(90 Kg)" — pull the leading number
 # and the unit token after the slash.
 _PRICE_RE = re.compile(r"^\s*([\d,]+(?:\.\d+)?)\s*/\s*(.+?)\s*$")
+
+
+def _live_products() -> dict[int, str]:
+    html = requests.get(f"{BASE}/site/market_search", timeout=60).text
+    pairs = re.findall(r'<option value="(\d+)">([^<]+)</option>', html)
+    return {int(pid): name.strip() for pid, name in pairs if int(pid) > 0}
 
 
 def dump_product_ids() -> dict[int, str]:
@@ -125,9 +140,7 @@ def dump_product_ids() -> dict[int, str]:
     Used to refresh PRODUCTS when the site adds/renames/removes commodities.
     Prints a diff vs the current PRODUCTS dict so we can hand-edit.
     """
-    html = requests.get(f"{BASE}/site/market_search", timeout=60).text
-    pairs = re.findall(r'<option value="(\d+)">([^<]+)</option>', html)
-    live = {int(pid): name.strip() for pid, name in pairs if int(pid) > 0}
+    live = _live_products()
     current = set(PRODUCTS)
     added = sorted(set(live) - current)
     removed = sorted(current - set(live))
@@ -300,6 +313,8 @@ if __name__ == "__main__":
     ap.add_argument("--years", type=int, nargs="+", default=list(range(2015, 2027)))
     ap.add_argument("--products", type=int, nargs="+", default=list(PRODUCTS.keys()))
     ap.add_argument("--sleep", type=float, default=1.0)
+    ap.add_argument("--discover", action="store_true",
+                    help="also scrape (full history) any live product not in PRODUCTS/SKIPPED_IDS")
     args = ap.parse_args()
 
     if args.demo:
@@ -311,6 +326,16 @@ if __name__ == "__main__":
         sys.exit(0)
 
     df = scrape(args.products, args.years, sleep=args.sleep)
+    if args.discover:
+        new = {p: n for p, n in _live_products().items()
+               if p not in PRODUCTS and p not in SKIPPED_IDS}
+        print(f"[discover] {len(new)} new products: {new}")
+        if new:
+            PRODUCTS.update(new)
+            # ponytail: new products get full history so they can clear the
+            # forecaster's 36-obs gate; add them to PRODUCTS (or SKIPPED_IDS) by hand later.
+            df = pd.concat([df, scrape(new, range(2015, pd.Timestamp.now().year + 1),
+                                       sleep=args.sleep)], ignore_index=True)
     # Merge into existing pull: freshly scraped rows win, years not re-scraped
     # survive, and a KAMIS outage can't wipe history (CI scrapes recent years only).
     if OUT.exists():
