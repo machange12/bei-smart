@@ -11,13 +11,13 @@ _Updated automatically by the monthly refresh on 2026-10-29._
 
 | | |
 |---|---|
-| Forecast series served | 286 (260 with data under 6 months old) |
+| Forecast series served | 270 (249 with data under 6 months old) |
 | Markets / commodities | 84 / 23 |
 | Regions covered | 8 of 8 |
-| Median forecast error (12-month holdout) | 9.8% |
-| Models serving | Chronos 179, blend of 2 models 107 |
-| Price alerts | 35 spikes, 9 crashes across 814 monitored series |
-| Prices observed up to | September 2026 |
+| Median forecast error (12-month holdout) | 9.7% |
+| Models serving | Chronos 163, blend of 2 models 107 |
+| Price alerts | 33 spikes, 7 crashes across 789 monitored series |
+| Prices observed up to | October 2026 |
 <!-- stats:end -->
 
 ## What it does
