@@ -212,10 +212,13 @@ def _fetch_product_month(product_id: int, year: int, month: int, sleep: float = 
         return pd.DataFrame()
 
 
-def _fetch_product_year(product_id: int, year: int, sleep: float = 1.0) -> pd.DataFrame:
-    """Concat 12 monthly pulls for one (product, year)."""
+def _fetch_product_year(product_id: int, year: int, sleep: float = 1.0,
+                        only: set[tuple[int, int]] | None = None) -> pd.DataFrame:
+    """Concat the monthly pulls for one (product, year); `only` limits to those (year, month)s."""
     parts = []
     for m in range(1, 13):
+        if only is not None and (year, m) not in only:
+            continue
         try:
             parts.append(_fetch_product_month(product_id, year, m, sleep=sleep))
         except requests.HTTPError as e:
@@ -260,13 +263,14 @@ def _to_long(daily: pd.DataFrame, canonical_name: str) -> pd.DataFrame:
     return pd.concat(rows, ignore_index=True) if rows else pd.DataFrame()
 
 
-def scrape(product_ids: Iterable[int], years: Iterable[int], sleep: float = 1.0) -> pd.DataFrame:
+def scrape(product_ids: Iterable[int], years: Iterable[int], sleep: float = 1.0,
+           only: set[tuple[int, int]] | None = None) -> pd.DataFrame:
     frames = []
     for pid in product_ids:
         name = PRODUCTS.get(pid, f"product_{pid}")
         for year in years:
             try:
-                raw = _fetch_product_year(pid, year, sleep=sleep)
+                raw = _fetch_product_year(pid, year, sleep=sleep, only=only)
             except requests.HTTPError as e:
                 print(f"[warn] {name} {year}: HTTP {e.response.status_code}", file=sys.stderr)
                 continue
@@ -313,6 +317,9 @@ if __name__ == "__main__":
     ap.add_argument("--years", type=int, nargs="+", default=list(range(2015, 2027)))
     ap.add_argument("--products", type=int, nargs="+", default=list(PRODUCTS.keys()))
     ap.add_argument("--sleep", type=float, default=1.0)
+    ap.add_argument("--months-back", type=int, default=None,
+                    help="only (re)scrape the last N months -- the monthly CI run; "
+                         "a clean runner has no cache, so whole years take hours")
     ap.add_argument("--discover", action="store_true",
                     help="also scrape (full history) any live product not in PRODUCTS/SKIPPED_IDS")
     args = ap.parse_args()
@@ -325,7 +332,12 @@ if __name__ == "__main__":
         dump_product_ids()
         sys.exit(0)
 
-    df = scrape(args.products, args.years, sleep=args.sleep)
+    only = None
+    if args.months_back:
+        recent = pd.period_range(end=pd.Timestamp.now().to_period("M"), periods=args.months_back, freq="M")
+        only = {(p.year, p.month) for p in recent}
+        args.years = sorted({y for y, _ in only})
+    df = scrape(args.products, args.years, sleep=args.sleep, only=only)
     if args.discover:
         new = {p: n for p, n in _live_products().items()
                if p not in PRODUCTS and p not in SKIPPED_IDS}
