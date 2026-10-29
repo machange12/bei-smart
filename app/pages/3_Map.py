@@ -12,7 +12,7 @@ APP_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = APP_DIR / "data"
 KENYA_CENTER = [0.0236, 37.9062]
 
-STATUS_COLORS = {"NORMAL": "green", "SPIKE": "red"}
+STATUS_COLORS = {"NORMAL": "green", "SPIKE": "red", "CRASH": "blue"}
 
 if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
@@ -43,7 +43,10 @@ def load_market_status() -> pd.DataFrame:
     anomalies = pd.read_csv(DATA_DIR / "price_anomalies.csv")
 
     def worst_status(statuses: pd.Series) -> str:
-        return "SPIKE" if (statuses == "SPIKE").any() else "NORMAL"
+        for status in ("SPIKE", "CRASH"):
+            if (statuses == status).any():
+                return status
+        return "NORMAL"
 
     grouped = anomalies.groupby("market").agg(
         status=("status", worst_status),
@@ -58,7 +61,7 @@ market_status = load_market_status()
 markets = markets.merge(market_status, on="market", how="left")
 
 st.subheader("Market Map")
-st.markdown("🟢 Normal · 🔴 Spike · ⚪ No anomaly data")
+st.markdown("🟢 Normal · 🔴 Spike (unusually high) · 🔵 Crash (unusually low) · ⚪ No anomaly data")
 
 m = folium.Map(location=KENYA_CENTER, zoom_start=6)
 

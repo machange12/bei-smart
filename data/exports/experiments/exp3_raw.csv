@@ -1,0 +1,1337 @@
+commodity,market,pricetype,arm,ds,h,ape
+Wheat,Kibuye,Retail,plain,2025-09-01,1,6.7752798998369
+Wheat,Kibuye,Retail,plain,2025-11-01,3,17.335588490096605
+Wheat,Kibuye,Retail,plain,2025-12-01,4,8.526031061442305
+Wheat,Kibuye,Retail,a3,2025-09-01,1,6.567519962361162
+Wheat,Kibuye,Retail,a3,2025-11-01,3,17.055883060724515
+Wheat,Kibuye,Retail,a3,2025-12-01,4,6.669903613681089
+Wheat,Kibuye,Retail,a6,2025-09-01,1,18.039398698824982
+Wheat,Kibuye,Retail,a6,2025-11-01,3,14.764939569571059
+Wheat,Kibuye,Retail,a6,2025-12-01,4,9.780963565890204
+Wheat,Kibuye,Retail,a3_a6,2025-09-01,1,18.39869377280556
+Wheat,Kibuye,Retail,a3_a6,2025-11-01,3,14.116270765925048
+Wheat,Kibuye,Retail,a3_a6,2025-12-01,4,6.324477144007437
+Wheat,Kibuye,Retail,plain,2026-01-01,1,45.48898338608156
+Wheat,Kibuye,Retail,plain,2026-02-01,2,34.92493654184289
+Wheat,Kibuye,Retail,plain,2026-03-01,3,40.500444218568724
+Wheat,Kibuye,Retail,a3,2026-01-01,1,43.62506546729015
+Wheat,Kibuye,Retail,a3,2026-02-01,2,36.38565903062578
+Wheat,Kibuye,Retail,a3,2026-03-01,3,37.860313681889714
+Wheat,Kibuye,Retail,a6,2026-01-01,1,42.493296968374054
+Wheat,Kibuye,Retail,a6,2026-02-01,2,35.73480722652743
+Wheat,Kibuye,Retail,a6,2026-03-01,3,30.779143640132904
+Wheat,Kibuye,Retail,a3_a6,2026-01-01,1,39.27445502918337
+Wheat,Kibuye,Retail,a3_a6,2026-02-01,2,38.117256507046065
+Wheat,Kibuye,Retail,a3_a6,2026-03-01,3,25.599736239711056
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2024-03-01,1,15.356478534908533
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2024-04-01,2,18.805654436909336
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2024-05-01,3,82.20687229421287
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2024-03-01,1,17.575921491771282
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2024-04-01,2,11.178170788949288
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2024-05-01,3,100.41533721243472
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2024-03-01,1,53.006730463528875
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2024-04-01,2,16.146613730232744
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2024-05-01,3,8.48744969492436
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2024-03-01,1,26.394120058629568
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2024-04-01,2,25.738601736511256
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2024-05-01,3,26.549675676622037
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2024-06-01,1,57.772346911851656
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2024-07-01,2,63.90004516623268
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2024-08-01,3,12.672811583435205
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2024-06-01,1,57.49235680665573
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2024-07-01,2,55.05490807194374
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2024-08-01,3,10.259321667328807
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2024-06-01,1,29.075384078301862
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2024-07-01,2,17.00734247857288
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2024-08-01,3,47.352511406095715
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2024-06-01,1,25.625293756374777
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2024-07-01,2,57.92544773656163
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2024-08-01,3,41.934451537210165
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2024-09-01,1,30.493625959338527
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2024-10-01,2,80.31377874984605
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2025-06-01,10,68.51135392115093
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2024-09-01,1,22.23258655944073
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2024-10-01,2,77.00235384720638
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2025-06-01,10,65.86446038639406
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2024-09-01,1,22.84800167112919
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2024-10-01,2,129.63603555705086
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2025-06-01,10,101.31101189869449
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2024-09-01,1,7.4541448423806695
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2024-10-01,2,134.1718412486972
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2025-06-01,10,90.30869748796444
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2025-07-01,1,71.0977316539897
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2025-08-01,2,66.66359395556066
+Beans red haricot (wairimu),Chuka,Wholesale,plain,2025-09-01,3,70.48356147878164
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2025-07-01,1,113.51448643943004
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2025-08-01,2,95.94697069070979
+Beans red haricot (wairimu),Chuka,Wholesale,a3,2025-09-01,3,76.27276620811526
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2025-07-01,1,64.89788777923017
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2025-08-01,2,83.58006795550122
+Beans red haricot (wairimu),Chuka,Wholesale,a6,2025-09-01,3,51.10735117561552
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2025-07-01,1,100.4152937410621
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2025-08-01,2,104.69957196783581
+Beans red haricot (wairimu),Chuka,Wholesale,a3_a6,2025-09-01,3,57.07482367545828
+Rice,Chuka,Wholesale,plain,2024-02-01,1,32.188267192441735
+Rice,Chuka,Wholesale,plain,2024-03-01,2,14.852744563177076
+Rice,Chuka,Wholesale,plain,2024-04-01,3,52.296568039011404
+Rice,Chuka,Wholesale,a3,2024-02-01,1,51.21771462100517
+Rice,Chuka,Wholesale,a3,2024-03-01,2,13.005699388571598
+Rice,Chuka,Wholesale,a3,2024-04-01,3,65.47889499696231
+Rice,Chuka,Wholesale,a6,2024-02-01,1,25.486581326901646
+Rice,Chuka,Wholesale,a6,2024-03-01,2,6.445427456476113
+Rice,Chuka,Wholesale,a6,2024-04-01,3,54.54784695834244
+Rice,Chuka,Wholesale,a3_a6,2024-02-01,1,43.655246491278064
+Rice,Chuka,Wholesale,a3_a6,2024-03-01,2,7.3597016908410975
+Rice,Chuka,Wholesale,a3_a6,2024-04-01,3,66.8269139608509
+Rice,Chuka,Wholesale,plain,2024-05-01,1,30.7499602191914
+Rice,Chuka,Wholesale,plain,2024-06-01,2,9.758266941665969
+Rice,Chuka,Wholesale,plain,2024-07-01,3,18.32524669439337
+Rice,Chuka,Wholesale,a3,2024-05-01,1,27.94998049761082
+Rice,Chuka,Wholesale,a3,2024-06-01,2,8.433111236721798
+Rice,Chuka,Wholesale,a3,2024-07-01,3,8.39320275718374
+Rice,Chuka,Wholesale,a6,2024-05-01,1,81.42183466675719
+Rice,Chuka,Wholesale,a6,2024-06-01,2,3.081766473010131
+Rice,Chuka,Wholesale,a6,2024-07-01,3,7.5200147531751735
+Rice,Chuka,Wholesale,a3_a6,2024-05-01,1,78.46898361262716
+Rice,Chuka,Wholesale,a3_a6,2024-06-01,2,1.6044162176773797
+Rice,Chuka,Wholesale,a3_a6,2024-07-01,3,18.269657813370443
+Rice,Chuka,Wholesale,plain,2024-08-01,1,26.784323799944094
+Rice,Chuka,Wholesale,plain,2024-09-01,2,8.29736805377166
+Rice,Chuka,Wholesale,plain,2024-10-01,3,19.51856296850658
+Rice,Chuka,Wholesale,a3,2024-08-01,1,19.00513414576548
+Rice,Chuka,Wholesale,a3,2024-09-01,2,5.233774295637065
+Rice,Chuka,Wholesale,a3,2024-10-01,3,21.09322523721208
+Rice,Chuka,Wholesale,a6,2024-08-01,1,33.410617209582114
+Rice,Chuka,Wholesale,a6,2024-09-01,2,4.480173416724439
+Rice,Chuka,Wholesale,a6,2024-10-01,3,50.281826127174924
+Rice,Chuka,Wholesale,a3_a6,2024-08-01,1,25.375977374430835
+Rice,Chuka,Wholesale,a3_a6,2024-09-01,2,2.4465296484167105
+Rice,Chuka,Wholesale,a3_a6,2024-10-01,3,45.806445188598815
+Rice,Chuka,Wholesale,plain,2025-06-01,1,18.40455357782552
+Rice,Chuka,Wholesale,plain,2025-07-01,2,14.69657782274412
+Rice,Chuka,Wholesale,plain,2025-09-01,4,15.06502853390379
+Rice,Chuka,Wholesale,a3,2025-06-01,1,21.347753113290636
+Rice,Chuka,Wholesale,a3,2025-07-01,2,8.919953831308655
+Rice,Chuka,Wholesale,a3,2025-09-01,4,14.00755268249263
+Rice,Chuka,Wholesale,a6,2025-06-01,1,18.90148411810856
+Rice,Chuka,Wholesale,a6,2025-07-01,2,14.58029226326284
+Rice,Chuka,Wholesale,a6,2025-09-01,4,14.618944161857842
+Rice,Chuka,Wholesale,a3_a6,2025-06-01,1,22.851804628799588
+Rice,Chuka,Wholesale,a3_a6,2025-07-01,2,8.410060705165236
+Rice,Chuka,Wholesale,a3_a6,2025-09-01,4,12.949127009642606
+Beans (mixed),Sotik,Retail,plain,2025-04-01,1,8.264856718239757
+Beans (mixed),Sotik,Retail,plain,2025-05-01,2,7.120101013930487
+Beans (mixed),Sotik,Retail,plain,2025-06-01,3,6.75936000733081
+Beans (mixed),Sotik,Retail,a3,2025-04-01,1,4.972170070959346
+Beans (mixed),Sotik,Retail,a3,2025-05-01,2,10.628369167374085
+Beans (mixed),Sotik,Retail,a3,2025-06-01,3,4.4944249288819345
+Beans (mixed),Sotik,Retail,a6,2025-04-01,1,7.1488580949832405
+Beans (mixed),Sotik,Retail,a6,2025-05-01,2,8.306316654979524
+Beans (mixed),Sotik,Retail,a6,2025-06-01,3,7.713005698280647
+Beans (mixed),Sotik,Retail,a3_a6,2025-04-01,1,3.4926453680697294
+Beans (mixed),Sotik,Retail,a3_a6,2025-05-01,2,12.203251358985225
+Beans (mixed),Sotik,Retail,a3_a6,2025-06-01,3,5.439401835594013
+Beans (mixed),Sotik,Retail,plain,2025-07-01,1,8.972482826460416
+Beans (mixed),Sotik,Retail,plain,2025-08-01,2,6.249406673122868
+Beans (mixed),Sotik,Retail,plain,2025-09-01,3,12.766110070889011
+Beans (mixed),Sotik,Retail,a3,2025-07-01,1,4.584785461485875
+Beans (mixed),Sotik,Retail,a3,2025-08-01,2,5.574492867741079
+Beans (mixed),Sotik,Retail,a3,2025-09-01,3,12.329580457845305
+Beans (mixed),Sotik,Retail,a6,2025-07-01,1,7.624405580386264
+Beans (mixed),Sotik,Retail,a6,2025-08-01,2,4.840841977675813
+Beans (mixed),Sotik,Retail,a6,2025-09-01,3,14.244833158050904
+Beans (mixed),Sotik,Retail,a3_a6,2025-07-01,1,3.2574390562894218
+Beans (mixed),Sotik,Retail,a3_a6,2025-08-01,2,4.249540509168961
+Beans (mixed),Sotik,Retail,a3_a6,2025-09-01,3,13.91588174652862
+Beans (mixed),Sotik,Retail,plain,2025-10-01,1,5.964849187629905
+Beans (mixed),Sotik,Retail,plain,2026-01-01,4,11.942439252825498
+Beans (mixed),Sotik,Retail,plain,2026-02-01,5,5.995012175761878
+Beans (mixed),Sotik,Retail,a3,2025-10-01,1,5.499069851436751
+Beans (mixed),Sotik,Retail,a3,2026-01-01,4,10.532230941539108
+Beans (mixed),Sotik,Retail,a3,2026-02-01,5,12.990136565834169
+Beans (mixed),Sotik,Retail,a6,2025-10-01,1,4.062259900335632
+Beans (mixed),Sotik,Retail,a6,2026-01-01,4,12.407750083508102
+Beans (mixed),Sotik,Retail,a6,2026-02-01,5,6.242454619387591
+Beans (mixed),Sotik,Retail,a3_a6,2025-10-01,1,4.020135511791434
+Beans (mixed),Sotik,Retail,a3_a6,2026-01-01,4,10.929187702028646
+Beans (mixed),Sotik,Retail,a3_a6,2026-02-01,5,13.022403956065848
+Beans (mixed),Sotik,Retail,plain,2026-03-01,1,3.1426268889347497
+Beans (mixed),Sotik,Retail,a3,2026-03-01,1,1.9063621250051597
+Beans (mixed),Sotik,Retail,a6,2026-03-01,1,2.5404711586412247
+Beans (mixed),Sotik,Retail,a3_a6,2026-03-01,1,1.5174775404611678
+Maize (white),Makueni,Retail,plain,2025-08-01,1,4.075889202823101
+Maize (white),Makueni,Retail,plain,2025-09-01,2,5.596866042951143
+Maize (white),Makueni,Retail,plain,2025-10-01,3,3.6614174177504184
+Maize (white),Makueni,Retail,a3,2025-08-01,1,2.081524062441087
+Maize (white),Makueni,Retail,a3,2025-09-01,2,2.926317650545565
+Maize (white),Makueni,Retail,a3,2025-10-01,3,1.4951633205556878
+Maize (white),Makueni,Retail,a6,2025-08-01,1,8.303645123193728
+Maize (white),Makueni,Retail,a6,2025-09-01,2,2.4414743423845016
+Maize (white),Makueni,Retail,a6,2025-10-01,3,3.050889981113831
+Maize (white),Makueni,Retail,a3_a6,2025-08-01,1,6.0827906934108
+Maize (white),Makueni,Retail,a3_a6,2025-09-01,2,0.31316974244287044
+Maize (white),Makueni,Retail,a3_a6,2025-10-01,3,1.0816750612838963
+Maize (white),Makueni,Retail,plain,2025-11-01,1,3.35400499950775
+Maize (white),Makueni,Retail,plain,2025-12-01,2,7.418862503518217
+Maize (white),Makueni,Retail,plain,2026-01-01,3,2.3413105076228504
+Maize (white),Makueni,Retail,a3,2025-11-01,1,1.4755074012822231
+Maize (white),Makueni,Retail,a3,2025-12-01,2,6.418134774577284
+Maize (white),Makueni,Retail,a3,2026-01-01,3,3.3633943813047837
+Maize (white),Makueni,Retail,a6,2025-11-01,1,2.238834380711666
+Maize (white),Makueni,Retail,a6,2025-12-01,2,5.340649118375311
+Maize (white),Makueni,Retail,a6,2026-01-01,3,3.605687850568466
+Maize (white),Makueni,Retail,a3_a6,2025-11-01,1,0.06860025641364231
+Maize (white),Makueni,Retail,a3_a6,2025-12-01,2,3.9005154243730673
+Maize (white),Makueni,Retail,a3_a6,2026-01-01,3,4.936821715507034
+Maize (white),Makueni,Retail,plain,2026-02-01,1,2.633862773588718
+Maize (white),Makueni,Retail,plain,2026-03-01,2,7.397952411511848
+Maize (white),Makueni,Retail,a3,2026-02-01,1,10.197130352857346
+Maize (white),Makueni,Retail,a3,2026-03-01,2,7.3270219382951325
+Maize (white),Makueni,Retail,a6,2026-02-01,1,5.237718366970254
+Maize (white),Makueni,Retail,a6,2026-03-01,2,8.528121643759148
+Maize (white),Makueni,Retail,a3_a6,2026-02-01,1,5.909769209636673
+Maize (white),Makueni,Retail,a3_a6,2026-03-01,2,7.955187418247764
+Maize,Kisumu,Wholesale,plain,2025-10-01,1,13.629086108067956
+Maize,Kisumu,Wholesale,plain,2025-11-01,2,17.48772960199775
+Maize,Kisumu,Wholesale,plain,2025-12-01,3,7.961385595389333
+Maize,Kisumu,Wholesale,a3,2025-10-01,1,10.998683596690551
+Maize,Kisumu,Wholesale,a3,2025-11-01,2,14.027058377461296
+Maize,Kisumu,Wholesale,a3,2025-12-01,3,9.355379096335486
+Maize,Kisumu,Wholesale,a6,2025-10-01,1,23.24222110107456
+Maize,Kisumu,Wholesale,a6,2025-11-01,2,15.370480041552955
+Maize,Kisumu,Wholesale,a6,2025-12-01,3,9.873352577771078
+Maize,Kisumu,Wholesale,a3_a6,2025-10-01,1,21.384858879342218
+Maize,Kisumu,Wholesale,a3_a6,2025-11-01,2,13.410912725330807
+Maize,Kisumu,Wholesale,a3_a6,2025-12-01,3,12.205158738347563
+Maize,Kisumu,Wholesale,plain,2026-01-01,1,2.356099260940729
+Maize,Kisumu,Wholesale,plain,2026-02-01,2,0.5493420345613155
+Maize,Kisumu,Wholesale,plain,2026-03-01,3,2.075557346357335
+Maize,Kisumu,Wholesale,a3,2026-01-01,1,1.2296064051549718
+Maize,Kisumu,Wholesale,a3,2026-02-01,2,9.448989768098068
+Maize,Kisumu,Wholesale,a3,2026-03-01,3,5.424627371327224
+Maize,Kisumu,Wholesale,a6,2026-01-01,1,0.3011606764564347
+Maize,Kisumu,Wholesale,a6,2026-02-01,2,2.931612328440955
+Maize,Kisumu,Wholesale,a6,2026-03-01,3,2.1416590688652923
+Maize,Kisumu,Wholesale,a3_a6,2026-01-01,1,0.5727689020420643
+Maize,Kisumu,Wholesale,a3_a6,2026-02-01,2,7.100521361245085
+Maize,Kisumu,Wholesale,a3_a6,2026-03-01,3,0.003375407131923617
+Maize meal,Nairobi,Retail,plain,2025-08-01,1,16.396490708625468
+Maize meal,Nairobi,Retail,plain,2025-09-01,2,7.749973081664034
+Maize meal,Nairobi,Retail,plain,2025-10-01,3,16.973172952438713
+Maize meal,Nairobi,Retail,a3,2025-08-01,1,7.804642593785732
+Maize meal,Nairobi,Retail,a3,2025-09-01,2,6.055764236315534
+Maize meal,Nairobi,Retail,a3,2025-10-01,3,15.743534692012714
+Maize meal,Nairobi,Retail,a6,2025-08-01,1,18.248208480130504
+Maize meal,Nairobi,Retail,a6,2025-09-01,2,7.99931698741113
+Maize meal,Nairobi,Retail,a6,2025-10-01,3,18.44596322905732
+Maize meal,Nairobi,Retail,a3_a6,2025-08-01,1,10.932484511019927
+Maize meal,Nairobi,Retail,a3_a6,2025-09-01,2,6.573236851000876
+Maize meal,Nairobi,Retail,a3_a6,2025-10-01,3,17.32659801173229
+Maize meal,Nairobi,Retail,plain,2025-11-01,1,1.8239594514835853
+Maize meal,Nairobi,Retail,plain,2025-12-01,2,0.2539859693541029
+Maize meal,Nairobi,Retail,plain,2026-01-01,3,1.593922480554225
+Maize meal,Nairobi,Retail,a3,2025-11-01,1,0.7025639562716635
+Maize meal,Nairobi,Retail,a3,2025-12-01,2,4.651140980608768
+Maize meal,Nairobi,Retail,a3,2026-01-01,3,1.8884876175866854
+Maize meal,Nairobi,Retail,a6,2025-11-01,1,5.476182194409937
+Maize meal,Nairobi,Retail,a6,2025-12-01,2,0.5052115436906746
+Maize meal,Nairobi,Retail,a6,2026-01-01,3,1.7775835861890286
+Maize meal,Nairobi,Retail,a3_a6,2025-11-01,1,6.246533989346421
+Maize meal,Nairobi,Retail,a3_a6,2025-12-01,2,2.597497432184599
+Maize meal,Nairobi,Retail,a3_a6,2026-01-01,3,0.056413391185315326
+Maize meal,Nairobi,Retail,plain,2026-02-01,1,3.7864270176031347
+Maize meal,Nairobi,Retail,plain,2026-03-01,2,0.18526000441056906
+Maize meal,Nairobi,Retail,a3,2026-02-01,1,14.555469236985557
+Maize meal,Nairobi,Retail,a3,2026-03-01,2,1.546098472193708
+Maize meal,Nairobi,Retail,a6,2026-02-01,1,0.7546490028170949
+Maize meal,Nairobi,Retail,a6,2026-03-01,2,2.194509174202388
+Maize meal,Nairobi,Retail,a3_a6,2026-02-01,1,10.845615216998631
+Maize meal,Nairobi,Retail,a3_a6,2026-03-01,2,2.174203189876473
+Beans (mixed),Gakoromere,Retail,plain,2025-05-01,1,5.855743122571444
+Beans (mixed),Gakoromere,Retail,plain,2025-06-01,2,1.7722525186910074
+Beans (mixed),Gakoromere,Retail,plain,2025-07-01,3,0.1056290828825677
+Beans (mixed),Gakoromere,Retail,a3,2025-05-01,1,9.35439318156238
+Beans (mixed),Gakoromere,Retail,a3,2025-06-01,2,0.44694912475711845
+Beans (mixed),Gakoromere,Retail,a3,2025-07-01,3,4.847249418659483
+Beans (mixed),Gakoromere,Retail,a6,2025-05-01,1,10.222934443903512
+Beans (mixed),Gakoromere,Retail,a6,2025-06-01,2,6.504964054850477
+Beans (mixed),Gakoromere,Retail,a6,2025-07-01,3,0.21731671717358414
+Beans (mixed),Gakoromere,Retail,a3_a6,2025-05-01,1,13.759069029198209
+Beans (mixed),Gakoromere,Retail,a3_a6,2025-06-01,2,5.395343407760376
+Beans (mixed),Gakoromere,Retail,a3_a6,2025-07-01,3,4.841220969436359
+Beans (mixed),Gakoromere,Retail,plain,2025-08-01,1,2.1375289393540333
+Beans (mixed),Gakoromere,Retail,plain,2025-09-01,2,0.8526335591162747
+Beans (mixed),Gakoromere,Retail,plain,2025-10-01,3,0.13122491728866845
+Beans (mixed),Gakoromere,Retail,a3,2025-08-01,1,0.20869994381499068
+Beans (mixed),Gakoromere,Retail,a3,2025-09-01,2,0.11665752256947469
+Beans (mixed),Gakoromere,Retail,a3,2025-10-01,3,1.5827651048518834
+Beans (mixed),Gakoromere,Retail,a6,2025-08-01,1,2.1665134057133457
+Beans (mixed),Gakoromere,Retail,a6,2025-09-01,2,2.6532926975657545
+Beans (mixed),Gakoromere,Retail,a6,2025-10-01,3,6.284687025624638
+Beans (mixed),Gakoromere,Retail,a3_a6,2025-08-01,1,4.1530052521310115
+Beans (mixed),Gakoromere,Retail,a3_a6,2025-09-01,2,2.107311804827187
+Beans (mixed),Gakoromere,Retail,a3_a6,2025-10-01,3,7.425438301954261
+Beans (mixed),Gakoromere,Retail,plain,2026-01-01,1,9.470730352193293
+Beans (mixed),Gakoromere,Retail,plain,2026-02-01,2,9.127017942183533
+Beans (mixed),Gakoromere,Retail,plain,2026-03-01,3,4.500466262514891
+Beans (mixed),Gakoromere,Retail,a3,2026-01-01,1,6.6619666688850625
+Beans (mixed),Gakoromere,Retail,a3,2026-02-01,2,12.75334085974357
+Beans (mixed),Gakoromere,Retail,a3,2026-03-01,3,5.063107019280444
+Beans (mixed),Gakoromere,Retail,a6,2026-01-01,1,11.659655807973397
+Beans (mixed),Gakoromere,Retail,a6,2026-02-01,2,10.406972397045774
+Beans (mixed),Gakoromere,Retail,a6,2026-03-01,3,2.770788702371005
+Beans (mixed),Gakoromere,Retail,a3_a6,2026-01-01,1,9.01693292223094
+Beans (mixed),Gakoromere,Retail,a3_a6,2026-02-01,2,13.133671727064916
+Beans (mixed),Gakoromere,Retail,a3_a6,2026-03-01,3,3.233562738097371
+Maize (white),Taita Taveta,Retail,plain,2025-08-01,1,10.685622414809234
+Maize (white),Taita Taveta,Retail,plain,2025-09-01,2,6.678606183484691
+Maize (white),Taita Taveta,Retail,plain,2025-10-01,3,11.4523783172587
+Maize (white),Taita Taveta,Retail,a3,2025-08-01,1,10.686880376621069
+Maize (white),Taita Taveta,Retail,a3,2025-09-01,2,5.629110584861985
+Maize (white),Taita Taveta,Retail,a3,2025-10-01,3,11.813195313404774
+Maize (white),Taita Taveta,Retail,a6,2025-08-01,1,15.6015652412371
+Maize (white),Taita Taveta,Retail,a6,2025-09-01,2,1.2521683772116619
+Maize (white),Taita Taveta,Retail,a6,2025-10-01,3,3.970513204577423
+Maize (white),Taita Taveta,Retail,a3_a6,2025-08-01,1,15.060289232231764
+Maize (white),Taita Taveta,Retail,a3_a6,2025-09-01,2,1.059419572363788
+Maize (white),Taita Taveta,Retail,a3_a6,2025-10-01,3,4.82960073573983
+Maize (white),Taita Taveta,Retail,plain,2025-11-01,1,11.595977796059058
+Maize (white),Taita Taveta,Retail,plain,2025-12-01,2,12.26219164990282
+Maize (white),Taita Taveta,Retail,plain,2026-01-01,3,6.924655326013555
+Maize (white),Taita Taveta,Retail,a3,2025-11-01,1,12.60946046748833
+Maize (white),Taita Taveta,Retail,a3,2025-12-01,2,13.527519293842222
+Maize (white),Taita Taveta,Retail,a3,2026-01-01,3,0.6837174358887437
+Maize (white),Taita Taveta,Retail,a6,2025-11-01,1,11.751195395605704
+Maize (white),Taita Taveta,Retail,a6,2025-12-01,2,10.698066660957437
+Maize (white),Taita Taveta,Retail,a6,2026-01-01,3,7.651273279865592
+Maize (white),Taita Taveta,Retail,a3_a6,2025-11-01,1,12.070089247160908
+Maize (white),Taita Taveta,Retail,a3_a6,2025-12-01,2,11.37288673181265
+Maize (white),Taita Taveta,Retail,a3_a6,2026-01-01,3,1.5257998844599234
+Maize (white),Taita Taveta,Retail,plain,2026-02-01,1,3.5697156606467715
+Maize (white),Taita Taveta,Retail,plain,2026-03-01,2,1.0801679123109602
+Maize (white),Taita Taveta,Retail,a3,2026-02-01,1,12.472881986313517
+Maize (white),Taita Taveta,Retail,a3,2026-03-01,2,0.6493931492954389
+Maize (white),Taita Taveta,Retail,a6,2026-02-01,1,4.341413852137902
+Maize (white),Taita Taveta,Retail,a6,2026-03-01,2,0.12359168716550915
+Maize (white),Taita Taveta,Retail,a3_a6,2026-02-01,1,11.146170749649317
+Maize (white),Taita Taveta,Retail,a3_a6,2026-03-01,2,1.3917695986680731
+Green maize,Ngurubani,Retail,plain,2025-10-01,1,16.788031759712112
+Green maize,Ngurubani,Retail,plain,2025-11-01,2,39.55305660322245
+Green maize,Ngurubani,Retail,plain,2025-12-01,3,39.297192139439616
+Green maize,Ngurubani,Retail,a3,2025-10-01,1,24.393944300105865
+Green maize,Ngurubani,Retail,a3,2025-11-01,2,48.91479236050458
+Green maize,Ngurubani,Retail,a3,2025-12-01,3,47.25463482966521
+Green maize,Ngurubani,Retail,a6,2025-10-01,1,28.786401527730426
+Green maize,Ngurubani,Retail,a6,2025-11-01,2,39.04381731659474
+Green maize,Ngurubani,Retail,a6,2025-12-01,3,39.46382814891225
+Green maize,Ngurubani,Retail,a3_a6,2025-10-01,1,31.526446033050103
+Green maize,Ngurubani,Retail,a3_a6,2025-11-01,2,44.61366764945486
+Green maize,Ngurubani,Retail,a3_a6,2025-12-01,3,44.803741630779115
+Green maize,Ngurubani,Retail,plain,2026-01-01,1,10.846283406427943
+Green maize,Ngurubani,Retail,plain,2026-02-01,2,15.12474632198351
+Green maize,Ngurubani,Retail,plain,2026-03-01,3,41.48604647747426
+Green maize,Ngurubani,Retail,a3,2026-01-01,1,7.990075440803224
+Green maize,Ngurubani,Retail,a3,2026-02-01,2,45.527724679626544
+Green maize,Ngurubani,Retail,a3,2026-03-01,3,44.92362429606693
+Green maize,Ngurubani,Retail,a6,2026-01-01,1,17.837496168772276
+Green maize,Ngurubani,Retail,a6,2026-02-01,2,24.139402907016247
+Green maize,Ngurubani,Retail,a6,2026-03-01,3,40.7310217645775
+Green maize,Ngurubani,Retail,a3_a6,2026-01-01,1,1.3539929047790196
+Green maize,Ngurubani,Retail,a3_a6,2026-02-01,2,44.84887197760102
+Green maize,Ngurubani,Retail,a3_a6,2026-03-01,3,42.921652730074534
+Maize,Maua,Wholesale,plain,2025-10-01,1,5.646206792647703
+Maize,Maua,Wholesale,plain,2025-11-01,2,6.0827495424083935
+Maize,Maua,Wholesale,plain,2025-12-01,3,45.362238732376994
+Maize,Maua,Wholesale,a3,2025-10-01,1,15.167638159388334
+Maize,Maua,Wholesale,a3,2025-11-01,2,2.521360404929979
+Maize,Maua,Wholesale,a3,2025-12-01,3,43.99415777572469
+Maize,Maua,Wholesale,a6,2025-10-01,1,30.31912781657479
+Maize,Maua,Wholesale,a6,2025-11-01,2,2.6743422032920563
+Maize,Maua,Wholesale,a6,2025-12-01,3,35.15716669751106
+Maize,Maua,Wholesale,a3_a6,2025-10-01,1,37.92058356070751
+Maize,Maua,Wholesale,a3_a6,2025-11-01,2,2.69470019602079
+Maize,Maua,Wholesale,a3_a6,2025-12-01,3,32.47278494529775
+Maize,Maua,Wholesale,plain,2026-01-01,1,36.5561287514268
+Maize,Maua,Wholesale,plain,2026-02-01,2,21.169481514314374
+Maize,Maua,Wholesale,plain,2026-03-01,3,1.6150380271759344
+Maize,Maua,Wholesale,a3,2026-01-01,1,16.403223208600508
+Maize,Maua,Wholesale,a3,2026-02-01,2,44.93742646332695
+Maize,Maua,Wholesale,a3,2026-03-01,3,1.796603573591362
+Maize,Maua,Wholesale,a6,2026-01-01,1,37.32772346892713
+Maize,Maua,Wholesale,a6,2026-02-01,2,26.278305893649918
+Maize,Maua,Wholesale,a6,2026-03-01,3,9.501286977182286
+Maize,Maua,Wholesale,a3_a6,2026-01-01,1,17.02153383828825
+Maize,Maua,Wholesale,a3_a6,2026-02-01,2,46.36100656385245
+Maize,Maua,Wholesale,a3_a6,2026-03-01,3,6.2622566981202485
+Sorghum,Muhoroni,Wholesale,plain,2025-06-01,1,1.003169994224843
+Sorghum,Muhoroni,Wholesale,plain,2025-07-01,2,13.971554548635066
+Sorghum,Muhoroni,Wholesale,plain,2025-09-01,4,12.647984895627982
+Sorghum,Muhoroni,Wholesale,a3,2025-06-01,1,9.430665832893187
+Sorghum,Muhoroni,Wholesale,a3,2025-07-01,2,19.171903123111722
+Sorghum,Muhoroni,Wholesale,a3,2025-09-01,4,10.830912357050265
+Sorghum,Muhoroni,Wholesale,a6,2025-06-01,1,1.4491359274979723
+Sorghum,Muhoroni,Wholesale,a6,2025-07-01,2,11.006054098336104
+Sorghum,Muhoroni,Wholesale,a6,2025-09-01,4,12.156611635479782
+Sorghum,Muhoroni,Wholesale,a3_a6,2025-06-01,1,7.631845239505491
+Sorghum,Muhoroni,Wholesale,a3_a6,2025-07-01,2,19.03249496404264
+Sorghum,Muhoroni,Wholesale,a3_a6,2025-09-01,4,11.964448657536064
+Sorghum,Muhoroni,Wholesale,plain,2025-11-01,1,4.076954765671475
+Sorghum,Muhoroni,Wholesale,plain,2026-01-01,3,7.180688236954796
+Sorghum,Muhoroni,Wholesale,plain,2026-02-01,4,16.49206621859997
+Sorghum,Muhoroni,Wholesale,a3,2025-11-01,1,3.8738122878286485
+Sorghum,Muhoroni,Wholesale,a3,2026-01-01,3,8.764109309618915
+Sorghum,Muhoroni,Wholesale,a3,2026-02-01,4,15.718651577847856
+Sorghum,Muhoroni,Wholesale,a6,2025-11-01,1,8.512499138747886
+Sorghum,Muhoroni,Wholesale,a6,2026-01-01,3,11.188107630875301
+Sorghum,Muhoroni,Wholesale,a6,2026-02-01,4,18.420803944139944
+Sorghum,Muhoroni,Wholesale,a3_a6,2025-11-01,1,8.23478009473226
+Sorghum,Muhoroni,Wholesale,a3_a6,2026-01-01,3,12.489720516069502
+Sorghum,Muhoroni,Wholesale,a3_a6,2026-02-01,4,17.22887734045807
+Sorghum,Muhoroni,Wholesale,plain,2026-03-01,1,15.845249900264541
+Sorghum,Muhoroni,Wholesale,a3,2026-03-01,1,14.810821184044121
+Sorghum,Muhoroni,Wholesale,a6,2026-03-01,1,10.926432952271677
+Sorghum,Muhoroni,Wholesale,a3_a6,2026-03-01,1,11.632379578248505
+Beans (mixed),Turbo,Retail,plain,2025-05-01,1,35.292188608090655
+Beans (mixed),Turbo,Retail,plain,2025-06-01,2,57.01991043866895
+Beans (mixed),Turbo,Retail,plain,2025-07-01,3,31.654056362105138
+Beans (mixed),Turbo,Retail,a3,2025-05-01,1,34.59920042053761
+Beans (mixed),Turbo,Retail,a3,2025-06-01,2,59.36003852269338
+Beans (mixed),Turbo,Retail,a3,2025-07-01,3,28.84590806908384
+Beans (mixed),Turbo,Retail,a6,2025-05-01,1,35.97744679053939
+Beans (mixed),Turbo,Retail,a6,2025-06-01,2,56.31326268860235
+Beans (mixed),Turbo,Retail,a6,2025-07-01,3,31.06931486612058
+Beans (mixed),Turbo,Retail,a3_a6,2025-05-01,1,35.272335432316396
+Beans (mixed),Turbo,Retail,a3_a6,2025-06-01,2,58.39282390137562
+Beans (mixed),Turbo,Retail,a3_a6,2025-07-01,3,28.9507305710699
+Beans (mixed),Turbo,Retail,plain,2025-08-01,1,0.3641915647549518
+Beans (mixed),Turbo,Retail,plain,2025-09-01,2,9.476756988256644
+Beans (mixed),Turbo,Retail,plain,2025-10-01,3,18.999207152881265
+Beans (mixed),Turbo,Retail,a3,2025-08-01,1,0.9495717619063888
+Beans (mixed),Turbo,Retail,a3,2025-09-01,2,9.177455866690961
+Beans (mixed),Turbo,Retail,a3,2025-10-01,3,18.162322812032457
+Beans (mixed),Turbo,Retail,a6,2025-08-01,1,1.7026716671990405
+Beans (mixed),Turbo,Retail,a6,2025-09-01,2,8.509316734408603
+Beans (mixed),Turbo,Retail,a6,2025-10-01,3,22.184000813784003
+Beans (mixed),Turbo,Retail,a3_a6,2025-08-01,1,0.5150486819905451
+Beans (mixed),Turbo,Retail,a3_a6,2025-09-01,2,8.424157616841269
+Beans (mixed),Turbo,Retail,a3_a6,2025-10-01,3,21.066987962710023
+Beans (mixed),Turbo,Retail,plain,2026-01-01,1,19.34396376608093
+Beans (mixed),Turbo,Retail,plain,2026-02-01,2,17.806963068383038
+Beans (mixed),Turbo,Retail,plain,2026-03-01,3,16.780173165950504
+Beans (mixed),Turbo,Retail,a3,2026-01-01,1,18.582533650528124
+Beans (mixed),Turbo,Retail,a3,2026-02-01,2,18.72781130138162
+Beans (mixed),Turbo,Retail,a3,2026-03-01,3,16.38498647323788
+Beans (mixed),Turbo,Retail,a6,2026-01-01,1,18.39547658391239
+Beans (mixed),Turbo,Retail,a6,2026-02-01,2,16.783245318611115
+Beans (mixed),Turbo,Retail,a6,2026-03-01,3,16.52370486370117
+Beans (mixed),Turbo,Retail,a3_a6,2026-01-01,1,18.082909230987557
+Beans (mixed),Turbo,Retail,a3_a6,2026-02-01,2,17.93203574936168
+Beans (mixed),Turbo,Retail,a3_a6,2026-03-01,3,16.372891524292207
+Maize (white),Embu-Mbeere,Retail,plain,2025-08-01,1,1.184934670207543
+Maize (white),Embu-Mbeere,Retail,plain,2025-09-01,2,5.997682578531658
+Maize (white),Embu-Mbeere,Retail,plain,2025-10-01,3,5.703967361531504
+Maize (white),Embu-Mbeere,Retail,a3,2025-08-01,1,6.794724086726703
+Maize (white),Embu-Mbeere,Retail,a3,2025-09-01,2,8.98843569211689
+Maize (white),Embu-Mbeere,Retail,a3,2025-10-01,3,8.80486934505055
+Maize (white),Embu-Mbeere,Retail,a6,2025-08-01,1,11.71954726803196
+Maize (white),Embu-Mbeere,Retail,a6,2025-09-01,2,0.8509597266327477
+Maize (white),Embu-Mbeere,Retail,a6,2025-10-01,3,1.6848707277180157
+Maize (white),Embu-Mbeere,Retail,a3_a6,2025-08-01,1,13.736222228823488
+Maize (white),Embu-Mbeere,Retail,a3_a6,2025-09-01,2,1.2146660703727856
+Maize (white),Embu-Mbeere,Retail,a3_a6,2025-10-01,3,3.9292647162861014
+Maize (white),Embu-Mbeere,Retail,plain,2025-11-01,1,18.847610005548006
+Maize (white),Embu-Mbeere,Retail,plain,2025-12-01,2,6.300414175465237
+Maize (white),Embu-Mbeere,Retail,plain,2026-01-01,3,10.175882282886919
+Maize (white),Embu-Mbeere,Retail,a3,2025-11-01,1,18.22479969115234
+Maize (white),Embu-Mbeere,Retail,a3,2025-12-01,2,0.16195127787349708
+Maize (white),Embu-Mbeere,Retail,a3,2026-01-01,3,27.410391764550017
+Maize (white),Embu-Mbeere,Retail,a6,2025-11-01,1,23.22004886282049
+Maize (white),Embu-Mbeere,Retail,a6,2025-12-01,2,7.508056196882228
+Maize (white),Embu-Mbeere,Retail,a6,2026-01-01,3,8.812430759492942
+Maize (white),Embu-Mbeere,Retail,a3_a6,2025-11-01,1,22.15941836332489
+Maize (white),Embu-Mbeere,Retail,a3_a6,2025-12-01,2,2.049538490628449
+Maize (white),Embu-Mbeere,Retail,a3_a6,2026-01-01,3,23.62411675310095
+Maize (white),Embu-Mbeere,Retail,plain,2026-02-01,1,7.91672589266187
+Maize (white),Embu-Mbeere,Retail,plain,2026-03-01,2,19.301447370568614
+Maize (white),Embu-Mbeere,Retail,a3,2026-02-01,1,16.262459263921443
+Maize (white),Embu-Mbeere,Retail,a3,2026-03-01,2,18.912883525060785
+Maize (white),Embu-Mbeere,Retail,a6,2026-02-01,1,8.555167273161548
+Maize (white),Embu-Mbeere,Retail,a6,2026-03-01,2,25.667883379421486
+Maize (white),Embu-Mbeere,Retail,a3_a6,2026-02-01,1,11.776485632554028
+Maize (white),Embu-Mbeere,Retail,a3_a6,2026-03-01,2,24.26927563897441
+Sorghum,Nairobi,Wholesale,plain,2025-05-01,1,8.182578368885903
+Sorghum,Nairobi,Wholesale,plain,2025-06-01,2,5.488715455748973
+Sorghum,Nairobi,Wholesale,plain,2025-07-01,3,4.654418914892554
+Sorghum,Nairobi,Wholesale,a3,2025-05-01,1,7.834505345084743
+Sorghum,Nairobi,Wholesale,a3,2025-06-01,2,4.958610487724718
+Sorghum,Nairobi,Wholesale,a3,2025-07-01,3,5.34457129653579
+Sorghum,Nairobi,Wholesale,a6,2025-05-01,1,7.6470087550423145
+Sorghum,Nairobi,Wholesale,a6,2025-06-01,2,4.537353953190248
+Sorghum,Nairobi,Wholesale,a6,2025-07-01,3,1.8870593168851226
+Sorghum,Nairobi,Wholesale,a3_a6,2025-05-01,1,7.168723870232746
+Sorghum,Nairobi,Wholesale,a3_a6,2025-06-01,2,4.263190141959947
+Sorghum,Nairobi,Wholesale,a3_a6,2025-07-01,3,2.414465037979987
+Sorghum,Nairobi,Wholesale,plain,2025-08-01,1,4.988522382311659
+Sorghum,Nairobi,Wholesale,plain,2025-09-01,2,5.79536255240856
+Sorghum,Nairobi,Wholesale,plain,2025-10-01,3,2.2793794377792036
+Sorghum,Nairobi,Wholesale,a3,2025-08-01,1,3.923209746294149
+Sorghum,Nairobi,Wholesale,a3,2025-09-01,2,5.5201295989870305
+Sorghum,Nairobi,Wholesale,a3,2025-10-01,3,2.1601703536152685
+Sorghum,Nairobi,Wholesale,a6,2025-08-01,1,6.096596368762467
+Sorghum,Nairobi,Wholesale,a6,2025-09-01,2,6.507983135818504
+Sorghum,Nairobi,Wholesale,a6,2025-10-01,3,4.335919405188011
+Sorghum,Nairobi,Wholesale,a3_a6,2025-08-01,1,5.304288555063784
+Sorghum,Nairobi,Wholesale,a3_a6,2025-09-01,2,6.330527679438151
+Sorghum,Nairobi,Wholesale,a3_a6,2025-10-01,3,4.339816583533665
+Sorghum,Nairobi,Wholesale,plain,2025-11-01,1,3.6048970638664706
+Sorghum,Nairobi,Wholesale,plain,2025-12-01,2,7.104843681269612
+Sorghum,Nairobi,Wholesale,plain,2026-01-01,3,3.227515290462891
+Sorghum,Nairobi,Wholesale,a3,2025-11-01,1,2.912885457413108
+Sorghum,Nairobi,Wholesale,a3,2025-12-01,2,7.4299595528215665
+Sorghum,Nairobi,Wholesale,a3,2026-01-01,3,3.3445160470528577
+Sorghum,Nairobi,Wholesale,a6,2025-11-01,1,2.56812801576509
+Sorghum,Nairobi,Wholesale,a6,2025-12-01,2,5.363955310107926
+Sorghum,Nairobi,Wholesale,a6,2026-01-01,3,4.800082334564018
+Sorghum,Nairobi,Wholesale,a3_a6,2025-11-01,1,2.8857248512364
+Sorghum,Nairobi,Wholesale,a3_a6,2025-12-01,2,5.571296035794649
+Sorghum,Nairobi,Wholesale,a3_a6,2026-01-01,3,4.793705346902166
+Sorghum,Nairobi,Wholesale,plain,2026-02-01,1,6.177249319416379
+Sorghum,Nairobi,Wholesale,plain,2026-03-01,2,12.970565951264138
+Sorghum,Nairobi,Wholesale,a3,2026-02-01,1,7.432984597473033
+Sorghum,Nairobi,Wholesale,a3,2026-03-01,2,12.114681472930073
+Sorghum,Nairobi,Wholesale,a6,2026-02-01,1,2.287224995479686
+Sorghum,Nairobi,Wholesale,a6,2026-03-01,2,13.375783381380687
+Sorghum,Nairobi,Wholesale,a3_a6,2026-02-01,1,3.079749128862962
+Sorghum,Nairobi,Wholesale,a3_a6,2026-03-01,2,12.635768851370296
+Potatoes (Irish),Kitui,Wholesale,plain,2024-09-01,1,46.38742626899393
+Potatoes (Irish),Kitui,Wholesale,plain,2024-10-01,2,39.72385288113829
+Potatoes (Irish),Kitui,Wholesale,plain,2024-11-01,3,16.408314694628245
+Potatoes (Irish),Kitui,Wholesale,a3,2024-09-01,1,46.182539013722206
+Potatoes (Irish),Kitui,Wholesale,a3,2024-10-01,2,39.83103705270494
+Potatoes (Irish),Kitui,Wholesale,a3,2024-11-01,3,16.378553167977334
+Potatoes (Irish),Kitui,Wholesale,a6,2024-09-01,1,49.170598599113625
+Potatoes (Irish),Kitui,Wholesale,a6,2024-10-01,2,37.02501723429313
+Potatoes (Irish),Kitui,Wholesale,a6,2024-11-01,3,17.088140906496417
+Potatoes (Irish),Kitui,Wholesale,a3_a6,2024-09-01,1,50.11771803434291
+Potatoes (Irish),Kitui,Wholesale,a3_a6,2024-10-01,2,37.75616088816185
+Potatoes (Irish),Kitui,Wholesale,a3_a6,2024-11-01,3,18.054512467982605
+Potatoes (Irish),Kitui,Wholesale,plain,2024-12-01,1,12.32783247392125
+Potatoes (Irish),Kitui,Wholesale,plain,2025-06-01,7,23.69529150462737
+Potatoes (Irish),Kitui,Wholesale,plain,2025-08-01,9,20.307587703177152
+Potatoes (Irish),Kitui,Wholesale,a3,2024-12-01,1,12.89602795833426
+Potatoes (Irish),Kitui,Wholesale,a3,2025-06-01,7,22.73946170431287
+Potatoes (Irish),Kitui,Wholesale,a3,2025-08-01,9,20.637915604804107
+Potatoes (Irish),Kitui,Wholesale,a6,2024-12-01,1,12.549540725136191
+Potatoes (Irish),Kitui,Wholesale,a6,2025-06-01,7,16.153585749250166
+Potatoes (Irish),Kitui,Wholesale,a6,2025-08-01,9,17.008156968040733
+Potatoes (Irish),Kitui,Wholesale,a3_a6,2024-12-01,1,12.0320765130059
+Potatoes (Irish),Kitui,Wholesale,a3_a6,2025-06-01,7,14.44615687499291
+Potatoes (Irish),Kitui,Wholesale,a3_a6,2025-08-01,9,17.882800381270343
+Potatoes (Irish),Kitui,Wholesale,plain,2025-09-01,1,3.9062957102068383
+Potatoes (Irish),Kitui,Wholesale,plain,2025-10-01,2,4.745213853838468
+Potatoes (Irish),Kitui,Wholesale,plain,2025-11-01,3,17.066383394602674
+Potatoes (Irish),Kitui,Wholesale,a3,2025-09-01,1,3.955914181797183
+Potatoes (Irish),Kitui,Wholesale,a3,2025-10-01,2,4.545767490956152
+Potatoes (Irish),Kitui,Wholesale,a3,2025-11-01,3,17.009439407094078
+Potatoes (Irish),Kitui,Wholesale,a6,2025-09-01,1,3.420049112249009
+Potatoes (Irish),Kitui,Wholesale,a6,2025-10-01,2,1.7729968578538016
+Potatoes (Irish),Kitui,Wholesale,a6,2025-11-01,3,16.278366423212496
+Potatoes (Irish),Kitui,Wholesale,a3_a6,2025-09-01,1,3.6407902069040996
+Potatoes (Irish),Kitui,Wholesale,a3_a6,2025-10-01,2,1.4469288958622428
+Potatoes (Irish),Kitui,Wholesale,a3_a6,2025-11-01,3,15.910739158708997
+Potatoes (Irish),Kitui,Wholesale,plain,2025-12-01,1,8.70006849892326
+Potatoes (Irish),Kitui,Wholesale,plain,2026-01-01,2,33.99173348702356
+Potatoes (Irish),Kitui,Wholesale,a3,2025-12-01,1,7.537008956490593
+Potatoes (Irish),Kitui,Wholesale,a3,2026-01-01,2,33.36710934390722
+Potatoes (Irish),Kitui,Wholesale,a6,2025-12-01,1,8.035565684879607
+Potatoes (Irish),Kitui,Wholesale,a6,2026-01-01,2,33.925338182235194
+Potatoes (Irish),Kitui,Wholesale,a3_a6,2025-12-01,1,9.002106277819218
+Potatoes (Irish),Kitui,Wholesale,a3_a6,2026-01-01,2,34.63665534727567
+Maize,Eldoret,Wholesale,plain,2025-02-01,1,16.859893358876292
+Maize,Eldoret,Wholesale,plain,2025-04-01,3,18.17611971886521
+Maize,Eldoret,Wholesale,plain,2025-05-01,4,7.433591502321415
+Maize,Eldoret,Wholesale,a3,2025-02-01,1,15.04036890919444
+Maize,Eldoret,Wholesale,a3,2025-04-01,3,17.045386234394023
+Maize,Eldoret,Wholesale,a3,2025-05-01,4,9.694105239571616
+Maize,Eldoret,Wholesale,a6,2025-02-01,1,11.600345909366213
+Maize,Eldoret,Wholesale,a6,2025-04-01,3,20.83413269849884
+Maize,Eldoret,Wholesale,a6,2025-05-01,4,6.217696876359455
+Maize,Eldoret,Wholesale,a3_a6,2025-02-01,1,10.827662919532894
+Maize,Eldoret,Wholesale,a3_a6,2025-04-01,3,20.010955760168926
+Maize,Eldoret,Wholesale,a3_a6,2025-05-01,4,8.62446110571395
+Maize,Eldoret,Wholesale,plain,2025-06-01,1,4.591803794222846
+Maize,Eldoret,Wholesale,plain,2025-09-01,4,39.67366670224313
+Maize,Eldoret,Wholesale,plain,2025-10-01,5,17.958544462957253
+Maize,Eldoret,Wholesale,a3,2025-06-01,1,8.903472137895154
+Maize,Eldoret,Wholesale,a3,2025-09-01,4,40.26883708375883
+Maize,Eldoret,Wholesale,a3,2025-10-01,5,10.239673433570637
+Maize,Eldoret,Wholesale,a6,2025-06-01,1,2.1472213229136403
+Maize,Eldoret,Wholesale,a6,2025-09-01,4,33.35639225496217
+Maize,Eldoret,Wholesale,a6,2025-10-01,5,25.020190652814005
+Maize,Eldoret,Wholesale,a3_a6,2025-06-01,1,5.599323204227846
+Maize,Eldoret,Wholesale,a3_a6,2025-09-01,4,35.451113225259625
+Maize,Eldoret,Wholesale,a3_a6,2025-10-01,5,18.36417011862505
+Maize,Eldoret,Wholesale,plain,2026-02-01,1,14.197351923905963
+Maize,Eldoret,Wholesale,plain,2026-03-01,2,12.605286390253422
+Maize,Eldoret,Wholesale,a3,2026-02-01,1,21.929819400785224
+Maize,Eldoret,Wholesale,a3,2026-03-01,2,11.031444708831604
+Maize,Eldoret,Wholesale,a6,2026-02-01,1,8.57554348235021
+Maize,Eldoret,Wholesale,a6,2026-03-01,2,12.856681826960259
+Maize,Eldoret,Wholesale,a3_a6,2026-02-01,1,16.447480681070015
+Maize,Eldoret,Wholesale,a3_a6,2026-03-01,2,10.688914835137881
+Beans (rosecoco),Mombasa,Wholesale,plain,2022-04-01,1,2.2187578148437694
+Beans (rosecoco),Mombasa,Wholesale,plain,2022-05-01,2,7.649235527484424
+Beans (rosecoco),Mombasa,Wholesale,plain,2022-12-01,9,46.396052179172464
+Beans (rosecoco),Mombasa,Wholesale,a3,2022-04-01,1,1.7406718995159876
+Beans (rosecoco),Mombasa,Wholesale,a3,2022-05-01,2,7.836018964562043
+Beans (rosecoco),Mombasa,Wholesale,a3,2022-12-01,9,46.615842820908526
+Beans (rosecoco),Mombasa,Wholesale,a6,2022-04-01,1,7.6441317745968576
+Beans (rosecoco),Mombasa,Wholesale,a6,2022-05-01,2,3.689090079944305
+Beans (rosecoco),Mombasa,Wholesale,a6,2022-12-01,9,47.69263336598134
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2022-04-01,1,6.88994621261017
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2022-05-01,2,4.0744646442025
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2022-12-01,9,47.73964074273474
+Beans (rosecoco),Mombasa,Wholesale,plain,2023-01-01,1,37.32377800245846
+Beans (rosecoco),Mombasa,Wholesale,plain,2023-04-01,4,30.28585435389943
+Beans (rosecoco),Mombasa,Wholesale,plain,2023-05-01,5,30.9569399162054
+Beans (rosecoco),Mombasa,Wholesale,a3,2023-01-01,1,36.84756036821032
+Beans (rosecoco),Mombasa,Wholesale,a3,2023-04-01,4,30.87950213603774
+Beans (rosecoco),Mombasa,Wholesale,a3,2023-05-01,5,31.254326521745334
+Beans (rosecoco),Mombasa,Wholesale,a6,2023-01-01,1,38.2583172231809
+Beans (rosecoco),Mombasa,Wholesale,a6,2023-04-01,4,29.498972406194596
+Beans (rosecoco),Mombasa,Wholesale,a6,2023-05-01,5,31.142300832796906
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2023-01-01,1,37.34136761423311
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2023-04-01,4,29.496303680034657
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2023-05-01,5,30.781899861965346
+Beans (rosecoco),Mombasa,Wholesale,plain,2023-06-01,1,33.285988925042496
+Beans (rosecoco),Mombasa,Wholesale,plain,2023-10-01,5,30.7954196370493
+Beans (rosecoco),Mombasa,Wholesale,plain,2024-01-01,8,26.677103653745863
+Beans (rosecoco),Mombasa,Wholesale,a3,2023-06-01,1,33.04554097277946
+Beans (rosecoco),Mombasa,Wholesale,a3,2023-10-01,5,31.37414365176761
+Beans (rosecoco),Mombasa,Wholesale,a3,2024-01-01,8,26.585605627774772
+Beans (rosecoco),Mombasa,Wholesale,a6,2023-06-01,1,33.116546805656824
+Beans (rosecoco),Mombasa,Wholesale,a6,2023-10-01,5,34.22931342605136
+Beans (rosecoco),Mombasa,Wholesale,a6,2024-01-01,8,27.366733120255493
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2023-06-01,1,32.7923095506243
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2023-10-01,5,33.587106841723
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2024-01-01,8,25.66801730035726
+Beans (rosecoco),Mombasa,Wholesale,plain,2024-05-01,1,5.532098728520146
+Beans (rosecoco),Mombasa,Wholesale,plain,2024-07-01,3,24.99085917418995
+Beans (rosecoco),Mombasa,Wholesale,plain,2025-11-01,19,24.338370194345003
+Beans (rosecoco),Mombasa,Wholesale,a3,2024-05-01,1,5.673798331039911
+Beans (rosecoco),Mombasa,Wholesale,a3,2024-07-01,3,22.38255416980799
+Beans (rosecoco),Mombasa,Wholesale,a3,2025-11-01,19,25.348982468103394
+Beans (rosecoco),Mombasa,Wholesale,a6,2024-05-01,1,3.6465374310421335
+Beans (rosecoco),Mombasa,Wholesale,a6,2024-07-01,3,25.73315420118798
+Beans (rosecoco),Mombasa,Wholesale,a6,2025-11-01,19,24.710296097584614
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2024-05-01,1,4.0736385497135865
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2024-07-01,3,21.992858903464096
+Beans (rosecoco),Mombasa,Wholesale,a3_a6,2025-11-01,19,25.325663197975075
+Beans (mixed),Wote,Retail,plain,2025-05-01,1,4.513796365742151
+Beans (mixed),Wote,Retail,plain,2025-06-01,2,1.2564522306886026
+Beans (mixed),Wote,Retail,plain,2025-07-01,3,2.7406942399489846
+Beans (mixed),Wote,Retail,a3,2025-05-01,1,4.176490803244617
+Beans (mixed),Wote,Retail,a3,2025-06-01,2,1.0116112436155966
+Beans (mixed),Wote,Retail,a3,2025-07-01,3,3.1753369848434327
+Beans (mixed),Wote,Retail,a6,2025-05-01,1,4.591060098620347
+Beans (mixed),Wote,Retail,a6,2025-06-01,2,1.1508154518459413
+Beans (mixed),Wote,Retail,a6,2025-07-01,3,2.637761635499793
+Beans (mixed),Wote,Retail,a3_a6,2025-05-01,1,4.137629171743122
+Beans (mixed),Wote,Retail,a3_a6,2025-06-01,2,1.0501735107023495
+Beans (mixed),Wote,Retail,a3_a6,2025-07-01,3,3.214526236582375
+Beans (mixed),Wote,Retail,plain,2025-08-01,1,3.5592577745695997
+Beans (mixed),Wote,Retail,plain,2025-09-01,2,6.364412942603346
+Beans (mixed),Wote,Retail,plain,2025-10-01,3,6.217065646518936
+Beans (mixed),Wote,Retail,a3,2025-08-01,1,2.123778075803749
+Beans (mixed),Wote,Retail,a3,2025-09-01,2,4.935367145731582
+Beans (mixed),Wote,Retail,a3,2025-10-01,3,4.590843131374204
+Beans (mixed),Wote,Retail,a6,2025-08-01,1,3.403681750285037
+Beans (mixed),Wote,Retail,a6,2025-09-01,2,6.193166564715457
+Beans (mixed),Wote,Retail,a6,2025-10-01,3,5.97094676131571
+Beans (mixed),Wote,Retail,a3_a6,2025-08-01,1,3.3571026333547533
+Beans (mixed),Wote,Retail,a3_a6,2025-09-01,2,6.311758542272608
+Beans (mixed),Wote,Retail,a3_a6,2025-10-01,3,6.534025682494902
+Beans (mixed),Wote,Retail,plain,2026-01-01,1,7.526079210534068
+Beans (mixed),Wote,Retail,plain,2026-02-01,2,2.827718356360186
+Beans (mixed),Wote,Retail,plain,2026-03-01,3,3.3731238226060256
+Beans (mixed),Wote,Retail,a3,2026-01-01,1,7.57919815598728
+Beans (mixed),Wote,Retail,a3,2026-02-01,2,1.1601530001507658
+Beans (mixed),Wote,Retail,a3,2026-03-01,3,3.3881271955200813
+Beans (mixed),Wote,Retail,a6,2026-01-01,1,6.670911355220283
+Beans (mixed),Wote,Retail,a6,2026-02-01,2,3.6990140843356745
+Beans (mixed),Wote,Retail,a6,2026-03-01,3,2.8808640871543467
+Beans (mixed),Wote,Retail,a3_a6,2026-01-01,1,7.561727351830873
+Beans (mixed),Wote,Retail,a3_a6,2026-02-01,2,1.1734957417659893
+Beans (mixed),Wote,Retail,a3_a6,2026-03-01,3,3.3665549313066734
+product_10,Ahero,Wholesale,plain,2025-10-01,1,3.636087736874357
+product_10,Ahero,Wholesale,plain,2025-11-01,2,0.10036783136604299
+product_10,Ahero,Wholesale,plain,2025-12-01,3,14.430568693472138
+product_10,Ahero,Wholesale,a3,2025-10-01,1,3.7929189687639564
+product_10,Ahero,Wholesale,a3,2025-11-01,2,0.04178872490897826
+product_10,Ahero,Wholesale,a3,2025-12-01,3,14.64615425399915
+product_10,Ahero,Wholesale,a6,2025-10-01,1,4.17782023667702
+product_10,Ahero,Wholesale,a6,2025-11-01,2,1.4064658286348695
+product_10,Ahero,Wholesale,a6,2025-12-01,3,12.860565955877846
+product_10,Ahero,Wholesale,a3_a6,2025-10-01,1,3.336669457399007
+product_10,Ahero,Wholesale,a3_a6,2025-11-01,2,0.21900473304181864
+product_10,Ahero,Wholesale,a3_a6,2025-12-01,3,14.703764175196463
+product_10,Ahero,Wholesale,plain,2026-01-01,1,13.778903372020295
+product_10,Ahero,Wholesale,plain,2026-02-01,2,19.61391999294686
+product_10,Ahero,Wholesale,plain,2026-03-01,3,6.009591361686413
+product_10,Ahero,Wholesale,a3,2026-01-01,1,13.484998610595698
+product_10,Ahero,Wholesale,a3,2026-02-01,2,19.70454199515787
+product_10,Ahero,Wholesale,a3,2026-03-01,3,6.207664356230548
+product_10,Ahero,Wholesale,a6,2026-01-01,1,13.228702883200642
+product_10,Ahero,Wholesale,a6,2026-02-01,2,19.251567052272144
+product_10,Ahero,Wholesale,a6,2026-03-01,3,6.238502585443825
+product_10,Ahero,Wholesale,a3_a6,2026-01-01,1,13.53871908379665
+product_10,Ahero,Wholesale,a3_a6,2026-02-01,2,19.67581408958543
+product_10,Ahero,Wholesale,a3_a6,2026-03-01,3,5.758968779063271
+Beans red haricot (wairimu),Nkubu,Retail,plain,2025-10-01,1,22.640865795058176
+Beans red haricot (wairimu),Nkubu,Retail,plain,2025-11-01,2,46.7785872629118
+Beans red haricot (wairimu),Nkubu,Retail,plain,2025-12-01,3,14.73773311931654
+Beans red haricot (wairimu),Nkubu,Retail,a3,2025-10-01,1,2.3533140060381186
+Beans red haricot (wairimu),Nkubu,Retail,a3,2025-11-01,2,7.624844703596622
+Beans red haricot (wairimu),Nkubu,Retail,a3,2025-12-01,3,20.986099491044275
+Beans red haricot (wairimu),Nkubu,Retail,a6,2025-10-01,1,38.289993845233795
+Beans red haricot (wairimu),Nkubu,Retail,a6,2025-11-01,2,49.81565431981463
+Beans red haricot (wairimu),Nkubu,Retail,a6,2025-12-01,3,14.832176103065962
+Beans red haricot (wairimu),Nkubu,Retail,a3_a6,2025-10-01,1,39.24261865976635
+Beans red haricot (wairimu),Nkubu,Retail,a3_a6,2025-11-01,2,48.73472449876053
+Beans red haricot (wairimu),Nkubu,Retail,a3_a6,2025-12-01,3,9.262375565746956
+Beans red haricot (wairimu),Nkubu,Retail,plain,2026-01-01,1,17.701004272927808
+Beans red haricot (wairimu),Nkubu,Retail,plain,2026-02-01,2,21.006147517373616
+Beans red haricot (wairimu),Nkubu,Retail,plain,2026-03-01,3,25.185034690429298
+Beans red haricot (wairimu),Nkubu,Retail,a3,2026-01-01,1,29.186154750489628
+Beans red haricot (wairimu),Nkubu,Retail,a3,2026-02-01,2,13.009706030287054
+Beans red haricot (wairimu),Nkubu,Retail,a3,2026-03-01,3,24.325163023163796
+Beans red haricot (wairimu),Nkubu,Retail,a6,2026-01-01,1,15.26612045023152
+Beans red haricot (wairimu),Nkubu,Retail,a6,2026-02-01,2,19.453472978900734
+Beans red haricot (wairimu),Nkubu,Retail,a6,2026-03-01,3,27.06806341287185
+Beans red haricot (wairimu),Nkubu,Retail,a3_a6,2026-01-01,1,26.768684098119948
+Beans red haricot (wairimu),Nkubu,Retail,a3_a6,2026-02-01,2,13.69177338037691
+Beans red haricot (wairimu),Nkubu,Retail,a3_a6,2026-03-01,3,26.136854904766587
+Finger millet,Kitale Municipality,Wholesale,plain,2024-08-01,1,36.56193071987543
+Finger millet,Kitale Municipality,Wholesale,plain,2025-05-01,10,16.72144821911953
+Finger millet,Kitale Municipality,Wholesale,plain,2025-06-01,11,11.674833404385458
+Finger millet,Kitale Municipality,Wholesale,a3,2024-08-01,1,43.09663518343742
+Finger millet,Kitale Municipality,Wholesale,a3,2025-05-01,10,15.81106092221322
+Finger millet,Kitale Municipality,Wholesale,a3,2025-06-01,11,7.902472872355065
+Finger millet,Kitale Municipality,Wholesale,a6,2024-08-01,1,34.70210674317771
+Finger millet,Kitale Municipality,Wholesale,a6,2025-05-01,10,14.445101344328236
+Finger millet,Kitale Municipality,Wholesale,a6,2025-06-01,11,11.07310793778388
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2024-08-01,1,36.535944235308435
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2025-05-01,10,14.333721282412682
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2025-06-01,11,10.13395458058751
+Finger millet,Kitale Municipality,Wholesale,plain,2025-07-01,1,3.550342827572364
+Finger millet,Kitale Municipality,Wholesale,plain,2025-08-01,2,10.957156421131382
+Finger millet,Kitale Municipality,Wholesale,plain,2025-09-01,3,36.216651780624915
+Finger millet,Kitale Municipality,Wholesale,a3,2025-07-01,1,0.8111372063702746
+Finger millet,Kitale Municipality,Wholesale,a3,2025-08-01,2,9.13213239258481
+Finger millet,Kitale Municipality,Wholesale,a3,2025-09-01,3,30.33689534157884
+Finger millet,Kitale Municipality,Wholesale,a6,2025-07-01,1,6.028833917764676
+Finger millet,Kitale Municipality,Wholesale,a6,2025-08-01,2,9.01431542851636
+Finger millet,Kitale Municipality,Wholesale,a6,2025-09-01,3,50.693324853929
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2025-07-01,1,4.112721656151177
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2025-08-01,2,8.514332334533444
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2025-09-01,3,47.26442288403112
+Finger millet,Kitale Municipality,Wholesale,plain,2025-10-01,1,50.25903872459557
+Finger millet,Kitale Municipality,Wholesale,plain,2025-11-01,2,20.918573682694454
+Finger millet,Kitale Municipality,Wholesale,plain,2025-12-01,3,4.973509494151203
+Finger millet,Kitale Municipality,Wholesale,a3,2025-10-01,1,45.40250958061699
+Finger millet,Kitale Municipality,Wholesale,a3,2025-11-01,2,26.476889471872454
+Finger millet,Kitale Municipality,Wholesale,a3,2025-12-01,3,9.17835289488742
+Finger millet,Kitale Municipality,Wholesale,a6,2025-10-01,1,50.65493858076178
+Finger millet,Kitale Municipality,Wholesale,a6,2025-11-01,2,21.997120901227856
+Finger millet,Kitale Municipality,Wholesale,a6,2025-12-01,3,5.027706187448706
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2025-10-01,1,45.82144299748231
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2025-11-01,2,26.9766849611672
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2025-12-01,3,8.725139886700244
+Finger millet,Kitale Municipality,Wholesale,plain,2026-01-01,1,18.31549916323795
+Finger millet,Kitale Municipality,Wholesale,plain,2026-02-01,2,16.419935473804202
+Finger millet,Kitale Municipality,Wholesale,plain,2026-03-01,3,26.213950475539395
+Finger millet,Kitale Municipality,Wholesale,a3,2026-01-01,1,18.312806343841658
+Finger millet,Kitale Municipality,Wholesale,a3,2026-02-01,2,14.18010875978867
+Finger millet,Kitale Municipality,Wholesale,a3,2026-03-01,3,23.698730584101334
+Finger millet,Kitale Municipality,Wholesale,a6,2026-01-01,1,18.33553888324302
+Finger millet,Kitale Municipality,Wholesale,a6,2026-02-01,2,15.092187922243303
+Finger millet,Kitale Municipality,Wholesale,a6,2026-03-01,3,25.52880443087152
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2026-01-01,1,18.354810854575568
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2026-02-01,2,13.638273943042615
+Finger millet,Kitale Municipality,Wholesale,a3_a6,2026-03-01,3,23.43045163643607
+Beans (mixed),Iciara,Retail,plain,2025-05-01,1,25.357144007785475
+Beans (mixed),Iciara,Retail,plain,2025-06-01,2,42.24128565170823
+Beans (mixed),Iciara,Retail,plain,2025-07-01,3,31.192924416864127
+Beans (mixed),Iciara,Retail,a3,2025-05-01,1,28.251501617980622
+Beans (mixed),Iciara,Retail,a3,2025-06-01,2,43.79560993367232
+Beans (mixed),Iciara,Retail,a3,2025-07-01,3,34.55995592530489
+Beans (mixed),Iciara,Retail,a6,2025-05-01,1,49.001384805093274
+Beans (mixed),Iciara,Retail,a6,2025-06-01,2,64.1549837460454
+Beans (mixed),Iciara,Retail,a6,2025-07-01,3,39.84448679555797
+Beans (mixed),Iciara,Retail,a3_a6,2025-05-01,1,48.950984037175466
+Beans (mixed),Iciara,Retail,a3_a6,2025-06-01,2,64.30951772549378
+Beans (mixed),Iciara,Retail,a3_a6,2025-07-01,3,39.73366626703495
+Beans (mixed),Iciara,Retail,plain,2025-08-01,1,18.42995703157198
+Beans (mixed),Iciara,Retail,plain,2025-09-01,2,19.885983683055304
+Beans (mixed),Iciara,Retail,plain,2025-10-01,3,20.07273606478708
+Beans (mixed),Iciara,Retail,a3,2025-08-01,1,16.968079938615183
+Beans (mixed),Iciara,Retail,a3,2025-09-01,2,19.27528072620707
+Beans (mixed),Iciara,Retail,a3,2025-10-01,3,18.99782554697476
+Beans (mixed),Iciara,Retail,a6,2025-08-01,1,24.754537795860955
+Beans (mixed),Iciara,Retail,a6,2025-09-01,2,12.838113225035459
+Beans (mixed),Iciara,Retail,a6,2025-10-01,3,26.544452271141612
+Beans (mixed),Iciara,Retail,a3_a6,2025-08-01,1,22.762554612791796
+Beans (mixed),Iciara,Retail,a3_a6,2025-09-01,2,11.715642295658933
+Beans (mixed),Iciara,Retail,a3_a6,2025-10-01,3,25.37244470376723
+Beans (mixed),Iciara,Retail,plain,2026-01-01,1,1.4937502333657375
+Beans (mixed),Iciara,Retail,plain,2026-02-01,2,16.25583195402112
+Beans (mixed),Iciara,Retail,plain,2026-03-01,3,20.716222512420927
+Beans (mixed),Iciara,Retail,a3,2026-01-01,1,1.3208416451922433
+Beans (mixed),Iciara,Retail,a3,2026-02-01,2,19.324015564281417
+Beans (mixed),Iciara,Retail,a3,2026-03-01,3,22.336626533601383
+Beans (mixed),Iciara,Retail,a6,2026-01-01,1,3.679421394272243
+Beans (mixed),Iciara,Retail,a6,2026-02-01,2,20.944861392330388
+Beans (mixed),Iciara,Retail,a6,2026-03-01,3,26.48996014663036
+Beans (mixed),Iciara,Retail,a3_a6,2026-01-01,1,4.791391968212527
+Beans (mixed),Iciara,Retail,a3_a6,2026-02-01,2,20.944258556956044
+Beans (mixed),Iciara,Retail,a3_a6,2026-03-01,3,23.184688992356346
+Maize (white),Migori,Retail,plain,2025-04-01,1,21.56615301875854
+Maize (white),Migori,Retail,plain,2025-05-01,2,5.472129991213948
+Maize (white),Migori,Retail,plain,2025-06-01,3,17.61622137376161
+Maize (white),Migori,Retail,a3,2025-04-01,1,19.161894762948663
+Maize (white),Migori,Retail,a3,2025-05-01,2,8.38191803258541
+Maize (white),Migori,Retail,a3,2025-06-01,3,19.705970971494715
+Maize (white),Migori,Retail,a6,2025-04-01,1,18.824185842650852
+Maize (white),Migori,Retail,a6,2025-05-01,2,1.9290963209885996
+Maize (white),Migori,Retail,a6,2025-06-01,3,27.412617740826832
+Maize (white),Migori,Retail,a3_a6,2025-04-01,1,16.668673763032636
+Maize (white),Migori,Retail,a3_a6,2025-05-01,2,4.705865359833323
+Maize (white),Migori,Retail,a3_a6,2025-06-01,3,30.037405818948887
+Maize (white),Migori,Retail,plain,2025-07-01,1,5.384720704473505
+Maize (white),Migori,Retail,plain,2025-08-01,2,8.162355797309402
+Maize (white),Migori,Retail,plain,2025-09-01,3,5.839551346216506
+Maize (white),Migori,Retail,a3,2025-07-01,1,8.916936797480648
+Maize (white),Migori,Retail,a3,2025-08-01,2,8.420295882895628
+Maize (white),Migori,Retail,a3,2025-09-01,3,6.124642801172888
+Maize (white),Migori,Retail,a6,2025-07-01,1,0.6233261211402613
+Maize (white),Migori,Retail,a6,2025-08-01,2,3.5363159628427767
+Maize (white),Migori,Retail,a6,2025-09-01,3,3.3446763476106733
+Maize (white),Migori,Retail,a3_a6,2025-07-01,1,2.7531202828526635
+Maize (white),Migori,Retail,a3_a6,2025-08-01,2,3.4667715298689514
+Maize (white),Migori,Retail,a3_a6,2025-09-01,3,2.7814346261062766
+Maize (white),Migori,Retail,plain,2026-01-01,1,4.9184306361537775
+Maize (white),Migori,Retail,plain,2026-02-01,2,1.062489059694318
+Maize (white),Migori,Retail,plain,2026-03-01,3,13.67470384885279
+Maize (white),Migori,Retail,a3,2026-01-01,1,6.098067570330187
+Maize (white),Migori,Retail,a3,2026-02-01,2,6.193079297256452
+Maize (white),Migori,Retail,a3,2026-03-01,3,13.016164319861897
+Maize (white),Migori,Retail,a6,2026-01-01,1,6.288482367644832
+Maize (white),Migori,Retail,a6,2026-02-01,2,6.863228336884475
+Maize (white),Migori,Retail,a6,2026-03-01,3,9.737827836267037
+Maize (white),Migori,Retail,a3_a6,2026-01-01,1,7.757673831390381
+Maize (white),Migori,Retail,a3_a6,2026-02-01,2,13.165167234492111
+Maize (white),Migori,Retail,a3_a6,2026-03-01,3,8.902666011434293
+Tea (Mombasa),Composite,Export,plain,2025-07-01,1,3.8344017774787233
+Tea (Mombasa),Composite,Export,plain,2025-08-01,2,1.1241089148152992
+Tea (Mombasa),Composite,Export,plain,2025-09-01,3,2.9469350375015178
+Tea (Mombasa),Composite,Export,a3,2025-07-01,1,0.8170571444631194
+Tea (Mombasa),Composite,Export,a3,2025-08-01,2,0.407515092326021
+Tea (Mombasa),Composite,Export,a3,2025-09-01,3,1.4061881912561165
+Tea (Mombasa),Composite,Export,a6,2025-07-01,1,3.715061912211748
+Tea (Mombasa),Composite,Export,a6,2025-08-01,2,1.028769881017826
+Tea (Mombasa),Composite,Export,a6,2025-09-01,3,2.4072300009390024
+Tea (Mombasa),Composite,Export,a3_a6,2025-07-01,1,1.7171800691274066
+Tea (Mombasa),Composite,Export,a3_a6,2025-08-01,2,1.31202045491274
+Tea (Mombasa),Composite,Export,a3_a6,2025-09-01,3,2.002272909025392
+Tea (Mombasa),Composite,Export,plain,2025-10-01,1,6.084736313903664
+Tea (Mombasa),Composite,Export,plain,2025-11-01,2,7.5419498754707455
+Tea (Mombasa),Composite,Export,plain,2025-12-01,3,6.8388578506649
+Tea (Mombasa),Composite,Export,a3,2025-10-01,1,5.941783564921824
+Tea (Mombasa),Composite,Export,a3,2025-11-01,2,6.866423238972912
+Tea (Mombasa),Composite,Export,a3,2025-12-01,3,5.876550788951778
+Tea (Mombasa),Composite,Export,a6,2025-10-01,1,8.584206105962213
+Tea (Mombasa),Composite,Export,a6,2025-11-01,2,7.717288010153589
+Tea (Mombasa),Composite,Export,a6,2025-12-01,3,7.794558145349092
+Tea (Mombasa),Composite,Export,a3_a6,2025-10-01,1,8.333438839444652
+Tea (Mombasa),Composite,Export,a3_a6,2025-11-01,2,7.096497488757623
+Tea (Mombasa),Composite,Export,a3_a6,2025-12-01,3,6.8732183794533785
+Tea (Mombasa),Composite,Export,plain,2026-01-01,1,2.258805269217303
+Tea (Mombasa),Composite,Export,plain,2026-02-01,2,5.928879093693103
+Tea (Mombasa),Composite,Export,plain,2026-03-01,3,8.452481934632324
+Tea (Mombasa),Composite,Export,a3,2026-01-01,1,8.536956399384518
+Tea (Mombasa),Composite,Export,a3,2026-02-01,2,4.210872321786311
+Tea (Mombasa),Composite,Export,a3,2026-03-01,3,8.080473622607574
+Tea (Mombasa),Composite,Export,a6,2026-01-01,1,3.269297159188448
+Tea (Mombasa),Composite,Export,a6,2026-02-01,2,6.54990059225655
+Tea (Mombasa),Composite,Export,a6,2026-03-01,3,8.755669065060728
+Tea (Mombasa),Composite,Export,a3_a6,2026-01-01,1,8.970439574404883
+Tea (Mombasa),Composite,Export,a3_a6,2026-02-01,2,4.501255767898765
+Tea (Mombasa),Composite,Export,a3_a6,2026-03-01,3,7.985078408552468
+Sorghum,Kisumu,Wholesale,plain,2025-10-01,1,25.944193237557357
+Sorghum,Kisumu,Wholesale,plain,2025-11-01,2,15.805754914452613
+Sorghum,Kisumu,Wholesale,plain,2025-12-01,3,4.888360808433526
+Sorghum,Kisumu,Wholesale,a3,2025-10-01,1,25.474402969744762
+Sorghum,Kisumu,Wholesale,a3,2025-11-01,2,16.368241228650298
+Sorghum,Kisumu,Wholesale,a3,2025-12-01,3,8.710705568673392
+Sorghum,Kisumu,Wholesale,a6,2025-10-01,1,41.6361093953195
+Sorghum,Kisumu,Wholesale,a6,2025-11-01,2,18.840137477457844
+Sorghum,Kisumu,Wholesale,a6,2025-12-01,3,9.84652675809516
+Sorghum,Kisumu,Wholesale,a3_a6,2025-10-01,1,41.616712496731836
+Sorghum,Kisumu,Wholesale,a3_a6,2025-11-01,2,18.50200808579449
+Sorghum,Kisumu,Wholesale,a3_a6,2025-12-01,3,14.324634813219541
+Sorghum,Kisumu,Wholesale,plain,2026-01-01,1,7.702693426311918
+Sorghum,Kisumu,Wholesale,plain,2026-02-01,2,6.192502595392338
+Sorghum,Kisumu,Wholesale,plain,2026-03-01,3,8.388214881113669
+Sorghum,Kisumu,Wholesale,a3,2026-01-01,1,8.665160034529757
+Sorghum,Kisumu,Wholesale,a3,2026-02-01,2,1.4088370174761433
+Sorghum,Kisumu,Wholesale,a3,2026-03-01,3,11.105068615745372
+Sorghum,Kisumu,Wholesale,a6,2026-01-01,1,8.05350716464483
+Sorghum,Kisumu,Wholesale,a6,2026-02-01,2,6.475552348392001
+Sorghum,Kisumu,Wholesale,a6,2026-03-01,3,2.6908947667972116
+Sorghum,Kisumu,Wholesale,a3_a6,2026-01-01,1,8.94401051396494
+Sorghum,Kisumu,Wholesale,a3_a6,2026-02-01,2,1.0192126636862855
+Sorghum,Kisumu,Wholesale,a3_a6,2026-03-01,3,5.062860659324952
+Beans (mixed),Kiambu,Retail,plain,2025-05-01,1,3.1316509070106364
+Beans (mixed),Kiambu,Retail,plain,2025-06-01,2,1.4809809852902878
+Beans (mixed),Kiambu,Retail,plain,2025-07-01,3,6.733057987613825
+Beans (mixed),Kiambu,Retail,a3,2025-05-01,1,2.603887172947219
+Beans (mixed),Kiambu,Retail,a3,2025-06-01,2,1.7953414696084697
+Beans (mixed),Kiambu,Retail,a3,2025-07-01,3,7.6485164236310075
+Beans (mixed),Kiambu,Retail,a6,2025-05-01,1,2.637751904730858
+Beans (mixed),Kiambu,Retail,a6,2025-06-01,2,1.6372352070493252
+Beans (mixed),Kiambu,Retail,a6,2025-07-01,3,7.398462706509362
+Beans (mixed),Kiambu,Retail,a3_a6,2025-05-01,1,1.7030603016255337
+Beans (mixed),Kiambu,Retail,a3_a6,2025-06-01,2,2.3543217356749953
+Beans (mixed),Kiambu,Retail,a3_a6,2025-07-01,3,8.365163350634898
+Beans (mixed),Kiambu,Retail,plain,2025-08-01,1,5.169220631346716
+Beans (mixed),Kiambu,Retail,plain,2025-09-01,2,0.2694539723837227
+Beans (mixed),Kiambu,Retail,plain,2025-10-01,3,9.401311864322889
+Beans (mixed),Kiambu,Retail,a3,2025-08-01,1,5.332328837112318
+Beans (mixed),Kiambu,Retail,a3,2025-09-01,2,0.07458687340939954
+Beans (mixed),Kiambu,Retail,a3,2025-10-01,3,9.218828908268126
+Beans (mixed),Kiambu,Retail,a6,2025-08-01,1,6.098324747969076
+Beans (mixed),Kiambu,Retail,a6,2025-09-01,2,0.27771811976777316
+Beans (mixed),Kiambu,Retail,a6,2025-10-01,3,7.9659336084070675
+Beans (mixed),Kiambu,Retail,a3_a6,2025-08-01,1,6.251101142918375
+Beans (mixed),Kiambu,Retail,a3_a6,2025-09-01,2,0.24314640136252397
+Beans (mixed),Kiambu,Retail,a3_a6,2025-10-01,3,7.695786151880688
+Beans (mixed),Kiambu,Retail,plain,2026-01-01,1,10.992197996951873
+Beans (mixed),Kiambu,Retail,plain,2026-02-01,2,14.225036273815963
+Beans (mixed),Kiambu,Retail,plain,2026-03-01,3,0.9502501151510258
+Beans (mixed),Kiambu,Retail,a3,2026-01-01,1,10.919419675251477
+Beans (mixed),Kiambu,Retail,a3,2026-02-01,2,14.699047106307958
+Beans (mixed),Kiambu,Retail,a3,2026-03-01,3,1.0053447115629492
+Beans (mixed),Kiambu,Retail,a6,2026-01-01,1,11.63463373549034
+Beans (mixed),Kiambu,Retail,a6,2026-02-01,2,13.480934513943732
+Beans (mixed),Kiambu,Retail,a6,2026-03-01,3,1.5280343842338033
+Beans (mixed),Kiambu,Retail,a3_a6,2026-01-01,1,11.598585519645708
+Beans (mixed),Kiambu,Retail,a3_a6,2026-02-01,2,13.56537112912983
+Beans (mixed),Kiambu,Retail,a3_a6,2026-03-01,3,1.5230745435357969
+Maize (white),Lamu,Retail,plain,2025-08-01,1,5.209134818697394
+Maize (white),Lamu,Retail,plain,2025-09-01,2,10.065494912882851
+Maize (white),Lamu,Retail,plain,2025-10-01,3,7.430216783266309
+Maize (white),Lamu,Retail,a3,2025-08-01,1,5.069593021862638
+Maize (white),Lamu,Retail,a3,2025-09-01,2,9.675678827144106
+Maize (white),Lamu,Retail,a3,2025-10-01,3,7.255086873339388
+Maize (white),Lamu,Retail,a6,2025-08-01,1,5.438631978377098
+Maize (white),Lamu,Retail,a6,2025-09-01,2,10.631715033324594
+Maize (white),Lamu,Retail,a6,2025-10-01,3,7.876636408756263
+Maize (white),Lamu,Retail,a3_a6,2025-08-01,1,5.354111998830819
+Maize (white),Lamu,Retail,a3_a6,2025-09-01,2,9.879257634076671
+Maize (white),Lamu,Retail,a3_a6,2025-10-01,3,7.446251814145991
+Maize (white),Lamu,Retail,plain,2025-11-01,1,4.395974419945432
+Maize (white),Lamu,Retail,plain,2025-12-01,2,3.0941295348345697
+Maize (white),Lamu,Retail,plain,2026-01-01,3,9.1781171678259
+Maize (white),Lamu,Retail,a3,2025-11-01,1,5.147500180588041
+Maize (white),Lamu,Retail,a3,2025-12-01,2,2.4206140125881013
+Maize (white),Lamu,Retail,a3,2026-01-01,3,8.681771959236121
+Maize (white),Lamu,Retail,a6,2025-11-01,1,1.818280267523124
+Maize (white),Lamu,Retail,a6,2025-12-01,2,2.3102543463881036
+Maize (white),Lamu,Retail,a6,2026-01-01,3,10.014330897068575
+Maize (white),Lamu,Retail,a3_a6,2025-11-01,1,2.2593495379531823
+Maize (white),Lamu,Retail,a3_a6,2025-12-01,2,1.7246688665938474
+Maize (white),Lamu,Retail,a3_a6,2026-01-01,3,9.541306947800928
+Maize (white),Lamu,Retail,plain,2026-02-01,1,8.491765812599356
+Maize (white),Lamu,Retail,plain,2026-03-01,2,5.4895260233972145
+Maize (white),Lamu,Retail,a3,2026-02-01,1,7.486415321092374
+Maize (white),Lamu,Retail,a3,2026-03-01,2,5.1257232605664855
+Maize (white),Lamu,Retail,a6,2026-02-01,1,10.019426072086466
+Maize (white),Lamu,Retail,a6,2026-03-01,2,7.364210378182018
+Maize (white),Lamu,Retail,a3_a6,2026-02-01,1,8.870807800304265
+Maize (white),Lamu,Retail,a3_a6,2026-03-01,2,6.892726340799271
+Beans (mixed),Siakago,Retail,plain,2025-05-01,1,7.277523827182046
+Beans (mixed),Siakago,Retail,plain,2025-06-01,2,6.906446159614524
+Beans (mixed),Siakago,Retail,plain,2025-07-01,3,4.141503516662938
+Beans (mixed),Siakago,Retail,a3,2025-05-01,1,9.226872171606388
+Beans (mixed),Siakago,Retail,a3,2025-06-01,2,6.729136495013533
+Beans (mixed),Siakago,Retail,a3,2025-07-01,3,6.482658632597952
+Beans (mixed),Siakago,Retail,a6,2025-05-01,1,19.634564143397196
+Beans (mixed),Siakago,Retail,a6,2025-06-01,2,1.083766154028053
+Beans (mixed),Siakago,Retail,a6,2025-07-01,3,6.466691167807162
+Beans (mixed),Siakago,Retail,a3_a6,2025-05-01,1,20.90789163874974
+Beans (mixed),Siakago,Retail,a3_a6,2025-06-01,2,1.2862593759449776
+Beans (mixed),Siakago,Retail,a3_a6,2025-07-01,3,7.930710866925543
+Beans (mixed),Siakago,Retail,plain,2025-08-01,1,5.887333667866661
+Beans (mixed),Siakago,Retail,plain,2025-09-01,2,7.7666596367922125
+Beans (mixed),Siakago,Retail,plain,2025-10-01,3,7.772194861051697
+Beans (mixed),Siakago,Retail,a3,2025-08-01,1,6.210826505567558
+Beans (mixed),Siakago,Retail,a3,2025-09-01,2,7.7219066918900365
+Beans (mixed),Siakago,Retail,a3,2025-10-01,3,7.572839351375103
+Beans (mixed),Siakago,Retail,a6,2025-08-01,1,10.986681654320913
+Beans (mixed),Siakago,Retail,a6,2025-09-01,2,2.8859717607774726
+Beans (mixed),Siakago,Retail,a6,2025-10-01,3,15.031581635196195
+Beans (mixed),Siakago,Retail,a3_a6,2025-08-01,1,11.14452308057039
+Beans (mixed),Siakago,Retail,a3_a6,2025-09-01,2,2.965597564156172
+Beans (mixed),Siakago,Retail,a3_a6,2025-10-01,3,15.159762877659919
+Beans (mixed),Siakago,Retail,plain,2026-01-01,1,1.04733614712461
+Beans (mixed),Siakago,Retail,plain,2026-02-01,2,7.160061333228492
+Beans (mixed),Siakago,Retail,plain,2026-03-01,3,16.232472937624802
+Beans (mixed),Siakago,Retail,a3,2026-01-01,1,0.562827327728838
+Beans (mixed),Siakago,Retail,a3,2026-02-01,2,6.901093862111379
+Beans (mixed),Siakago,Retail,a3,2026-03-01,3,15.985726691950337
+Beans (mixed),Siakago,Retail,a6,2026-01-01,1,3.794450115139885
+Beans (mixed),Siakago,Retail,a6,2026-02-01,2,5.051644667451002
+Beans (mixed),Siakago,Retail,a6,2026-03-01,3,15.285030790955359
+Beans (mixed),Siakago,Retail,a3_a6,2026-01-01,1,6.061050552504713
+Beans (mixed),Siakago,Retail,a3_a6,2026-02-01,2,5.993806844094548
+Beans (mixed),Siakago,Retail,a3_a6,2026-03-01,3,15.066497043896964
+product_10,Kutus,Wholesale,plain,2025-07-01,1,1.087577838674138
+product_10,Kutus,Wholesale,plain,2025-08-01,2,20.06927131205264
+product_10,Kutus,Wholesale,plain,2025-09-01,3,3.9420092456106324
+product_10,Kutus,Wholesale,a3,2025-07-01,1,6.240555273441151
+product_10,Kutus,Wholesale,a3,2025-08-01,2,36.282791778522196
+product_10,Kutus,Wholesale,a3,2025-09-01,3,1.782985590101293
+product_10,Kutus,Wholesale,a6,2025-07-01,1,5.028175246418603
+product_10,Kutus,Wholesale,a6,2025-08-01,2,34.53030072519471
+product_10,Kutus,Wholesale,a6,2025-09-01,3,10.49300976244774
+product_10,Kutus,Wholesale,a3_a6,2025-07-01,1,2.6059324122581713
+product_10,Kutus,Wholesale,a3_a6,2025-08-01,2,44.37209550897001
+product_10,Kutus,Wholesale,a3_a6,2025-09-01,3,3.6389711164798064
+product_10,Kutus,Wholesale,plain,2025-10-01,1,9.143984376620027
+product_10,Kutus,Wholesale,plain,2025-11-01,2,17.974392846146017
+product_10,Kutus,Wholesale,plain,2025-12-01,3,3.801939205436195
+product_10,Kutus,Wholesale,a3,2025-10-01,1,5.705302864920259
+product_10,Kutus,Wholesale,a3,2025-11-01,2,14.1725896272722
+product_10,Kutus,Wholesale,a3,2025-12-01,3,6.935286533649678
+product_10,Kutus,Wholesale,a6,2025-10-01,1,6.5281726875795805
+product_10,Kutus,Wholesale,a6,2025-11-01,2,16.472579504445534
+product_10,Kutus,Wholesale,a6,2025-12-01,3,5.088979180985274
+product_10,Kutus,Wholesale,a3_a6,2025-10-01,1,4.445338734918505
+product_10,Kutus,Wholesale,a3_a6,2025-11-01,2,13.820150724435546
+product_10,Kutus,Wholesale,a3_a6,2025-12-01,3,7.250929207298803
+product_10,Kutus,Wholesale,plain,2026-01-01,1,29.193764262628036
+product_10,Kutus,Wholesale,plain,2026-02-01,2,23.58779752529304
+product_10,Kutus,Wholesale,plain,2026-03-01,3,24.240796969740135
+product_10,Kutus,Wholesale,a3,2026-01-01,1,36.85372160057163
+product_10,Kutus,Wholesale,a3,2026-02-01,2,14.60456274071103
+product_10,Kutus,Wholesale,a3,2026-03-01,3,25.04880645553888
+product_10,Kutus,Wholesale,a6,2026-01-01,1,27.445760139897125
+product_10,Kutus,Wholesale,a6,2026-02-01,2,22.3764359668557
+product_10,Kutus,Wholesale,a6,2026-03-01,3,25.216885031398117
+product_10,Kutus,Wholesale,a3_a6,2026-01-01,1,35.07885565263657
+product_10,Kutus,Wholesale,a3_a6,2026-02-01,2,14.939379951418827
+product_10,Kutus,Wholesale,a3_a6,2026-03-01,3,25.680843375340295
+Pearl rush millet,Nkubu,Retail,plain,2025-10-01,1,7.372577478888931
+Pearl rush millet,Nkubu,Retail,plain,2025-11-01,2,1.7174146017111553
+Pearl rush millet,Nkubu,Retail,plain,2025-12-01,3,0.01320743436660621
+Pearl rush millet,Nkubu,Retail,a3,2025-10-01,1,8.93572594937955
+Pearl rush millet,Nkubu,Retail,a3,2025-11-01,2,1.1884144137607393
+Pearl rush millet,Nkubu,Retail,a3,2025-12-01,3,2.665052359281802
+Pearl rush millet,Nkubu,Retail,a6,2025-10-01,1,18.363089416846964
+Pearl rush millet,Nkubu,Retail,a6,2025-11-01,2,0.48303749723885403
+Pearl rush millet,Nkubu,Retail,a6,2025-12-01,3,3.0270707367504315
+Pearl rush millet,Nkubu,Retail,a3_a6,2025-10-01,1,14.972728522497283
+Pearl rush millet,Nkubu,Retail,a3_a6,2025-11-01,2,4.403305246163228
+Pearl rush millet,Nkubu,Retail,a3_a6,2025-12-01,3,7.761108679951846
+Pearl rush millet,Nkubu,Retail,plain,2026-01-01,1,20.63911636692758
+Pearl rush millet,Nkubu,Retail,plain,2026-02-01,2,21.32387062402979
+Pearl rush millet,Nkubu,Retail,plain,2026-03-01,3,31.908232740308073
+Pearl rush millet,Nkubu,Retail,a3,2026-01-01,1,25.82476944722187
+Pearl rush millet,Nkubu,Retail,a3,2026-02-01,2,16.902441466496896
+Pearl rush millet,Nkubu,Retail,a3,2026-03-01,3,31.219430478785736
+Pearl rush millet,Nkubu,Retail,a6,2026-01-01,1,20.289525054225628
+Pearl rush millet,Nkubu,Retail,a6,2026-02-01,2,20.999459405760263
+Pearl rush millet,Nkubu,Retail,a6,2026-03-01,3,35.85683064208819
+Pearl rush millet,Nkubu,Retail,a3_a6,2026-01-01,1,23.77456281343554
+Pearl rush millet,Nkubu,Retail,a3_a6,2026-02-01,2,17.953230178609385
+Pearl rush millet,Nkubu,Retail,a3_a6,2026-03-01,3,35.00193130508114
+Sorghum,Chuka,Wholesale,plain,2024-03-01,1,20.61451379700446
+Sorghum,Chuka,Wholesale,plain,2024-04-01,2,3.6918475862953604
+Sorghum,Chuka,Wholesale,plain,2024-05-01,3,29.957163515983243
+Sorghum,Chuka,Wholesale,a3,2024-03-01,1,0.2068494136488515
+Sorghum,Chuka,Wholesale,a3,2024-04-01,2,1.5186314679612358
+Sorghum,Chuka,Wholesale,a3,2024-05-01,3,50.955095119772196
+Sorghum,Chuka,Wholesale,a6,2024-03-01,1,34.7271292689219
+Sorghum,Chuka,Wholesale,a6,2024-04-01,2,0.9654837716310153
+Sorghum,Chuka,Wholesale,a6,2024-05-01,3,1.0191188345068336
+Sorghum,Chuka,Wholesale,a3_a6,2024-03-01,1,10.783827904025085
+Sorghum,Chuka,Wholesale,a3_a6,2024-04-01,2,5.530863386114182
+Sorghum,Chuka,Wholesale,a3_a6,2024-05-01,3,14.561218553406052
+Sorghum,Chuka,Wholesale,plain,2024-06-01,1,63.69068435347749
+Sorghum,Chuka,Wholesale,plain,2024-07-01,2,59.56832562213968
+Sorghum,Chuka,Wholesale,plain,2024-08-01,3,51.49439566189672
+Sorghum,Chuka,Wholesale,a3,2024-06-01,1,63.9976256249607
+Sorghum,Chuka,Wholesale,a3,2024-07-01,2,86.82876154343269
+Sorghum,Chuka,Wholesale,a3,2024-08-01,3,46.08863540976732
+Sorghum,Chuka,Wholesale,a6,2024-06-01,1,62.141461708823954
+Sorghum,Chuka,Wholesale,a6,2024-07-01,2,74.3925651555892
+Sorghum,Chuka,Wholesale,a6,2024-08-01,3,72.04443363966358
+Sorghum,Chuka,Wholesale,a3_a6,2024-06-01,1,56.45571778402989
+Sorghum,Chuka,Wholesale,a3_a6,2024-07-01,2,183.15630725083585
+Sorghum,Chuka,Wholesale,a3_a6,2024-08-01,3,75.32280292587456
+Sorghum,Chuka,Wholesale,plain,2024-09-01,1,31.91076298015747
+Sorghum,Chuka,Wholesale,plain,2024-10-01,2,34.37493013655967
+Sorghum,Chuka,Wholesale,plain,2025-06-01,10,1.4091450543846424
+Sorghum,Chuka,Wholesale,a3,2024-09-01,1,32.805114239175694
+Sorghum,Chuka,Wholesale,a3,2024-10-01,2,31.299235304913587
+Sorghum,Chuka,Wholesale,a3,2025-06-01,10,4.659435259994176
+Sorghum,Chuka,Wholesale,a6,2024-09-01,1,32.38809060505725
+Sorghum,Chuka,Wholesale,a6,2024-10-01,2,31.900939845988713
+Sorghum,Chuka,Wholesale,a6,2025-06-01,10,1.5489874640608885
+Sorghum,Chuka,Wholesale,a3_a6,2024-09-01,1,32.34759975488165
+Sorghum,Chuka,Wholesale,a3_a6,2024-10-01,2,34.77164406784819
+Sorghum,Chuka,Wholesale,a3_a6,2025-06-01,10,6.024112521329255
+Sorghum,Chuka,Wholesale,plain,2025-07-01,1,8.25161824292531
+Sorghum,Chuka,Wholesale,plain,2025-08-01,2,10.232424412395073
+Sorghum,Chuka,Wholesale,plain,2025-09-01,3,12.234818943385477
+Sorghum,Chuka,Wholesale,a3,2025-07-01,1,10.806750427173101
+Sorghum,Chuka,Wholesale,a3,2025-08-01,2,7.869971800271481
+Sorghum,Chuka,Wholesale,a3,2025-09-01,3,10.76864550034185
+Sorghum,Chuka,Wholesale,a6,2025-07-01,1,7.438127486157323
+Sorghum,Chuka,Wholesale,a6,2025-08-01,2,16.55736835968319
+Sorghum,Chuka,Wholesale,a6,2025-09-01,3,11.38844411789713
+Sorghum,Chuka,Wholesale,a3_a6,2025-07-01,1,9.835725356498724
+Sorghum,Chuka,Wholesale,a3_a6,2025-08-01,2,14.003637342465616
+Sorghum,Chuka,Wholesale,a3_a6,2025-09-01,3,9.955550470086042
+Beans (mixed),Meru,Retail,plain,2025-08-01,1,1.1090233485689505
+Beans (mixed),Meru,Retail,plain,2025-09-01,2,5.321088901048706
+Beans (mixed),Meru,Retail,plain,2025-10-01,3,1.3307003351164133
+Beans (mixed),Meru,Retail,a3,2025-08-01,1,4.6421945443631
+Beans (mixed),Meru,Retail,a3,2025-09-01,2,9.137102057266086
+Beans (mixed),Meru,Retail,a3,2025-10-01,3,6.309424236120862
+Beans (mixed),Meru,Retail,a6,2025-08-01,1,13.16895065049723
+Beans (mixed),Meru,Retail,a6,2025-09-01,2,0.09014135463124817
+Beans (mixed),Meru,Retail,a6,2025-10-01,3,9.826203139671351
+Beans (mixed),Meru,Retail,a3_a6,2025-08-01,1,17.87701331348486
+Beans (mixed),Meru,Retail,a3_a6,2025-09-01,2,1.9626357483671395
+Beans (mixed),Meru,Retail,a3_a6,2025-10-01,3,13.871713720377327
+Beans (mixed),Meru,Retail,plain,2025-11-01,1,8.969768091129438
+Beans (mixed),Meru,Retail,plain,2025-12-01,2,26.390636463948436
+Beans (mixed),Meru,Retail,plain,2026-01-01,3,41.55986661681676
+Beans (mixed),Meru,Retail,a3,2025-11-01,1,9.586055959509759
+Beans (mixed),Meru,Retail,a3,2025-12-01,2,31.996754995319925
+Beans (mixed),Meru,Retail,a3,2026-01-01,3,51.3914547196128
+Beans (mixed),Meru,Retail,a6,2025-11-01,1,5.246094018658207
+Beans (mixed),Meru,Retail,a6,2025-12-01,2,24.042211583750476
+Beans (mixed),Meru,Retail,a6,2026-01-01,3,38.81764014326085
+Beans (mixed),Meru,Retail,a3_a6,2025-11-01,1,2.8782920623335055
+Beans (mixed),Meru,Retail,a3_a6,2025-12-01,2,27.81384803534735
+Beans (mixed),Meru,Retail,a3_a6,2026-01-01,3,46.58577100912591
+Beans (mixed),Meru,Retail,plain,2026-02-01,1,37.416606901288844
+Beans (mixed),Meru,Retail,plain,2026-03-01,2,30.711516659780337
+Beans (mixed),Meru,Retail,a3,2026-02-01,1,27.400254970234894
+Beans (mixed),Meru,Retail,a3,2026-03-01,2,28.563064299593083
+Beans (mixed),Meru,Retail,a6,2026-02-01,1,36.54217395079358
+Beans (mixed),Meru,Retail,a6,2026-03-01,2,36.92015366799629
+Beans (mixed),Meru,Retail,a3_a6,2026-02-01,1,26.44324167844403
+Beans (mixed),Meru,Retail,a3_a6,2026-03-01,2,33.912561685015575
+Sorghum,Eldoret,Wholesale,plain,2023-10-01,1,28.033964756263224
+Sorghum,Eldoret,Wholesale,plain,2023-11-01,2,23.372585994432796
+Sorghum,Eldoret,Wholesale,plain,2024-03-01,6,23.761404019566726
+Sorghum,Eldoret,Wholesale,a3,2023-10-01,1,27.302172265296004
+Sorghum,Eldoret,Wholesale,a3,2023-11-01,2,23.364664604754864
+Sorghum,Eldoret,Wholesale,a3,2024-03-01,6,22.79248150142267
+Sorghum,Eldoret,Wholesale,a6,2023-10-01,1,28.410752948847893
+Sorghum,Eldoret,Wholesale,a6,2023-11-01,2,22.97540561680907
+Sorghum,Eldoret,Wholesale,a6,2024-03-01,6,24.155446101469195
+Sorghum,Eldoret,Wholesale,a3_a6,2023-10-01,1,28.67478631733037
+Sorghum,Eldoret,Wholesale,a3_a6,2023-11-01,2,21.956132467160174
+Sorghum,Eldoret,Wholesale,a3_a6,2024-03-01,6,24.40989542138253
+Sorghum,Eldoret,Wholesale,plain,2024-04-01,1,14.679490938176118
+Sorghum,Eldoret,Wholesale,plain,2024-05-01,2,9.567859948787271
+Sorghum,Eldoret,Wholesale,plain,2024-06-01,3,32.43664029902501
+Sorghum,Eldoret,Wholesale,a3,2024-04-01,1,18.53269628987789
+Sorghum,Eldoret,Wholesale,a3,2024-05-01,2,11.534948758718919
+Sorghum,Eldoret,Wholesale,a3,2024-06-01,3,33.2246985839907
+Sorghum,Eldoret,Wholesale,a6,2024-04-01,1,15.305885487144986
+Sorghum,Eldoret,Wholesale,a6,2024-05-01,2,11.172919382328434
+Sorghum,Eldoret,Wholesale,a6,2024-06-01,3,33.35194366018682
+Sorghum,Eldoret,Wholesale,a3_a6,2024-04-01,1,18.356068169113797
+Sorghum,Eldoret,Wholesale,a3_a6,2024-05-01,2,11.355721532565042
+Sorghum,Eldoret,Wholesale,a3_a6,2024-06-01,3,33.147166556713145
+Sorghum,Eldoret,Wholesale,plain,2024-07-01,1,16.06482276883405
+Sorghum,Eldoret,Wholesale,plain,2024-08-01,2,22.817576669604883
+Sorghum,Eldoret,Wholesale,plain,2024-09-01,3,6.288410956124511
+Sorghum,Eldoret,Wholesale,a3,2024-07-01,1,18.02914922621504
+Sorghum,Eldoret,Wholesale,a3,2024-08-01,2,22.885437664268377
+Sorghum,Eldoret,Wholesale,a3,2024-09-01,3,7.901653707947403
+Sorghum,Eldoret,Wholesale,a6,2024-07-01,1,15.877423446045057
+Sorghum,Eldoret,Wholesale,a6,2024-08-01,2,23.06402034576442
+Sorghum,Eldoret,Wholesale,a6,2024-09-01,3,6.738611258321059
+Sorghum,Eldoret,Wholesale,a3_a6,2024-07-01,1,17.209043771072174
+Sorghum,Eldoret,Wholesale,a3_a6,2024-08-01,2,22.658102714701027
+Sorghum,Eldoret,Wholesale,a3_a6,2024-09-01,3,7.654970687276815
+Sorghum,Eldoret,Wholesale,plain,2025-05-01,1,24.617955960863174
+Sorghum,Eldoret,Wholesale,a3,2025-05-01,1,24.670504264507905
+Sorghum,Eldoret,Wholesale,a6,2025-05-01,1,23.728284466620167
+Sorghum,Eldoret,Wholesale,a3_a6,2025-05-01,1,23.814986081447387
+Maize (white),Marsabit,Retail,plain,2025-08-01,1,23.326612598563102
+Maize (white),Marsabit,Retail,plain,2025-09-01,2,20.17684816761605
+Maize (white),Marsabit,Retail,plain,2025-10-01,3,11.506554969219136
+Maize (white),Marsabit,Retail,a3,2025-08-01,1,19.78957258756182
+Maize (white),Marsabit,Retail,a3,2025-09-01,2,19.08637165024345
+Maize (white),Marsabit,Retail,a3,2025-10-01,3,10.832717799080411
+Maize (white),Marsabit,Retail,a6,2025-08-01,1,23.683923702103836
+Maize (white),Marsabit,Retail,a6,2025-09-01,2,13.024549860050968
+Maize (white),Marsabit,Retail,a6,2025-10-01,3,13.175691691239802
+Maize (white),Marsabit,Retail,a3_a6,2025-08-01,1,21.06271431983473
+Maize (white),Marsabit,Retail,a3_a6,2025-09-01,2,12.594677609724478
+Maize (white),Marsabit,Retail,a3_a6,2025-10-01,3,12.971968360973761
+Maize (white),Marsabit,Retail,plain,2025-11-01,1,7.431006058426842
+Maize (white),Marsabit,Retail,plain,2025-12-01,2,5.210961141054911
+Maize (white),Marsabit,Retail,plain,2026-01-01,3,5.3359552193638065
+Maize (white),Marsabit,Retail,a3,2025-11-01,1,5.993733460726661
+Maize (white),Marsabit,Retail,a3,2025-12-01,2,5.900261230827146
+Maize (white),Marsabit,Retail,a3,2026-01-01,3,7.225995983587325
+Maize (white),Marsabit,Retail,a6,2025-11-01,1,3.6326220758042913
+Maize (white),Marsabit,Retail,a6,2025-12-01,2,5.564378705114174
+Maize (white),Marsabit,Retail,a6,2026-01-01,3,6.0284185664314505
+Maize (white),Marsabit,Retail,a3_a6,2025-11-01,1,2.1710399317173468
+Maize (white),Marsabit,Retail,a3_a6,2025-12-01,2,5.920250827235477
+Maize (white),Marsabit,Retail,a3_a6,2026-01-01,3,7.518732766496347
+Maize (white),Marsabit,Retail,plain,2026-02-01,1,6.879166930147819
+Maize (white),Marsabit,Retail,plain,2026-03-01,2,8.841798292867468
+Maize (white),Marsabit,Retail,a3,2026-02-01,1,12.436454490769162
+Maize (white),Marsabit,Retail,a3,2026-03-01,2,9.996796615020084
+Maize (white),Marsabit,Retail,a6,2026-02-01,1,3.396444683636367
+Maize (white),Marsabit,Retail,a6,2026-03-01,2,9.790415258685629
+Maize (white),Marsabit,Retail,a3_a6,2026-02-01,1,7.633334952582811
+Maize (white),Marsabit,Retail,a3_a6,2026-03-01,2,9.93321519695903
+Beans (rosecoco),Kisumu,Wholesale,plain,2025-10-01,1,5.486075013798261
+Beans (rosecoco),Kisumu,Wholesale,plain,2025-11-01,2,7.891193637080833
+Beans (rosecoco),Kisumu,Wholesale,plain,2025-12-01,3,1.1827939110449681
+Beans (rosecoco),Kisumu,Wholesale,a3,2025-10-01,1,5.177210889939959
+Beans (rosecoco),Kisumu,Wholesale,a3,2025-11-01,2,8.413765233608753
+Beans (rosecoco),Kisumu,Wholesale,a3,2025-12-01,3,0.08083768187182191
+Beans (rosecoco),Kisumu,Wholesale,a6,2025-10-01,1,6.707782375211092
+Beans (rosecoco),Kisumu,Wholesale,a6,2025-11-01,2,7.959938829059491
+Beans (rosecoco),Kisumu,Wholesale,a6,2025-12-01,3,1.2934542121564536
+Beans (rosecoco),Kisumu,Wholesale,a3_a6,2025-10-01,1,5.517986582576029
+Beans (rosecoco),Kisumu,Wholesale,a3_a6,2025-11-01,2,8.435079038937934
+Beans (rosecoco),Kisumu,Wholesale,a3_a6,2025-12-01,3,0.07048349762377203
+Beans (rosecoco),Kisumu,Wholesale,plain,2026-01-01,1,4.174206259857614
+Beans (rosecoco),Kisumu,Wholesale,plain,2026-02-01,2,4.498547768222488
+Beans (rosecoco),Kisumu,Wholesale,plain,2026-03-01,3,5.419220519574306
+Beans (rosecoco),Kisumu,Wholesale,a3,2026-01-01,1,3.9758105329554185
+Beans (rosecoco),Kisumu,Wholesale,a3,2026-02-01,2,8.617969412098864
+Beans (rosecoco),Kisumu,Wholesale,a3,2026-03-01,3,6.763691368466872
+Beans (rosecoco),Kisumu,Wholesale,a6,2026-01-01,1,4.568773762631562
+Beans (rosecoco),Kisumu,Wholesale,a6,2026-02-01,2,4.632191631831566
+Beans (rosecoco),Kisumu,Wholesale,a6,2026-03-01,3,4.833993640238435
+Beans (rosecoco),Kisumu,Wholesale,a3_a6,2026-01-01,1,4.158180826458354
+Beans (rosecoco),Kisumu,Wholesale,a3_a6,2026-02-01,2,8.570773564635878
+Beans (rosecoco),Kisumu,Wholesale,a3_a6,2026-03-01,3,6.624340248384618
+Maize (white),Siakago,Retail,plain,2025-04-01,1,20.721972912557188
+Maize (white),Siakago,Retail,plain,2025-05-01,2,14.823740618350033
+Maize (white),Siakago,Retail,plain,2025-06-01,3,23.381406356727304
+Maize (white),Siakago,Retail,a3,2025-04-01,1,12.326176452499757
+Maize (white),Siakago,Retail,a3,2025-05-01,2,24.361732086007816
+Maize (white),Siakago,Retail,a3,2025-06-01,3,1.379188964984639
+Maize (white),Siakago,Retail,a6,2025-04-01,1,26.45091386462536
+Maize (white),Siakago,Retail,a6,2025-05-01,2,31.90289792874015
+Maize (white),Siakago,Retail,a6,2025-06-01,3,20.803712950632892
+Maize (white),Siakago,Retail,a3_a6,2025-04-01,1,18.486918579262422
+Maize (white),Siakago,Retail,a3_a6,2025-05-01,2,35.136400946360325
+Maize (white),Siakago,Retail,a3_a6,2025-06-01,3,4.595007626322169
+Maize (white),Siakago,Retail,plain,2025-07-01,1,33.656172693380796
+Maize (white),Siakago,Retail,plain,2025-08-01,2,34.040060844833945
+Maize (white),Siakago,Retail,plain,2025-09-01,3,28.771701175299224
+Maize (white),Siakago,Retail,a3,2025-07-01,1,46.50562734884364
+Maize (white),Siakago,Retail,a3,2025-08-01,2,42.51653465343369
+Maize (white),Siakago,Retail,a3,2025-09-01,3,21.208953563095953
+Maize (white),Siakago,Retail,a6,2025-07-01,1,13.441325549763194
+Maize (white),Siakago,Retail,a6,2025-08-01,2,48.069098753119725
+Maize (white),Siakago,Retail,a6,2025-09-01,3,4.296303855236848
+Maize (white),Siakago,Retail,a3_a6,2025-07-01,1,23.365535010825838
+Maize (white),Siakago,Retail,a3_a6,2025-08-01,2,51.016469837731506
+Maize (white),Siakago,Retail,a3_a6,2025-09-01,3,6.604516626474943
+Maize (white),Siakago,Retail,plain,2026-01-01,1,1.7933998937256657
+Maize (white),Siakago,Retail,plain,2026-02-01,2,6.35275132346216
+Maize (white),Siakago,Retail,plain,2026-03-01,3,10.304254988843972
+Maize (white),Siakago,Retail,a3,2026-01-01,1,28.620964228777883
+Maize (white),Siakago,Retail,a3,2026-02-01,2,34.93356321226932
+Maize (white),Siakago,Retail,a3,2026-03-01,3,6.3575715966919395
+Maize (white),Siakago,Retail,a6,2026-01-01,1,0.64006519172614
+Maize (white),Siakago,Retail,a6,2026-02-01,2,0.8250132084779346
+Maize (white),Siakago,Retail,a6,2026-03-01,3,3.5775687109933654
+Maize (white),Siakago,Retail,a3_a6,2026-01-01,1,21.635754409537196
+Maize (white),Siakago,Retail,a3_a6,2026-02-01,2,20.309085355142283
+Maize (white),Siakago,Retail,a3_a6,2026-03-01,3,5.983324374736765
+Beans (mixed),Makueni,Retail,plain,2025-08-01,1,7.809841048224371
+Beans (mixed),Makueni,Retail,plain,2025-09-01,2,1.9436233992833383
+Beans (mixed),Makueni,Retail,plain,2025-10-01,3,0.22336980884579646
+Beans (mixed),Makueni,Retail,a3,2025-08-01,1,7.749268661339964
+Beans (mixed),Makueni,Retail,a3,2025-09-01,2,1.9211906184340235
+Beans (mixed),Makueni,Retail,a3,2025-10-01,3,0.3016214510027289
+Beans (mixed),Makueni,Retail,a6,2025-08-01,1,6.629419837354911
+Beans (mixed),Makueni,Retail,a6,2025-09-01,2,2.624388672147454
+Beans (mixed),Makueni,Retail,a6,2025-10-01,3,1.242712555805496
+Beans (mixed),Makueni,Retail,a3_a6,2025-08-01,1,6.643047492310251
+Beans (mixed),Makueni,Retail,a3_a6,2025-09-01,2,2.756968371545395
+Beans (mixed),Makueni,Retail,a3_a6,2025-10-01,3,1.3010189521229767
+Beans (mixed),Makueni,Retail,plain,2025-11-01,1,3.2089441848552807
+Beans (mixed),Makueni,Retail,plain,2025-12-01,2,0.9132534768780475
+Beans (mixed),Makueni,Retail,plain,2026-01-01,3,3.9852013701227142
+Beans (mixed),Makueni,Retail,a3,2025-11-01,1,3.213753070289112
+Beans (mixed),Makueni,Retail,a3,2025-12-01,2,0.7110202342787658
+Beans (mixed),Makueni,Retail,a3,2026-01-01,3,4.303842695138579
+Beans (mixed),Makueni,Retail,a6,2025-11-01,1,3.2661269270812565
+Beans (mixed),Makueni,Retail,a6,2025-12-01,2,0.9168996437468265
+Beans (mixed),Makueni,Retail,a6,2026-01-01,3,3.8580896819796253
+Beans (mixed),Makueni,Retail,a3_a6,2025-11-01,1,3.274974511320577
+Beans (mixed),Makueni,Retail,a3_a6,2025-12-01,2,0.7670029303386184
+Beans (mixed),Makueni,Retail,a3_a6,2026-01-01,3,4.060011401402581
+Beans (mixed),Makueni,Retail,plain,2026-02-01,1,2.808090300426321
+Beans (mixed),Makueni,Retail,plain,2026-03-01,2,10.40244960793497
+Beans (mixed),Makueni,Retail,a3,2026-02-01,1,0.34173688704387417
+Beans (mixed),Makueni,Retail,a3,2026-03-01,2,10.640471633693593
+Beans (mixed),Makueni,Retail,a6,2026-02-01,1,2.7026653034884114
+Beans (mixed),Makueni,Retail,a6,2026-03-01,2,9.843698592142065
+Beans (mixed),Makueni,Retail,a3_a6,2026-02-01,1,0.23449131394586822
+Beans (mixed),Makueni,Retail,a3_a6,2026-03-01,2,9.97130723433353
+Beans (mixed),Kongowea,Retail,plain,2025-05-01,1,32.495865116972524
+Beans (mixed),Kongowea,Retail,plain,2025-06-01,2,36.07029919014189
+Beans (mixed),Kongowea,Retail,plain,2025-07-01,3,32.22762977266625
+Beans (mixed),Kongowea,Retail,a3,2025-05-01,1,32.77635190941353
+Beans (mixed),Kongowea,Retail,a3,2025-06-01,2,36.320823212298095
+Beans (mixed),Kongowea,Retail,a3,2025-07-01,3,32.555411776612736
+Beans (mixed),Kongowea,Retail,a6,2025-05-01,1,28.32369159065954
+Beans (mixed),Kongowea,Retail,a6,2025-06-01,2,35.41878008144163
+Beans (mixed),Kongowea,Retail,a6,2025-07-01,3,29.686971448233873
+Beans (mixed),Kongowea,Retail,a3_a6,2025-05-01,1,28.428505569105877
+Beans (mixed),Kongowea,Retail,a3_a6,2025-06-01,2,35.38589293990279
+Beans (mixed),Kongowea,Retail,a3_a6,2025-07-01,3,29.641125199826718
+Beans (mixed),Kongowea,Retail,plain,2025-08-01,1,20.54624712081046
+Beans (mixed),Kongowea,Retail,plain,2025-09-01,2,23.478414899157514
+Beans (mixed),Kongowea,Retail,plain,2025-10-01,3,21.756051299573514
+Beans (mixed),Kongowea,Retail,a3,2025-08-01,1,20.358798965453424
+Beans (mixed),Kongowea,Retail,a3,2025-09-01,2,23.380568854789942
+Beans (mixed),Kongowea,Retail,a3,2025-10-01,3,21.686459585812216
+Beans (mixed),Kongowea,Retail,a6,2025-08-01,1,18.887997437356567
+Beans (mixed),Kongowea,Retail,a6,2025-09-01,2,21.8378162803194
+Beans (mixed),Kongowea,Retail,a6,2025-10-01,3,20.063229292630282
+Beans (mixed),Kongowea,Retail,a3_a6,2025-08-01,1,18.933515918128336
+Beans (mixed),Kongowea,Retail,a3_a6,2025-09-01,2,21.98418066825836
+Beans (mixed),Kongowea,Retail,a3_a6,2025-10-01,3,20.36369993401574
+Beans (mixed),Kongowea,Retail,plain,2026-01-01,1,21.523031602850796
+Beans (mixed),Kongowea,Retail,plain,2026-02-01,2,27.744375205715333
+Beans (mixed),Kongowea,Retail,plain,2026-03-01,3,34.416916998452656
+Beans (mixed),Kongowea,Retail,a3,2026-01-01,1,21.54229138327705
+Beans (mixed),Kongowea,Retail,a3,2026-02-01,2,27.805523822209217
+Beans (mixed),Kongowea,Retail,a3,2026-03-01,3,34.46421105346246
+Beans (mixed),Kongowea,Retail,a6,2026-01-01,1,19.81996366992187
+Beans (mixed),Kongowea,Retail,a6,2026-02-01,2,25.86215017394629
+Beans (mixed),Kongowea,Retail,a6,2026-03-01,3,30.962944598405688
+Beans (mixed),Kongowea,Retail,a3_a6,2026-01-01,1,18.753738455170947
+Beans (mixed),Kongowea,Retail,a3_a6,2026-02-01,2,25.938847553285672
+Beans (mixed),Kongowea,Retail,a3_a6,2026-03-01,3,30.83085081149376

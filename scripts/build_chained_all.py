@@ -102,9 +102,12 @@ _COMMODITY_ALIAS = {
     "Maize": "Maize",
     "Dry maize": "Maize",
     "Dry Maize": "Maize",
-    "Maize (white)": "Maize (white)",
-    "Maize (white, dry)": "Maize (white)",
-    "Maize Grain (White)": "Maize (white)",
+    # "Maize (white)" is the same product under a label retired ~2019-2020
+    # (analyst report: corr 0.94-0.98, mean diff <2 KES) - fold onto "Maize",
+    # which is what users type and what the RAG maps "mahindi" to.
+    "Maize (white)": "Maize",
+    "Maize (white, dry)": "Maize",
+    "Maize Grain (White)": "Maize",
     # Flour vs meal: keep them SEPARATE. Meal = coarsely ground, flour = fine.
     "Maize flour": "Maize flour",
     "Maize Flour": "Maize flour",
@@ -293,7 +296,8 @@ def load_kamis() -> pd.DataFrame:
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
     df = df.dropna(subset=["date", "market", "commodity", "pricetype", "price"])
     df["commodity"] = df["commodity"].map(_canonical)
-    df = df[df["commodity"].notna()].copy()
+    # scrape_kamis.py once fell back to "product_<id>" for unnamed IDs.
+    df = df[df["commodity"].notna() & ~df["commodity"].str.match(r"product_\d+$", na=False)].copy()
     df["market"] = df["market"].map(_norm_market)
     out = df.rename(columns={"admin_1": "admin1", "price": "price_per_kg"})[[
         "commodity", "market", "pricetype", "date", "price_per_kg", "admin1",

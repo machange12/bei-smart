@@ -1,25 +1,52 @@
 # bei-smart — Progress Log
 
-Last updated: 2026-09-22
+Last updated: 2026-10-29
 
 ## Current state
 
 **Data pipeline:**
-- Chain: `data/cleaned/bei_smart_forecasting_chained_all.csv` — 123,998 rows, **51 commodities**, **468 markets**, 1,692 series ≥24 obs
-- Sources stitched: WFP, WFP_SUPP, FEWS, KAMIS, KNBS (priority in that order)
-- KAMIS scraper: 133 curated food products, 46 landing data, 250 markets
+- Chain: `data/cleaned/bei_smart_forecasting_chained_all.csv` — 114,632 rows, **49 commodities**, **468 markets** (settlement markets still in the chain; excluded downstream), 1,524 series ≥24 obs, data through 2026-09
+- Sources stitched: WFP_SUPP, FEWS, WFP, KAMIS, KNBS (`SOURCE_PRIORITY` order). KAMIS is now the largest source (160 of 266 served series)
+- **Refreshes automatically** on the 5th of each month via `.github/workflows/refresh-data.yml`
 - External features merged into chain (oni, corn/wheat futures, KES/USD, EPRA fuel) — **present but unused by forecaster**
 
-**Forecasts (`app/data/`):**
-- **318 reliable series** (up from 248 pre-widen)
-- Median MAPE: **9.50%** overall / **7.23% on series shared with prior baseline** (−2.19 pts, 33/41 improved)
-- Strategy mix: chronos 170, ensemble 52, prophet 48, sarima 48
-- Ensemble = **weighted top-2 by 1/val_mape** (replaced unweighted mean)
-- Anomalies: 961 rows, 145 markets coloured, 45 SPIKE + 4 CRASH
+**Forecasts (`app/data/`, pre-maize-merge — see below):**
+- **266 served series** (commodity+market+pricetype), **80 markets**, 22 commodity labels, **all 8 regions**; horizons 3/6/12 months. 284 screened, 18 fail the 25% MAPE gate
+- Median test MAPE: **9.65%** (mean 10.36%)
+- Strategy mix: chronos 145, ensemble 47, sarima 39, prophet 35 (model: `amazon/chronos-bolt-small`; ensemble = weighted top-2 by 1/val_mape)
+- Confidence: high 141, medium 112, low 13
+- Anomalies: 781 series, 135 markets, 31 SPIKE + 10 CRASH (36-month IQR band)
+- Down from 318 because settlement markets are excluded again; the next full rebuild will also fold 50 `Maize (white)` series into `Maize`, so expect the count to move again
 
-**Dashboard:** Streamlit at `app/streamlit_app.py`, points at `app/data/` CSVs. Serves widened data.
+**Dashboard:** Streamlit at `app/streamlit_app.py`, points at `app/data/` CSVs. Chat is a floating "Ask AgriPulse" button on every page (no separate Chat page).
 
-## What was done this pass (A + B sequenced)
+## This session (2026-10) — automation, data hygiene, demo UX
+
+**Automation**
+- `.github/workflows/refresh-data.yml` — cron `0 3 5 * *` + manual dispatch: fetch WFP (HDX), `fetch_external_features`, `scrape_kamis --discover` (last + current year) → `build_chained_all` → `enrich_chain` → `rebuild_anomalies` → `rebuild_forecasts` → commit `app/data`, exports, chain
+- `scripts/scrape_kamis.py` merges into existing `kamis_prices.csv` instead of overwriting; `--discover` full-history-scrapes live product IDs not in `PRODUCTS`/`SKIPPED_IDS`
+
+**Data / model hygiene**
+- Refugee settlement markets (Kakuma, Kalobeyei, Dadaab/Daadab, Hagadera, Ifo, Dagahaley + Kakuma camp names) excluded from forecasts and anomalies — `SETTLEMENT_RE` in `rebuild_forecasts.py`, reused by `rebuild_anomalies.py`
+- Region column normalised to the 8 former provinces (`REGIONS`, `COUNTY_TO_REGION` for KAMIS counties, market overrides; "Northern" retired)
+- `build_chained_all.py`: `Maize (white)` variants fold onto `Maize`; `product_<id>` placeholders dropped (product_10 gone). Chain + anomalies already reflect this; **production forecasts still show both maize labels until the next full rebuild**
+- `rebuild_anomalies.py`: IQR band from the 36 months before latest (was all history → flagged nothing), anchor = latest month in data
+- Dead `_prophet_predict_log` / `_sarima_predict_log` wrappers deleted
+- `--chronos-model` flag on `rebuild_forecasts.py` (default `amazon/chronos-bolt-small`) for the Bolt-base test
+- RAG `lookup.get_forecast`: falls back to the variety a market tracks (e.g. Maize → Maize (white)); RAG suite 20 → 24 found
+
+**UX (demo)**
+- Floating "Ask AgriPulse" chat (st.dialog, history in session_state) replaces `6_Chat.py`; RAG stack warmed in a background thread
+- Freshness banner on every page ("Data as of <month> · refreshes automatically on the 5th")
+- Landing "This month" cards: best time & place to sell, price alerts, cheapest maize to buy
+- Mobile CSS (≤640px padding, icon-only chat button)
+- Forecast page: shareable links (selection mirrored into URL query params), CSV download, "Typical error ±x%" metric, plain-English model caption ("blend of the 2 best models", etc.)
+- Alerts: CSV download of the monitored table
+- Classify: "likely cheap/average/expensive — use as a shortlist" wording + per-class precision caption
+- Map: CRASH markers in blue (previously fell through to NORMAL)
+- KB (`app/data/kb/*.md`), README and this log refreshed to current numbers; robust phrasing so the chatbot doesn't drift monthly
+
+## Earlier pass (2026-09) — A + B sequenced
 
 ### Part A — Data acquisition
 
@@ -38,7 +65,7 @@ Last updated: 2026-09-22
    - Only ensemble branch changed; single-model routing unchanged
 2. **Log-transform for Prophet + SARIMA** — TRIED, REGRESSED, REVERTED
    - Caused Chronos to win val races it shouldn't; ensemble share dropped 54 → 34
-   - Log wrapper functions (`_prophet_predict_log`, `_sarima_predict_log`) left in the file as dead code (~10 lines) — could delete
+   - Log wrapper functions left as dead code — deleted 2026-10
 3. **Checkpointing** (`scripts/rebuild_forecasts.py`)
    - `CHECKPOINT = data/exports/.rebuild_checkpoint.pkl`, saved every 25 series (atomic rename), cleared on full run
    - Root-cause fix for the low-memory reaper killing rebuilds mid-flight (killed 3 runs previously)
@@ -62,7 +89,7 @@ Ruled out this pass:
 - **KNBS bulk CPI** — national aggregates, not market-level, won't help per-market forecast
 - **Log-transform target** — measured regression, reverted
 
-## Files touched this pass
+## Files touched (2026-09 pass)
 
 - `scripts/scrape_kamis.py` — PRODUCTS dict refreshed, `dump_product_ids()` helper + `--dump-products` flag, `.mean()` → `.median()`
 - `scripts/rebuild_forecasts.py` — weighted top-2 ensemble, checkpointing, dead `_prophet_predict_log`/`_sarima_predict_log` wrappers to clean up
@@ -74,12 +101,14 @@ Uncommitted git state at time of writing: modified pipeline scripts + regenerate
 
 ## Next session — pick one
 
-- **A. Ship NAFIS scraper** — model on `scrape_kamis.py`, cache per (commodity, month), emit long-format rows in the chain schema. Then re-run `build_chained_all → enrich_chain → rebuild_anomalies → rebuild_forecasts`.
-- **B. Try Chronos-Bolt-base** — swap the model ID in `_chronos_predict`, download weights, re-run rebuild once. Measure with `diff_mape.py`.
-- **C. Delete the log-transform dead code** in `rebuild_forecasts.py` and commit the pass cleanly first.
+- **A. Full rebuild to land the maize merge** — `build_chained_all → enrich_chain → rebuild_anomalies → rebuild_forecasts` (or trigger the workflow); then re-check counts and commit. Also refreshes `app/data/bei_smart_forecasting_chained.csv`.
+- **B. Ship NAFIS scraper** — model on `scrape_kamis.py`, cache per (commodity, month), emit long-format rows in the chain schema, add to the workflow.
+- **C. Try Chronos-Bolt-base** — `rebuild_forecasts.py --chronos-model amazon/chronos-bolt-base`, measure with `diff_mape.py`.
+- Add the live Streamlit URL to README.
 
-Parked from prior plans (not this session's focus):
-- Mobile pass (Streamlit phone-usable, plan drafted)
+Done since last log: log-transform dead code deleted; mobile pass (CSS); monthly ingestion automated.
+
+Parked from prior plans:
 - Classifier swap
 - Custom Prophet seasonalities
 - Rolling-origin CV
@@ -90,12 +119,13 @@ Parked from prior plans (not this session's focus):
 # Refresh KAMIS product IDs (review + hand-edit PRODUCTS)
 venv/Scripts/python.exe scripts/scrape_kamis.py --dump-products
 
-# Full pipeline rebuild
-venv/Scripts/python.exe scripts/scrape_kamis.py
+# Full pipeline rebuild (CI does this monthly; manual: gh workflow run refresh-data.yml)
+venv/Scripts/python.exe scripts/scrape_kamis.py --discover
 venv/Scripts/python.exe scripts/build_chained_all.py
 venv/Scripts/python.exe scripts/enrich_chain.py
 venv/Scripts/python.exe scripts/rebuild_anomalies.py
 venv/Scripts/python.exe scripts/rebuild_forecasts.py           # resumes from ckpt if killed
+venv/Scripts/python.exe scripts/rebuild_forecasts.py --chronos-model amazon/chronos-bolt-base
 
 # Measure lift
 venv/Scripts/python.exe scripts/diff_mape.py

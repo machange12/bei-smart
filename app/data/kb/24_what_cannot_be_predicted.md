@@ -4,6 +4,6 @@ AgriPulse's models learn from patterns in past prices, rainfall, and related dat
 
 This applies generally to geopolitical shocks, sudden policy changes such as an import ban or subsidy shift, and abrupt supply disruptions. These can move prices sharply and quickly, and a forecast made the month before will simply be wrong, through no fault of the method.
 
-AgriPulse also does not attempt to forecast refugee settlement markets — Kakuma, Dadaab, and Kalobeyei — because prices there are set largely by humanitarian distribution schedules rather than ordinary supply and demand; an early attempt produced errors above 5,000% before these were excluded.
+AgriPulse also does not attempt to forecast refugee settlement markets — Kakuma, Kalobeyei, Dadaab, Hagadera, Ifo, and Dagahaley — or raise price alerts for them, because prices there are set largely by humanitarian distribution schedules rather than ordinary supply and demand; an early attempt produced errors above 5,000% before these were excluded.
 
 Treat every forecast as a projection of business-as-usual conditions, not a prediction that accounts for the next unprecedented event.

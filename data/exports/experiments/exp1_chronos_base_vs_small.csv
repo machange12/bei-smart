@@ -1,0 +1,40 @@
+commodity,market,pricetype,n,small_sec,small_mape,base_sec,base_mape
+Wheat,Kibuye,Retail,49,0.404,12.293,0.432,11.824
+Beans red haricot (wairimu),Chuka,Wholesale,46,0.509,11.101,0.357,14.231
+Rice,Chuka,Wholesale,45,0.079,3.387,0.365,3.447
+Beans (mixed),Sotik,Retail,86,0.216,7.065,0.626,7.286
+Maize (white),Makueni,Retail,220,0.73,6.52,0.695,10.087
+Maize,Kisumu,Wholesale,291,0.31,11.636,0.747,16.888
+Maize meal,Nairobi,Retail,233,0.188,15.156,0.624,11.744
+Beans (mixed),Gakoromere,Retail,88,0.25,4.166,0.653,4.259
+Maize (white),Taita Taveta,Retail,220,0.234,7.446,0.808,4.721
+Green maize,Ngurubani,Retail,55,0.208,12.672,0.937,12.873
+Maize,Maua,Wholesale,53,0.177,9.506,0.314,13.303
+Sorghum,Muhoroni,Wholesale,49,0.125,12.697,0.253,18.139
+Beans (mixed),Turbo,Retail,88,0.086,11.082,0.266,8.42
+Maize (white),Embu-Mbeere,Retail,220,0.106,19.442,0.315,23.211
+Sorghum,Nairobi,Wholesale,242,0.303,10.667,0.555,12.548
+Potatoes (Irish),Kitui,Wholesale,193,0.253,17.697,0.564,17.061
+Maize,Eldoret,Wholesale,275,0.14,13.443,0.402,12.528
+Beans (rosecoco),Mombasa,Wholesale,217,0.111,20.724,0.319,18.081
+Beans (mixed),Wote,Retail,84,0.087,3.994,0.368,3.897
+product_10,Ahero,Wholesale,58,0.104,8.831,0.295,8.32
+Beans red haricot (wairimu),Nkubu,Retail,56,0.078,12.945,0.239,10.666
+Finger millet,Kitale Municipality,Wholesale,43,0.084,13.891,0.284,12.201
+Beans (mixed),Iciara,Retail,74,0.132,18.254,0.327,19.122
+Maize (white),Migori,Retail,83,0.163,32.511,0.334,29.797
+Tea (Mombasa),Composite,Export,245,0.175,8.07,0.388,8.288
+Sorghum,Kisumu,Wholesale,242,0.226,10.696,0.44,10.384
+Beans (mixed),Kiambu,Retail,76,0.111,5.407,0.329,4.551
+Maize (white),Lamu,Retail,220,0.13,5.171,0.532,4.184
+Beans (mixed),Siakago,Retail,80,0.124,11.55,0.413,12.534
+product_10,Kutus,Wholesale,55,0.445,21.3,0.571,20.721
+Pearl rush millet,Nkubu,Retail,56,0.133,22.435,1.19,23.897
+Sorghum,Chuka,Wholesale,46,0.208,8.03,0.425,6.873
+Beans (mixed),Meru,Retail,135,0.119,15.769,0.287,17.597
+Sorghum,Eldoret,Wholesale,222,0.097,11.865,0.25,11.629
+Maize (white),Marsabit,Retail,247,0.08,4.127,0.288,4.672
+Beans (rosecoco),Kisumu,Wholesale,286,0.092,15.422,0.349,12.26
+Maize (white),Siakago,Retail,79,0.141,12.437,0.518,16.006
+Beans (mixed),Makueni,Retail,124,0.148,3.823,0.398,4.634
+Beans (mixed),Kongowea,Retail,95,0.094,11.627,0.233,11.603

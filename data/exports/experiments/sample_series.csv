@@ -1,0 +1,41 @@
+commodity,market,pricetype,region,n_records,strategy,mape,long
+Wheat,Kibuye,Retail,Nyanza,49,chronos,12.29,False
+Beans red haricot (wairimu),Chuka,Wholesale,Central,46,chronos,11.1,False
+Rice,Chuka,Wholesale,Central,45,chronos,3.39,False
+Beans (mixed),Sotik,Retail,Bomet,86,chronos,7.06,True
+Maize (white),Makueni,Retail,Eastern,220,chronos,6.52,True
+Maize,Kisumu,Wholesale,Nyanza,197,chronos,9.97,True
+Maize meal,Nairobi,Retail,Nairobi,233,chronos,15.16,True
+Maize (white),Kisumu,Wholesale,Nyanza,281,chronos,13.38,True
+Beans (mixed),Gakoromere,Retail,Meru,88,chronos,4.17,True
+Maize (white),Taita Taveta,Retail,Taita Taveta,220,chronos,7.45,True
+Green maize,Ngurubani,Retail,Kirinyaga,55,ensemble,9.7,False
+Maize,Maua,Wholesale,Meru,53,ensemble,4.96,False
+Sorghum,Muhoroni,Wholesale,Kisumu,49,ensemble,8.53,False
+Beans (mixed),Turbo,Retail,Uasin Gishu,88,ensemble,7.02,True
+Maize (white),Embu-Mbeere,Retail,Embu,220,ensemble,11.62,True
+Sorghum,Nairobi,Wholesale,Nairobi,242,ensemble,3.01,True
+Potatoes (Irish),Kitui,Wholesale,Eastern,193,ensemble,21.94,True
+Maize,Eldoret,Wholesale,Rift Valley,220,ensemble,11.94,True
+Beans (rosecoco),Mombasa,Wholesale,Coast,217,ensemble,17.48,True
+Beans (mixed),Wote,Retail,Eastern,84,ensemble,3.56,True
+product_10,Ahero,Wholesale,Nyanza,58,prophet,7.12,False
+Beans red haricot (wairimu),Nkubu,Retail,Meru,56,prophet,9.2,False
+Finger millet,Kitale Municipality,Wholesale,Trans-Nzoia,43,prophet,12.61,False
+Beans (mixed),Iciara,Retail,Embu,74,prophet,12.44,True
+Maize (white),Migori,Retail,Nyanza,83,prophet,8.84,True
+Tea (Mombasa),Composite,Export,Mombasa,245,prophet,5.68,True
+Sorghum,Kisumu,Wholesale,Nyanza,242,prophet,12.81,True
+Beans (mixed),Kiambu,Retail,Kiambu,76,prophet,2.68,True
+Maize (white),Lamu,Retail,Coast,220,prophet,6.81,True
+Beans (mixed),Siakago,Retail,Embu,80,prophet,9.94,True
+product_10,Kutus,Wholesale,Kirinyaga,55,sarima,16.4,False
+Pearl rush millet,Nkubu,Retail,Meru,56,sarima,13.53,False
+Sorghum,Chuka,Wholesale,Central,46,sarima,4.96,False
+Beans (mixed),Meru,Retail,Central,135,sarima,13.23,True
+Sorghum,Eldoret,Wholesale,Rift Valley,222,sarima,11.3,True
+Maize (white),Marsabit,Retail,Northern,247,sarima,5.03,True
+Beans (rosecoco),Kisumu,Wholesale,Nyanza,286,sarima,18.75,True
+Maize (white),Siakago,Retail,Embu,79,sarima,4.35,True
+Beans (mixed),Makueni,Retail,Eastern,124,sarima,5.36,True
+Beans (mixed),Kongowea,Retail,Mombasa,95,sarima,11.51,True

@@ -8,6 +8,7 @@ widgets (badges, header/footer, the standard forecast chart) are defined.
 from __future__ import annotations
 
 import base64
+import threading
 from pathlib import Path
 
 import pandas as pd
@@ -29,6 +30,13 @@ GREY = "#E0E0E0"          # gridlines, dividers
 
 CONFIDENCE_COLORS = {"high": GREEN_DARK, "medium": "#B8860B", "low": "#C0392B"}
 STATUS_COLORS = {"SPIKE": "#C0392B", "CRASH": "#1565C0", "NORMAL": "#757575"}
+# Routing strategy codes -> what a non-technical reader sees.
+STRATEGY_NAMES = {
+    "ensemble": "blend of the 2 best models",
+    "chronos": "Chronos (AI foundation model)",
+    "prophet": "Prophet",
+    "sarima": "SARIMA (statistical)",
+}
 
 DATA_SOURCES = (
     "FEWS NET",
@@ -39,6 +47,50 @@ DATA_SOURCES = (
 )
 
 ASSETS_DIR = Path(__file__).resolve().parent.parent / "assets"
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+SERIES_KEY = ["commodity", "market", "pricetype"]
+# Matches the GitHub Actions cron (5th of each month, 03:00 UTC).
+REFRESH_NOTE = "refreshes automatically on the 5th of each month"
+
+
+@st.cache_data(ttl="6h")
+def latest_prices() -> pd.DataFrame:
+    """Last observed price per series. Shared by the freshness banner and
+    the landing cards so the big history CSV is parsed once per process.
+    The ttl lets a monthly data refresh show up without a restart."""
+    try:
+        history = pd.read_csv(
+            DATA_DIR / "bei_smart_forecasting_chained.csv",
+            usecols=SERIES_KEY + ["date", "price_per_kg"],
+            parse_dates=["date"],
+        )
+    except (OSError, ValueError):  # missing file or columns -- banner just hides
+        return pd.DataFrame(columns=SERIES_KEY + ["date", "price_per_kg"])
+    return history.dropna(subset=["date"]).sort_values("date").groupby(SERIES_KEY).tail(1)
+
+
+def _freshness_banner() -> None:
+    """One slim line so nobody has to wonder how current the numbers are."""
+    as_of = latest_prices()["date"].max()
+    if pd.notna(as_of):
+        st.caption(f"📅 Data as of {as_of:%B %Y} · {REFRESH_NOTE}")
+
+
+@st.cache_resource
+def _warm_chat() -> None:
+    """Load the RAG stack in a background thread, once per process. The first
+    chat question otherwise pays ~60s for chromadb + the embedding model; the
+    modules keep their loaded client/collection in globals, so warming once
+    is enough. Failures are swallowed: chat just falls back to loading lazily."""
+    def warm() -> None:
+        try:
+            from src.rag import pipeline
+            pipeline.vectorstore.query("warm up", n_results=1)
+        except Exception:
+            pass
+
+    # ponytail: a question asked mid-warm-up may load the model a second time; add a lock in vectorstore if memory bites.
+    threading.Thread(target=warm, daemon=True).start()
 
 
 def inject_css() -> None:
@@ -50,7 +102,7 @@ def inject_css() -> None:
         <style>
         .block-container {{
             max-width: 1150px;
-            padding-top: 2rem;
+            padding-top: 4rem;  /* clears the 60px top bar so the freshness line isn't hidden */
         }}
         div[data-testid="stVerticalBlock"] {{
             gap: 0.5rem;
@@ -81,14 +133,36 @@ def inject_css() -> None:
             border-radius: 999px;
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
         }}
+        /* Landing "This month" cards: the bordered container is the card,
+           so drop the metric's own card styling inside it. */
+        .st-key-this_month div[data-testid="stMetric"] {{
+            background: none;
+            border: none;
+            padding: 0;
+        }}
+        @media (max-width: 640px) {{
+            .block-container {{
+                padding: 4rem 1rem 5rem;  /* bottom room so the chat button never hides the last row */
+            }}
+            .st-key-chat_fab {{
+                bottom: 1rem;
+                right: 1rem;
+            }}
+            .st-key-chat_fab button strong {{
+                display: none;  /* icon-only on phones */
+            }}
+        }}
         </style>
         """,
         unsafe_allow_html=True,
     )
-    # Every page calls inject_css() first, so the chat launcher rides along
-    # and shows up everywhere -- even on pages that st.stop() early.
+    # Every page calls inject_css() first, so the chat launcher and the
+    # freshness line ride along everywhere -- even on pages that st.stop() early.
+    _freshness_banner()
+    _warm_chat()
     with st.container(key="chat_fab"):
-        if st.button("💬 Ask AgriPulse", type="primary"):
+        # Bold label so the mobile CSS can hide the words and keep the icon.
+        if st.button("💬 **Ask AgriPulse**", type="primary"):
             _chat_dialog()
 
 
@@ -273,11 +347,13 @@ def status_badge(status: str) -> None:
 
 
 def model_provenance_caption(strategy: str, test_mape: float, last_observed: str | None = None) -> None:
-    """Caption naming the model serving a forecast, its test MAPE, and --
-    when supplied -- the last date it actually observed real data."""
-    text = f"Served by `{strategy}` · Test MAPE: {test_mape:.2f}%"
+    """Plain-English caption naming the model serving a forecast, its typical
+    error (test MAPE, same term as the Forecast page), and -- when supplied --
+    the last date it actually observed real data."""
+    model = STRATEGY_NAMES.get(strategy, strategy)
+    text = f"Model: {model} · typical error ±{test_mape:.1f}%"
     if last_observed:
-        text += f" · Last observed {last_observed}"
+        text += f" · last price observed {last_observed}"
     st.caption(text)
 
 

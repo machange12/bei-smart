@@ -1,5 +1,6 @@
 """Alerts page: active price anomaly cards, full monitoring table, volatility."""
 
+import re
 import sys
 from pathlib import Path
 
@@ -88,6 +89,13 @@ else:
 
 with st.expander(f"All monitored markets ({len(filtered)})"):
     st.dataframe(filtered, width="stretch", hide_index=True)
+    scope = "_".join(selected_regions + selected_commodities) or "all"
+    st.download_button(
+        "⬇️ Download this table (CSV)",
+        filtered.to_csv(index=False),
+        file_name=f"agripulse_alerts_{re.sub(r'[^a-z0-9]+', '_', scope.lower()).strip('_')[:80]}.csv",
+        mime="text/csv",
+    )
 
 st.divider()
 st.subheader("Market volatility")

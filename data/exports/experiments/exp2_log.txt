@@ -1,0 +1,426 @@
+10:49:08 - cmdstanpy - INFO - Chain [1] start processing
+10:49:09 - cmdstanpy - INFO - Chain [1] done processing
+10:49:10 - cmdstanpy - INFO - Chain [1] start processing
+10:49:11 - cmdstanpy - INFO - Chain [1] done processing
+10:49:12 - cmdstanpy - INFO - Chain [1] start processing
+10:49:14 - cmdstanpy - INFO - Chain [1] done processing
+10:49:14 - cmdstanpy - INFO - Chain [1] start processing
+10:49:16 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/143 [00:00<?, ?it/s]Loading weights: 100%|██████████| 143/143 [00:00<00:00, 2071.75it/s]
+('Beans (mixed)', 'Sotik', 'Retail') {'prophet': 6.144, 'sarima': 8.368, 'chronos': 7.065}
+10:50:08 - cmdstanpy - INFO - Chain [1] start processing
+10:50:08 - cmdstanpy - INFO - Chain [1] done processing
+10:50:08 - cmdstanpy - INFO - Chain [1] start processing
+10:50:08 - cmdstanpy - INFO - Chain [1] done processing
+10:50:09 - cmdstanpy - INFO - Chain [1] start processing
+10:50:09 - cmdstanpy - INFO - Chain [1] done processing
+10:50:10 - cmdstanpy - INFO - Chain [1] start processing
+10:50:10 - cmdstanpy - INFO - Chain [1] done processing
+('Maize (white)', 'Makueni', 'Retail') {'prophet': 4.037, 'sarima': 5.437, 'chronos': 6.52}
+10:50:34 - cmdstanpy - INFO - Chain [1] start processing
+10:50:34 - cmdstanpy - INFO - Chain [1] done processing
+10:50:34 - cmdstanpy - INFO - Chain [1] start processing
+10:50:35 - cmdstanpy - INFO - Chain [1] done processing
+10:50:35 - cmdstanpy - INFO - Chain [1] start processing
+10:50:35 - cmdstanpy - INFO - Chain [1] done processing
+10:50:36 - cmdstanpy - INFO - Chain [1] start processing
+10:50:36 - cmdstanpy - INFO - Chain [1] done processing
+('Maize', 'Kisumu', 'Wholesale') {'prophet': 5.542, 'sarima': 8.519, 'chronos': 11.636}
+10:51:26 - cmdstanpy - INFO - Chain [1] start processing
+10:51:26 - cmdstanpy - INFO - Chain [1] done processing
+10:51:27 - cmdstanpy - INFO - Chain [1] start processing
+10:51:27 - cmdstanpy - INFO - Chain [1] done processing
+10:51:28 - cmdstanpy - INFO - Chain [1] start processing
+10:51:29 - cmdstanpy - INFO - Chain [1] done processing
+10:51:30 - cmdstanpy - INFO - Chain [1] start processing
+10:51:30 - cmdstanpy - INFO - Chain [1] done processing
+('Maize meal', 'Nairobi', 'Retail') {'prophet': 4.691, 'sarima': 13.286, 'chronos': 15.156}
+10:52:13 - cmdstanpy - INFO - Chain [1] start processing
+10:52:15 - cmdstanpy - INFO - Chain [1] done processing
+10:52:15 - cmdstanpy - INFO - Chain [1] start processing
+10:52:17 - cmdstanpy - INFO - Chain [1] done processing
+10:52:18 - cmdstanpy - INFO - Chain [1] start processing
+10:52:19 - cmdstanpy - INFO - Chain [1] done processing
+10:52:20 - cmdstanpy - INFO - Chain [1] start processing
+10:52:23 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+skip (missing/short/duplicate in chain): Maize (white) Kisumu Wholesale 0
+('Beans (mixed)', 'Gakoromere', 'Retail') {'prophet': 4.786, 'sarima': 7.437, 'chronos': 4.166}
+10:52:50 - cmdstanpy - INFO - Chain [1] start processing
+10:52:50 - cmdstanpy - INFO - Chain [1] done processing
+10:52:51 - cmdstanpy - INFO - Chain [1] start processing
+10:52:51 - cmdstanpy - INFO - Chain [1] done processing
+10:52:52 - cmdstanpy - INFO - Chain [1] start processing
+10:52:52 - cmdstanpy - INFO - Chain [1] done processing
+10:52:52 - cmdstanpy - INFO - Chain [1] start processing
+10:52:52 - cmdstanpy - INFO - Chain [1] done processing
+('Maize (white)', 'Taita Taveta', 'Retail') {'prophet': 9.928, 'sarima': 3.572, 'chronos': 7.446}
+10:53:10 - cmdstanpy - INFO - Chain [1] start processing
+10:53:11 - cmdstanpy - INFO - Chain [1] done processing
+10:53:12 - cmdstanpy - INFO - Chain [1] start processing
+10:53:13 - cmdstanpy - INFO - Chain [1] done processing
+10:53:14 - cmdstanpy - INFO - Chain [1] start processing
+10:53:15 - cmdstanpy - INFO - Chain [1] done processing
+10:53:16 - cmdstanpy - INFO - Chain [1] start processing
+10:53:17 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+('Beans (mixed)', 'Turbo', 'Retail') {'prophet': 19.012, 'sarima': 20.557, 'chronos': 11.082}
+10:53:38 - cmdstanpy - INFO - Chain [1] start processing
+10:53:38 - cmdstanpy - INFO - Chain [1] done processing
+10:53:38 - cmdstanpy - INFO - Chain [1] start processing
+10:53:38 - cmdstanpy - INFO - Chain [1] done processing
+10:53:39 - cmdstanpy - INFO - Chain [1] start processing
+10:53:39 - cmdstanpy - INFO - Chain [1] done processing
+10:53:39 - cmdstanpy - INFO - Chain [1] start processing
+10:53:40 - cmdstanpy - INFO - Chain [1] done processing
+('Maize (white)', 'Embu-Mbeere', 'Retail') {'prophet': 6.611, 'sarima': 16.429, 'chronos': 19.442}
+10:54:04 - cmdstanpy - INFO - Chain [1] start processing
+10:54:04 - cmdstanpy - INFO - Chain [1] done processing
+10:54:05 - cmdstanpy - INFO - Chain [1] start processing
+10:54:05 - cmdstanpy - INFO - Chain [1] done processing
+10:54:05 - cmdstanpy - INFO - Chain [1] start processing
+10:54:05 - cmdstanpy - INFO - Chain [1] done processing
+10:54:06 - cmdstanpy - INFO - Chain [1] start processing
+10:54:06 - cmdstanpy - INFO - Chain [1] done processing
+('Sorghum', 'Nairobi', 'Wholesale') {'prophet': 10.353, 'sarima': 15.652, 'chronos': 10.667}
+10:54:36 - cmdstanpy - INFO - Chain [1] start processing
+10:54:36 - cmdstanpy - INFO - Chain [1] done processing
+10:54:36 - cmdstanpy - INFO - Chain [1] start processing
+10:54:36 - cmdstanpy - INFO - Chain [1] done processing
+10:54:37 - cmdstanpy - INFO - Chain [1] start processing
+10:54:37 - cmdstanpy - INFO - Chain [1] done processing
+10:54:37 - cmdstanpy - INFO - Chain [1] start processing
+10:54:38 - cmdstanpy - INFO - Chain [1] done processing
+('Potatoes (Irish)', 'Kitui', 'Wholesale') {'prophet': 24.352, 'sarima': 25.838, 'chronos': 17.697}
+10:55:00 - cmdstanpy - INFO - Chain [1] start processing
+10:55:00 - cmdstanpy - INFO - Chain [1] done processing
+10:55:01 - cmdstanpy - INFO - Chain [1] start processing
+10:55:01 - cmdstanpy - INFO - Chain [1] done processing
+10:55:01 - cmdstanpy - INFO - Chain [1] start processing
+10:55:01 - cmdstanpy - INFO - Chain [1] done processing
+10:55:02 - cmdstanpy - INFO - Chain [1] start processing
+10:55:02 - cmdstanpy - INFO - Chain [1] done processing
+('Maize', 'Eldoret', 'Wholesale') {'prophet': 36.591, 'sarima': 13.025, 'chronos': 13.443}
+10:55:29 - cmdstanpy - INFO - Chain [1] start processing
+10:55:29 - cmdstanpy - INFO - Chain [1] done processing
+10:55:30 - cmdstanpy - INFO - Chain [1] start processing
+10:55:30 - cmdstanpy - INFO - Chain [1] done processing
+10:55:30 - cmdstanpy - INFO - Chain [1] start processing
+10:55:30 - cmdstanpy - INFO - Chain [1] done processing
+10:55:31 - cmdstanpy - INFO - Chain [1] start processing
+10:55:31 - cmdstanpy - INFO - Chain [1] done processing
+('Beans (rosecoco)', 'Mombasa', 'Wholesale') {'prophet': 20.62, 'sarima': 21.218, 'chronos': 20.724}
+10:55:56 - cmdstanpy - INFO - Chain [1] start processing
+10:55:58 - cmdstanpy - INFO - Chain [1] done processing
+10:55:59 - cmdstanpy - INFO - Chain [1] start processing
+10:56:02 - cmdstanpy - INFO - Chain [1] done processing
+10:56:02 - cmdstanpy - INFO - Chain [1] start processing
+10:56:05 - cmdstanpy - INFO - Chain [1] done processing
+10:56:05 - cmdstanpy - INFO - Chain [1] start processing
+10:56:06 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+('Beans (mixed)', 'Wote', 'Retail') {'prophet': 6.077, 'sarima': 5.631, 'chronos': 3.994}
+10:56:28 - cmdstanpy - INFO - Chain [1] start processing
+10:56:29 - cmdstanpy - INFO - Chain [1] done processing
+10:56:30 - cmdstanpy - INFO - Chain [1] start processing
+10:56:32 - cmdstanpy - INFO - Chain [1] done processing
+10:56:32 - cmdstanpy - INFO - Chain [1] start processing
+10:56:33 - cmdstanpy - INFO - Chain [1] done processing
+10:56:34 - cmdstanpy - INFO - Chain [1] start processing
+10:56:35 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+('Beans (mixed)', 'Iciara', 'Retail') {'prophet': 12.437, 'sarima': 33.034, 'chronos': 18.254}
+10:56:53 - cmdstanpy - INFO - Chain [1] start processing
+10:56:53 - cmdstanpy - INFO - Chain [1] done processing
+10:56:54 - cmdstanpy - INFO - Chain [1] start processing
+10:56:55 - cmdstanpy - INFO - Chain [1] done processing
+10:56:56 - cmdstanpy - INFO - Chain [1] start processing
+10:56:57 - cmdstanpy - INFO - Chain [1] done processing
+10:56:58 - cmdstanpy - INFO - Chain [1] start processing
+10:56:59 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+('Maize (white)', 'Migori', 'Retail') {'prophet': 8.835, 'sarima': 23.988, 'chronos': 32.511}
+10:57:22 - cmdstanpy - INFO - Chain [1] start processing
+10:57:22 - cmdstanpy - INFO - Chain [1] done processing
+10:57:23 - cmdstanpy - INFO - Chain [1] start processing
+10:57:23 - cmdstanpy - INFO - Chain [1] done processing
+10:57:25 - cmdstanpy - INFO - Chain [1] start processing
+10:57:25 - cmdstanpy - INFO - Chain [1] done processing
+10:57:26 - cmdstanpy - INFO - Chain [1] start processing
+10:57:26 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+('Tea (Mombasa)', 'Composite', 'Export') {'prophet': 5.677, 'sarima': 8.689, 'chronos': 8.07}
+10:58:06 - cmdstanpy - INFO - Chain [1] start processing
+10:58:06 - cmdstanpy - INFO - Chain [1] done processing
+10:58:07 - cmdstanpy - INFO - Chain [1] start processing
+10:58:07 - cmdstanpy - INFO - Chain [1] done processing
+10:58:08 - cmdstanpy - INFO - Chain [1] start processing
+10:58:08 - cmdstanpy - INFO - Chain [1] done processing
+10:58:08 - cmdstanpy - INFO - Chain [1] start processing
+10:58:08 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+('Sorghum', 'Kisumu', 'Wholesale') {'prophet': 12.806, 'sarima': 13.104, 'chronos': 10.696}
+10:58:37 - cmdstanpy - INFO - Chain [1] start processing
+10:58:38 - cmdstanpy - INFO - Chain [1] done processing
+10:58:38 - cmdstanpy - INFO - Chain [1] start processing
+10:58:40 - cmdstanpy - INFO - Chain [1] done processing
+10:58:40 - cmdstanpy - INFO - Chain [1] start processing
+10:58:42 - cmdstanpy - INFO - Chain [1] done processing
+10:58:42 - cmdstanpy - INFO - Chain [1] start processing
+10:58:44 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+('Beans (mixed)', 'Kiambu', 'Retail') {'prophet': 2.675, 'sarima': 3.082, 'chronos': 5.407}
+10:58:57 - cmdstanpy - INFO - Chain [1] start processing
+10:58:57 - cmdstanpy - INFO - Chain [1] done processing
+10:58:58 - cmdstanpy - INFO - Chain [1] start processing
+10:58:58 - cmdstanpy - INFO - Chain [1] done processing
+10:58:59 - cmdstanpy - INFO - Chain [1] start processing
+10:58:59 - cmdstanpy - INFO - Chain [1] done processing
+10:58:59 - cmdstanpy - INFO - Chain [1] start processing
+10:59:00 - cmdstanpy - INFO - Chain [1] done processing
+('Maize (white)', 'Lamu', 'Retail') {'prophet': 6.808, 'sarima': 4.255, 'chronos': 5.171}
+10:59:27 - cmdstanpy - INFO - Chain [1] start processing
+10:59:28 - cmdstanpy - INFO - Chain [1] done processing
+10:59:28 - cmdstanpy - INFO - Chain [1] start processing
+10:59:29 - cmdstanpy - INFO - Chain [1] done processing
+10:59:30 - cmdstanpy - INFO - Chain [1] start processing
+10:59:31 - cmdstanpy - INFO - Chain [1] done processing
+10:59:31 - cmdstanpy - INFO - Chain [1] start processing
+10:59:33 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+('Beans (mixed)', 'Siakago', 'Retail') {'prophet': 9.94, 'sarima': 15.962, 'chronos': 11.55}
+10:59:51 - cmdstanpy - INFO - Chain [1] start processing
+10:59:52 - cmdstanpy - INFO - Chain [1] done processing
+10:59:52 - cmdstanpy - INFO - Chain [1] start processing
+10:59:52 - cmdstanpy - INFO - Chain [1] done processing
+10:59:53 - cmdstanpy - INFO - Chain [1] start processing
+10:59:53 - cmdstanpy - INFO - Chain [1] done processing
+10:59:53 - cmdstanpy - INFO - Chain [1] start processing
+10:59:53 - cmdstanpy - INFO - Chain [1] done processing
+('Beans (mixed)', 'Meru', 'Retail') {'prophet': 19.77, 'sarima': 13.232, 'chronos': 15.769}
+11:00:07 - cmdstanpy - INFO - Chain [1] start processing
+11:00:08 - cmdstanpy - INFO - Chain [1] done processing
+11:00:08 - cmdstanpy - INFO - Chain [1] start processing
+11:00:08 - cmdstanpy - INFO - Chain [1] done processing
+11:00:08 - cmdstanpy - INFO - Chain [1] start processing
+11:00:08 - cmdstanpy - INFO - Chain [1] done processing
+11:00:09 - cmdstanpy - INFO - Chain [1] start processing
+11:00:09 - cmdstanpy - INFO - Chain [1] done processing
+('Sorghum', 'Eldoret', 'Wholesale') {'prophet': 17.173, 'sarima': 11.298, 'chronos': 11.865}
+11:00:33 - cmdstanpy - INFO - Chain [1] start processing
+11:00:33 - cmdstanpy - INFO - Chain [1] done processing
+11:00:33 - cmdstanpy - INFO - Chain [1] start processing
+11:00:33 - cmdstanpy - INFO - Chain [1] done processing
+11:00:34 - cmdstanpy - INFO - Chain [1] start processing
+11:00:34 - cmdstanpy - INFO - Chain [1] done processing
+11:00:34 - cmdstanpy - INFO - Chain [1] start processing
+11:00:34 - cmdstanpy - INFO - Chain [1] done processing
+('Maize (white)', 'Marsabit', 'Retail') {'prophet': 14.525, 'sarima': 5.035, 'chronos': 4.127}
+11:00:58 - cmdstanpy - INFO - Chain [1] start processing
+11:00:58 - cmdstanpy - INFO - Chain [1] done processing
+11:00:58 - cmdstanpy - INFO - Chain [1] start processing
+11:00:58 - cmdstanpy - INFO - Chain [1] done processing
+11:00:59 - cmdstanpy - INFO - Chain [1] start processing
+11:00:59 - cmdstanpy - INFO - Chain [1] done processing
+11:00:59 - cmdstanpy - INFO - Chain [1] start processing
+11:00:59 - cmdstanpy - INFO - Chain [1] done processing
+('Beans (rosecoco)', 'Kisumu', 'Wholesale') {'prophet': 13.631, 'sarima': 18.748, 'chronos': 15.422}
+11:01:31 - cmdstanpy - INFO - Chain [1] start processing
+11:01:32 - cmdstanpy - INFO - Chain [1] done processing
+11:01:32 - cmdstanpy - INFO - Chain [1] start processing
+11:01:33 - cmdstanpy - INFO - Chain [1] done processing
+11:01:33 - cmdstanpy - INFO - Chain [1] start processing
+11:01:34 - cmdstanpy - INFO - Chain [1] done processing
+11:01:35 - cmdstanpy - INFO - Chain [1] start processing
+11:01:36 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+('Maize (white)', 'Siakago', 'Retail') {'prophet': 24.767, 'sarima': 4.353, 'chronos': 12.437}
+11:01:47 - cmdstanpy - INFO - Chain [1] start processing
+11:01:49 - cmdstanpy - INFO - Chain [1] done processing
+11:01:49 - cmdstanpy - INFO - Chain [1] start processing
+11:01:52 - cmdstanpy - INFO - Chain [1] done processing
+11:01:53 - cmdstanpy - INFO - Chain [1] start processing
+11:01:53 - cmdstanpy - INFO - Chain [1] done processing
+11:01:53 - cmdstanpy - INFO - Chain [1] start processing
+11:01:53 - cmdstanpy - INFO - Chain [1] done processing
+('Beans (mixed)', 'Makueni', 'Retail') {'prophet': 4.759, 'sarima': 5.363, 'chronos': 3.823}
+11:02:04 - cmdstanpy - INFO - Chain [1] start processing
+11:02:06 - cmdstanpy - INFO - Chain [1] done processing
+11:02:06 - cmdstanpy - INFO - Chain [1] start processing
+11:02:07 - cmdstanpy - INFO - Chain [1] done processing
+11:02:08 - cmdstanpy - INFO - Chain [1] start processing
+11:02:08 - cmdstanpy - INFO - Chain [1] done processing
+11:02:09 - cmdstanpy - INFO - Chain [1] start processing
+11:02:10 - cmdstanpy - INFO - Chain [1] done processing
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+C:\Users\matew\OneDrive\Documents\capstone\bei-smart\venv\Lib\site-packages\statsmodels\base\model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+('Beans (mixed)', 'Kongowea', 'Retail') {'prophet': 50.07, 'sarima': 11.515, 'chronos': 11.627}

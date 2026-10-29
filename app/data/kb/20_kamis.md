@@ -1,6 +1,6 @@
 # Data Source: KAMIS
 
-KAMIS, the Kenya Ministry of Agriculture's Market Information System, is the source that keeps AgriPulse's price history continuous from 2022 onward.
+KAMIS, the Kenya Ministry of Agriculture's Market Information System, is now AgriPulse's largest price source: more of the price history, and more of the live forecast series, come from KAMIS than from any other source. It keeps AgriPulse's price history continuous from 2022 onward and covers many markets, commodities, and both wholesale and retail prices that the humanitarian sources never reached. AgriPulse collects it with an automated scraper that runs every month, merges new prices into the existing history, and picks up newly listed KAMIS products automatically.
 
 When WFP changed its data collection methodology in 2022 and retired its old city-level generic price series, a gap opened in the record. KAMIS fills that gap, because it already reports prices at the named-market, disaggregated level that WFP moved to — so the two sources line up in structure even though they come from different institutions.
 

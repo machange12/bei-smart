@@ -6,7 +6,7 @@ the widening, leaving 211/297 map markers grey).
 
 Rule per (commodity, market, pricetype):
   - need n >= 24 monthly obs and staleness <= 12 months
-  - build IQR band from all-but-last: lower = max(Q1 - 1.5*IQR, 0), upper = Q3 + 1.5*IQR
+  - build IQR band from the 36 months before the latest: lower = max(Q1 - 1.5*IQR, 0), upper = Q3 + 1.5*IQR
   - skip flat / zero-variance series
   - status: SPIKE if latest > upper, CRASH if < lower, else NORMAL
 
@@ -17,25 +17,32 @@ import pathlib
 import shutil
 import pandas as pd
 
+from rebuild_forecasts import SETTLEMENT_RE
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 INPUT = ROOT / "data" / "cleaned" / "bei_smart_forecasting_chained_all.csv"
 EXPORTS = ROOT / "data" / "exports"
 APP_DATA = ROOT / "app" / "data"
 
-ANCHOR = pd.Period("2026-09", "M")
+# Band window: over 10-20 years of trending prices the IQR spans 0-235 KES and
+# flags nothing; 3 years tracks the current price level.
+BAND_MONTHS = 36
 
 
 def build(df: pd.DataFrame) -> pd.DataFrame:
+    # Settlement prices follow aid distribution, so an IQR band flags noise.
+    df = df[~df["market"].str.contains(SETTLEMENT_RE)]
+    anchor = df["date"].max().to_period("M")  # latest month in the data, not a fixed date
     rows = []
     for (c, mk, pt), g in df.groupby(["commodity", "market", "pricetype"]):
         g = g.sort_values("date")
         if len(g) < 24:
             continue
-        stale = (ANCHOR - g["date"].max().to_period("M")).n
+        stale = (anchor - g["date"].max().to_period("M")).n
         if stale > 12:
             continue
 
-        hist = g.iloc[:-1]["price_per_kg"]
+        hist = g.iloc[:-1]["price_per_kg"].tail(BAND_MONTHS)
         q1, q3 = hist.quantile(0.25), hist.quantile(0.75)
         iqr = q3 - q1
         if iqr <= 0 or hist.std() == 0:

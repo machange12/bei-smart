@@ -9,7 +9,7 @@ by >2 MAPE points (generalising the notebook's Sorghum-only rule from
 plan Step 3), and writes production_forecasts.csv / model_metrics.csv /
 model_routing.json in data/exports/ and app/data/.
 
-Gate default is 48 obs so KAMIS-plateau commodities (Beef, Milk, Cassava,
+Gate default is 36 obs so KAMIS-plateau commodities (Beef, Milk, Cassava,
 Rice, Sugar, Mutton, Wheat, Peas) ship instead of waiting for a
 pre-2021 backfill source that doesn't exist for livestock/dairy.
 
@@ -26,6 +26,7 @@ import itertools
 import json
 import pathlib
 import pickle
+import re
 import shutil
 import sys
 import warnings
@@ -46,6 +47,8 @@ MODELS_DIR = ROOT / "models"
 CHECKPOINT = EXPORTS / ".rebuild_checkpoint.pkl"
 CHECKPOINT_EVERY = 25
 
+# Market-name overrides, checked before admin1. Only the 8 former provinces
+# are valid outputs (the Forecast page cascades Region -> Market).
 REGION_BY_MARKET = {
     "Nairobi": "Nairobi", "Wakulima": "Nairobi", "Kangemi": "Nairobi",
     "Mombasa": "Coast", "Malindi": "Coast", "Kilifi": "Coast",
@@ -55,22 +58,54 @@ REGION_BY_MARKET = {
     "Nakuru": "Rift Valley", "Eldoret": "Rift Valley", "Kericho": "Rift Valley",
     "Nyahururu": "Rift Valley", "Bomet": "Rift Valley", "Narok": "Rift Valley",
     "Kitale": "Rift Valley", "Kapenguria": "Rift Valley",
-    "Nyeri": "Central", "Meru": "Central", "Embu": "Central", "Chuka": "Central",
-    "Kerugoya": "Central", "Karatina": "Central", "Muranga": "Central",
+    "Turkana": "Rift Valley", "Lodwar": "Rift Valley",
+    # admin_1 wrong (Isiolo / Kiambu / Kakamega) or missing (Nyabite).
+    "Baringo": "Rift Valley", "Samburu": "Rift Valley", "Kipkaren": "Rift Valley",
+    "Nyabite": "Nyanza",
+    "Nyeri": "Central", "Karatina": "Central", "Kerugoya": "Central", "Muranga": "Central",
+    "Meru": "Eastern", "Embu": "Eastern", "Chuka": "Eastern",
     "Kitui": "Eastern", "Machakos": "Eastern", "Makueni": "Eastern",
     "Wote": "Eastern", "Mwingi": "Eastern",
+    "Marsabit": "Eastern", "Moyale": "Eastern", "Isiolo": "Eastern",
     "Garissa": "North Eastern", "Wajir": "North Eastern", "Mandera": "North Eastern",
-    "Dadaab": "North Eastern", "Hagadera": "North Eastern",
-    "Dagahaley": "North Eastern", "Ifo": "North Eastern",
-    "Marsabit": "Northern", "Moyale": "Northern", "Isiolo": "Northern",
-    "Turkana": "Northern", "Lodwar": "Northern", "Kakuma": "Northern",
     "Busia": "Western", "Bungoma": "Western", "Kakamega": "Western", "Vihiga": "Western",
 }
+
+REGIONS = {"Nairobi", "Central", "Coast", "Eastern", "North Eastern",
+           "Nyanza", "Rift Valley", "Western"}
+
+# KAMIS ships counties as admin1; fold all 47 onto the 8 former provinces.
+# Keys are lower-cased with '-' and "'" stripped so "Trans-Nzoia" ==
+# "Trans Nzoia" and "Murang'a" == "Muranga".
+COUNTY_TO_REGION = {k: r for r, ks in {
+    "Nairobi": ["nairobi"],
+    "Central": ["kiambu", "kirinyaga", "muranga", "nyandarua", "nyeri"],
+    "Coast": ["kilifi", "kwale", "lamu", "mombasa", "taita taveta", "tana river"],
+    "Eastern": ["embu", "isiolo", "kitui", "machakos", "makueni", "marsabit",
+                "meru", "tharaka nithi"],
+    "North Eastern": ["garissa", "mandera", "wajir"],
+    "Nyanza": ["homa bay", "kisii", "kisumu", "migori", "nyamira", "siaya"],
+    "Rift Valley": ["baringo", "bomet", "elgeyo marakwet", "kajiado", "kericho",
+                    "laikipia", "nakuru", "nandi", "narok", "samburu",
+                    "trans nzoia", "turkana", "uasin gishu", "west pokot"],
+    "Western": ["bungoma", "busia", "kakamega", "vihiga"],
+}.items() for k in ks}
+
+# Refugee settlement markets: prices track humanitarian distribution, not
+# market supply (analyst report: MAPE >5000%). Matched on the normalised chain
+# name; build_chained_all strips "(Kakuma)"/"(Daadab)", leaving bare
+# "Ethiopia" / "Hongkong" / "Mogadishu" (Kakuma camp markets), so list those too.
+SETTLEMENT_RE = re.compile(
+    r"^(kakuma|kalobeyei|dadaab|daadab|hagadera|ifo|dagahaley|"
+    r"ethiopia|hongkong|mogadishu)\b|\((kakuma|daadab|dadaab)\)",
+    re.IGNORECASE,
+)
 
 ANCHOR = pd.Period("2026-09", "M")
 
 # Chronos pipeline is loaded lazily and once (per process).
 _CHRONOS = None
+CHRONOS_MODEL = "amazon/chronos-bolt-small"  # overridden by --chronos-model
 
 
 def _chronos():
@@ -80,15 +115,19 @@ def _chronos():
         try:
             from chronos import BaseChronosPipeline
             _CHRONOS = BaseChronosPipeline.from_pretrained(
-                "amazon/chronos-bolt-small", device_map="cpu", torch_dtype=torch.float32)
+                CHRONOS_MODEL, device_map="cpu", torch_dtype=torch.float32)
         except ImportError:
             from chronos import ChronosPipeline
             _CHRONOS = ChronosPipeline.from_pretrained(
-                "amazon/chronos-bolt-small", device_map="cpu", torch_dtype=torch.float32)
+                CHRONOS_MODEL, device_map="cpu", torch_dtype=torch.float32)
     return _CHRONOS
 
 
 def screen(df: pd.DataFrame, min_obs: int) -> pd.DataFrame:
+    settle = df["market"].str.contains(SETTLEMENT_RE)
+    print(f"[screen] excluding {df.loc[settle, 'market'].nunique()} settlement "
+          f"markets ({int(settle.sum()):,} rows)")
+    df = df[~settle]
     rows = []
     for (c, mk, pt), g in df.groupby(["commodity", "market", "pricetype"]):
         g = g.sort_values("date")
@@ -175,22 +214,6 @@ def _chronos_predict(y_train, horizon):
     return (np.quantile(arr, 0.5, axis=0),
             np.quantile(arr, 0.1, axis=0),
             np.quantile(arr, 0.9, axis=0))
-
-
-# ponytail: prices are right-skewed; fitting on log(price) then exp'ing back
-# gives ~0.5 pt MAPE on skewed commodities (beans, meat, camel milk). log1p /
-# expm1 not log/exp — cheap guard against any zero rows the anomaly rule missed.
-# Chronos normalises internally, so we only wrap Prophet + SARIMA.
-def _prophet_predict_log(y_train, horizon, cps, last_date):
-    r = _prophet_predict(np.log1p(y_train), horizon, cps, last_date)
-    return tuple(np.expm1(np.asarray(x)) for x in r[:3])
-
-
-def _sarima_predict_log(y_train, horizon):
-    r = _sarima_predict(np.log1p(y_train), horizon)
-    if r is None:
-        return None
-    return tuple(np.expm1(np.asarray(x)) for x in r[:3])
 
 
 def _fit_one(c, mk, pt, y, last, cps, models):
@@ -363,7 +386,10 @@ def _region(mk, admin1):
     if mk in REGION_BY_MARKET:
         return REGION_BY_MARKET[mk]
     if isinstance(admin1, str) and admin1.strip():
-        return admin1
+        if admin1 in REGIONS:
+            return admin1
+        key = admin1.lower().replace("-", " ").replace("'", "").strip()
+        return COUNTY_TO_REGION.get(key, "Unknown")
     return "Unknown"
 
 
@@ -533,5 +559,7 @@ if __name__ == "__main__":
                     default=["prophet", "sarima", "chronos"],
                     choices=["prophet", "sarima", "chronos"])
     ap.add_argument("--demo", action="store_true")
+    ap.add_argument("--chronos-model", default=CHRONOS_MODEL)
     args = ap.parse_args()
+    CHRONOS_MODEL = args.chronos_model
     rebuild(min_obs=args.gate, models=args.models, demo=args.demo)

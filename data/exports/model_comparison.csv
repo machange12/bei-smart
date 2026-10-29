@@ -1,8 +1,4 @@
 commodity,market,pricetype,prophet_mape,sarima_mape,chronos_mape,selected,final_mape
-Beans (dry),Hagadera,Retail,14.56,10.89,8.49,ensemble,3.31
-Beans (dry),Ifo,Retail,15.1,16.33,7.93,chronos,7.93
-Beans (dry),Kakuma 3,Retail,23.05,12.91,13.34,ensemble,9.02
-Beans (dry),Kalobeyei,Retail,10.39,62.87,11.89,prophet,10.39
 Beans (dry),Nakuru,Retail,5.07,5.04,1.44,chronos,1.44
 Beans (mixed),Ahero,Retail,14.78,36.01,2.88,chronos,2.88
 Beans (mixed),Bomet,Retail,15.06,6.36,8.61,chronos,8.61
@@ -105,8 +101,6 @@ Beans rosecoco,Chuka,Wholesale,38.6,83.04,15.76,chronos,15.76
 Beans rosecoco,Kibuye,Retail,12.67,9.17,1.84,chronos,1.84
 Beans rosecoco,Nkubu,Retail,8.57,14.12,10.19,prophet,8.57
 Beans rosecoco,Nkubu,Wholesale,12.42,25.5,15.1,prophet,12.42
-Camel meat,Hagadera,Retail,9.22,6.1,0.49,chronos,0.49
-Camel meat,Ifo,Retail,7.27,7.65,6.97,chronos,6.97
 Finger millet,Ahero,Retail,13.45,20.12,5.13,chronos,5.13
 Finger millet,Ahero,Wholesale,14.32,26.35,9.67,chronos,9.67
 Finger millet,Chuka,Retail,18.06,17.1,18.12,sarima,17.1
@@ -146,10 +140,8 @@ Maize,Chuka,Wholesale,106.3,70.79,14.72,chronos,14.72
 Maize,Eldoret,Wholesale,38.14,21.83,12.13,ensemble,11.94
 Maize,Gakoromone,Retail,25.89,37.66,7.03,chronos,7.03
 Maize,Gakoromone,Wholesale,23.02,16.05,6.72,chronos,6.72
-Maize,Ifo,Retail,5.2,17.74,8.51,prophet,5.2
 Maize,Kagio,Retail,23.86,13.86,9.56,chronos,9.56
 Maize,Kagio,Wholesale,26.03,10.71,12.87,sarima,10.71
-Maize,Kalobeyei,Retail,17.48,13.56,8.64,chronos,8.64
 Maize,Kangeta,Retail,11.82,10.82,17.67,ensemble,8.23
 Maize,Kangeta,Wholesale,17.36,18.83,13.02,ensemble,9.78
 Maize,Kapkwen,Retail,8.28,30.68,24.21,prophet,8.28
@@ -228,14 +220,8 @@ Maize (white),Wajir,Retail,15.03,8.66,5.52,chronos,5.52
 Maize (white),West Pokot,Retail,14.79,16.84,21.9,ensemble,17.28
 Maize flour,Ahero,Retail,19.35,21.6,3.53,chronos,3.53
 Maize flour,Ahero,Wholesale,9.68,7.76,3.29,chronos,3.29
-Maize flour,Hagadera,Retail,18.79,11.44,7.22,chronos,7.22
-Maize flour,Ifo,Retail,14.06,4.85,10.28,sarima,4.85
-Maize flour,Kakuma 3,Retail,11.36,6.39,11.32,ensemble,3.11
-Maize flour,Kakuma 4,Retail,14.48,18.43,6.11,chronos,6.11
-Maize flour,Kalobeyei,Retail,24.88,12.01,6.19,chronos,6.19
 Maize flour,Nairobi Supermarkets,Retail,10.29,6.79,8.82,sarima,6.79
 Maize meal,Nairobi,Retail,4.69,13.29,15.16,chronos,15.16
-Mutton,Ifo,Retail,6.24,5.62,12.73,sarima,5.62
 Pearl rush millet,Chuka,Retail,17.85,26.76,9.24,chronos,9.24
 Pearl rush millet,Kangeta,Retail,28.0,16.94,21.21,sarima,16.94
 Pearl rush millet,Kangeta,Wholesale,20.72,17.36,18.26,sarima,17.36
@@ -248,21 +234,14 @@ Pearl rush millet,Maua,Wholesale,23.76,18.81,19.55,sarima,18.81
 Pearl rush millet,Nkubu,Retail,15.75,13.53,22.44,sarima,13.53
 Pearl rush millet,Nkubu,Wholesale,28.32,21.34,27.97,sarima,21.34
 Peas (dry),Chuka,Retail,41.37,48.99,34.65,chronos,34.65
-Potatoes (Irish),Hagadera,Retail,29.14,34.56,18.99,chronos,18.99
-Potatoes (Irish),Ifo,Retail,25.98,39.39,19.66,chronos,19.66
 Potatoes (Irish),Kitui,Wholesale,24.35,25.84,17.7,ensemble,21.94
 Potatoes (Irish),Nairobi,Wholesale,58.19,78.92,33.38,chronos,33.38
 Rice,Ahero,Retail,10.3,10.09,5.03,chronos,5.03
 Rice,Ahero,Wholesale,11.25,8.38,7.33,chronos,7.33
 Rice,Chuka,Retail,11.94,63.81,5.26,chronos,5.26
 Rice,Chuka,Wholesale,16.95,40.13,3.39,chronos,3.39
-Rice,Hagadera,Retail,4.1,8.79,4.51,prophet,4.1
-Rice,Ifo,Retail,6.99,23.36,9.36,prophet,6.99
 Rice,Kagio,Retail,29.43,14.11,8.41,chronos,8.41
 Rice,Kagio,Wholesale,39.85,15.54,11.55,chronos,11.55
-Rice,Kakuma 3,Retail,29.69,13.07,16.99,sarima,13.07
-Rice,Kakuma 4,Retail,39.0,44.59,14.93,chronos,14.93
-Rice,Kalobeyei,Retail,6.81,7.26,4.29,chronos,4.29
 Rice,Kawangware,Retail,25.51,10.03,10.11,sarima,10.03
 Rice,Kibuye,Retail,12.44,13.43,8.26,chronos,8.26
 Rice,Kitale Municipality,Retail,11.84,41.95,10.44,chronos,10.44
@@ -293,19 +272,10 @@ Sorghum,Maua,Wholesale,22.06,21.38,22.99,sarima,21.38
 Sorghum,Muhoroni,Retail,9.55,17.85,9.72,prophet,9.55
 Sorghum,Muhoroni,Wholesale,27.52,24.57,12.7,ensemble,8.53
 Sorghum,Nairobi,Wholesale,10.35,15.65,10.67,ensemble,3.01
-Sugar,Hagadera,Retail,7.21,26.72,12.94,prophet,7.21
-Sugar,Ifo,Retail,7.75,11.68,10.55,prophet,7.75
-Sugar,Kakuma 3,Retail,19.43,5.39,8.8,sarima,5.39
-Sugar,Kalobeyei,Retail,27.24,61.13,5.69,chronos,5.69
 Tea (Mombasa),Composite,Export,5.68,8.69,8.07,prophet,5.68
 Wheat,Kibuye,Retail,27.81,30.14,12.29,chronos,12.29
 Wheat,Maua,Retail,8.9,4.37,3.42,chronos,3.42
 Wheat,Maua,Wholesale,4.98,7.13,9.3,prophet,4.98
-Wheat flour,Hagadera,Retail,5.92,6.94,2.6,chronos,2.6
-Wheat flour,Ifo,Retail,6.58,10.35,3.14,chronos,3.14
-Wheat flour,Kakuma 3,Retail,15.08,6.01,5.62,chronos,5.62
-Wheat flour,Kakuma 4,Retail,19.06,28.01,10.23,chronos,10.23
-Wheat flour,Kalobeyei,Retail,9.71,4.57,13.15,sarima,4.57
 Wheat flour,Nairobi Supermarkets,Retail,13.42,4.81,6.62,sarima,4.81
 White sorghum,Chuka,Retail,26.12,17.2,18.87,sarima,17.2
 White sorghum,Chuka,Wholesale,32.16,16.08,20.93,sarima,16.08
@@ -313,26 +283,3 @@ White sorghum,Maua,Retail,17.57,10.05,16.14,sarima,10.05
 White sorghum,Maua,Wholesale,14.26,19.94,18.01,prophet,14.26
 White sorghum,Nkubu,Retail,13.08,13.08,18.59,prophet,13.08
 White sorghum,Nkubu,Wholesale,11.98,13.45,11.96,chronos,11.96
-product_10,Ahero,Retail,7.85,11.78,9.62,prophet,7.85
-product_10,Ahero,Wholesale,7.12,11.11,8.83,prophet,7.12
-product_10,Chuka,Retail,36.93,,20.12,chronos,20.12
-product_10,Chuka,Wholesale,12.95,10.45,9.36,chronos,9.36
-product_10,Kagio,Retail,12.08,10.98,12.04,sarima,10.98
-product_10,Kagio,Wholesale,12.25,17.26,15.89,prophet,12.25
-product_10,Kangeta,Retail,18.06,12.57,13.77,sarima,12.57
-product_10,Kangeta,Wholesale,96.02,100.68,98.54,prophet,96.02
-product_10,Kibuye,Retail,7.57,7.19,11.87,ensemble,2.92
-product_10,Kisasi,Retail,59.28,,19.23,chronos,19.23
-product_10,Kisasi,Wholesale,58.4,33.02,8.87,chronos,8.87
-product_10,Kitale Municipality,Retail,8.98,50.73,10.63,prophet,8.98
-product_10,Kitale Municipality,Wholesale,12.42,55.15,24.34,prophet,12.42
-product_10,Kutus,Retail,20.59,19.8,24.07,sarima,19.8
-product_10,Kutus,Wholesale,20.98,16.4,21.3,sarima,16.4
-product_10,Makutano Kirinyaga,Retail,19.87,25.78,23.19,prophet,19.87
-product_10,Makutano Kirinyaga,Wholesale,20.4,33.91,18.24,chronos,18.24
-product_10,Maua,Retail,19.33,21.25,17.74,chronos,17.74
-product_10,Maua,Wholesale,26.72,24.4,19.97,chronos,19.97
-product_10,Ngurubani,Retail,14.37,16.83,16.74,ensemble,10.56
-product_10,Ngurubani,Wholesale,7.73,10.01,8.3,prophet,7.73
-product_10,Nkubu,Retail,23.13,26.55,21.39,chronos,21.39
-product_10,Nkubu,Wholesale,29.0,42.83,24.52,chronos,24.52

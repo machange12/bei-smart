@@ -27,3 +27,6 @@ models/
 # Scraper caches + raw pulls -- regenerable via scripts/scrape_*.py
 data/raw/_kamis_cache/
 data/raw/_knbs_sample.pdf
+
+# Experiment chain snapshot (23 MB, regenerable)
+data/exports/experiments/chain_snapshot.csv

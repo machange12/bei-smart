@@ -128,7 +128,18 @@ def predict(payload: dict, artifacts: dict) -> tuple[str, dict[str, float]]:
 
 
 st.subheader("Price Classification")
-st.markdown("Predict whether a price point is cheap, average, or expensive relative to norms.")
+st.markdown(
+    "A quick indication of whether a commodity is **likely** cheap, average or expensive "
+    "in a region right now, compared with the regional average for that month. Use it to shortlist where to "
+    "look -- not as a final buy/sell call."
+)
+
+# Plain-English verdicts: the classifier is an indicator, not a recommendation.
+VERDICTS = {
+    "Cheap": "Likely cheaper than the regional average -- worth checking",
+    "Average": "Likely around the regional average",
+    "Expensive": "Likely pricier than the regional average -- worth a second look before buying",
+}
 
 try:
     artifacts = load_classifier()
@@ -146,7 +157,7 @@ with st.form("classify_form"):
         commodity = st.selectbox("Commodity", valid_values["commodity"])
     with col2:
         region = st.selectbox("Region", regions)
-    submitted = st.form_submit_button("Predict")
+    submitted = st.form_submit_button("Check")
 
 if submitted:
     defaults = REGION_DEFAULTS[region]
@@ -179,7 +190,15 @@ if submitted:
         sidebar_footer()
         st.stop()
 
-    st.success(f"Predicted class: **{predicted_class}**")
+    st.info(f"**{VERDICTS.get(predicted_class, predicted_class)}**")
+    precision = artifacts["metadata"].get("per_class", {}).get(predicted_class, {}).get("precision")
+    if precision is not None:
+        st.caption(
+            f"How reliable is this? When the model says {predicted_class}, it's right about "
+            f"{round(precision * 10)} in 10 times on recent data -- treat it as a shortlist, "
+            "and confirm with a real market price."
+        )
+    st.markdown("**How strongly the model leans each way**")
     proba_df = pd.DataFrame(
         {"class": list(probabilities.keys()), "probability": list(probabilities.values())}
     ).set_index("class")

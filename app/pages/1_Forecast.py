@@ -6,7 +6,9 @@ in the sidebar can ever resolve to an empty result.
 """
 
 import json
+import re
 import sys
+from urllib.parse import urlencode
 from pathlib import Path
 
 import pandas as pd
@@ -61,28 +63,54 @@ else:
 
 st.subheader("Price Forecast")
 
+
+def seed_from_url(key: str, options: list, param: str) -> None:
+    """Keep the widget's current value if still valid; otherwise take the URL
+    value when it's a valid option at this cascade level, else the first option.
+    A bad or stale shared link therefore degrades to defaults, never crashes."""
+    if st.session_state.get(key) not in options:
+        wanted = st.query_params.get(param)
+        st.session_state[key] = next((o for o in options if str(o) == wanted), options[0])
+
+
 with st.sidebar:
     st.markdown("#### Filters")
 
     regions = sorted(forecasts["region"].dropna().unique()) if "region" in forecasts.columns else []
-    region = st.selectbox("Region", regions) if regions else None
+    region = None
+    if regions:
+        seed_from_url("fc_region", regions, "region")
+        region = st.selectbox("Region", regions, key="fc_region")
 
     scoped = forecasts[forecasts["region"] == region] if region else forecasts
 
     markets = sorted(scoped["market"].unique())
-    market = st.selectbox("Market", markets)
+    seed_from_url("fc_market", markets, "market")
+    market = st.selectbox("Market", markets, key="fc_market")
     scoped = scoped[scoped["market"] == market]
 
     commodities = sorted(scoped["commodity"].unique())
-    commodity = st.selectbox("Commodity", commodities)
+    seed_from_url("fc_commodity", commodities, "commodity")
+    commodity = st.selectbox("Commodity", commodities, key="fc_commodity")
     scoped = scoped[scoped["commodity"] == commodity]
 
     pricetypes = sorted(scoped["pricetype"].unique())
-    pricetype = st.selectbox("Price type", pricetypes)
+    seed_from_url("fc_pricetype", pricetypes, "pricetype")
+    pricetype = st.selectbox(
+        "Price type", pricetypes, key="fc_pricetype",
+        help="Wholesale = bulk price traders pay; Retail = what shoppers pay.",
+    )
     scoped = scoped[scoped["pricetype"] == pricetype]
 
-    horizons = sorted(scoped["horizon_months"].unique())
-    horizon = st.radio("Horizon (months)", horizons, horizontal=True)
+    horizons = [int(h) for h in sorted(scoped["horizon_months"].unique())]
+    seed_from_url("fc_horizon", horizons, "horizon")
+    horizon = st.radio("Horizon (months)", horizons, horizontal=True, key="fc_horizon")
+
+# Mirror the selection into the URL so the address bar is a shareable link.
+link_params = {"market": market, "commodity": commodity, "pricetype": pricetype, "horizon": horizon}
+if region:
+    link_params = {"region": region, **link_params}
+st.query_params.from_dict({k: str(v) for k, v in link_params.items()})
 
 subset = scoped[scoped["horizon_months"] == horizon].sort_values("forecast_date")
 
@@ -129,8 +157,36 @@ metric_cols[0].metric(
 with metric_cols[1]:
     st.markdown("**Confidence**")
     confidence_badge(confidence)
-metric_cols[2].metric("Test MAPE", f"{test_mape:.2f}%")
+metric_cols[2].metric(
+    "Typical error",
+    f"±{test_mape:.1f}%",
+    help="Test MAPE: the average gap between forecast and actual price on months the model never saw.",
+)
 
 model_provenance_caption(strategy, test_mape, last_observed_str)
+
+export = pd.concat(
+    [
+        hist_subset[["date", "price_per_kg"]]
+        .rename(columns={"price_per_kg": "actual_price_kes"})
+        .assign(row_type="history"),
+        subset[["forecast_date", "forecast_price_kes", "forecast_lower", "forecast_upper"]]
+        .rename(columns={"forecast_date": "date"})
+        .assign(row_type="forecast"),
+    ]
+).assign(commodity=commodity, market=market, pricetype=pricetype, horizon_months=horizon)
+slug = re.sub(r"[^a-z0-9]+", "_", f"{commodity} {market} {pricetype} {horizon}m".lower()).strip("_")
+dl_col, link_col = st.columns(2)
+dl_col.download_button(
+    "⬇️ Download this forecast (CSV)",
+    export.to_csv(index=False),
+    file_name=f"agripulse_forecast_{slug}.csv",
+    mime="text/csv",
+)
+with link_col:
+    query = "?" + urlencode(st.query_params.to_dict())
+    base = (st.context.url or "").split("?")[0]
+    st.caption("🔗 Copy link to this forecast")
+    st.code(base + query, language=None, wrap_lines=True)
 
 sidebar_footer()
