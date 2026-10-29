@@ -16,7 +16,7 @@ _Updated automatically by the monthly refresh on 2026-10-29._
 | Regions covered | 8 of 8 |
 | Median forecast error (12-month holdout) | 9.8% |
 | Models serving | Chronos 179, blend of 2 models 107 |
-| Price alerts | 35 spikes, 11 crashes across 814 monitored series |
+| Price alerts | 35 spikes, 9 crashes across 814 monitored series |
 | Prices observed up to | September 2026 |
 <!-- stats:end -->
 

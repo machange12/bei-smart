@@ -1,6 +1,6 @@
 commodity,market,pricetype,latest_date,latest_price,normal_low,normal_high,status,deviation_pct
 Beans (dolichos),Kangemi,Wholesale,2026-08-01,80.83,0.0,244.12,NORMAL,0.0
-Beans (dry),Nakuru,Retail,2026-06-01,137.9,125.36,147.26,NORMAL,0.0
+Beans (dry),Nakuru,Retail,2026-06-01,137.9,122.62,149.88,NORMAL,0.0
 Beans (mixed),Ahero,Retail,2026-07-01,126.9,109.14,190.64,NORMAL,0.0
 Beans (mixed),Bomet,Retail,2026-07-01,170.1,105.98,185.77,NORMAL,0.0
 Beans (mixed),Bondeni,Retail,2026-03-01,110.0,43.75,213.75,NORMAL,0.0
@@ -8,7 +8,7 @@ Beans (mixed),Bondeni,Wholesale,2026-03-01,87.5,25.0,185.0,NORMAL,0.0
 Beans (mixed),Bondo,Retail,2026-07-01,160.5,69.87,324.08,NORMAL,0.0
 Beans (mixed),Bumala,Retail,2026-07-01,150.2,69.16,278.06,NORMAL,0.0
 Beans (mixed),Bungoma,Retail,2026-07-01,150.1,94.29,217.79,NORMAL,0.0
-Beans (mixed),Burma,Retail,2026-07-01,190.1,175.56,214.86,NORMAL,0.0
+Beans (mixed),Burma,Retail,2026-07-01,190.1,175.56,215.27,NORMAL,0.0
 Beans (mixed),Busia,Retail,2026-07-01,141.5,111.55,240.75,NORMAL,0.0
 Beans (mixed),Butere,Retail,2026-07-01,144.3,102.09,256.59,NORMAL,0.0
 Beans (mixed),Chuka,Retail,2026-07-01,114.1,70.32,171.09,NORMAL,0.0
@@ -39,10 +39,10 @@ Beans (mixed),Kawangware,Retail,2026-09-01,80.0,0.0,222.85,NORMAL,0.0
 Beans (mixed),Kayole,Retail,2026-07-01,140.8,136.25,178.25,NORMAL,0.0
 Beans (mixed),Kerugoya,Retail,2026-09-01,130.0,87.35,161.75,NORMAL,0.0
 Beans (mixed),Kerugoya,Wholesale,2026-09-01,95.0,37.16,217.7,NORMAL,0.0
-Beans (mixed),Kiambu,Retail,2026-07-01,174.8,161.57,189.97,NORMAL,0.0
+Beans (mixed),Kiambu,Retail,2026-07-01,174.8,157.5,192.5,NORMAL,0.0
 Beans (mixed),Kianjai,Retail,2026-07-01,101.2,80.55,164.95,NORMAL,0.0
 Beans (mixed),Kiboswa,Retail,2026-07-01,150.1,100.05,222.05,NORMAL,0.0
-Beans (mixed),Kibuye,Retail,2026-09-01,150.0,158.98,159.17,CRASH,5.6
+Beans (mixed),Kibuye,Retail,2026-09-01,150.0,143.19,175.01,NORMAL,0.0
 Beans (mixed),Kilifi,Retail,2026-09-01,144.0,96.25,170.25,NORMAL,0.0
 Beans (mixed),Kimulot,Retail,2026-07-01,132.0,107.04,175.94,NORMAL,0.0
 Beans (mixed),Kipkaren,Retail,2026-07-01,176.9,43.69,293.79,NORMAL,0.0
@@ -57,7 +57,7 @@ Beans (mixed),Kongowea,Retail,2026-07-01,121.6,59.82,156.62,NORMAL,0.0
 Beans (mixed),Korokocho,Retail,2026-05-01,185.0,88.05,253.25,NORMAL,0.0
 Beans (mixed),Kutus,Retail,2026-07-01,110.9,89.28,158.68,NORMAL,0.0
 Beans (mixed),Kwale,Retail,2026-07-01,127.3,76.88,243.88,NORMAL,0.0
-Beans (mixed),Lamu,Retail,2026-09-01,175.0,164.75,184.75,NORMAL,0.0
+Beans (mixed),Lamu,Retail,2026-09-01,175.0,157.5,192.5,NORMAL,0.0
 Beans (mixed),Lodwar,Retail,2026-07-01,144.0,66.04,214.14,NORMAL,0.0
 Beans (mixed),Machakos,Retail,2026-07-01,160.6,0.0,289.5,NORMAL,0.0
 Beans (mixed),Majengo,Retail,2026-05-01,140.0,78.5,182.5,NORMAL,0.0
@@ -93,11 +93,11 @@ Beans (mixed),Soko Mjinga,Retail,2026-07-01,143.8,2.18,247.57,NORMAL,0.0
 Beans (mixed),Sotik,Retail,2026-05-01,156.1,117.67,180.27,NORMAL,0.0
 Beans (mixed),Taita Taveta,Retail,2026-09-01,136.0,112.5,166.5,NORMAL,0.0
 Beans (mixed),Thika,Retail,2026-07-01,148.5,129.46,205.96,NORMAL,0.0
-Beans (mixed),Toi,Retail,2026-03-01,180.0,192.69,204.39,CRASH,6.6
+Beans (mixed),Toi,Retail,2026-03-01,180.0,180.0,220.0,NORMAL,0.0
 Beans (mixed),Turbo,Retail,2026-07-01,174.1,50.0,290.0,NORMAL,0.0
 Beans (mixed),Voi,Retail,2026-07-01,120.4,78.03,221.22,NORMAL,0.0
 Beans (mixed),Wajir,Retail,2026-07-01,150.3,75.0,195.0,NORMAL,0.0
-Beans (mixed),Wote,Retail,2026-07-01,151.5,150.92,175.13,NORMAL,0.0
+Beans (mixed),Wote,Retail,2026-07-01,151.5,144.0,176.0,NORMAL,0.0
 Beans (rosecoco),Eldoret,Wholesale,2026-09-01,155.0,48.31,255.77,NORMAL,0.0
 Beans (rosecoco),Kangemi,Wholesale,2026-08-01,106.66,45.66,172.71,NORMAL,0.0
 Beans (rosecoco),Kisumu,Wholesale,2026-09-01,148.1,115.9,201.24,NORMAL,0.0
@@ -272,7 +272,7 @@ Beans rosecoco,Ngurubani,Retail,2026-09-01,140.0,25.0,225.0,NORMAL,0.0
 Beans rosecoco,Ngurubani,Wholesale,2026-09-01,100.0,16.46,171.46,NORMAL,0.0
 Beans rosecoco,Nkubu,Retail,2026-09-01,120.0,55.0,175.0,NORMAL,0.0
 Beans rosecoco,Nkubu,Wholesale,2026-09-01,100.0,39.93,153.82,NORMAL,0.0
-Bread,Nairobi,Retail,2026-09-01,136.0,120.0,136.0,NORMAL,0.0
+Bread,Nairobi,Retail,2026-09-01,136.0,116.1,141.9,NORMAL,0.0
 Cabbages,Eldoret,Wholesale,2026-08-01,30.0,2.29,62.24,NORMAL,0.0
 Cabbages,Kathonzweni,Wholesale,2026-05-01,22.5,10.24,47.15,NORMAL,0.0
 Cassava,Eldoret,Wholesale,2026-09-01,70.0,0.0,124.24,NORMAL,0.0
@@ -293,12 +293,12 @@ Finger millet,Ahero,Retail,2026-09-01,175.0,107.81,215.31,NORMAL,0.0
 Finger millet,Ahero,Wholesale,2026-09-01,165.0,65.0,225.0,NORMAL,0.0
 Finger millet,Bondeni,Retail,2026-03-01,175.0,102.5,162.5,SPIKE,7.7
 Finger millet,Bondeni,Wholesale,2026-03-01,150.0,62.5,162.5,NORMAL,0.0
-Finger millet,Bondo,Retail,2026-06-01,200.0,135.94,173.44,SPIKE,15.3
+Finger millet,Bondo,Retail,2026-06-01,200.0,135.0,173.44,SPIKE,15.3
 Finger millet,Bondo,Wholesale,2026-06-01,150.0,93.41,157.28,NORMAL,0.0
 Finger millet,Chepterit,Retail,2025-10-01,150.0,91.68,158.32,NORMAL,0.0
 Finger millet,Chepterit,Wholesale,2025-10-01,125.0,46.11,151.67,NORMAL,0.0
-Finger millet,Chuka,Retail,2025-09-01,120.0,95.31,107.81,SPIKE,11.3
-Finger millet,Chuka,Wholesale,2025-09-01,73.0,87.0,95.0,CRASH,16.1
+Finger millet,Chuka,Retail,2025-09-01,120.0,90.0,110.0,SPIKE,9.1
+Finger millet,Chuka,Wholesale,2025-09-01,73.0,82.8,101.2,CRASH,11.8
 Finger millet,Embu,Retail,2026-09-01,150.0,106.25,141.25,SPIKE,6.2
 Finger millet,Embu,Wholesale,2026-09-01,125.0,69.79,118.12,SPIKE,5.8
 Finger millet,Gikomba,Retail,2026-03-01,140.0,125.0,165.0,NORMAL,0.0
@@ -309,8 +309,8 @@ Finger millet,Kapkwen,Retail,2026-05-01,125.0,43.76,213.75,NORMAL,0.0
 Finger millet,Kapkwen,Wholesale,2026-05-01,100.0,51.32,175.21,NORMAL,0.0
 Finger millet,Katito,Retail,2026-08-01,155.63,125.0,191.67,NORMAL,0.0
 Finger millet,Katito,Wholesale,2026-08-01,150.0,87.5,187.5,NORMAL,0.0
-Finger millet,Kawangware,Retail,2026-09-01,130.0,82.5,102.5,SPIKE,26.8
-Finger millet,Kerugoya,Retail,2026-09-01,100.0,118.75,128.75,CRASH,15.8
+Finger millet,Kawangware,Retail,2026-09-01,130.0,81.0,102.5,SPIKE,26.8
+Finger millet,Kerugoya,Retail,2026-09-01,100.0,112.5,137.5,CRASH,11.1
 Finger millet,Kerugoya,Wholesale,2026-09-01,60.0,55.0,95.0,NORMAL,0.0
 Finger millet,Khayega,Retail,2026-09-01,133.4,110.6,142.33,NORMAL,0.0
 Finger millet,Khayega,Wholesale,2026-09-01,126.58,83.79,149.73,NORMAL,0.0
@@ -330,15 +330,15 @@ Finger millet,Muhoroni,Retail,2026-09-01,175.0,105.82,196.96,NORMAL,0.0
 Finger millet,Mulot,Retail,2026-08-01,200.0,44.38,259.38,NORMAL,0.0
 Finger millet,Mulot,Wholesale,2026-08-01,150.0,52.85,148.95,SPIKE,0.7
 Finger millet,Mumias,Retail,2026-09-01,151.08,0.0,288.31,NORMAL,0.0
-Finger millet,Nkubu,Retail,2026-09-01,100.0,116.25,126.25,CRASH,14.0
+Finger millet,Nkubu,Retail,2026-09-01,100.0,108.0,132.0,CRASH,7.4
 Finger millet,Nkubu,Wholesale,2026-09-01,88.89,79.17,134.72,NORMAL,0.0
 Goats,Baringo,Retail,2026-09-01,4437.0,3565.88,5088.88,NORMAL,0.0
 Goats,Embu-Mbeere,Retail,2026-09-01,7600.0,5030.5,8682.5,NORMAL,0.0
 Goats,Garissa,Retail,2026-09-01,5154.0,3512.5,5892.5,NORMAL,0.0
-Goats,Isiolo,Retail,2026-09-01,6300.0,5712.5,7012.5,NORMAL,0.0
+Goats,Isiolo,Retail,2026-09-01,6300.0,5712.5,7018.0,NORMAL,0.0
 Goats,Kajiado,Retail,2026-09-01,8157.0,5583.75,9849.75,NORMAL,0.0
 Goats,Kilifi,Retail,2026-09-01,6684.0,5421.75,7007.75,NORMAL,0.0
-Goats,Kitui,Retail,2026-09-01,6184.0,5100.12,6153.12,SPIKE,0.5
+Goats,Kitui,Retail,2026-09-01,6184.0,5040.0,6160.0,SPIKE,0.4
 Goats,Kwale,Retail,2026-09-01,6806.0,5499.25,8193.25,NORMAL,0.0
 Goats,Laikipia,Retail,2026-09-01,6750.0,5669.62,8288.62,NORMAL,0.0
 Goats,Lamu,Retail,2026-09-01,6750.0,5180.0,6500.0,SPIKE,3.8
@@ -377,12 +377,12 @@ Green maize,Kagio,Wholesale,2026-09-01,40.0,22.5,42.5,NORMAL,0.0
 Green maize,Kalundu,Retail,2026-04-01,95.0,12.5,112.5,NORMAL,0.0
 Green maize,Kalundu,Wholesale,2026-04-01,50.0,0.0,87.5,NORMAL,0.0
 Green maize,Kangemi,Retail,2026-07-01,70.0,16.25,146.25,NORMAL,0.0
-Green maize,Kangeta,Wholesale,2026-09-01,50.0,46.88,51.88,NORMAL,0.0
+Green maize,Kangeta,Wholesale,2026-09-01,50.0,45.0,55.0,NORMAL,0.0
 Green maize,Kerugoya,Retail,2026-08-01,80.0,37.5,137.5,NORMAL,0.0
 Green maize,Kerugoya,Wholesale,2026-08-01,60.0,12.5,112.5,NORMAL,0.0
 Green maize,Kibuye,Retail,2026-09-01,90.0,52.5,122.5,NORMAL,0.0
-Green maize,Kinango,Retail,2026-09-01,70.0,66.88,71.88,NORMAL,0.0
-Green maize,Kinango,Wholesale,2026-09-01,47.5,43.12,54.12,NORMAL,0.0
+Green maize,Kinango,Retail,2026-09-01,70.0,63.0,77.0,NORMAL,0.0
+Green maize,Kinango,Wholesale,2026-09-01,47.5,43.12,55.0,NORMAL,0.0
 Green maize,Kirwara,Retail,2025-11-01,55.5,27.4,69.72,NORMAL,0.0
 Green maize,Kitale Municipality,Retail,2026-03-01,75.0,37.5,137.5,NORMAL,0.0
 Green maize,Kitale Municipality,Wholesale,2026-03-01,50.0,8.44,115.94,NORMAL,0.0
@@ -411,15 +411,15 @@ Ground nuts,Embu,Retail,2026-09-01,300.0,115.0,335.0,NORMAL,0.0
 Ground nuts,Embu,Wholesale,2026-09-01,250.0,91.25,301.25,NORMAL,0.0
 Ground nuts,Gikomba,Retail,2026-03-01,300.0,151.88,386.88,NORMAL,0.0
 Ground nuts,Gikomba,Wholesale,2026-03-01,172.22,101.67,275.0,NORMAL,0.0
-Ground nuts,Holo,Retail,2026-09-01,300.0,281.25,331.25,NORMAL,0.0
+Ground nuts,Holo,Retail,2026-09-01,300.0,270.0,331.25,NORMAL,0.0
 Ground nuts,Holo,Wholesale,2026-09-01,244.44,193.75,343.75,NORMAL,0.0
-Ground nuts,Kagio,Wholesale,2026-07-01,170.0,151.25,181.25,NORMAL,0.0
+Ground nuts,Kagio,Wholesale,2026-07-01,170.0,151.25,187.0,NORMAL,0.0
 Ground nuts,Kangemi,Retail,2026-09-01,260.0,120.0,360.0,NORMAL,0.0
 Ground nuts,Kangemi,Wholesale,2026-08-01,205.0,79.69,317.19,NORMAL,0.0
 Ground nuts,Katito,Retail,2026-08-01,261.9,130.76,340.58,NORMAL,0.0
 Ground nuts,Katito,Wholesale,2026-08-01,247.22,137.5,237.5,SPIKE,4.1
 Ground nuts,Kawangware,Retail,2026-09-01,250.0,210.0,290.0,NORMAL,0.0
-Ground nuts,Kawangware,Wholesale,2026-09-01,207.0,202.5,249.16,NORMAL,0.0
+Ground nuts,Kawangware,Wholesale,2026-09-01,207.0,198.0,249.16,NORMAL,0.0
 Ground nuts,Kerugoya,Retail,2026-09-01,277.5,225.0,425.0,NORMAL,0.0
 Ground nuts,Kerugoya,Wholesale,2026-09-01,215.0,189.38,334.38,NORMAL,0.0
 Ground nuts,Khayega,Retail,2026-09-01,250.0,206.52,293.48,NORMAL,0.0
@@ -470,12 +470,12 @@ Maize,Embu-Mbeere,Retail,2026-09-01,49.0,33.25,71.25,NORMAL,0.0
 Maize,Gakoromere,Retail,2026-07-01,60.6,33.93,104.12,NORMAL,0.0
 Maize,Gakoromone,Retail,2026-08-01,42.22,17.3,95.62,NORMAL,0.0
 Maize,Gakoromone,Wholesale,2026-08-01,40.0,24.22,78.14,NORMAL,0.0
-Maize,Garissa,Retail,2026-09-01,106.0,97.5,109.5,NORMAL,0.0
+Maize,Garissa,Retail,2026-09-01,106.0,94.5,115.5,NORMAL,0.0
 Maize,Gatundu,Retail,2026-07-01,68.7,22.69,115.19,NORMAL,0.0
 Maize,Gikomba,Retail,2026-05-01,69.8,35.44,103.54,NORMAL,0.0
 Maize,Gikomba,Wholesale,2026-03-01,65.56,31.25,94.58,NORMAL,0.0
 Maize,Githurai,Retail,2026-07-01,59.2,30.0,110.0,NORMAL,0.0
-Maize,Hola,Retail,2026-07-01,74.5,59.38,76.38,NORMAL,0.0
+Maize,Hola,Retail,2026-07-01,74.5,59.38,77.0,NORMAL,0.0
 Maize,Holo,Retail,2026-09-01,80.0,14.69,127.19,NORMAL,0.0
 Maize,Holo,Wholesale,2026-09-01,44.44,11.72,98.96,NORMAL,0.0
 Maize,Homabay,Retail,2026-07-01,62.9,35.02,81.23,NORMAL,0.0
@@ -560,7 +560,7 @@ Maize,Maua,Wholesale,2026-09-01,50.0,41.66,63.9,NORMAL,0.0
 Maize,Mbale,Retail,2026-07-01,52.3,24.63,89.82,NORMAL,0.0
 Maize,Meru,Retail,2026-09-01,53.0,26.0,76.0,NORMAL,0.0
 Maize,Migori,Retail,2026-07-01,57.3,10.0,90.0,NORMAL,0.0
-Maize,Mkunguni,Retail,2026-07-01,103.8,90.25,116.25,NORMAL,0.0
+Maize,Mkunguni,Retail,2026-07-01,103.8,90.0,116.25,NORMAL,0.0
 Maize,Mogogosiek,Retail,2026-09-01,66.67,23.75,93.76,NORMAL,0.0
 Maize,Mogogosiek,Wholesale,2026-09-01,54.17,3.12,84.8,NORMAL,0.0
 Maize,Mombasa,Wholesale,2025-11-30,50.0,28.73,89.44,NORMAL,0.0
@@ -673,7 +673,7 @@ Rice,Eldoret,Retail,2026-09-01,200.0,0.0,323.75,NORMAL,0.0
 Rice,Eldoret,Wholesale,2026-09-01,175.0,0.0,307.36,NORMAL,0.0
 Rice,Embu,Retail,2026-09-01,160.0,120.0,200.0,NORMAL,0.0
 Rice,Embu,Wholesale,2026-09-01,150.0,109.38,174.38,NORMAL,0.0
-Rice,Gikomba,Retail,2026-03-01,170.0,145.0,185.0,NORMAL,0.0
+Rice,Gikomba,Retail,2026-03-01,170.0,144.0,185.0,NORMAL,0.0
 Rice,Gikomba,Wholesale,2026-03-01,160.0,90.0,202.0,NORMAL,0.0
 Rice,Holo,Retail,2026-09-01,250.0,125.0,325.0,NORMAL,0.0
 Rice,Holo,Wholesale,2026-09-01,152.0,104.25,226.25,NORMAL,0.0
@@ -685,10 +685,10 @@ Rice,Kangemi,Retail,2026-09-01,170.0,150.0,230.0,NORMAL,0.0
 Rice,Kangemi,Wholesale,2026-09-01,140.0,119.25,194.59,NORMAL,0.0
 Rice,Katito,Retail,2026-08-01,170.45,101.36,239.18,NORMAL,0.0
 Rice,Katito,Wholesale,2026-08-01,150.0,100.0,200.0,NORMAL,0.0
-Rice,Kawangware,Retail,2026-09-01,180.0,155.0,195.0,NORMAL,0.0
-Rice,Kawangware,Wholesale,2026-09-01,158.33,147.94,174.44,NORMAL,0.0
-Rice,Kerugoya,Retail,2026-09-01,182.5,172.5,192.5,NORMAL,0.0
-Rice,Kerugoya,Wholesale,2026-09-01,160.0,158.44,160.94,NORMAL,0.0
+Rice,Kawangware,Retail,2026-09-01,180.0,155.0,198.0,NORMAL,0.0
+Rice,Kawangware,Wholesale,2026-09-01,158.33,144.0,176.0,NORMAL,0.0
+Rice,Kerugoya,Retail,2026-09-01,182.5,162.0,198.0,NORMAL,0.0
+Rice,Kerugoya,Wholesale,2026-09-01,160.0,144.0,176.0,NORMAL,0.0
 Rice,Kibuye,Retail,2026-09-01,137.5,122.19,154.69,NORMAL,0.0
 Rice,Kitale Municipality,Retail,2026-03-01,150.0,105.0,193.0,NORMAL,0.0
 Rice,Kitale Municipality,Wholesale,2026-03-01,129.0,67.5,183.5,NORMAL,0.0
@@ -696,18 +696,18 @@ Rice,Kutus,Retail,2026-08-01,180.0,112.5,212.5,NORMAL,0.0
 Rice,Kutus,Wholesale,2026-08-01,162.5,110.0,190.0,NORMAL,0.0
 Rice,Mabera,Retail,2026-09-01,185.0,46.93,226.55,NORMAL,0.0
 Rice,Mabera,Wholesale,2026-09-01,110.0,22.59,192.16,NORMAL,0.0
-Rice,Makutano Kirinyaga,Retail,2026-09-01,170.0,155.0,195.0,NORMAL,0.0
+Rice,Makutano Kirinyaga,Retail,2026-09-01,170.0,153.0,195.0,NORMAL,0.0
 Rice,Makutano Kirinyaga,Wholesale,2026-09-01,150.0,135.0,175.0,NORMAL,0.0
 Rice,Maua,Retail,2026-09-01,160.0,86.25,256.25,NORMAL,0.0
 Rice,Maua,Wholesale,2026-09-01,140.0,86.25,224.25,NORMAL,0.0
-Rice,Ngurubani,Retail,2026-09-01,170.0,160.62,185.62,NORMAL,0.0
+Rice,Ngurubani,Retail,2026-09-01,170.0,153.0,187.0,NORMAL,0.0
 Rice,Ngurubani,Wholesale,2026-09-01,150.0,135.0,175.0,NORMAL,0.0
 Rice,Rhamu,Retail,2025-12-01,130.0,125.0,165.0,NORMAL,0.0
 Rice,Takaba,Retail,2025-12-01,100.0,25.0,225.0,NORMAL,0.0
 Rice (paddy),Kibuye,Retail,2026-09-01,47.5,41.12,58.12,NORMAL,0.0
 Sorghum,Ahero,Retail,2026-09-01,65.0,42.5,102.5,NORMAL,0.0
 Sorghum,Ahero,Wholesale,2026-09-01,60.0,37.5,97.5,NORMAL,0.0
-Sorghum,Bondeni,Retail,2026-03-01,95.0,84.38,109.38,NORMAL,0.0
+Sorghum,Bondeni,Retail,2026-03-01,95.0,84.38,110.0,NORMAL,0.0
 Sorghum,Bondeni,Wholesale,2026-03-01,75.0,61.25,91.25,NORMAL,0.0
 Sorghum,Bondo,Retail,2026-06-01,100.0,5.0,125.0,NORMAL,0.0
 Sorghum,Bondo,Wholesale,2026-06-01,40.0,16.1,91.66,NORMAL,0.0
@@ -719,11 +719,11 @@ Sorghum,Eldoret,Retail,2026-09-01,125.0,28.12,143.12,NORMAL,0.0
 Sorghum,Eldoret,Wholesale,2026-09-01,127.5,26.95,143.83,NORMAL,0.0
 Sorghum,Embu,Retail,2026-09-01,75.0,65.94,88.44,NORMAL,0.0
 Sorghum,Embu,Wholesale,2026-09-01,50.0,45.0,85.0,NORMAL,0.0
-Sorghum,Gikomba,Wholesale,2026-03-01,72.22,61.12,78.88,NORMAL,0.0
+Sorghum,Gikomba,Wholesale,2026-03-01,72.22,61.12,79.44,NORMAL,0.0
 Sorghum,Holo,Retail,2026-09-01,75.0,44.06,101.56,NORMAL,0.0
 Sorghum,Holo,Wholesale,2026-09-01,44.44,17.36,105.13,NORMAL,0.0
 Sorghum,Isebania,Retail,2026-09-01,80.0,32.5,108.5,NORMAL,0.0
-Sorghum,Kagio,Wholesale,2026-04-01,80.0,73.75,83.75,NORMAL,0.0
+Sorghum,Kagio,Wholesale,2026-04-01,80.0,72.0,88.0,NORMAL,0.0
 Sorghum,Kalundu,Retail,2026-04-01,80.0,30.0,110.0,NORMAL,0.0
 Sorghum,Kalundu,Wholesale,2026-04-01,75.56,9.99,116.68,NORMAL,0.0
 Sorghum,Kangemi,Retail,2026-01-01,120.0,55.0,95.0,SPIKE,26.3
@@ -770,7 +770,7 @@ Sweet potatoes,Kitale,Wholesale,2026-03-01,65.0,31.5,106.3,NORMAL,0.0
 Sweet potatoes,Kitui,Wholesale,2025-11-01,60.0,29.34,84.44,NORMAL,0.0
 Sweet potatoes,Nairobi,Wholesale,2026-09-01,45.0,24.99,88.34,NORMAL,0.0
 Sweet potatoes,Taveta,Wholesale,2026-09-01,55.0,29.53,70.12,NORMAL,0.0
-Tea (Mombasa),Composite,Export,2026-06-01,2.27,1.98,2.41,NORMAL,0.0
+Tea (Mombasa),Composite,Export,2026-06-01,2.27,1.98,2.42,NORMAL,0.0
 Tomatoes,Eldoret,Wholesale,2026-08-01,70.0,16.9,114.33,NORMAL,0.0
 Tomatoes,Kangemi,Wholesale,2026-07-01,45.0,28.19,88.01,NORMAL,0.0
 Tomatoes,Kathonzweni,Wholesale,2026-05-01,80.0,16.28,79.54,SPIKE,0.6
@@ -791,7 +791,7 @@ Wheat,Kitale Municipality,Wholesale,2026-03-01,150.0,25.0,185.0,NORMAL,0.0
 Wheat,Maua,Wholesale,2026-09-01,83.33,69.04,92.35,NORMAL,0.0
 Wheat,Nairobi,Wholesale,2026-09-01,69.0,37.5,97.5,NORMAL,0.0
 Wheat,Taveta,Wholesale,2025-11-01,80.0,46.67,68.89,SPIKE,16.1
-Wheat bran,Kibuye,Retail,2026-09-01,33.0,31.5,35.5,NORMAL,0.0
+Wheat bran,Kibuye,Retail,2026-09-01,33.0,29.7,36.3,NORMAL,0.0
 Wheat flour,Ahero,Retail,2026-09-01,100.0,37.5,177.5,NORMAL,0.0
 Wheat flour,Ahero,Wholesale,2026-09-01,90.0,40.0,160.0,NORMAL,0.0
 Wheat flour,Kibuye,Retail,2026-09-01,92.5,51.25,141.25,NORMAL,0.0
@@ -802,7 +802,7 @@ White sorghum,Chuka,Retail,2025-09-01,80.0,50.0,130.0,NORMAL,0.0
 White sorghum,Chuka,Wholesale,2025-09-01,55.0,45.62,70.62,NORMAL,0.0
 White sorghum,Embu,Retail,2026-09-01,100.0,46.88,131.88,NORMAL,0.0
 White sorghum,Embu,Wholesale,2026-09-01,75.0,52.81,88.31,NORMAL,0.0
-White sorghum,Kagio,Retail,2026-08-01,120.0,87.5,107.5,SPIKE,11.6
+White sorghum,Kagio,Retail,2026-08-01,120.0,87.5,110.0,SPIKE,9.1
 White sorghum,Kagio,Wholesale,2026-08-01,82.0,30.0,110.0,NORMAL,0.0
 White sorghum,Kisasi,Retail,2026-02-01,120.0,45.0,165.0,NORMAL,0.0
 White sorghum,Kisasi,Wholesale,2026-02-01,65.0,33.12,108.12,NORMAL,0.0
@@ -812,4 +812,4 @@ White sorghum,Maua,Retail,2026-09-01,80.0,42.5,102.5,NORMAL,0.0
 White sorghum,Maua,Wholesale,2026-09-01,65.0,33.75,83.75,NORMAL,0.0
 White sorghum,Mumias,Retail,2026-06-01,90.48,57.63,88.2,SPIKE,2.6
 White sorghum,Nkubu,Retail,2026-09-01,80.0,55.0,95.0,NORMAL,0.0
-White sorghum,Nkubu,Wholesale,2026-09-01,66.67,63.2,68.75,NORMAL,0.0
+White sorghum,Nkubu,Wholesale,2026-09-01,66.67,60.0,73.34,NORMAL,0.0
