@@ -296,7 +296,7 @@ def _finalize(intent: str, language: str, entities: dict, result: dict) -> dict:
         "entities": entities,
     }
     if result["status"] in _FOLLOWUP_STATUSES:
-        # Carried by the caller (e.g. the Chat page) so the *next* message
+        # Carried by the caller (e.g. the chat dialog in src/ui.py) so the *next* message
         # can be treated as answering this question rather than a fresh one.
         # Language is carried forward too: a follow-up reply is often just
         # one or two words ("Nairobi", "maize"), exactly the short text

@@ -70,9 +70,94 @@ def inject_css() -> None:
         section[data-testid="stSidebar"] {{
             border-right: 1px solid {GREY};
         }}
+        .st-key-chat_fab {{
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 1000;
+            width: auto;
+        }}
+        .st-key-chat_fab button {{
+            border-radius: 999px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        }}
         </style>
         """,
         unsafe_allow_html=True,
+    )
+    # Every page calls inject_css() first, so the chat launcher rides along
+    # and shows up everywhere -- even on pages that st.stop() early.
+    with st.container(key="chat_fab"):
+        if st.button("💬 Ask AgriPulse", type="primary"):
+            _chat_dialog()
+
+
+CHAT_EXAMPLES = [
+    "What is the maize price forecast for Nairobi wholesale next month?",
+    "Bei ya mahindi itakuwa ngapi Nairobi jumla mwezi ujao?",
+    "Why do prices vary so much by region?",
+]
+
+
+def _chat_meta(meta: dict) -> None:
+    """Confidence pill + source caption under an assistant reply."""
+    if meta.get("confidence"):
+        color = CONFIDENCE_COLORS.get(meta["confidence"], "#666666")
+        st.markdown(
+            f"<span style='background-color:{color};color:white;padding:2px 10px;"
+            f"border-radius:999px;font-size:0.8rem;'>Confidence: "
+            f"{meta['confidence'].upper()}</span>",
+            unsafe_allow_html=True,
+        )
+    if meta.get("sources"):
+        st.caption(f"Source: {', '.join(meta['sources'])} · status: {meta['status']}")
+
+
+@st.dialog("Ask AgriPulse", width="large")
+def _chat_dialog() -> None:
+    """RAG chat in a modal. Dialogs rerun as fragments, so chatting doesn't
+    close it; history lives in session_state and follows the user across pages."""
+    from src.rag import pipeline  # lazy: chroma + embeddings only load once someone chats
+
+    st.caption("Ask about forecasts, price alerts, or which market is cheapest -- "
+               "in English or Kiswahili.")
+    st.session_state.setdefault("chat_history", [])
+    st.session_state.setdefault("pending_followup", None)
+
+    example_clicked = None
+    for col, example in zip(st.columns(len(CHAT_EXAMPLES)), CHAT_EXAMPLES):
+        if col.button(example, width="stretch"):
+            example_clicked = example
+
+    log = st.container(height=420)
+    with log:
+        for turn in st.session_state.chat_history:
+            with st.chat_message(turn["role"]):
+                st.markdown(turn["content"])
+                if turn["role"] == "assistant":
+                    _chat_meta(turn.get("meta") or {})
+
+    user_input = st.chat_input("Ask a question...") or example_clicked
+    if not user_input:
+        return
+
+    st.session_state.chat_history.append({"role": "user", "content": user_input})
+    with log:
+        with st.chat_message("user"):
+            st.markdown(user_input)
+        with st.chat_message("assistant"):
+            with st.spinner("Looking this up..."):
+                if st.session_state.pending_followup is not None:
+                    # Answering last turn's follow-up (e.g. "which market?"), not a fresh question.
+                    result = pipeline.continue_answer(st.session_state.pending_followup, user_input)
+                else:
+                    result = pipeline.answer(user_input)
+            st.session_state.pending_followup = result.get("pending")
+            meta = {k: result.get(k) for k in ("confidence", "sources", "status")}
+            st.markdown(result["answer"])
+            _chat_meta(meta)
+    st.session_state.chat_history.append(
+        {"role": "assistant", "content": result["answer"], "meta": meta}
     )
 
 

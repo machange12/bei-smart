@@ -354,6 +354,13 @@ def get_forecast(entities: dict) -> dict:
         }
 
     combos = _pricetypes_for(commodity, market)
+    if not combos:
+        # The chain splits varieties ("Maize" -> "Maize (white)"); fall back to
+        # the variety this market tracks. The answer names it, so nothing is hidden.
+        variant = next((c for c in COVERED_COMMODITIES
+                        if c.startswith(commodity + " (") and _pricetypes_for(c, market)), None)
+        if variant:
+            commodity, combos = variant, _pricetypes_for(variant, market)
     if pricetype is None:
         # Not specified by the question: default to whichever pricetype
         # this series is actually tracked as.
