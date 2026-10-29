@@ -121,7 +121,10 @@ def _chronos():
     return _CHRONOS
 
 
-def screen(df: pd.DataFrame, min_obs: int) -> pd.DataFrame:
+def screen(df: pd.DataFrame, min_obs: int, near: int = 0) -> pd.DataFrame:
+    """Series that pass every gate. `near` > 0 also keeps series that would pass after
+    at most `near` more months of steady reporting (enough months, gaps under 25%) and
+    reported in the last 3 months -- the app's "Coming soon" list; `months_to_go` > 0."""
     settle = df["market"].str.contains(SETTLEMENT_RE)
     print(f"[screen] excluding {df.loc[settle, 'market'].nunique()} settlement "
           f"markets ({int(settle.sum()):,} rows)")
@@ -131,13 +134,14 @@ def screen(df: pd.DataFrame, min_obs: int) -> pd.DataFrame:
     for (c, mk, pt), g in df.groupby(["commodity", "market", "pricetype"]):
         g = g.sort_values("date")
         n = len(g)
-        if n < min_obs:
+        if n < min_obs - near:
             continue
         stale = (anchor - g["date"].max().to_period("M")).n
-        if stale > 12:
-            continue
         span = (g["date"].max().to_period("M") - g["date"].min().to_period("M")).n + 1
-        if (span - n) / span >= 0.25:
+        gaps = span - n
+        # months of steady reporting until n >= min_obs and gaps/span < 25%
+        need = max(min_obs - n, 4 * gaps - span + 1, 0)
+        if need > near or stale > (12 if need == 0 else 3):  # waiting series must still be reporting
             continue
         cv = g["price_per_kg"].std() / g["price_per_kg"].mean() * 100
         if cv >= 60:
@@ -147,8 +151,25 @@ def screen(df: pd.DataFrame, min_obs: int) -> pd.DataFrame:
             "n_records": n, "months_stale": stale, "cv": round(cv, 2),
             "source": g["source"].mode().iloc[0],
             "last_obs": g["date"].max().date().isoformat(),
+            "months_to_go": need,
         })
     return pd.DataFrame(rows)
+
+
+def write_watchlist(df: pd.DataFrame, min_obs: int, near: int = 12) -> pd.DataFrame:
+    """app/data/watchlist.csv: series that will clear the gate once they gain a few more months."""
+    admin_map = df.groupby("market")["admin1"].agg(
+        lambda s: s.dropna().mode().iloc[0] if s.notna().any() else "").to_dict()
+    wl = screen(df, min_obs, near=near)
+    wl = wl[wl["months_to_go"] > 0].copy()
+    wl["region"] = [_region(mk, admin_map.get(mk, "")) for mk in wl["market"]]
+    anchor = df["date"].max().to_period("M")
+    wl["eligible_from"] = [(anchor + int(k)).strftime("%b %Y") for k in wl["months_to_go"]]
+    wl = wl.sort_values(["months_to_go", "commodity", "market"])
+    APP_DATA.mkdir(parents=True, exist_ok=True)
+    wl.to_csv(APP_DATA / "watchlist.csv", index=False)
+    print(f"[watchlist] {len(wl)} series within {near} months of passing the gates")
+    return wl
 
 
 def _mape(y, p):
@@ -401,6 +422,8 @@ def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
 
     scr = screen(df, min_obs)
     print(f"[screen] {len(scr)} series pass gate (min_obs>={min_obs})")
+    if not demo:
+        write_watchlist(df, min_obs)
     print(f"[models] {models}")
 
     if demo:

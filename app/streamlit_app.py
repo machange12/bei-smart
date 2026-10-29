@@ -12,5 +12,5 @@ st.navigation([
     st.Page("pages/2_Alerts.py", title="Alerts", icon="🚨", url_path="Alerts"),
     st.Page("pages/3_Map.py", title="Map", icon="🗺️", url_path="Map"),
     st.Page("pages/4_Classify.py", title="Classify", icon="🏷️", url_path="Classify"),
-    st.Page("pages/5_Validation.py", title="Validation", icon="✅", url_path="Validation"),
+    st.Page("pages/5_Coming_Soon.py", title="Coming soon", icon="⏳", url_path="Coming-soon"),
 ]).run()

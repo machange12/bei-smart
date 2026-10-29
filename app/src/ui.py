@@ -136,6 +136,23 @@ def inject_css() -> None:
             border-radius: 999px;
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
         }}
+        /* Chat dialog as a floating window: no dimmed backdrop, the page stays
+           clickable behind it, and the title bar is the drag handle (CHAT_DRAG_JS). */
+        div[data-testid="stDialog"] {{
+            background: transparent !important;
+            pointer-events: none;
+            overflow: hidden;
+        }}
+        div[data-testid="stDialog"] > div {{
+            pointer-events: auto;
+            width: min(640px, 94vw) !important;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+            border: 1px solid {GREY};
+        }}
+        div[data-testid="stDialog"] [role="dialog"] h2 {{
+            cursor: move;
+            user-select: none;
+        }}
         /* Landing "This month" cards: the bordered container is the card,
            so drop the metric's own card styling inside it. */
         .st-key-this_month div[data-testid="stMetric"] {{
@@ -164,10 +181,49 @@ def inject_css() -> None:
     _freshness_banner()
     _warm_chat()
     with st.container(key="chat_fab"):
+        st.html(CHAT_DRAG_JS, unsafe_allow_javascript=True)
         # Bold label so the mobile CSS can hide the words and keep the icon.
         if st.button("💬 **Ask AgriPulse**", type="primary"):
             _chat_dialog()
 
+
+# Drag the chat window by its title. Installed once per browser tab; a new dialog
+# (each open, each page) is picked up by the observer and placed where it was left.
+CHAT_DRAG_JS = """
+<script>
+(() => {
+  if (window.__agriDrag) return;
+  window.__agriDrag = true;
+  const pos = {x: 0, y: 0};
+  const place = (card) => { card.style.transform = `translate(${pos.x}px, ${pos.y}px)`; };
+  const wire = (card) => {
+    if (card.dataset.drag) return;
+    card.dataset.drag = "1";
+    place(card);
+    const handle = card.querySelector('[role="dialog"] h2');
+    if (!handle) return;
+    handle.addEventListener("pointerdown", (e) => {
+      const start = {x: e.clientX - pos.x, y: e.clientY - pos.y};
+      const r = card.getBoundingClientRect();
+      const base = {left: r.left - pos.x, top: r.top - pos.y};  // untranslated position
+      handle.setPointerCapture(e.pointerId);
+      const move = (ev) => {
+        // fully on screen sideways; the title bar always stays grabbable vertically
+        pos.x = Math.min(Math.max(ev.clientX - start.x, -base.left), innerWidth - r.width - base.left);
+        pos.y = Math.min(Math.max(ev.clientY - start.y, -base.top), innerHeight - 60 - base.top);
+        place(card);
+      };
+      const up = () => { handle.removeEventListener("pointermove", move); handle.removeEventListener("pointerup", up); };
+      handle.addEventListener("pointermove", move);
+      handle.addEventListener("pointerup", up);
+    });
+  };
+  new MutationObserver(() => {
+    document.querySelectorAll('div[data-testid="stDialog"] > div').forEach(wire);
+  }).observe(document.body, {childList: true, subtree: true});
+})();
+</script>
+"""
 
 CHAT_EXAMPLES = [
     "What is the maize price forecast for Nairobi wholesale next month?",
@@ -190,7 +246,7 @@ def _chat_meta(meta: dict) -> None:
         st.caption(f"Source: {', '.join(meta['sources'])} · status: {meta['status']}")
 
 
-@st.dialog("Ask AgriPulse", width="large")
+@st.dialog("Ask AgriPulse", width="medium")
 def _chat_dialog() -> None:
     """RAG chat in a modal. Dialogs rerun as fragments, so chatting doesn't
     close it; history lives in session_state and follows the user across pages."""
@@ -420,48 +476,6 @@ def forecast_chart(history: pd.DataFrame, forecast: pd.DataFrame) -> go.Figure:
         legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0),
         xaxis=dict(showgrid=False, title=None),
         yaxis=dict(showgrid=True, gridcolor=GREY, title=f"Price (KES/{unit})"),
-        plot_bgcolor="white",
-        paper_bgcolor="white",
-    )
-    return fig
-
-
-def validation_chart(actual: pd.DataFrame, actual_col: str, forecast_col: str, date_col: str) -> go.Figure:
-    """Actual-vs-forecast figure for the Validation page: solid green
-    actual, dashed yellow forecast, the gap between them shaded."""
-    fig = go.Figure()
-
-    fig.add_trace(
-        go.Scatter(
-            x=actual[date_col],
-            y=actual[actual_col],
-            name="Actual",
-            mode="lines+markers",
-            line=dict(color=GREEN_DARK, width=2),
-            hovertemplate="%{x|%b %Y}<br>KES %{y:.2f}<extra></extra>",
-        )
-    )
-    fig.add_trace(
-        go.Scatter(
-            x=actual[date_col],
-            y=actual[forecast_col],
-            name="Forecast",
-            mode="lines+markers",
-            line=dict(color=YELLOW, width=2, dash="dash"),
-            fill="tonexty",
-            fillcolor="rgba(249, 168, 37, 0.25)",
-            hovertemplate="%{x|%b %Y}<br>KES %{y:.2f}<extra></extra>",
-        )
-    )
-
-    fig.update_layout(
-        template="plotly_white",
-        height=450,
-        hovermode="x unified",
-        margin=dict(t=10, b=10, l=10, r=10),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0),
-        xaxis=dict(showgrid=False, title=None),
-        yaxis=dict(showgrid=True, gridcolor=GREY, title="Price (KES)"),
         plot_bgcolor="white",
         paper_bgcolor="white",
     )

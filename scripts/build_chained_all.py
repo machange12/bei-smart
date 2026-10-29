@@ -333,7 +333,9 @@ def _load_supplement(path: pathlib.Path, source_tag: str) -> pd.DataFrame:
         print(f"[info] {path.relative_to(ROOT)} not found - skipping")
         return pd.DataFrame(columns=SCHEMA)
     df = pd.read_csv(path)
-    df["date"] = pd.to_datetime(df["date"], errors="coerce")
+    # month-start like every other loader; the supplement mixes 1st-of-month and month-end dates,
+    # which put two rows in one month for the same series
+    df["date"] = pd.to_datetime(df["date"], errors="coerce").dt.to_period("M").dt.to_timestamp()
     df = df.dropna(subset=["date", "market", "commodity", "pricetype", "price"])
     unit_norm = df["unit"].astype(str).str.strip().str.lower()
     _kg_re = re.compile(r"^(\d+(?:\.\d+)?)?\s*[_ ]?\s*kg$")
@@ -346,7 +348,8 @@ def _load_supplement(path: pathlib.Path, source_tag: str) -> pd.DataFrame:
     df["commodity"] = df["commodity"].map(_canonical)
     df = df[df["commodity"].notna()].copy()
     df["market"] = df["market"].map(_norm_market)
-    out = df[["commodity", "market", "pricetype", "date", "price_per_kg"]].copy()
+    key = ["commodity", "market", "pricetype", "date"]
+    out = df.groupby(key, as_index=False)["price_per_kg"].median()  # one row per month
     out["source"] = source_tag
     out["admin1"] = ""
     out["latitude"] = np.nan
@@ -389,6 +392,13 @@ def stitch(wfp: pd.DataFrame, fews: pd.DataFrame, kamis: pd.DataFrame,
     parts = [p for p in [wfp, fews, kamis, wfp_supp, knbs, fpma] if p is not None]
     all_ = pd.concat(parts, ignore_index=True)
     all_ = all_[all_["price_per_kg"].gt(0)]
+    # Unit slips (a bag price keyed as per-kg, a shifted decimal) land 5-10x off the series.
+    # Drop them before picking a source, so a good lower-priority price can fill the month.
+    # ponytail: whole-history median; a 20-year inflation run stays well inside 5x.
+    med = all_.groupby(["commodity", "market", "pricetype"])["price_per_kg"].transform("median")
+    ratio = all_["price_per_kg"] / med
+    print(f"[outlier] dropping {int((~ratio.between(0.2, 5)).sum()):,} prices >5x off their series median")
+    all_ = all_[ratio.between(0.2, 5)].copy()
     # Priority: FEWS first, WFP second, KAMIS third. Keep first per group.
     all_["_prio"] = all_["source"].map({s: i for i, s in enumerate(SOURCE_PRIORITY)})
     all_ = all_.sort_values(["commodity", "market", "pricetype", "date", "_prio"])
@@ -417,11 +427,15 @@ def demo() -> None:
     supp, knbs = load_wholesale_supplement(), load_knbs_retail()
     for name, part in (("WFP", wfp), ("FEWS", fews), ("KAMIS", kamis),
                        ("WFP_SUPP", supp), ("KNBS", knbs)):
-        assert list(part.columns) == SCHEMA if not part.empty else True, f"{name} schema drift"
+        assert part.empty or set(part.columns) == set(SCHEMA), f"{name} schema drift"
     out = stitch(wfp, fews, kamis, supp, knbs, load_fpma())
     assert not out.empty, "stitcher produced empty output"
     assert list(out.columns) == SCHEMA, "output schema drift"
     assert out["price_per_kg"].gt(0).all()
+    assert out["date"].dt.day.eq(1).all(), "dates not month-start"
+    assert not out.duplicated(["commodity", "market", "pricetype", "date"]).any(), "two rows in one month"
+    nm = out[(out["market"] == "Nairobi") & (out["commodity"] == "Maize") & (out["pricetype"] == "Wholesale")]
+    assert nm["price_per_kg"].max() < 200, "Nairobi maize unit slip (KES 555/kg) leaked through"
     # Benchmark markets from the supplement should now be present.
     for mk in ["Nairobi", "Nakuru", "Mombasa", "Kisumu", "Eldoret"]:
         assert (out["market"] == mk).any(), f"benchmark market missing: {mk}"
@@ -432,6 +446,9 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--demo", action="store_true")
     args = ap.parse_args()
+    if args.demo:
+        demo()
+        sys.exit(0)
 
     wfp = load_wfp();   print(f"[load] WFP        {len(wfp):>7,} rows")
     fews = load_fews(); print(f"[load] FEWS       {len(fews):>7,} rows")
@@ -442,9 +459,6 @@ if __name__ == "__main__":
 
     out = stitch(wfp, fews, kamis, supp, knbs, fpma)
     report(out)
-
-    if args.demo:
-        sys.exit(0)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(OUT, index=False)

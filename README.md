@@ -29,7 +29,8 @@ _Updated automatically by the monthly refresh on 2026-11-05._
 | **Alerts** | Which prices are unusually high (spike) or low (crash) right now? |
 | **Map** | Where are the alerts? |
 | **Classify** | Is a commodity likely cheap or expensive in a region? (a shortlist, not a verdict) |
-| **Ask AgriPulse** 💬 | Floating chatbot on every page, English and Kiswahili, answers cite the data |
+| **Coming soon** | Which series are still reporting and will pass the data rules within a year, and when |
+| **Ask AgriPulse** 💬 | Floating, draggable chatbot on every page, English and Kiswahili, answers cite the data |
 
 ## How it works
 

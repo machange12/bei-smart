@@ -1,4 +1,4 @@
-streamlit
+streamlit>=1.62  # st.html unsafe_allow_javascript (draggable chat)
 pandas
 plotly
 folium
