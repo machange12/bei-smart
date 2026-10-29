@@ -1,0 +1,69 @@
+name: Refresh data + forecasts
+
+on:
+  schedule:
+    - cron: "0 3 5 * *"   # 5th of each month, 03:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: refresh-data
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install pipeline deps
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install pandas numpy requests openpyxl prophet statsmodels scikit-learn chronos-forecasting
+
+      - name: Fetch WFP (HDX)
+        continue-on-error: true   # falls back to the committed copy
+        run: |
+          url=$(curl -sf "https://data.humdata.org/api/3/action/package_show?id=wfp-food-prices-for-kenya" \
+            | jq -r '.result.resources[] | select(.url | endswith("wfp_food_prices_ken.csv")) | .url')
+          curl -sfL "$url" -o /tmp/wfp.csv
+          test -s /tmp/wfp.csv && mv /tmp/wfp.csv data/raw/wfp_food_prices_ken.csv
+
+      - name: Fetch external features
+        run: python scripts/fetch_external_features.py
+
+      - name: Scrape KAMIS (recent years, merged into history)
+        run: python scripts/scrape_kamis.py --years $(date -d '-2 months' +%Y) $(date +%Y)
+
+      - name: Build chain
+        run: python scripts/build_chained_all.py
+
+      - name: Enrich chain
+        run: python scripts/enrich_chain.py
+
+      - name: Rebuild anomalies
+        run: python scripts/rebuild_anomalies.py
+
+      - name: Rebuild forecasts
+        run: python scripts/rebuild_forecasts.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: model-metrics
+          path: data/exports/model_metrics.csv
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/data data/exports data/cleaned/bei_smart_forecasting_chained_all.csv \
+                  data/external data/raw/kamis_prices.csv data/raw/wfp_food_prices_ken.csv
+          git diff --cached --quiet && { echo "no changes"; exit 0; }
+          git commit -m "data: monthly refresh $(date +%Y-%m-%d)"
+          git push

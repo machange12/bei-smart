@@ -26,5 +26,4 @@ models/
 
 # Scraper caches + raw pulls -- regenerable via scripts/scrape_*.py
 data/raw/_kamis_cache/
-data/raw/kamis_prices.csv
 data/raw/_knbs_sample.pdf

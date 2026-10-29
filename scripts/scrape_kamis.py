@@ -311,6 +311,14 @@ if __name__ == "__main__":
         sys.exit(0)
 
     df = scrape(args.products, args.years, sleep=args.sleep)
+    # Merge into existing pull: freshly scraped rows win, years not re-scraped
+    # survive, and a KAMIS outage can't wipe history (CI scrapes recent years only).
+    if OUT.exists():
+        old = pd.read_csv(OUT, parse_dates=["date"])
+        df = (pd.concat([old, df], ignore_index=True)
+                .drop_duplicates(subset=["source", "market", "commodity", "pricetype", "date"],
+                                 keep="last")
+                .reset_index(drop=True))
     OUT.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(OUT, index=False)
     print(f"\nwrote {len(df):,} rows -> {OUT.relative_to(ROOT)}")
