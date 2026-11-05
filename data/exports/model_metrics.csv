@@ -1,56 +1,56 @@
 commodity,market,pricetype,region,source,n_records,last_obs,months_stale,mape,strategy,reliable
 Beans (dry),Nakuru,Retail,Rift Valley,KNBS,54,2026-06-01,4,1.44,chronos,True
-Beans (mixed),Ahero,Retail,Nyanza,FEWS,71,2026-07-01,3,2.97,chronos,True
-Beans (mixed),Bomet,Retail,Rift Valley,FEWS,88,2026-07-01,3,9.72,ensemble,True
-Beans (mixed),Butere,Retail,Western,FEWS,87,2026-07-01,3,23.73,ensemble,True
-Beans (mixed),Eldoret,Retail,Rift Valley,FEWS,78,2026-07-01,3,9.14,chronos,True
+Beans (mixed),Ahero,Retail,Nyanza,FEWS,72,2026-08-01,2,2.94,chronos,True
+Beans (mixed),Bomet,Retail,Rift Valley,FEWS,89,2026-08-01,2,12.61,ensemble,True
+Beans (mixed),Butere,Retail,Western,FEWS,88,2026-08-01,2,12.75,ensemble,True
+Beans (mixed),Eldoret,Retail,Rift Valley,FEWS,79,2026-08-01,2,10.15,chronos,True
 Beans (mixed),Embu-Mbeere,Retail,Eastern,FEWS,126,2026-09-01,1,9.29,ensemble,True
-Beans (mixed),Gakoromere,Retail,Eastern,FEWS,89,2026-07-01,3,4.57,ensemble,True
-Beans (mixed),Gatundu,Retail,Central,FEWS,83,2026-07-01,3,3.59,chronos,True
-Beans (mixed),Githurai,Retail,Nairobi,FEWS,89,2026-07-01,3,11.84,ensemble,True
-Beans (mixed),Hola,Retail,Coast,FEWS,81,2026-07-01,3,13.42,chronos,True
-Beans (mixed),Iciara,Retail,Eastern,FEWS,75,2026-07-01,3,15.43,chronos,True
-Beans (mixed),Kajiado,Retail,Rift Valley,FEWS,79,2026-05-01,5,27.01,chronos,False
-Beans (mixed),Kakamega,Retail,Western,FEWS,89,2026-09-01,1,39.8,ensemble,False
-Beans (mixed),Kalundu,Retail,Eastern,FEWS,88,2026-07-01,3,2.11,ensemble,True
-Beans (mixed),Kapsabet,Retail,Rift Valley,FEWS,90,2026-07-01,3,8.63,ensemble,True
-Beans (mixed),Karatina,Retail,Central,FEWS,89,2026-07-01,3,5.88,ensemble,True
-Beans (mixed),Kerugoya,Retail,Central,FEWS,93,2026-09-01,1,11.29,ensemble,True
+Beans (mixed),Gakoromere,Retail,Eastern,FEWS,90,2026-08-01,2,4.26,ensemble,True
+Beans (mixed),Gatundu,Retail,Central,FEWS,84,2026-08-01,2,2.89,ensemble,True
+Beans (mixed),Githurai,Retail,Nairobi,FEWS,90,2026-08-01,2,15.54,ensemble,True
+Beans (mixed),Hola,Retail,Coast,FEWS,82,2026-08-01,2,15.79,chronos,True
+Beans (mixed),Iciara,Retail,Eastern,FEWS,76,2026-08-01,2,19.58,chronos,True
+Beans (mixed),Kajiado,Retail,Rift Valley,FEWS,80,2026-08-01,2,30.62,chronos,False
+Beans (mixed),Kakamega,Retail,Western,FEWS,89,2026-09-01,1,34.12,ensemble,False
+Beans (mixed),Kalundu,Retail,Eastern,FEWS,89,2026-08-01,2,2.02,ensemble,True
+Beans (mixed),Kapsabet,Retail,Rift Valley,FEWS,91,2026-08-01,2,6.19,ensemble,True
+Beans (mixed),Karatina,Retail,Central,FEWS,90,2026-08-01,2,7.16,ensemble,True
+Beans (mixed),Kerugoya,Retail,Central,FEWS,93,2026-09-01,1,11.08,ensemble,True
 Beans (mixed),Kerugoya,Wholesale,Central,KAMIS,41,2026-09-01,1,43.96,chronos,False
-Beans (mixed),Kiambu,Retail,Central,FEWS,77,2026-07-01,3,4.49,chronos,True
-Beans (mixed),Kianjai,Retail,Eastern,FEWS,85,2026-07-01,3,7.26,ensemble,True
-Beans (mixed),Kibuye,Retail,Nyanza,FEWS,78,2026-09-01,1,2.67,chronos,True
+Beans (mixed),Kiambu,Retail,Central,FEWS,78,2026-08-01,2,3.62,chronos,True
+Beans (mixed),Kianjai,Retail,Eastern,FEWS,86,2026-08-01,2,8.74,ensemble,True
+Beans (mixed),Kibuye,Retail,Nyanza,FEWS,78,2026-09-01,1,2.64,chronos,True
 Beans (mixed),Kilifi,Retail,Coast,FEWS,162,2026-09-01,1,5.97,ensemble,True
-Beans (mixed),Kimulot,Retail,Rift Valley,FEWS,86,2026-07-01,3,7.36,ensemble,True
-Beans (mixed),Kipkaren,Retail,Rift Valley,FEWS,91,2026-07-01,3,12.15,ensemble,True
-Beans (mixed),Kiritiri,Retail,Eastern,FEWS,76,2026-07-01,3,15.08,chronos,True
+Beans (mixed),Kimulot,Retail,Rift Valley,FEWS,87,2026-08-01,2,6.64,ensemble,True
+Beans (mixed),Kipkaren,Retail,Rift Valley,FEWS,92,2026-08-01,2,16.32,ensemble,True
+Beans (mixed),Kiritiri,Retail,Eastern,FEWS,77,2026-08-01,2,18.32,chronos,True
 Beans (mixed),Kisumu,Wholesale,Nyanza,WFP_SUPP,53,2026-09-01,1,14.17,chronos,True
-Beans (mixed),Kitale,Retail,Rift Valley,FEWS,85,2026-07-01,3,9.14,ensemble,True
+Beans (mixed),Kitale,Retail,Rift Valley,FEWS,86,2026-08-01,2,11.9,ensemble,True
 Beans (mixed),Kitale Municipality,Retail,Rift Valley,KAMIS,37,2026-03-01,7,23.54,chronos,True
 Beans (mixed),Kitale Municipality,Wholesale,Rift Valley,KAMIS,37,2026-03-01,7,31.29,chronos,False
 Beans (mixed),Kitui,Retail,Eastern,FEWS,248,2026-09-01,1,4.83,ensemble,True
-Beans (mixed),Kongowea,Retail,Coast,FEWS,96,2026-07-01,3,8.66,ensemble,True
-Beans (mixed),Kutus,Retail,Central,FEWS,87,2026-07-01,3,80.91,ensemble,False
+Beans (mixed),Kongowea,Retail,Coast,FEWS,97,2026-08-01,2,12.3,ensemble,True
+Beans (mixed),Kutus,Retail,Central,FEWS,88,2026-08-01,2,80.86,ensemble,False
 Beans (mixed),Lamu,Retail,Coast,FEWS,125,2026-09-01,1,4.01,ensemble,True
-Beans (mixed),Majengo,Retail,Coast,FEWS,94,2026-05-01,5,11.46,ensemble,True
+Beans (mixed),Majengo,Retail,Coast,FEWS,95,2026-08-01,2,6.99,ensemble,True
 Beans (mixed),Makueni,Retail,Eastern,FEWS,126,2026-09-01,1,4.27,ensemble,True
 Beans (mixed),Marsabit,Retail,Eastern,FEWS,95,2026-09-01,1,3.96,ensemble,True
 Beans (mixed),Maua,Retail,Eastern,FEWS,63,2026-09-01,1,10.1,chronos,True
-Beans (mixed),Mbale,Retail,Western,FEWS,78,2026-07-01,3,4.66,chronos,True
+Beans (mixed),Mbale,Retail,Western,FEWS,79,2026-08-01,2,5.36,chronos,True
 Beans (mixed),Meru,Retail,Eastern,FEWS,137,2026-09-01,1,23.63,ensemble,True
-Beans (mixed),Migori,Retail,Nyanza,FEWS,79,2026-07-01,3,9.5,chronos,True
-Beans (mixed),Mulot,Retail,Rift Valley,FEWS,86,2026-07-01,3,7.03,ensemble,True
-Beans (mixed),Mumias,Retail,Western,FEWS,90,2026-09-01,1,11.03,ensemble,True
-Beans (mixed),Nanyuki,Retail,Rift Valley,FEWS,78,2026-02-01,8,8.11,chronos,True
-Beans (mixed),Nyeri,Retail,Central,FEWS,92,2026-07-01,3,3.28,ensemble,True
+Beans (mixed),Migori,Retail,Nyanza,FEWS,80,2026-08-01,2,8.52,chronos,True
+Beans (mixed),Mulot,Retail,Rift Valley,FEWS,87,2026-08-01,2,15.39,ensemble,True
+Beans (mixed),Mumias,Retail,Western,FEWS,90,2026-09-01,1,10.72,ensemble,True
+Beans (mixed),Nanyuki,Retail,Rift Valley,FEWS,79,2026-08-01,2,8.18,chronos,True
+Beans (mixed),Nyeri,Retail,Central,FEWS,93,2026-08-01,2,4.44,ensemble,True
 Beans (mixed),Nyeri-Kieni,Retail,Central,FEWS,126,2026-09-01,1,12.6,ensemble,True
-Beans (mixed),Runyenjes,Retail,Eastern,FEWS,84,2026-07-01,3,14.36,ensemble,True
-Beans (mixed),Siakago,Retail,Eastern,FEWS,81,2026-07-01,3,10.9,chronos,True
-Beans (mixed),Sotik,Retail,Rift Valley,FEWS,86,2026-05-01,5,6.88,ensemble,True
+Beans (mixed),Runyenjes,Retail,Eastern,FEWS,85,2026-08-01,2,14.61,ensemble,True
+Beans (mixed),Siakago,Retail,Eastern,FEWS,82,2026-08-01,2,13.7,chronos,True
+Beans (mixed),Sotik,Retail,Rift Valley,FEWS,87,2026-08-01,2,9.19,ensemble,True
 Beans (mixed),Taita Taveta,Retail,Coast,FEWS,162,2026-09-01,1,5.4,ensemble,True
-Beans (mixed),Thika,Retail,Central,FEWS,86,2026-07-01,3,2.78,ensemble,True
-Beans (mixed),Turbo,Retail,Rift Valley,FEWS,89,2026-07-01,3,7.89,ensemble,True
-Beans (mixed),Wote,Retail,Eastern,FEWS,85,2026-07-01,3,4.1,ensemble,True
+Beans (mixed),Thika,Retail,Central,FEWS,87,2026-08-01,2,7.3,ensemble,True
+Beans (mixed),Turbo,Retail,Rift Valley,FEWS,90,2026-08-01,2,19.06,ensemble,True
+Beans (mixed),Wote,Retail,Eastern,FEWS,86,2026-08-01,2,3.88,ensemble,True
 Beans (rosecoco),Eldoret,Wholesale,Rift Valley,FEWS,258,2026-09-01,1,46.46,ensemble,False
 Beans (rosecoco),Kisumu,Wholesale,Nyanza,FEWS,286,2026-09-01,1,17.14,ensemble,True
 Beans (rosecoco),Mombasa,Wholesale,Coast,FEWS,217,2025-11-30,11,17.45,ensemble,True
@@ -146,90 +146,90 @@ Ground nuts,Kerugoya,Wholesale,Central,KAMIS,42,2026-09-01,1,7.01,chronos,True
 Ground nuts,Kibuye,Retail,Nyanza,KAMIS,49,2026-09-01,1,6.77,chronos,True
 Ground nuts,Kitale Municipality,Retail,Rift Valley,KAMIS,48,2026-03-01,7,5.5,chronos,True
 Ground nuts,Kitale Municipality,Wholesale,Rift Valley,KAMIS,48,2026-03-01,7,6.55,chronos,True
-Maize,Ahero,Retail,Nyanza,FEWS,79,2026-09-01,1,4.42,chronos,True
+Maize,Ahero,Retail,Nyanza,FEWS,79,2026-09-01,1,4.6,chronos,True
 Maize,Ahero,Wholesale,Nyanza,KAMIS,58,2026-09-01,1,14.96,chronos,True
 Maize,Baringo,Retail,Rift Valley,FEWS,222,2026-09-01,1,5.33,ensemble,True
-Maize,Bomet,Retail,Rift Valley,FEWS,88,2026-07-01,3,13.78,ensemble,True
-Maize,Busia,Retail,Western,FEWS,76,2026-07-01,3,6.42,chronos,True
-Maize,Butere,Retail,Western,FEWS,89,2026-09-01,1,13.7,ensemble,True
-Maize,Chuka,Retail,Eastern,FEWS,65,2026-07-01,3,9.78,chronos,True
-Maize,Eldoret,Retail,Rift Valley,FEWS,96,2026-09-01,1,24.1,ensemble,True
+Maize,Bomet,Retail,Rift Valley,FEWS,89,2026-08-01,2,5.64,ensemble,True
+Maize,Busia,Retail,Western,FEWS,77,2026-08-01,2,7.23,chronos,True
+Maize,Butere,Retail,Western,FEWS,89,2026-09-01,1,12.93,ensemble,True
+Maize,Chuka,Retail,Eastern,FEWS,66,2026-08-01,2,10.16,chronos,True
+Maize,Eldoret,Retail,Rift Valley,FEWS,96,2026-09-01,1,25.74,ensemble,False
 Maize,Eldoret,Wholesale,Rift Valley,FEWS,275,2026-09-01,1,13.29,ensemble,True
-Maize,Embu,Retail,Eastern,FEWS,84,2026-09-01,1,14.23,ensemble,True
+Maize,Embu,Retail,Eastern,FEWS,84,2026-09-01,1,13.09,ensemble,True
 Maize,Embu-Mbeere,Retail,Eastern,FEWS,222,2026-09-01,1,10.87,ensemble,True
-Maize,Gakoromere,Retail,Eastern,FEWS,88,2026-07-01,3,24.33,ensemble,True
+Maize,Gakoromere,Retail,Eastern,FEWS,89,2026-08-01,2,9.55,ensemble,True
 Maize,Gakoromone,Retail,Eastern,KAMIS,55,2026-08-01,2,7.03,chronos,True
 Maize,Gakoromone,Wholesale,Eastern,KAMIS,55,2026-08-01,2,6.72,chronos,True
 Maize,Garissa,Retail,North Eastern,FEWS,249,2026-09-01,1,2.2,ensemble,True
-Maize,Gatundu,Retail,Central,FEWS,80,2026-07-01,3,5.39,chronos,True
-Maize,Githurai,Retail,Nairobi,FEWS,86,2026-07-01,3,27.74,ensemble,False
-Maize,Hola,Retail,Coast,FEWS,115,2026-07-01,3,8.25,ensemble,True
-Maize,Iciara,Retail,Eastern,FEWS,75,2026-07-01,3,15.93,chronos,True
+Maize,Gatundu,Retail,Central,FEWS,81,2026-08-01,2,12.3,chronos,True
+Maize,Githurai,Retail,Nairobi,FEWS,87,2026-08-01,2,30.99,ensemble,False
+Maize,Hola,Retail,Coast,FEWS,116,2026-08-01,2,8.21,ensemble,True
+Maize,Iciara,Retail,Eastern,FEWS,76,2026-08-01,2,15.82,chronos,True
 Maize,Isiolo,Retail,Eastern,FEWS,222,2026-09-01,1,9.94,ensemble,True
 Maize,Kagio,Retail,Central,KAMIS,52,2026-08-01,2,9.56,chronos,True
 Maize,Kagio,Wholesale,Central,KAMIS,52,2026-08-01,2,12.87,chronos,True
 Maize,Kajiado,Retail,Rift Valley,FEWS,225,2026-09-01,1,3.23,ensemble,True
-Maize,Kakamega,Retail,Western,FEWS,80,2026-09-01,1,11.58,chronos,True
-Maize,Kalundu,Retail,Eastern,FEWS,93,2026-07-01,3,6.07,ensemble,True
-Maize,Kangemi,Wholesale,Nairobi,WFP,55,2026-09-01,1,14.49,chronos,True
+Maize,Kakamega,Retail,Western,FEWS,80,2026-09-01,1,10.47,chronos,True
+Maize,Kalundu,Retail,Eastern,FEWS,94,2026-08-01,2,8.98,ensemble,True
+Maize,Kangemi,Wholesale,Nairobi,WFP,55,2026-09-01,1,14.31,chronos,True
 Maize,Kangeta,Retail,Eastern,KAMIS,58,2026-09-01,1,17.67,chronos,True
 Maize,Kangeta,Wholesale,Eastern,KAMIS,58,2026-09-01,1,13.02,chronos,True
 Maize,Kapkwen,Retail,Rift Valley,KAMIS,52,2026-09-01,1,24.21,chronos,True
 Maize,Kapkwen,Wholesale,Rift Valley,KAMIS,52,2026-09-01,1,16.99,chronos,True
-Maize,Kapsabet,Retail,Rift Valley,FEWS,91,2026-07-01,3,9.97,ensemble,True
-Maize,Karatina,Retail,Central,FEWS,91,2026-07-01,3,6.06,ensemble,True
+Maize,Kapsabet,Retail,Rift Valley,FEWS,92,2026-08-01,2,6.06,ensemble,True
+Maize,Karatina,Retail,Central,FEWS,92,2026-08-01,2,3.48,ensemble,True
 Maize,Katito,Retail,Nyanza,KAMIS,50,2026-08-01,2,32.36,chronos,False
 Maize,Katito,Wholesale,Nyanza,KAMIS,50,2026-08-01,2,22.73,chronos,True
-Maize,Kerugoya,Retail,Central,FEWS,94,2026-09-01,1,5.98,ensemble,True
-Maize,Kibuye,Retail,Nyanza,FEWS,78,2026-09-01,1,7.11,chronos,True
+Maize,Kerugoya,Retail,Central,FEWS,94,2026-09-01,1,6.09,ensemble,True
+Maize,Kibuye,Retail,Nyanza,FEWS,78,2026-09-01,1,6.92,chronos,True
 Maize,Kibuye,Wholesale,Nyanza,WFP,57,2026-09-01,1,10.0,chronos,True
 Maize,Kilifi,Retail,Coast,FEWS,225,2026-09-01,1,5.52,ensemble,True
-Maize,Kimulot,Retail,Rift Valley,FEWS,85,2026-07-01,3,18.21,ensemble,True
-Maize,Kipkaren,Retail,Rift Valley,FEWS,95,2026-09-01,1,23.86,ensemble,True
-Maize,Kiritiri,Retail,Eastern,FEWS,75,2026-07-01,3,8.89,chronos,True
+Maize,Kimulot,Retail,Rift Valley,FEWS,86,2026-08-01,2,7.35,ensemble,True
+Maize,Kipkaren,Retail,Rift Valley,FEWS,95,2026-09-01,1,22.53,ensemble,True
+Maize,Kiritiri,Retail,Eastern,FEWS,76,2026-08-01,2,9.88,chronos,True
 Maize,Kisasi,Retail,Eastern,KAMIS,41,2026-02-01,8,12.19,chronos,True
 Maize,Kisasi,Wholesale,Eastern,KAMIS,41,2026-02-01,8,13.24,chronos,True
 Maize,Kisumu,Wholesale,Nyanza,FEWS,291,2026-09-01,1,10.15,ensemble,True
 Maize,Kitui,Retail,Eastern,FEWS,249,2026-09-01,1,6.7,ensemble,True
-Maize,Kongowea,Retail,Coast,FEWS,94,2026-07-01,3,12.73,ensemble,True
-Maize,Kutus,Retail,Central,FEWS,96,2026-08-01,2,9.38,ensemble,True
+Maize,Kongowea,Retail,Coast,FEWS,95,2026-08-01,2,10.56,ensemble,True
+Maize,Kutus,Retail,Central,FEWS,96,2026-08-01,2,7.08,ensemble,True
 Maize,Kutus,Wholesale,Central,KAMIS,57,2026-08-01,2,12.68,chronos,True
 Maize,Kwale,Retail,Coast,FEWS,225,2026-09-01,1,21.88,ensemble,True
 Maize,Laikipia,Retail,Rift Valley,FEWS,222,2026-09-01,1,8.46,ensemble,True
 Maize,Lamu,Retail,Coast,FEWS,222,2026-09-01,1,3.72,ensemble,True
 Maize,Lodwar,Retail,Rift Valley,WFP,221,2026-07-01,3,24.17,ensemble,True
-Maize,Majengo,Retail,Coast,FEWS,87,2026-05-01,5,10.27,ensemble,True
+Maize,Majengo,Retail,Coast,FEWS,88,2026-08-01,2,9.27,ensemble,True
 Maize,Makueni,Retail,Eastern,FEWS,222,2026-09-01,1,8.2,ensemble,True
 Maize,Mandera,Retail,North Eastern,FEWS,249,2026-09-01,1,5.84,ensemble,True
 Maize,Marsabit,Retail,Eastern,FEWS,249,2026-09-01,1,4.96,ensemble,True
 Maize,Maua,Retail,Eastern,FEWS,70,2026-09-01,1,5.49,chronos,True
 Maize,Maua,Wholesale,Eastern,KAMIS,53,2026-09-01,1,9.51,chronos,True
-Maize,Mbale,Retail,Western,FEWS,81,2026-07-01,3,9.24,chronos,True
+Maize,Mbale,Retail,Western,FEWS,82,2026-08-01,2,11.07,chronos,True
 Maize,Meru,Retail,Eastern,FEWS,222,2026-09-01,1,13.74,ensemble,True
-Maize,Migori,Retail,Nyanza,FEWS,84,2026-07-01,3,12.73,ensemble,True
+Maize,Migori,Retail,Nyanza,FEWS,85,2026-08-01,2,10.53,ensemble,True
 Maize,Mombasa,Wholesale,Coast,FEWS,239,2025-11-30,11,26.01,ensemble,False
 Maize,Muhoroni,Retail,Nyanza,KAMIS,52,2026-09-01,1,26.76,chronos,False
 Maize,Muhoroni,Wholesale,Nyanza,KAMIS,52,2026-09-01,1,16.68,chronos,True
-Maize,Mulot,Retail,Rift Valley,FEWS,94,2026-09-01,1,12.79,ensemble,True
-Maize,Mumias,Retail,Western,FEWS,91,2026-09-01,1,17.93,ensemble,True
-Maize,Nakuru,Retail,Rift Valley,FEWS,82,2026-07-01,3,8.75,chronos,True
-Maize,Nanyuki,Retail,Rift Valley,FEWS,78,2026-02-01,8,33.71,chronos,False
+Maize,Mulot,Retail,Rift Valley,FEWS,94,2026-09-01,1,13.03,ensemble,True
+Maize,Mumias,Retail,Western,FEWS,91,2026-09-01,1,17.14,ensemble,True
+Maize,Nakuru,Retail,Rift Valley,FEWS,83,2026-08-01,2,7.76,chronos,True
+Maize,Nanyuki,Retail,Rift Valley,FEWS,79,2026-08-01,2,37.27,chronos,False
 Maize,Narok,Retail,Rift Valley,FEWS,222,2026-09-01,1,5.8,ensemble,True
 Maize,Ngurubani,Retail,Central,KAMIS,58,2026-09-01,1,30.33,chronos,False
 Maize,Ngurubani,Wholesale,Central,KAMIS,58,2026-09-01,1,26.47,chronos,False
 Maize,Nkubu,Retail,Eastern,KAMIS,56,2026-09-01,1,5.83,chronos,True
 Maize,Nkubu,Wholesale,Eastern,KAMIS,56,2026-09-01,1,3.97,chronos,True
-Maize,Nyeri,Retail,Central,FEWS,92,2026-07-01,3,5.69,ensemble,True
+Maize,Nyeri,Retail,Central,FEWS,93,2026-08-01,2,3.4,ensemble,True
 Maize,Nyeri-Kieni,Retail,Central,FEWS,222,2026-09-01,1,9.91,ensemble,True
-Maize,Runyenjes,Retail,Eastern,FEWS,82,2026-07-01,3,17.1,chronos,True
+Maize,Runyenjes,Retail,Eastern,FEWS,83,2026-08-01,2,11.51,chronos,True
 Maize,Samburu,Retail,Rift Valley,FEWS,222,2026-09-01,1,5.1,ensemble,True
-Maize,Siakago,Retail,Eastern,FEWS,80,2026-07-01,3,6.01,chronos,True
-Maize,Sotik,Retail,Rift Valley,FEWS,86,2026-05-01,5,27.81,ensemble,False
+Maize,Siakago,Retail,Eastern,FEWS,81,2026-08-01,2,6.0,chronos,True
+Maize,Sotik,Retail,Rift Valley,FEWS,87,2026-08-01,2,23.06,ensemble,True
 Maize,Taita Taveta,Retail,Coast,FEWS,222,2026-09-01,1,5.77,ensemble,True
 Maize,Tana River,Retail,Coast,FEWS,222,2026-09-01,1,6.74,ensemble,True
 Maize,Tharaka Nithi,Retail,Eastern,FEWS,222,2026-09-01,1,5.54,ensemble,True
-Maize,Thika,Retail,Central,FEWS,85,2026-07-01,3,11.78,ensemble,True
-Maize,Turbo,Retail,Rift Valley,FEWS,89,2026-07-01,3,10.66,ensemble,True
+Maize,Thika,Retail,Central,FEWS,86,2026-08-01,2,12.24,ensemble,True
+Maize,Turbo,Retail,Rift Valley,FEWS,90,2026-08-01,2,16.23,ensemble,True
 Maize,Turkana,Retail,Rift Valley,FEWS,222,2026-09-01,1,4.13,ensemble,True
 Maize,Wajir,Retail,North Eastern,FEWS,222,2026-09-01,1,6.82,ensemble,True
 Maize,West Pokot,Retail,Rift Valley,FEWS,222,2026-09-01,1,10.28,ensemble,True

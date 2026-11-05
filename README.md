@@ -7,16 +7,16 @@ Forecasts of Kenyan food and livestock prices market by market, alerts when a pr
 ## Live numbers
 
 <!-- stats:start -->
-_Updated automatically by the monthly refresh on 2026-10-29._
+_Updated automatically by the monthly refresh on 2026-11-05._
 
 | | |
 |---|---|
-| Forecast series served | 270 (249 with data under 6 months old) |
+| Forecast series served | 270 (250 with data under 6 months old) |
 | Markets / commodities | 84 / 23 |
 | Regions covered | 8 of 8 |
-| Median forecast error (12-month holdout) | 9.7% |
-| Models serving | Chronos 163, blend of 2 models 107 |
-| Price alerts | 33 spikes, 7 crashes across 789 monitored series |
+| Median forecast error (12-month holdout) | 9.9% |
+| Models serving | Chronos 162, blend of 2 models 108 |
+| Price alerts | 35 spikes, 7 crashes across 791 monitored series |
 | Prices observed up to | October 2026 |
 <!-- stats:end -->
 

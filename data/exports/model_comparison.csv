@@ -1,56 +1,56 @@
 commodity,market,pricetype,prophet_mape,sarima_mape,chronos_mape,selected,final_mape
 Beans (dry),Nakuru,Retail,5.07,5.04,1.44,chronos,1.44
-Beans (mixed),Ahero,Retail,11.36,39.05,2.97,chronos,2.97
-Beans (mixed),Bomet,Retail,17.75,8.57,10.95,ensemble,9.72
-Beans (mixed),Butere,Retail,23.99,29.17,18.32,ensemble,23.73
-Beans (mixed),Eldoret,Retail,13.13,24.1,9.14,chronos,9.14
+Beans (mixed),Ahero,Retail,9.92,14.53,2.94,chronos,2.94
+Beans (mixed),Bomet,Retail,18.52,11.81,13.5,ensemble,12.61
+Beans (mixed),Butere,Retail,24.32,7.8,18.13,ensemble,12.75
+Beans (mixed),Eldoret,Retail,12.99,22.92,10.15,chronos,10.15
 Beans (mixed),Embu-Mbeere,Retail,6.52,10.8,7.81,ensemble,9.29
-Beans (mixed),Gakoromere,Retail,4.6,7.8,5.85,ensemble,4.57
-Beans (mixed),Gatundu,Retail,4.33,6.21,3.59,chronos,3.59
-Beans (mixed),Githurai,Retail,10.07,11.83,11.84,ensemble,11.84
-Beans (mixed),Hola,Retail,15.11,12.33,13.42,chronos,13.42
-Beans (mixed),Iciara,Retail,14.6,18.26,15.43,chronos,15.43
-Beans (mixed),Kajiado,Retail,59.67,44.5,27.01,chronos,27.01
-Beans (mixed),Kakamega,Retail,61.81,47.59,33.57,ensemble,39.8
-Beans (mixed),Kalundu,Retail,18.78,3.29,2.11,ensemble,2.11
-Beans (mixed),Kapsabet,Retail,20.31,7.28,12.13,ensemble,8.63
-Beans (mixed),Karatina,Retail,8.92,9.7,6.47,ensemble,5.88
-Beans (mixed),Kerugoya,Retail,15.9,17.44,7.29,ensemble,11.29
-Beans (mixed),Kerugoya,Wholesale,15.36,28.57,43.96,chronos,43.96
-Beans (mixed),Kiambu,Retail,2.73,4.98,4.49,chronos,4.49
-Beans (mixed),Kianjai,Retail,22.59,15.4,7.68,ensemble,7.26
-Beans (mixed),Kibuye,Retail,5.49,9.62,2.67,chronos,2.67
+Beans (mixed),Gakoromere,Retail,4.5,9.87,4.55,ensemble,4.26
+Beans (mixed),Gatundu,Retail,4.16,11.87,3.22,ensemble,2.89
+Beans (mixed),Githurai,Retail,11.1,15.38,15.68,ensemble,15.54
+Beans (mixed),Hola,Retail,18.71,13.7,15.79,chronos,15.79
+Beans (mixed),Iciara,Retail,16.27,12.7,19.58,chronos,19.58
+Beans (mixed),Kajiado,Retail,62.55,46.89,30.62,chronos,30.62
+Beans (mixed),Kakamega,Retail,55.22,41.46,28.23,ensemble,34.12
+Beans (mixed),Kalundu,Retail,15.46,3.54,1.49,ensemble,2.02
+Beans (mixed),Kapsabet,Retail,16.15,7.02,10.83,ensemble,6.19
+Beans (mixed),Karatina,Retail,8.74,9.44,8.69,ensemble,7.16
+Beans (mixed),Kerugoya,Retail,15.71,17.73,7.45,ensemble,11.08
+Beans (mixed),Kerugoya,Wholesale,15.36,28.55,43.96,chronos,43.96
+Beans (mixed),Kiambu,Retail,2.92,4.67,3.62,chronos,3.62
+Beans (mixed),Kianjai,Retail,16.82,13.34,8.23,ensemble,8.74
+Beans (mixed),Kibuye,Retail,5.46,9.58,2.64,chronos,2.64
 Beans (mixed),Kilifi,Retail,14.11,9.0,8.31,ensemble,5.97
-Beans (mixed),Kimulot,Retail,9.02,10.68,7.85,ensemble,7.36
-Beans (mixed),Kipkaren,Retail,21.49,14.02,11.49,ensemble,12.15
-Beans (mixed),Kiritiri,Retail,18.84,22.23,15.08,chronos,15.08
+Beans (mixed),Kimulot,Retail,10.49,7.91,7.59,ensemble,6.64
+Beans (mixed),Kipkaren,Retail,15.44,18.56,15.21,ensemble,16.32
+Beans (mixed),Kiritiri,Retail,22.0,20.05,18.32,chronos,18.32
 Beans (mixed),Kisumu,Wholesale,9.74,9.07,14.17,chronos,14.17
-Beans (mixed),Kitale,Retail,15.94,10.39,8.82,ensemble,9.14
+Beans (mixed),Kitale,Retail,13.36,10.88,12.45,ensemble,11.9
 Beans (mixed),Kitale Municipality,Retail,16.07,55.54,23.54,chronos,23.54
 Beans (mixed),Kitale Municipality,Wholesale,85.87,65.9,31.29,chronos,31.29
 Beans (mixed),Kitui,Retail,20.3,4.0,6.81,ensemble,4.83
-Beans (mixed),Kongowea,Retail,39.32,10.08,9.69,ensemble,8.66
-Beans (mixed),Kutus,Retail,72.39,79.18,81.74,ensemble,80.91
+Beans (mixed),Kongowea,Retail,34.92,7.43,9.48,ensemble,12.3
+Beans (mixed),Kutus,Retail,72.13,83.18,81.09,ensemble,80.86
 Beans (mixed),Lamu,Retail,3.71,3.07,4.81,ensemble,4.01
-Beans (mixed),Majengo,Retail,33.44,12.85,10.68,ensemble,11.46
+Beans (mixed),Majengo,Retail,31.5,6.14,7.84,ensemble,6.99
 Beans (mixed),Makueni,Retail,5.74,3.83,6.52,ensemble,4.27
 Beans (mixed),Marsabit,Retail,13.05,3.82,4.58,ensemble,3.96
-Beans (mixed),Maua,Retail,56.82,46.61,10.1,chronos,10.1
-Beans (mixed),Mbale,Retail,3.58,13.57,4.66,chronos,4.66
+Beans (mixed),Maua,Retail,56.82,25.49,10.1,chronos,10.1
+Beans (mixed),Mbale,Retail,3.67,12.73,5.36,chronos,5.36
 Beans (mixed),Meru,Retail,24.08,20.92,23.06,ensemble,23.63
-Beans (mixed),Migori,Retail,15.43,15.74,9.5,chronos,9.5
-Beans (mixed),Mulot,Retail,19.45,7.05,11.42,ensemble,7.03
-Beans (mixed),Mumias,Retail,14.51,9.44,13.11,ensemble,11.03
-Beans (mixed),Nanyuki,Retail,12.63,9.95,8.11,chronos,8.11
-Beans (mixed),Nyeri,Retail,12.4,7.7,4.03,ensemble,3.28
+Beans (mixed),Migori,Retail,20.08,15.95,8.52,chronos,8.52
+Beans (mixed),Mulot,Retail,18.69,7.28,12.68,ensemble,15.39
+Beans (mixed),Mumias,Retail,12.39,7.86,13.46,ensemble,10.72
+Beans (mixed),Nanyuki,Retail,11.77,10.21,8.18,chronos,8.18
+Beans (mixed),Nyeri,Retail,8.5,8.02,2.43,ensemble,4.44
 Beans (mixed),Nyeri-Kieni,Retail,10.28,24.2,14.6,ensemble,12.6
-Beans (mixed),Runyenjes,Retail,16.21,22.16,13.0,ensemble,14.36
-Beans (mixed),Siakago,Retail,12.89,10.71,10.9,chronos,10.9
-Beans (mixed),Sotik,Retail,6.14,8.37,7.06,ensemble,6.88
+Beans (mixed),Runyenjes,Retail,18.41,16.26,12.68,ensemble,14.61
+Beans (mixed),Siakago,Retail,15.69,10.87,13.7,chronos,13.7
+Beans (mixed),Sotik,Retail,7.55,13.88,8.38,ensemble,9.19
 Beans (mixed),Taita Taveta,Retail,14.27,5.33,5.55,ensemble,5.4
-Beans (mixed),Thika,Retail,4.69,6.28,3.95,ensemble,2.78
-Beans (mixed),Turbo,Retail,17.46,19.3,13.92,ensemble,7.89
-Beans (mixed),Wote,Retail,6.32,4.03,7.36,ensemble,4.1
+Beans (mixed),Thika,Retail,3.96,13.28,3.62,ensemble,7.3
+Beans (mixed),Turbo,Retail,9.77,14.28,23.63,ensemble,19.06
+Beans (mixed),Wote,Retail,4.53,8.59,4.01,ensemble,3.88
 Beans (rosecoco),Eldoret,Wholesale,48.72,47.45,43.56,ensemble,46.46
 Beans (rosecoco),Kisumu,Wholesale,14.15,18.75,15.42,ensemble,17.14
 Beans (rosecoco),Mombasa,Wholesale,20.7,21.22,20.72,ensemble,17.45
@@ -64,10 +64,10 @@ Beans (yellow-green),Kangeta,Wholesale,41.67,13.72,9.74,chronos,9.74
 Beans (yellow-green),Katito,Retail,24.88,25.6,7.34,chronos,7.34
 Beans (yellow-green),Katito,Wholesale,32.61,32.26,6.19,chronos,6.19
 Beans (yellow-green),Kibuye,Retail,21.56,19.39,1.45,chronos,1.45
-Beans (yellow-green),Kisasi,Retail,47.74,8.64,9.56,chronos,9.56
+Beans (yellow-green),Kisasi,Retail,47.74,11.14,9.56,chronos,9.56
 Beans (yellow-green),Kisasi,Wholesale,22.94,34.74,6.66,chronos,6.66
-Beans (yellow-green),Kitale Municipality,Retail,63.32,40.92,41.81,chronos,41.81
-Beans (yellow-green),Kitale Municipality,Wholesale,86.62,32.94,55.18,chronos,55.18
+Beans (yellow-green),Kitale Municipality,Retail,63.32,39.0,41.81,chronos,41.81
+Beans (yellow-green),Kitale Municipality,Wholesale,86.62,31.13,55.18,chronos,55.18
 Beans (yellow-green),Kutus,Retail,43.64,101.9,16.37,chronos,16.37
 Beans (yellow-green),Kutus,Wholesale,55.03,117.68,14.77,chronos,14.77
 Beans (yellow-green),Makutano Kirinyaga,Retail,17.69,17.0,13.89,chronos,13.89
@@ -142,94 +142,94 @@ Green maize,Ngurubani,Wholesale,19.7,24.79,11.96,chronos,11.96
 Ground nuts,Ahero,Retail,12.06,9.49,12.15,chronos,12.15
 Ground nuts,Ahero,Wholesale,13.77,10.5,7.78,chronos,7.78
 Ground nuts,Kerugoya,Retail,42.23,15.85,6.8,chronos,6.8
-Ground nuts,Kerugoya,Wholesale,28.14,24.51,7.01,chronos,7.01
+Ground nuts,Kerugoya,Wholesale,28.14,24.41,7.01,chronos,7.01
 Ground nuts,Kibuye,Retail,12.06,11.49,6.77,chronos,6.77
 Ground nuts,Kitale Municipality,Retail,8.11,5.75,5.5,chronos,5.5
 Ground nuts,Kitale Municipality,Wholesale,14.44,10.4,6.55,chronos,6.55
-Maize,Ahero,Retail,14.57,5.98,4.42,chronos,4.42
+Maize,Ahero,Retail,16.05,7.19,4.6,chronos,4.6
 Maize,Ahero,Wholesale,16.74,8.85,14.96,chronos,14.96
 Maize,Baringo,Retail,11.93,7.38,13.56,ensemble,5.33
-Maize,Bomet,Retail,7.59,10.47,17.17,ensemble,13.78
-Maize,Busia,Retail,13.86,12.27,6.42,chronos,6.42
-Maize,Butere,Retail,14.91,18.63,10.23,ensemble,13.7
-Maize,Chuka,Retail,8.17,15.47,9.78,chronos,9.78
-Maize,Eldoret,Retail,49.78,25.54,23.51,ensemble,24.1
+Maize,Bomet,Retail,7.8,15.82,6.61,ensemble,5.64
+Maize,Busia,Retail,13.33,8.42,7.23,chronos,7.23
+Maize,Butere,Retail,14.07,17.79,9.51,ensemble,12.93
+Maize,Chuka,Retail,8.32,8.77,10.16,chronos,10.16
+Maize,Eldoret,Retail,51.65,27.15,25.16,ensemble,25.74
 Maize,Eldoret,Wholesale,37.15,13.03,13.44,ensemble,13.29
-Maize,Embu,Retail,23.84,18.78,13.82,ensemble,14.23
+Maize,Embu,Retail,25.48,15.96,13.1,ensemble,13.09
 Maize,Embu-Mbeere,Retail,7.24,9.36,21.93,ensemble,10.87
-Maize,Gakoromere,Retail,28.21,17.23,26.87,ensemble,24.33
+Maize,Gakoromere,Retail,27.52,4.47,11.33,ensemble,9.55
 Maize,Gakoromone,Retail,25.89,37.66,7.03,chronos,7.03
 Maize,Gakoromone,Wholesale,23.02,16.05,6.72,chronos,6.72
 Maize,Garissa,Retail,8.83,2.38,2.02,ensemble,2.2
-Maize,Gatundu,Retail,27.2,6.72,5.39,chronos,5.39
-Maize,Githurai,Retail,32.09,29.63,26.23,ensemble,27.74
-Maize,Hola,Retail,8.69,7.75,9.26,ensemble,8.25
-Maize,Iciara,Retail,28.74,14.58,15.93,chronos,15.93
+Maize,Gatundu,Retail,24.45,8.06,12.3,chronos,12.3
+Maize,Githurai,Retail,35.57,32.47,29.59,ensemble,30.99
+Maize,Hola,Retail,8.59,7.62,10.75,ensemble,8.21
+Maize,Iciara,Retail,28.61,22.7,15.82,chronos,15.82
 Maize,Isiolo,Retail,7.45,9.66,10.1,ensemble,9.94
 Maize,Kagio,Retail,23.86,13.86,9.56,chronos,9.56
 Maize,Kagio,Wholesale,26.03,10.71,12.87,chronos,12.87
 Maize,Kajiado,Retail,3.65,3.78,3.03,ensemble,3.23
-Maize,Kakamega,Retail,14.63,20.21,11.58,chronos,11.58
-Maize,Kalundu,Retail,6.89,3.77,10.5,ensemble,6.07
-Maize,Kangemi,Wholesale,24.43,19.6,14.49,chronos,14.49
+Maize,Kakamega,Retail,16.32,21.87,10.47,chronos,10.47
+Maize,Kalundu,Retail,7.15,5.8,12.36,ensemble,8.98
+Maize,Kangemi,Wholesale,24.71,19.45,14.31,chronos,14.31
 Maize,Kangeta,Retail,11.82,10.82,17.67,chronos,17.67
 Maize,Kangeta,Wholesale,17.36,18.83,13.02,chronos,13.02
 Maize,Kapkwen,Retail,8.28,30.68,24.21,chronos,24.21
 Maize,Kapkwen,Wholesale,10.08,117.23,16.99,chronos,16.99
-Maize,Kapsabet,Retail,10.74,9.33,10.45,ensemble,9.97
-Maize,Karatina,Retail,28.75,5.68,6.57,ensemble,6.06
+Maize,Kapsabet,Retail,11.34,8.64,6.54,ensemble,6.06
+Maize,Karatina,Retail,29.13,4.19,3.98,ensemble,3.48
 Maize,Katito,Retail,31.87,13.92,32.36,chronos,32.36
 Maize,Katito,Wholesale,40.97,25.71,22.73,chronos,22.73
-Maize,Kerugoya,Retail,10.1,7.89,7.63,ensemble,5.98
-Maize,Kibuye,Retail,14.01,10.67,7.11,chronos,7.11
+Maize,Kerugoya,Retail,10.22,7.99,7.74,ensemble,6.09
+Maize,Kibuye,Retail,14.72,10.28,6.92,chronos,6.92
 Maize,Kibuye,Wholesale,15.71,16.36,10.0,chronos,10.0
 Maize,Kilifi,Retail,12.57,7.01,4.25,ensemble,5.52
-Maize,Kimulot,Retail,7.11,8.89,25.55,ensemble,18.21
-Maize,Kipkaren,Retail,24.11,27.79,21.77,ensemble,23.86
-Maize,Kiritiri,Retail,18.62,10.48,8.89,chronos,8.89
-Maize,Kisasi,Retail,28.62,42.17,12.19,chronos,12.19
-Maize,Kisasi,Wholesale,24.82,46.89,13.24,chronos,13.24
+Maize,Kimulot,Retail,7.39,5.59,15.15,ensemble,7.35
+Maize,Kipkaren,Retail,22.45,28.92,18.54,ensemble,22.53
+Maize,Kiritiri,Retail,17.62,12.32,9.88,chronos,9.88
+Maize,Kisasi,Retail,28.62,43.81,12.19,chronos,12.19
+Maize,Kisasi,Wholesale,24.82,46.85,13.24,chronos,13.24
 Maize,Kisumu,Wholesale,5.53,8.52,11.64,ensemble,10.15
 Maize,Kitui,Retail,8.62,7.52,4.01,ensemble,6.7
-Maize,Kongowea,Retail,17.93,12.6,13.7,ensemble,12.73
-Maize,Kutus,Retail,19.86,9.25,10.22,ensemble,9.38
+Maize,Kongowea,Retail,12.43,9.77,12.62,ensemble,10.56
+Maize,Kutus,Retail,16.74,6.46,9.02,ensemble,7.08
 Maize,Kutus,Wholesale,14.39,31.9,12.68,chronos,12.68
 Maize,Kwale,Retail,21.37,22.27,21.74,ensemble,21.88
 Maize,Laikipia,Retail,14.93,6.58,10.76,ensemble,8.46
 Maize,Lamu,Retail,7.55,4.74,3.35,ensemble,3.72
 Maize,Lodwar,Retail,30.24,39.71,13.47,ensemble,24.17
-Maize,Majengo,Retail,42.42,8.34,21.63,ensemble,10.27
+Maize,Majengo,Retail,36.52,8.61,21.48,ensemble,9.27
 Maize,Makueni,Retail,4.9,3.04,11.31,ensemble,8.2
 Maize,Mandera,Retail,11.82,6.44,7.65,ensemble,5.84
 Maize,Marsabit,Retail,12.38,5.76,4.77,ensemble,4.96
 Maize,Maua,Retail,9.9,12.09,5.49,chronos,5.49
 Maize,Maua,Wholesale,12.0,25.38,9.51,chronos,9.51
-Maize,Mbale,Retail,22.31,22.66,9.24,chronos,9.24
+Maize,Mbale,Retail,23.99,28.51,11.07,chronos,11.07
 Maize,Meru,Retail,8.75,21.25,22.26,ensemble,13.74
-Maize,Migori,Retail,8.88,6.53,20.11,ensemble,12.73
+Maize,Migori,Retail,9.05,27.57,10.54,ensemble,10.53
 Maize,Mombasa,Wholesale,49.95,26.17,26.21,ensemble,26.01
 Maize,Muhoroni,Retail,79.32,91.46,26.76,chronos,26.76
 Maize,Muhoroni,Wholesale,56.6,54.37,16.68,chronos,16.68
-Maize,Mulot,Retail,18.42,14.05,8.19,ensemble,12.79
-Maize,Mumias,Retail,19.94,25.54,15.9,ensemble,17.93
-Maize,Nakuru,Retail,19.66,15.51,8.75,chronos,8.75
-Maize,Nanyuki,Retail,19.96,41.17,33.71,chronos,33.71
+Maize,Mulot,Retail,18.69,14.3,8.4,ensemble,13.03
+Maize,Mumias,Retail,19.04,24.68,15.23,ensemble,17.14
+Maize,Nakuru,Retail,19.6,12.17,7.76,chronos,7.76
+Maize,Nanyuki,Retail,14.39,53.81,37.27,chronos,37.27
 Maize,Narok,Retail,5.97,8.32,13.7,ensemble,5.8
 Maize,Ngurubani,Retail,13.69,21.6,30.33,chronos,30.33
 Maize,Ngurubani,Wholesale,12.79,14.52,26.47,chronos,26.47
 Maize,Nkubu,Retail,21.11,18.39,5.83,chronos,5.83
 Maize,Nkubu,Wholesale,17.68,17.33,3.97,chronos,3.97
-Maize,Nyeri,Retail,10.87,6.55,5.97,ensemble,5.69
+Maize,Nyeri,Retail,10.21,5.78,2.8,ensemble,3.4
 Maize,Nyeri-Kieni,Retail,13.14,6.44,11.5,ensemble,9.91
-Maize,Runyenjes,Retail,16.24,11.19,17.1,chronos,17.1
+Maize,Runyenjes,Retail,15.18,7.12,11.51,chronos,11.51
 Maize,Samburu,Retail,9.17,3.66,6.37,ensemble,5.1
-Maize,Siakago,Retail,24.77,9.89,6.01,chronos,6.01
-Maize,Sotik,Retail,10.19,23.8,30.34,ensemble,27.81
+Maize,Siakago,Retail,25.73,8.62,6.0,chronos,6.0
+Maize,Sotik,Retail,12.61,22.9,30.69,ensemble,23.06
 Maize,Taita Taveta,Retail,10.73,3.44,2.99,ensemble,5.77
 Maize,Tana River,Retail,19.59,6.81,6.76,ensemble,6.74
 Maize,Tharaka Nithi,Retail,9.0,7.5,9.84,ensemble,5.54
-Maize,Thika,Retail,26.75,10.54,12.84,ensemble,11.78
-Maize,Turbo,Retail,18.28,16.83,6.65,ensemble,10.66
+Maize,Thika,Retail,29.2,20.01,9.69,ensemble,12.24
+Maize,Turbo,Retail,19.94,23.22,7.62,ensemble,16.23
 Maize,Turkana,Retail,4.58,5.14,3.98,ensemble,4.13
 Maize,Wajir,Retail,16.39,8.0,5.45,ensemble,6.82
 Maize,West Pokot,Retail,13.65,8.71,17.98,ensemble,10.28

@@ -18708,10 +18708,619 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-05-15,Nyanza,Kisumu,Kibuye (Kisumu),5671,-0.09,34.77,vegetables and fruits,Kale,796,50 KG,actual,Wholesale,KES,2222,17.17
 2026-05-15,Nyanza,Kisumu,Kibuye (Kisumu),5671,-0.09,34.77,vegetables and fruits,Onions (dry),892,13 KG,actual,Wholesale,KES,1600.04,12.37
 2026-05-15,Nyanza,Kisumu,Kibuye (Kisumu),5671,-0.09,34.77,vegetables and fruits,Tomatoes,114,64 KG,actual,Wholesale,KES,12343.04,95.39
+2026-06-15,Coast,Tana River,Adele Center,10441,-0.47,39.61,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,80,0.62
+2026-06-15,Coast,Tana River,Adele Center,10441,-0.47,39.61,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,80,0.62
+2026-06-15,Coast,Tana River,Adele Center,10441,-0.47,39.61,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Adele Center,10441,-0.47,39.61,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,90,0.7
+2026-06-15,Coast,Tana River,Adele Center,10441,-0.47,39.61,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,120,0.93
+2026-06-15,Coast,Tana River,Adele Center,10441,-0.47,39.61,miscellaneous food,Salt,185,200 G,actual,Retail,KES,20,0.15
+2026-06-15,Coast,Tana River,Adele Center,10441,-0.47,39.61,miscellaneous food,Sugar,97,KG,actual,Retail,KES,150,1.16
+2026-06-15,Coast,Tana River,Adele Center,10441,-0.47,39.61,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,175,1.35
+2026-06-15,Coast,Tana River,Adele Center,10441,-0.47,39.61,pulses and nuts,Beans,50,KG,actual,Retail,KES,120,0.93
+2026-06-15,Coast,Tana River,Adele Center,10441,-0.47,39.61,vegetables and fruits,Kale,796,KG,actual,Retail,KES,50,0.39
+2026-06-15,Coast,Tana River,Adele Center,10441,-0.47,39.61,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,50,0.39
+2026-06-15,Coast,Tana River,Bangale,10438,-0.72,39.02,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,110,0.85
+2026-06-15,Coast,Tana River,Bangale,10438,-0.72,39.02,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,167,1.29
+2026-06-15,Coast,Tana River,Bangale,10438,-0.72,39.02,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,123,0.95
+2026-06-15,Coast,Tana River,Bangale,10438,-0.72,39.02,miscellaneous food,Salt,185,200 G,actual,Retail,KES,38,0.29
+2026-06-15,Coast,Tana River,Bangale,10438,-0.72,39.02,miscellaneous food,Sugar,97,KG,actual,Retail,KES,170,1.31
+2026-06-15,Coast,Tana River,Bangale,10438,-0.72,39.02,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,375,2.9
+2026-06-15,Coast,Tana River,Bangale,10438,-0.72,39.02,pulses and nuts,Beans,50,KG,actual,Retail,KES,200,1.55
+2026-06-15,Coast,Tana River,Bangale,10438,-0.72,39.02,vegetables and fruits,Kale,796,KG,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Bangale,10438,-0.72,39.02,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,140,1.08
+2026-06-15,Coast,Tana River,Bilbil,10439,-1.01,39.79,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,70,0.54
+2026-06-15,Coast,Tana River,Bilbil,10439,-1.01,39.79,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,77,0.6
+2026-06-15,Coast,Tana River,Bilbil,10439,-1.01,39.79,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,120,0.93
+2026-06-15,Coast,Tana River,Bilbil,10439,-1.01,39.79,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,98,0.76
+2026-06-15,Coast,Tana River,Bilbil,10439,-1.01,39.79,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,200,1.55
+2026-06-15,Coast,Tana River,Bilbil,10439,-1.01,39.79,pulses and nuts,Beans,50,KG,actual,Retail,KES,170,1.31
+2026-06-15,Coast,Tana River,Bilbil,10439,-1.01,39.79,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Boka,10440,-0.34,38.78,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,85,0.66
+2026-06-15,Coast,Tana River,Boka,10440,-0.34,38.78,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,160,1.24
+2026-06-15,Coast,Tana River,Boka,10440,-0.34,38.78,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Boka,10440,-0.34,38.78,miscellaneous food,Salt,185,200 G,actual,Retail,KES,30,0.23
+2026-06-15,Coast,Tana River,Boka,10440,-0.34,38.78,miscellaneous food,Sugar,97,KG,actual,Retail,KES,147,1.14
+2026-06-15,Coast,Tana River,Boka,10440,-0.34,38.78,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,400,3.09
+2026-06-15,Coast,Tana River,Boka,10440,-0.34,38.78,pulses and nuts,Beans,50,KG,actual,Retail,KES,150,1.16
+2026-06-15,Coast,Tana River,Boka,10440,-0.34,38.78,vegetables and fruits,Kale,796,KG,actual,Retail,KES,50,0.39
+2026-06-15,Coast,Tana River,Boka,10440,-0.34,38.78,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,50,0.39
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,94,0.73
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,91,0.7
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,128.5,0.99
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,98,0.76
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,124,0.96
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,miscellaneous food,Salt,185,200 G,actual,Retail,KES,11.5,0.089
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,miscellaneous food,Sugar,97,KG,actual,Retail,KES,151.5,1.17
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,323,2.5
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,pulses and nuts,Beans,50,KG,actual,Retail,KES,132,1.02
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,140,1.08
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,137,1.06
+2026-06-15,Coast,Tana River,Bura,10442,-1.19,39.84,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,80,0.62
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,50,0.39
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,90,0.7
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,120,0.93
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,93,0.72
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,miscellaneous food,Sugar,97,KG,actual,Retail,KES,200,1.55
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,350,2.7
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,pulses and nuts,Beans,50,KG,actual,Retail,KES,180,1.39
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,160,1.24
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,200,1.55
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,vegetables and fruits,Kale,796,KG,actual,Retail,KES,70,0.54
+2026-06-15,Coast,Tana River,Charidende,10443,-0.78,39.67,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,75,0.58
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,95.5,0.74
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,83.5,0.65
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,107.5,0.83
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,95,0.73
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,114.5,0.88
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,miscellaneous food,Salt,185,200 G,actual,Retail,KES,13,0.1
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,miscellaneous food,Sugar,97,KG,actual,Retail,KES,154,1.19
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,226,1.75
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,pulses and nuts,Beans,50,KG,actual,Retail,KES,171.5,1.33
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,90,0.7
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,145,1.12
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,vegetables and fruits,Kale,796,KG,actual,Retail,KES,98,0.76
+2026-06-15,Coast,Tana River,Garsen,10448,-2.27,40.11,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,135,1.04
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,54,0.42
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,88,0.68
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,108,0.83
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,98,0.76
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,149,1.15
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,miscellaneous food,Salt,185,200 G,actual,Retail,KES,14,0.11
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,miscellaneous food,Sugar,97,KG,actual,Retail,KES,158,1.22
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,140,1.08
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,pulses and nuts,Beans,50,KG,actual,Retail,KES,157,1.21
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,152,1.17
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,175,1.35
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,vegetables and fruits,Kale,796,KG,actual,Retail,KES,75,0.58
+2026-06-15,Coast,Tana River,Hola town,3359,-1.5,40.03,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,80,0.62
+2026-06-15,Coast,Tana River,Kipini,10450,-2.53,40.53,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,75,0.58
+2026-06-15,Coast,Tana River,Kipini,10450,-2.53,40.53,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,78,0.6
+2026-06-15,Coast,Tana River,Kipini,10450,-2.53,40.53,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Kipini,10450,-2.53,40.53,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,92,0.71
+2026-06-15,Coast,Tana River,Kipini,10450,-2.53,40.53,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,140,1.08
+2026-06-15,Coast,Tana River,Kipini,10450,-2.53,40.53,miscellaneous food,Salt,185,200 G,actual,Retail,KES,11,0.085
+2026-06-15,Coast,Tana River,Kipini,10450,-2.53,40.53,miscellaneous food,Sugar,97,KG,actual,Retail,KES,153,1.18
+2026-06-15,Coast,Tana River,Kipini,10450,-2.53,40.53,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,196,1.51
+2026-06-15,Coast,Tana River,Kipini,10450,-2.53,40.53,pulses and nuts,Beans,50,KG,actual,Retail,KES,150,1.16
+2026-06-15,Coast,Tana River,Kipini,10450,-2.53,40.53,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,50,0.39
+2026-06-15,Coast,Tana River,Makere,10445,-1.33,40.01,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,83,0.64
+2026-06-15,Coast,Tana River,Makere,10445,-1.33,40.01,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,110,0.85
+2026-06-15,Coast,Tana River,Makere,10445,-1.33,40.01,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Makere,10445,-1.33,40.01,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,300,2.32
+2026-06-15,Coast,Tana River,Makere,10445,-1.33,40.01,pulses and nuts,Beans,50,KG,actual,Retail,KES,160,1.24
+2026-06-15,Coast,Tana River,Masalani,10366,-1.7,40.17,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,117,0.9
+2026-06-15,Coast,Tana River,Masalani,10366,-1.7,40.17,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,173,1.34
+2026-06-15,Coast,Tana River,Masalani,10366,-1.7,40.17,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,120,0.93
+2026-06-15,Coast,Tana River,Masalani,10366,-1.7,40.17,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,145,1.12
+2026-06-15,Coast,Tana River,Masalani,10366,-1.7,40.17,miscellaneous food,Salt,185,200 G,actual,Retail,KES,14,0.11
+2026-06-15,Coast,Tana River,Masalani,10366,-1.7,40.17,miscellaneous food,Sugar,97,KG,actual,Retail,KES,170,1.31
+2026-06-15,Coast,Tana River,Masalani,10366,-1.7,40.17,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,343,2.65
+2026-06-15,Coast,Tana River,Masalani,10366,-1.7,40.17,pulses and nuts,Beans,50,KG,actual,Retail,KES,210,1.62
+2026-06-15,Coast,Tana River,Minjila,10449,-2.32,40.11,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,89,0.69
+2026-06-15,Coast,Tana River,Minjila,10449,-2.32,40.11,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,85,0.66
+2026-06-15,Coast,Tana River,Minjila,10449,-2.32,40.11,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,116,0.9
+2026-06-15,Coast,Tana River,Minjila,10449,-2.32,40.11,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,98,0.76
+2026-06-15,Coast,Tana River,Minjila,10449,-2.32,40.11,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,136,1.05
+2026-06-15,Coast,Tana River,Minjila,10449,-2.32,40.11,miscellaneous food,Salt,185,200 G,actual,Retail,KES,14,0.11
+2026-06-15,Coast,Tana River,Minjila,10449,-2.32,40.11,miscellaneous food,Sugar,97,KG,actual,Retail,KES,166,1.28
+2026-06-15,Coast,Tana River,Minjila,10449,-2.32,40.11,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,306,2.36
+2026-06-15,Coast,Tana River,Minjila,10449,-2.32,40.11,pulses and nuts,Beans,50,KG,actual,Retail,KES,176,1.36
+2026-06-15,Coast,Tana River,Minjila,10449,-2.32,40.11,vegetables and fruits,Kale,796,KG,actual,Retail,KES,88,0.68
+2026-06-15,Coast,Tana River,Minjila,10449,-2.32,40.11,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,115,0.89
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,83,0.64
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,93,0.72
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,155,1.2
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,miscellaneous food,Salt,185,200 G,actual,Retail,KES,16,0.12
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,miscellaneous food,Sugar,97,KG,actual,Retail,KES,140,1.08
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,305,2.36
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,pulses and nuts,Beans,50,KG,actual,Retail,KES,145,1.12
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,vegetables and fruits,Kale,796,KG,actual,Retail,KES,50,0.39
+2026-06-15,Coast,Tana River,Saka Town,10353,-0.14,39.33,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,65,0.5
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,103,0.8
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,89,0.69
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,118,0.91
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,103,0.8
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,115,0.89
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,miscellaneous food,Salt,185,200 G,actual,Retail,KES,14,0.11
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,miscellaneous food,Sugar,97,KG,actual,Retail,KES,167,1.29
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,303,2.34
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,pulses and nuts,Beans,50,KG,actual,Retail,KES,183,1.41
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,110,0.85
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,vegetables and fruits,Kale,796,KG,actual,Retail,KES,83,0.64
+2026-06-15,Coast,Tana River,Tarasaa,10451,-2.44,40.17,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,108,0.83
+2026-06-15,Coast,Tana River,Waldena,10446,-1.61,39.03,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,130,1
+2026-06-15,Coast,Tana River,Waldena,10446,-1.61,39.03,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,120,0.93
+2026-06-15,Coast,Tana River,Waldena,10446,-1.61,39.03,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Waldena,10446,-1.61,39.03,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Coast,Tana River,Waldena,10446,-1.61,39.03,miscellaneous food,Sugar,97,KG,actual,Retail,KES,173,1.34
+2026-06-15,Coast,Tana River,Waldena,10446,-1.61,39.03,pulses and nuts,Beans,50,KG,actual,Retail,KES,120,0.93
+2026-06-15,Coast,Tana River,Waldena,10446,-1.61,39.03,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,120,0.93
+2026-06-15,Coast,Tana River,Waldena,10446,-1.61,39.03,vegetables and fruits,Kale,796,KG,actual,Retail,KES,50,0.39
+2026-06-15,Coast,Tana River,Waldena,10446,-1.61,39.03,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,90,0.7
+2026-06-15,Coast,Tana River,Wayu,10447,-1.53,39.58,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,100,0.77
+2026-06-15,Coast,Tana River,Wayu,10447,-1.53,39.58,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,140,1.08
+2026-06-15,Coast,Tana River,Wayu,10447,-1.53,39.58,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,120,0.93
+2026-06-15,Coast,Tana River,Wayu,10447,-1.53,39.58,miscellaneous food,Sugar,97,KG,actual,Retail,KES,200,1.55
+2026-06-15,Coast,Tana River,Wayu,10447,-1.53,39.58,pulses and nuts,Beans,50,KG,actual,Retail,KES,200,1.55
+2026-06-15,Eastern,Isiolo,Benane,10368,0.5,38.66,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,127,0.98
+2026-06-15,Eastern,Isiolo,Benane,10368,0.5,38.66,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,110,0.85
+2026-06-15,Eastern,Isiolo,Benane,10368,0.5,38.66,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,170,1.31
+2026-06-15,Eastern,Isiolo,Benane,10368,0.5,38.66,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,117,0.9
+2026-06-15,Eastern,Isiolo,Benane,10368,0.5,38.66,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,110,0.85
+2026-06-15,Eastern,Isiolo,Benane,10368,0.5,38.66,miscellaneous food,Salt,185,200 G,actual,Retail,KES,30,0.23
+2026-06-15,Eastern,Isiolo,Benane,10368,0.5,38.66,miscellaneous food,Sugar,97,KG,actual,Retail,KES,153,1.18
+2026-06-15,Eastern,Isiolo,Benane,10368,0.5,38.66,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,350,2.7
+2026-06-15,Eastern,Isiolo,Benane,10368,0.5,38.66,pulses and nuts,Beans,50,KG,actual,Retail,KES,143,1.11
+2026-06-15,Eastern,Isiolo,Benane,10368,0.5,38.66,vegetables and fruits,Kale,796,KG,actual,Retail,KES,50,0.39
+2026-06-15,Eastern,Isiolo,Benane,10368,0.5,38.66,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,60,0.46
+2026-06-15,Eastern,Isiolo,Biliqo,10374,0.9,38.48,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,100,0.77
+2026-06-15,Eastern,Isiolo,Biliqo,10374,0.9,38.48,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,96,0.74
+2026-06-15,Eastern,Isiolo,Biliqo,10374,0.9,38.48,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,128,0.99
+2026-06-15,Eastern,Isiolo,Biliqo,10374,0.9,38.48,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,106,0.82
+2026-06-15,Eastern,Isiolo,Biliqo,10374,0.9,38.48,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Eastern,Isiolo,Biliqo,10374,0.9,38.48,miscellaneous food,Sugar,97,KG,actual,Retail,KES,158,1.22
+2026-06-15,Eastern,Isiolo,Biliqo,10374,0.9,38.48,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,290,2.24
+2026-06-15,Eastern,Isiolo,Biliqo,10374,0.9,38.48,pulses and nuts,Beans,50,KG,actual,Retail,KES,144,1.11
+2026-06-15,Eastern,Isiolo,Biliqo,10374,0.9,38.48,vegetables and fruits,Kale,796,KG,actual,Retail,KES,50,0.39
+2026-06-15,Eastern,Isiolo,Biliqo,10374,0.9,38.48,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,55,0.43
+2026-06-15,Eastern,Isiolo,Bulesa Bulesa,10375,0.96,38.54,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,84,0.65
+2026-06-15,Eastern,Isiolo,Bulesa Bulesa,10375,0.96,38.54,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,100,0.77
+2026-06-15,Eastern,Isiolo,Bulesa Bulesa,10375,0.96,38.54,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,120,0.93
+2026-06-15,Eastern,Isiolo,Bulesa Bulesa,10375,0.96,38.54,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,120,0.93
+2026-06-15,Eastern,Isiolo,Bulesa Bulesa,10375,0.96,38.54,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,120,0.93
+2026-06-15,Eastern,Isiolo,Bulesa Bulesa,10375,0.96,38.54,miscellaneous food,Salt,185,200 G,actual,Retail,KES,10,0.077
+2026-06-15,Eastern,Isiolo,Bulesa Bulesa,10375,0.96,38.54,miscellaneous food,Sugar,97,KG,actual,Retail,KES,160,1.24
+2026-06-15,Eastern,Isiolo,Bulesa Bulesa,10375,0.96,38.54,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,296,2.29
+2026-06-15,Eastern,Isiolo,Bulesa Bulesa,10375,0.96,38.54,pulses and nuts,Beans,50,KG,actual,Retail,KES,142,1.1
+2026-06-15,Eastern,Isiolo,Bulesa Bulesa,10375,0.96,38.54,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,197,1.52
+2026-06-15,Eastern,Isiolo,Bulesa Bulesa,10375,0.96,38.54,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,177,1.37
+2026-06-15,Eastern,Isiolo,Kipsing CENTER,10376,0.6,37.25,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,68,0.53
+2026-06-15,Eastern,Isiolo,Kipsing CENTER,10376,0.6,37.25,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,73,0.56
+2026-06-15,Eastern,Isiolo,Kipsing CENTER,10376,0.6,37.25,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,135,1.04
+2026-06-15,Eastern,Isiolo,Kipsing CENTER,10376,0.6,37.25,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,118,0.91
+2026-06-15,Eastern,Isiolo,Kipsing CENTER,10376,0.6,37.25,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Eastern,Isiolo,Kipsing CENTER,10376,0.6,37.25,miscellaneous food,Sugar,97,KG,actual,Retail,KES,173,1.34
+2026-06-15,Eastern,Isiolo,Kipsing CENTER,10376,0.6,37.25,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,330,2.55
+2026-06-15,Eastern,Isiolo,Kipsing CENTER,10376,0.6,37.25,pulses and nuts,Beans,50,KG,actual,Retail,KES,145,1.12
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,83,0.64
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,98,0.76
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,191,1.48
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,102,0.79
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,110,0.85
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,miscellaneous food,Salt,185,200 G,actual,Retail,KES,33,0.26
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,miscellaneous food,Sugar,97,KG,actual,Retail,KES,145,1.12
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,318,2.46
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,pulses and nuts,Beans,50,KG,actual,Retail,KES,143,1.11
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,143,1.11
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,160,1.24
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,vegetables and fruits,Kale,796,KG,actual,Retail,KES,78,0.6
+2026-06-15,Eastern,Isiolo,Modogashe,10371,0.73,39.17,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,96,0.74
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,64,0.49
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,73,0.56
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,123,0.95
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,miscellaneous food,Salt,185,200 G,actual,Retail,KES,14,0.11
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,miscellaneous food,Sugar,97,KG,actual,Retail,KES,159,1.23
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,300,2.32
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,pulses and nuts,Beans,50,KG,actual,Retail,KES,128,0.99
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,147,1.14
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,145,1.12
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,vegetables and fruits,Kale,796,KG,actual,Retail,KES,68,0.53
+2026-06-15,Eastern,Isiolo,Oldonyiro,10380,0.62,36.99,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,90,0.7
+2026-06-15,Eastern,Marsabit,Kargi South Horr,10401,2.1,36.92,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,65,0.5
+2026-06-15,Eastern,Marsabit,Kargi South Horr,10401,2.1,36.92,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,65,0.5
+2026-06-15,Eastern,Marsabit,Kargi South Horr,10401,2.1,36.92,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,120,0.93
+2026-06-15,Eastern,Marsabit,Kargi South Horr,10401,2.1,36.92,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,Eastern,Marsabit,Kargi South Horr,10401,2.1,36.92,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,160,1.24
+2026-06-15,Eastern,Marsabit,Kargi South Horr,10401,2.1,36.92,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Eastern,Marsabit,Kargi South Horr,10401,2.1,36.92,miscellaneous food,Sugar,97,KG,actual,Retail,KES,155,1.2
+2026-06-15,Eastern,Marsabit,Kargi South Horr,10401,2.1,36.92,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,310,2.4
+2026-06-15,Eastern,Marsabit,Kargi South Horr,10401,2.1,36.92,pulses and nuts,Beans,50,KG,actual,Retail,KES,110,0.85
+2026-06-15,Eastern,Marsabit,Kargi South Horr,10401,2.1,36.92,vegetables and fruits,Kale,796,KG,actual,Retail,KES,73,0.56
+2026-06-15,Eastern,Marsabit,Kargi South Horr,10401,2.1,36.92,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,78,0.6
+2026-06-15,Eastern,Moyale,Moyale town,3269,3.51,39.05,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,55,0.43
+2026-06-15,Eastern,Moyale,Moyale town,3269,3.51,39.05,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,100,0.77
+2026-06-15,Eastern,Moyale,Moyale town,3269,3.51,39.05,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,110,0.85
+2026-06-15,Eastern,Moyale,Moyale town,3269,3.51,39.05,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,Eastern,Moyale,Moyale town,3269,3.51,39.05,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,220,1.7
+2026-06-15,Eastern,Moyale,Moyale town,3269,3.51,39.05,miscellaneous food,Salt,185,200 G,actual,Retail,KES,10,0.077
+2026-06-15,Eastern,Moyale,Moyale town,3269,3.51,39.05,miscellaneous food,Sugar,97,KG,actual,Retail,KES,120,0.93
+2026-06-15,Eastern,Moyale,Moyale town,3269,3.51,39.05,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,265,2.05
+2026-06-15,Eastern,Moyale,Moyale town,3269,3.51,39.05,pulses and nuts,Beans,50,KG,actual,Retail,KES,100,0.77
+2026-06-15,Eastern,Moyale,Moyale town,3269,3.51,39.05,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,160,1.24
+2026-06-15,Eastern,Moyale,Moyale town,3269,3.51,39.05,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,235,1.82
+2026-06-15,North Eastern,Garissa,Bura fafi,3259,-1.5,40.05,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,115,0.89
+2026-06-15,North Eastern,Garissa,Bura fafi,3259,-1.5,40.05,miscellaneous food,Salt,185,200 G,actual,Retail,KES,23,0.18
+2026-06-15,North Eastern,Garissa,Bura fafi,3259,-1.5,40.05,miscellaneous food,Sugar,97,KG,actual,Retail,KES,150,1.16
+2026-06-15,North Eastern,Garissa,Dadaab town,3243,0.06,40.31,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,81,0.63
+2026-06-15,North Eastern,Garissa,Dadaab town,3243,0.06,40.31,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,125,0.97
+2026-06-15,North Eastern,Garissa,Dadaab town,3243,0.06,40.31,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,126,0.97
+2026-06-15,North Eastern,Garissa,Dadaab town,3243,0.06,40.31,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,118,0.91
+2026-06-15,North Eastern,Garissa,Dadaab town,3243,0.06,40.31,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,122,0.94
+2026-06-15,North Eastern,Garissa,Dadaab town,3243,0.06,40.31,miscellaneous food,Sugar,97,KG,actual,Retail,KES,123,0.95
+2026-06-15,North Eastern,Garissa,Dadaab town,3243,0.06,40.31,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,345,2.67
+2026-06-15,North Eastern,Garissa,Dadaab town,3243,0.06,40.31,pulses and nuts,Beans,50,KG,actual,Retail,KES,125,0.97
+2026-06-15,North Eastern,Garissa,Dadaab town,3243,0.06,40.31,vegetables and fruits,Kale,796,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,80,0.62
+2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,102,0.79
+2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,130,1
+2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,150,1.16
+2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,210.5,1.63
+2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,pulses and nuts,Beans,50,KG,actual,Retail,KES,112,0.87
+2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,107,0.83
+2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,vegetables and fruits,Kale,796,KG,actual,Retail,KES,900,6.96
+2026-06-15,North Eastern,Garissa,Dertu,10358,0.28,39.8,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,110,0.85
+2026-06-15,North Eastern,Garissa,Dertu,10358,0.28,39.8,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,110,0.85
+2026-06-15,North Eastern,Garissa,Dertu,10358,0.28,39.8,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,185,1.43
+2026-06-15,North Eastern,Garissa,Dertu,10358,0.28,39.8,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,108,0.83
+2026-06-15,North Eastern,Garissa,Dertu,10358,0.28,39.8,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,170,1.31
+2026-06-15,North Eastern,Garissa,Dertu,10358,0.28,39.8,miscellaneous food,Salt,185,200 G,actual,Retail,KES,21,0.16
+2026-06-15,North Eastern,Garissa,Dertu,10358,0.28,39.8,miscellaneous food,Sugar,97,KG,actual,Retail,KES,160,1.24
+2026-06-15,North Eastern,Garissa,Dertu,10358,0.28,39.8,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,350,2.7
+2026-06-15,North Eastern,Garissa,Dertu,10358,0.28,39.8,pulses and nuts,Beans,50,KG,actual,Retail,KES,148,1.14
+2026-06-15,North Eastern,Garissa,Dertu,10358,0.28,39.8,vegetables and fruits,Kale,796,KG,actual,Retail,KES,50,0.39
+2026-06-15,North Eastern,Garissa,Dertu,10358,0.28,39.8,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,60,0.46
+2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,67,0.52
+2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,99,0.77
+2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,113,0.87
+2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,150,1.16
+2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,267,2.06
+2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,pulses and nuts,Beans,50,KG,actual,Retail,KES,125,0.97
+2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,120,0.93
+2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,vegetables and fruits,Kale,796,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,64,0.49
+2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,117,0.9
+2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,180,1.39
+2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,245,1.89
+2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,pulses and nuts,Beans,50,KG,actual,Retail,KES,120,0.93
+2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,132,1.02
+2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,vegetables and fruits,Kale,796,KG,actual,Retail,KES,55,0.43
+2026-06-15,North Eastern,Garissa,Maalamin,10370,0.38,39.35,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,110,0.85
+2026-06-15,North Eastern,Garissa,Maalamin,10370,0.38,39.35,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,110,0.85
+2026-06-15,North Eastern,Garissa,Maalamin,10370,0.38,39.35,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,156,1.21
+2026-06-15,North Eastern,Garissa,Maalamin,10370,0.38,39.35,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,120,0.93
+2026-06-15,North Eastern,Garissa,Maalamin,10370,0.38,39.35,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Garissa,Maalamin,10370,0.38,39.35,miscellaneous food,Salt,185,200 G,actual,Retail,KES,18,0.14
+2026-06-15,North Eastern,Garissa,Maalamin,10370,0.38,39.35,miscellaneous food,Sugar,97,KG,actual,Retail,KES,155,1.2
+2026-06-15,North Eastern,Garissa,Maalamin,10370,0.38,39.35,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,355,2.74
+2026-06-15,North Eastern,Garissa,Maalamin,10370,0.38,39.35,pulses and nuts,Beans,50,KG,actual,Retail,KES,143,1.11
+2026-06-15,North Eastern,Garissa,Maalamin,10370,0.38,39.35,vegetables and fruits,Kale,796,KG,actual,Retail,KES,70,0.54
+2026-06-15,North Eastern,Garissa,Maalamin,10370,0.38,39.35,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,60,0.46
+2026-06-15,North Eastern,Garissa,Saretho,10357,-0.03,40.13,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,115,0.89
+2026-06-15,North Eastern,Garissa,Saretho,10357,-0.03,40.13,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,107,0.83
+2026-06-15,North Eastern,Garissa,Saretho,10357,-0.03,40.13,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,140,1.08
+2026-06-15,North Eastern,Garissa,Saretho,10357,-0.03,40.13,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Garissa,Saretho,10357,-0.03,40.13,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,147,1.14
+2026-06-15,North Eastern,Garissa,Saretho,10357,-0.03,40.13,miscellaneous food,Salt,185,200 G,actual,Retail,KES,22,0.17
+2026-06-15,North Eastern,Garissa,Saretho,10357,-0.03,40.13,miscellaneous food,Sugar,97,KG,actual,Retail,KES,157,1.21
+2026-06-15,North Eastern,Garissa,Saretho,10357,-0.03,40.13,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,383,2.96
+2026-06-15,North Eastern,Garissa,Saretho,10357,-0.03,40.13,pulses and nuts,Beans,50,KG,actual,Retail,KES,140,1.08
+2026-06-15,North Eastern,Garissa,Saretho,10357,-0.03,40.13,vegetables and fruits,Kale,796,KG,actual,Retail,KES,65,0.5
+2026-06-15,North Eastern,Garissa,Saretho,10357,-0.03,40.13,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,70,0.54
+2026-06-15,North Eastern,Ijara,Kotile,10365,-1.97,40.21,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,180,1.39
+2026-06-15,North Eastern,Ijara,Kotile,10365,-1.97,40.21,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,150,1.16
+2026-06-15,North Eastern,Ijara,Kotile,10365,-1.97,40.21,miscellaneous food,Salt,185,200 G,actual,Retail,KES,10,0.077
+2026-06-15,North Eastern,Ijara,Kotile,10365,-1.97,40.21,miscellaneous food,Sugar,97,KG,actual,Retail,KES,160,1.24
+2026-06-15,North Eastern,Ijara,Kotile,10365,-1.97,40.21,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,380,2.94
+2026-06-15,North Eastern,Ijara,Kotile,10365,-1.97,40.21,pulses and nuts,Beans,50,KG,actual,Retail,KES,200,1.55
+2026-06-15,North Eastern,Mandera,Alungu,10393,3.05,41.06,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,150,1.16
+2026-06-15,North Eastern,Mandera,Alungu,10393,3.05,41.06,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,150,1.16
+2026-06-15,North Eastern,Mandera,Alungu,10393,3.05,41.06,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,150,1.16
+2026-06-15,North Eastern,Mandera,Alungu,10393,3.05,41.06,pulses and nuts,Beans,50,KG,actual,Retail,KES,170,1.31
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,115,0.89
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,200,1.55
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,miscellaneous food,Salt,185,200 G,actual,Retail,KES,25,0.19
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,miscellaneous food,Sugar,97,KG,actual,Retail,KES,155,1.2
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,240,1.85
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,pulses and nuts,Beans,50,KG,actual,Retail,KES,150,1.16
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,80,0.62
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,vegetables and fruits,Kale,796,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Mandera,El Wak,3263,2.81,40.93,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Mandera,Mandera town,3357,3.94,41.85,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Mandera,Mandera town,3357,3.94,41.85,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,118,0.91
+2026-06-15,North Eastern,Mandera,Mandera town,3357,3.94,41.85,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,183,1.41
+2026-06-15,North Eastern,Mandera,Mandera town,3357,3.94,41.85,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,118,0.91
+2026-06-15,North Eastern,Mandera,Mandera town,3357,3.94,41.85,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,200,1.55
+2026-06-15,North Eastern,Mandera,Mandera town,3357,3.94,41.85,miscellaneous food,Salt,185,200 G,actual,Retail,KES,17,0.13
+2026-06-15,North Eastern,Mandera,Mandera town,3357,3.94,41.85,miscellaneous food,Sugar,97,KG,actual,Retail,KES,147,1.14
+2026-06-15,North Eastern,Mandera,Mandera town,3357,3.94,41.85,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,295,2.28
+2026-06-15,North Eastern,Mandera,Mandera town,3357,3.94,41.85,pulses and nuts,Beans,50,KG,actual,Retail,KES,170,1.31
+2026-06-15,North Eastern,Mandera,Mandera town,3357,3.94,41.85,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,214,1.65
+2026-06-15,North Eastern,Mandera,Mandera town,3357,3.94,41.85,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,235,1.82
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,120,0.93
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,110,0.85
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,135,1.04
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,127,0.98
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,233,1.8
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,miscellaneous food,Salt,185,200 G,actual,Retail,KES,31,0.24
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,miscellaneous food,Sugar,97,KG,actual,Retail,KES,143,1.11
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,277,2.14
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,pulses and nuts,Beans,50,KG,actual,Retail,KES,190,1.47
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,183,1.41
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,187,1.45
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,vegetables and fruits,Kale,796,KG,actual,Retail,KES,135,1.04
+2026-06-15,North Eastern,Mandera,Rhamu,3266,3.93,41.22,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,125,0.97
+2026-06-15,North Eastern,Wajir,Buna,6648,2.79,39.5,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Wajir,Buna,6648,2.79,39.5,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Wajir,Buna,6648,2.79,39.5,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,143,1.11
+2026-06-15,North Eastern,Wajir,Buna,6648,2.79,39.5,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Wajir,Buna,6648,2.79,39.5,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,160,1.24
+2026-06-15,North Eastern,Wajir,Buna,6648,2.79,39.5,miscellaneous food,Salt,185,200 G,actual,Retail,KES,20,0.15
+2026-06-15,North Eastern,Wajir,Buna,6648,2.79,39.5,miscellaneous food,Sugar,97,KG,actual,Retail,KES,137,1.06
+2026-06-15,North Eastern,Wajir,Buna,6648,2.79,39.5,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,333,2.57
+2026-06-15,North Eastern,Wajir,Buna,6648,2.79,39.5,pulses and nuts,Beans,50,KG,actual,Retail,KES,137,1.06
+2026-06-15,North Eastern,Wajir,Buna,6648,2.79,39.5,vegetables and fruits,Kale,796,KG,actual,Retail,KES,90,0.7
+2026-06-15,North Eastern,Wajir,Buna,6648,2.79,39.5,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,97,0.75
+2026-06-15,North Eastern,Wajir,Eldas,6645,2.49,39.57,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Wajir,Eldas,6645,2.49,39.57,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,103,0.8
+2026-06-15,North Eastern,Wajir,Eldas,6645,2.49,39.57,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,133,1.03
+2026-06-15,North Eastern,Wajir,Eldas,6645,2.49,39.57,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,112,0.87
+2026-06-15,North Eastern,Wajir,Eldas,6645,2.49,39.57,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,127,0.98
+2026-06-15,North Eastern,Wajir,Eldas,6645,2.49,39.57,miscellaneous food,Salt,185,200 G,actual,Retail,KES,20,0.15
+2026-06-15,North Eastern,Wajir,Eldas,6645,2.49,39.57,miscellaneous food,Sugar,97,KG,actual,Retail,KES,134,1.04
+2026-06-15,North Eastern,Wajir,Eldas,6645,2.49,39.57,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,333,2.57
+2026-06-15,North Eastern,Wajir,Eldas,6645,2.49,39.57,pulses and nuts,Beans,50,KG,actual,Retail,KES,160,1.24
+2026-06-15,North Eastern,Wajir,Eldas,6645,2.49,39.57,vegetables and fruits,Kale,796,KG,actual,Retail,KES,50,0.39
+2026-06-15,North Eastern,Wajir,Eldas,6645,2.49,39.57,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,90,0.7
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,84,0.65
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,128,0.99
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,140,1.08
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,miscellaneous food,Salt,185,200 G,actual,Retail,KES,21,0.16
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,miscellaneous food,Sugar,97,KG,actual,Retail,KES,135,1.04
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,313,2.42
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,pulses and nuts,Beans,50,KG,actual,Retail,KES,138,1.07
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,vegetables and fruits,Kale,796,KG,actual,Retail,KES,120,0.93
+2026-06-15,North Eastern,Wajir,Griftu,6644,2,39.75,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,107,0.83
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,140,1.08
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,130,1
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,miscellaneous food,Salt,185,200 G,actual,Retail,KES,20,0.15
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,miscellaneous food,Sugar,97,KG,actual,Retail,KES,127,0.98
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,367,2.84
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,pulses and nuts,Beans,50,KG,actual,Retail,KES,153,1.18
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,100,0.77
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,vegetables and fruits,Kale,796,KG,actual,Retail,KES,90,0.7
+2026-06-15,North Eastern,Wajir,Habaswein,6651,1.02,39.49,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,90,0.7
+2026-06-15,North Eastern,Wajir,Lagbogol,6655,1.29,39.84,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,107,0.83
+2026-06-15,North Eastern,Wajir,Lagbogol,6655,1.29,39.84,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,147,1.14
+2026-06-15,North Eastern,Wajir,Lagbogol,6655,1.29,39.84,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,107,0.83
+2026-06-15,North Eastern,Wajir,Lagbogol,6655,1.29,39.84,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,130,1
+2026-06-15,North Eastern,Wajir,Lagbogol,6655,1.29,39.84,miscellaneous food,Salt,185,200 G,actual,Retail,KES,23,0.18
+2026-06-15,North Eastern,Wajir,Lagbogol,6655,1.29,39.84,miscellaneous food,Sugar,97,KG,actual,Retail,KES,140,1.08
+2026-06-15,North Eastern,Wajir,Lagbogol,6655,1.29,39.84,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,350,2.7
+2026-06-15,North Eastern,Wajir,Lagbogol,6655,1.29,39.84,pulses and nuts,Beans,50,KG,actual,Retail,KES,157,1.21
+2026-06-15,North Eastern,Wajir,Tarbaj,6647,2.21,40.12,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,110,0.85
+2026-06-15,North Eastern,Wajir,Tarbaj,6647,2.21,40.12,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,120,0.93
+2026-06-15,North Eastern,Wajir,Tarbaj,6647,2.21,40.12,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,123,0.95
+2026-06-15,North Eastern,Wajir,Tarbaj,6647,2.21,40.12,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,120,0.93
+2026-06-15,North Eastern,Wajir,Tarbaj,6647,2.21,40.12,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,145,1.12
+2026-06-15,North Eastern,Wajir,Tarbaj,6647,2.21,40.12,miscellaneous food,Salt,185,200 G,actual,Retail,KES,16,0.12
+2026-06-15,North Eastern,Wajir,Tarbaj,6647,2.21,40.12,miscellaneous food,Sugar,97,KG,actual,Retail,KES,150,1.16
+2026-06-15,North Eastern,Wajir,Tarbaj,6647,2.21,40.12,pulses and nuts,Beans,50,KG,actual,Retail,KES,163,1.26
 2026-06-15,Nyanza,Kisumu,Kibuye (Kisumu),5671,-0.09,34.77,cereals and tubers,"Maize (white, dry)",440,90 KG,actual,Wholesale,KES,5599.8,43.28
 2026-06-15,Nyanza,Kisumu,Kibuye (Kisumu),5671,-0.09,34.77,cereals and tubers,"Potatoes (Irish, white)",891,50 KG,actual,Wholesale,KES,4500,34.78
 2026-06-15,Nyanza,Kisumu,Kibuye (Kisumu),5671,-0.09,34.77,vegetables and fruits,Kale,796,50 KG,actual,Wholesale,KES,2778,21.47
 2026-06-15,Nyanza,Kisumu,Kibuye (Kisumu),5671,-0.09,34.77,vegetables and fruits,Tomatoes,114,64 KG,actual,Wholesale,KES,6856.96,52.99
+2026-06-15,Rift Valley,Baringo,Chemolingot,10505,0.99,35.97,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,80,0.62
+2026-06-15,Rift Valley,Baringo,Chemolingot,10505,0.99,35.97,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,140,1.08
+2026-06-15,Rift Valley,Baringo,Chemolingot,10505,0.99,35.97,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,120,0.93
+2026-06-15,Rift Valley,Baringo,Chemolingot,10505,0.99,35.97,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,140,1.08
+2026-06-15,Rift Valley,Baringo,Chemolingot,10505,0.99,35.97,miscellaneous food,Salt,185,200 G,actual,Retail,KES,17,0.13
+2026-06-15,Rift Valley,Baringo,Chemolingot,10505,0.99,35.97,miscellaneous food,Sugar,97,KG,actual,Retail,KES,157,1.21
+2026-06-15,Rift Valley,Baringo,Chemolingot,10505,0.99,35.97,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,293,2.26
+2026-06-15,Rift Valley,Baringo,Chemolingot,10505,0.99,35.97,pulses and nuts,Beans,50,KG,actual,Retail,KES,100,0.77
+2026-06-15,Rift Valley,Baringo,Koriema,10501,0.46,35.86,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,55,0.43
+2026-06-15,Rift Valley,Baringo,Koriema,10501,0.46,35.86,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,88,0.68
+2026-06-15,Rift Valley,Baringo,Koriema,10501,0.46,35.86,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,120,0.93
+2026-06-15,Rift Valley,Baringo,Koriema,10501,0.46,35.86,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,140,1.08
+2026-06-15,Rift Valley,Baringo,Koriema,10501,0.46,35.86,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,127,0.98
+2026-06-15,Rift Valley,Baringo,Koriema,10501,0.46,35.86,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Rift Valley,Baringo,Koriema,10501,0.46,35.86,miscellaneous food,Sugar,97,KG,actual,Retail,KES,153,1.18
+2026-06-15,Rift Valley,Baringo,Koriema,10501,0.46,35.86,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,293,2.26
+2026-06-15,Rift Valley,Baringo,Koriema,10501,0.46,35.86,pulses and nuts,Beans,50,KG,actual,Retail,KES,140,1.08
+2026-06-15,Rift Valley,Baringo,Koriema,10501,0.46,35.86,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,180,1.39
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,58,0.45
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,77,0.6
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,103,0.8
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,120,0.93
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,miscellaneous food,Sugar,97,KG,actual,Retail,KES,150,1.16
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,290,2.24
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,pulses and nuts,Beans,50,KG,actual,Retail,KES,113,0.87
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,170,1.31
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,170,1.31
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,vegetables and fruits,Kale,796,KG,actual,Retail,KES,50,0.39
+2026-06-15,Rift Valley,Samburu,Archers Post,10421,0.64,37.67,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,50,0.39
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,60,0.46
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,65,0.5
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,110,0.85
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,130,1
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,miscellaneous food,Sugar,97,KG,actual,Retail,KES,155,1.2
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,335,2.59
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,pulses and nuts,Beans,50,KG,actual,Retail,KES,110,0.85
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,170,1.31
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,150,1.16
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,vegetables and fruits,Kale,796,KG,actual,Retail,KES,60,0.46
+2026-06-15,Rift Valley,Samburu,Baragoi,10426,1.65,37.03,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,65,0.5
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,58,0.45
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,64,0.49
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,110,0.85
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,103,0.8
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,120,0.93
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,miscellaneous food,Salt,185,200 G,actual,Retail,KES,14,0.11
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,miscellaneous food,Sugar,97,KG,actual,Retail,KES,148,1.14
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,295,2.28
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,pulses and nuts,Beans,50,KG,actual,Retail,KES,115,0.89
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,150,1.16
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,150,1.16
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,vegetables and fruits,Kale,796,KG,actual,Retail,KES,60,0.46
+2026-06-15,Rift Valley,Samburu,Kisima,4526,0.95,36.77,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,63,0.49
+2026-06-15,Rift Valley,Samburu,Lolkuniyani,4531,1.06,37.23,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,73,0.56
+2026-06-15,Rift Valley,Samburu,Lolkuniyani,4531,1.06,37.23,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,85,0.66
+2026-06-15,Rift Valley,Samburu,Lolkuniyani,4531,1.06,37.23,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,120,0.93
+2026-06-15,Rift Valley,Samburu,Lolkuniyani,4531,1.06,37.23,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,120,0.93
+2026-06-15,Rift Valley,Samburu,Lolkuniyani,4531,1.06,37.23,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,130,1
+2026-06-15,Rift Valley,Samburu,Lolkuniyani,4531,1.06,37.23,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Rift Valley,Samburu,Lolkuniyani,4531,1.06,37.23,miscellaneous food,Sugar,97,KG,actual,Retail,KES,180,1.39
+2026-06-15,Rift Valley,Samburu,Lolkuniyani,4531,1.06,37.23,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,358,2.77
+2026-06-15,Rift Valley,Samburu,Lolkuniyani,4531,1.06,37.23,pulses and nuts,Beans,50,KG,actual,Retail,KES,130,1
+2026-06-15,Rift Valley,Samburu,Lolkuniyani,4531,1.06,37.23,vegetables and fruits,Kale,796,KG,actual,Retail,KES,73,0.56
+2026-06-15,Rift Valley,Samburu,Lolkuniyani,4531,1.06,37.23,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,75,0.58
+2026-06-15,Rift Valley,Samburu,Loosuk,4532,1.02,36.58,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,60,0.46
+2026-06-15,Rift Valley,Samburu,Loosuk,4532,1.02,36.58,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,60,0.46
+2026-06-15,Rift Valley,Samburu,Loosuk,4532,1.02,36.58,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,110,0.85
+2026-06-15,Rift Valley,Samburu,Loosuk,4532,1.02,36.58,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,103,0.8
+2026-06-15,Rift Valley,Samburu,Loosuk,4532,1.02,36.58,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,120,0.93
+2026-06-15,Rift Valley,Samburu,Loosuk,4532,1.02,36.58,miscellaneous food,Salt,185,200 G,actual,Retail,KES,14,0.11
+2026-06-15,Rift Valley,Samburu,Loosuk,4532,1.02,36.58,miscellaneous food,Sugar,97,KG,actual,Retail,KES,153,1.18
+2026-06-15,Rift Valley,Samburu,Loosuk,4532,1.02,36.58,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,300,2.32
+2026-06-15,Rift Valley,Samburu,Loosuk,4532,1.02,36.58,pulses and nuts,Beans,50,KG,actual,Retail,KES,115,0.89
+2026-06-15,Rift Valley,Samburu,Loosuk,4532,1.02,36.58,vegetables and fruits,Kale,796,KG,actual,Retail,KES,55,0.43
+2026-06-15,Rift Valley,Samburu,Loosuk,4532,1.02,36.58,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,60,0.46
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,50,0.39
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,60,0.46
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,115,0.89
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,107,0.83
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,miscellaneous food,Sugar,97,KG,actual,Retail,KES,157,1.21
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,287,2.22
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,pulses and nuts,Beans,50,KG,actual,Retail,KES,118,0.91
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,140,1.08
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,158,1.22
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,vegetables and fruits,Kale,796,KG,actual,Retail,KES,55,0.43
+2026-06-15,Rift Valley,Samburu,Maralal,4533,1.1,36.7,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,63,0.49
+2026-06-15,Rift Valley,Samburu,Tuum,10433,2.15,36.77,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,70,0.54
+2026-06-15,Rift Valley,Samburu,Tuum,10433,2.15,36.77,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,125,0.97
+2026-06-15,Rift Valley,Samburu,Tuum,10433,2.15,36.77,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,100,0.77
+2026-06-15,Rift Valley,Samburu,Tuum,10433,2.15,36.77,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,147,1.14
+2026-06-15,Rift Valley,Samburu,Tuum,10433,2.15,36.77,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Rift Valley,Samburu,Tuum,10433,2.15,36.77,miscellaneous food,Sugar,97,KG,actual,Retail,KES,170,1.31
+2026-06-15,Rift Valley,Samburu,Tuum,10433,2.15,36.77,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,345,2.67
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,60,0.46
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,70,0.54
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,118,0.91
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,106,0.82
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,120,0.93
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,miscellaneous food,Salt,185,200 G,actual,Retail,KES,15,0.12
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,miscellaneous food,Sugar,97,KG,actual,Retail,KES,154,1.19
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,310,2.4
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,pulses and nuts,Beans,50,KG,actual,Retail,KES,122,0.94
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,185,1.43
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,pulses and nuts,Pigeon peas (dry),937,KG,actual,Retail,KES,200,1.55
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,vegetables and fruits,Kale,796,KG,actual,Retail,KES,50,0.39
+2026-06-15,Rift Valley,Samburu,Wamba,4536,0.98,37.32,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,50,0.39
+2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,63,0.49
+2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,84,0.65
+2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,113,0.87
+2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,173,1.34
+2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,289,2.23
+2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,pulses and nuts,Beans,50,KG,actual,Retail,KES,128,0.99
+2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,vegetables and fruits,Kale,796,KG,actual,Retail,KES,78,0.6
+2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,64,0.49
+2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,85,0.66
+2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,106,0.82
+2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,194,1.5
+2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,302,2.33
+2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,pulses and nuts,Beans,50,KG,actual,Retail,KES,144,1.11
+2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,160,1.24
+2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,vegetables and fruits,Kale,796,KG,actual,Retail,KES,80,0.62
+2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,66,0.51
+2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,80,0.62
+2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,101,0.78
+2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,200,1.55
+2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,300,2.32
+2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,pulses and nuts,Beans,50,KG,actual,Retail,KES,108,0.83
+2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,157,1.21
+2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,vegetables and fruits,Kale,796,KG,actual,Retail,KES,70,0.54
+2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,68,0.53
+2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,85,0.66
+2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,114,0.88
+2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,160,1.24
+2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,273,2.11
+2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,pulses and nuts,Beans,50,KG,actual,Retail,KES,120,0.93
+2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,158,1.22
+2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,vegetables and fruits,Kale,796,KG,actual,Retail,KES,87,0.67
+2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,66,0.51
+2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,80,0.62
+2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,115,0.89
+2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,160,1.24
+2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,305,2.36
+2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,pulses and nuts,Beans,50,KG,actual,Retail,KES,100,0.77
+2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,135,1.04
+2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,vegetables and fruits,Kale,796,KG,actual,Retail,KES,110,0.85
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,72,0.56
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,82,0.63
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,114,0.88
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,160,1.24
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,294,2.27
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,pulses and nuts,Beans,50,KG,actual,Retail,KES,110,0.85
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,vegetables and fruits,Kale,796,KG,actual,Retail,KES,90,0.7
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,57,0.44
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,82,0.63
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,110,0.85
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,157,1.21
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,275,2.13
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,pulses and nuts,Beans,50,KG,actual,Retail,KES,120,0.93
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,123,0.95
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,71,0.55
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,81,0.63
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,115,0.89
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,160,1.24
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,296,2.29
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,pulses and nuts,Beans,50,KG,actual,Retail,KES,107,0.83
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,150,1.16
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,vegetables and fruits,Kale,796,KG,actual,Retail,KES,80,0.62
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,cereals and tubers,"Maize (white, dry)",440,KG,actual,Retail,KES,131,1.01
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,cereals and tubers,Maize flour (white),134,KG,actual,Retail,KES,107,0.83
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,cereals and tubers,Rice (aromatic),894,KG,actual,Retail,KES,118,0.91
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,cereals and tubers,Wheat flour,58,KG,actual,Retail,KES,101,0.78
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,milk and dairy,"Milk (cow, pasteurized)",472,L,actual,Retail,KES,194,1.5
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,miscellaneous food,Salt,185,200 G,actual,Retail,KES,22,0.17
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,miscellaneous food,Sugar,97,KG,actual,Retail,KES,169,1.31
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,oil and fats,"Oil (vegetable, fortified)",494,L,actual,Retail,KES,304,2.35
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,pulses and nuts,Beans,50,KG,actual,Retail,KES,154,1.19
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,pulses and nuts,Cowpeas (dry),901,KG,actual,Retail,KES,180,1.39
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,vegetables and fruits,Kale,796,KG,actual,Retail,KES,80,0.62
+2026-06-15,Rift Valley,Turkana,Lodwar town,3360,3.12,35.6,vegetables and fruits,Spinach,404,KG,actual,Retail,KES,100,0.77
 2026-07-15,Nairobi,Nairobi,Kangemi (Nairobi),4626,-1.27,36.74,cereals and tubers,"Maize (white, dry)",440,90 KG,actual,Wholesale,KES,4300.2,33.26
 2026-07-15,Nairobi,Nairobi,Kangemi (Nairobi),4626,-1.27,36.74,pulses and nuts,Beans (dolichos),896,90 KG,actual,Wholesale,KES,7200,55.68
 2026-07-15,Nairobi,Nairobi,Kangemi (Nairobi),4626,-1.27,36.74,pulses and nuts,Beans (rosecoco),897,90 KG,actual,Wholesale,KES,8399.7,64.96
@@ -18736,6 +19345,25 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-08-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,vegetables and fruits,Cabbage,181,126 KG,actual,Wholesale,KES,3780,29.22
 2026-08-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,vegetables and fruits,Onions (dry),892,13 KG,actual,Wholesale,KES,1170,9.05
 2026-08-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,vegetables and fruits,Tomatoes,114,64 KG,actual,Wholesale,KES,4480,34.63
+2026-09-15,Nairobi,Nairobi,Kangemi (Nairobi),4626,-1.27,36.74,cereals and tubers,"Maize (white, dry)",440,90 KG,actual,Wholesale,KES,4100,31.6
+2026-09-15,Nairobi,Nairobi,Kangemi (Nairobi),4626,-1.27,36.74,cereals and tubers,"Potatoes (Irish, white)",891,50 KG,actual,Wholesale,KES,2500,19.27
+2026-09-15,Nairobi,Nairobi,Kangemi (Nairobi),4626,-1.27,36.74,cereals and tubers,Rice (aromatic),894,50 KG,actual,Wholesale,KES,7500,57.8
+2026-09-15,Nairobi,Nairobi,Kangemi (Nairobi),4626,-1.27,36.74,pulses and nuts,Beans (dolichos),896,90 KG,actual,Wholesale,KES,8000,61.66
+2026-09-15,Nairobi,Nairobi,Kangemi (Nairobi),4626,-1.27,36.74,pulses and nuts,Beans (rosecoco),897,90 KG,actual,Wholesale,KES,11250,86.71
+2026-09-15,Nairobi,Nairobi,Kangemi (Nairobi),4626,-1.27,36.74,vegetables and fruits,Onions (dry),892,13 KG,actual,Wholesale,KES,845,6.51
+2026-09-15,Nyanza,Kisumu,Kibuye (Kisumu),5671,-0.09,34.77,cereals and tubers,"Maize (white, dry)",440,90 KG,actual,Wholesale,KES,4400,33.91
+2026-09-15,Nyanza,Kisumu,Kibuye (Kisumu),5671,-0.09,34.77,cereals and tubers,"Potatoes (Irish, white)",891,50 KG,actual,Wholesale,KES,6700,51.64
+2026-09-15,Nyanza,Kisumu,Kibuye (Kisumu),5671,-0.09,34.77,vegetables and fruits,Kale,796,50 KG,actual,Wholesale,KES,4482,34.54
+2026-09-15,Nyanza,Kisumu,Kibuye (Kisumu),5671,-0.09,34.77,vegetables and fruits,Tomatoes,114,64 KG,actual,Wholesale,KES,7619,58.72
+2026-09-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,cereals and tubers,"Maize (white, dry)",440,90 KG,actual,Wholesale,KES,3729,28.74
+2026-09-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,cereals and tubers,"Potatoes (Irish, red)",890,50 KG,actual,Wholesale,KES,3375,26.01
+2026-09-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,cereals and tubers,"Potatoes (Irish, white)",891,50 KG,actual,Wholesale,KES,3748,28.89
+2026-09-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,cereals and tubers,Rice (aromatic),894,50 KG,actual,Wholesale,KES,8750,67.44
+2026-09-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,pulses and nuts,Beans (rosecoco),897,90 KG,actual,Wholesale,KES,14400,110.98
+2026-09-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,vegetables and fruits,Cabbage,181,126 KG,actual,Wholesale,KES,4410,33.99
+2026-09-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,vegetables and fruits,Kale,796,50 KG,actual,Wholesale,KES,1958,15.09
+2026-09-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,vegetables and fruits,Onions (dry),892,13 KG,actual,Wholesale,KES,1092,8.42
+2026-09-15,Rift Valley,Uasin Gishu,Eldoret town (Uasin Gishu),185,0.52,35.28,vegetables and fruits,Tomatoes,114,64 KG,actual,Wholesale,KES,5248,40.45
 2023-12-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,119.4,0.78
 2023-12-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Salt,185,200 G,"actual,aggregate",Retail,KES,10,0.065
 2023-12-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,178.51,1.16
@@ -18994,6 +19622,38 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-03-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,158,1.22
 2026-03-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,90,0.7
 2026-03-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,152.5,1.18
+2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,105,0.81
+2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Salt,185,200 G,"actual,aggregate",Retail,KES,22.88,0.18
+2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,118.58,0.92
+2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,99.69,0.77
+2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Salt,185,200 G,"actual,aggregate",Retail,KES,13.19,0.1
+2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,121.35,0.94
+2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,100,0.77
+2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,miscellaneous food,Salt,185,200 G,"actual,aggregate",Retail,KES,15.5,0.12
+2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,121.5,0.94
+2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,93,0.72
+2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,miscellaneous food,Salt,185,200 G,"actual,aggregate",Retail,KES,13,0.1
+2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,150.5,1.16
+2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,91.75,0.71
+2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,miscellaneous food,Salt,185,200 G,"actual,aggregate",Retail,KES,12.88,0.099
+2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,161.25,1.25
+2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,91.67,0.71
+2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,miscellaneous food,Salt,185,200 G,"actual,aggregate",Retail,KES,14,0.11
+2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,155,1.2
+2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,90.5,0.7
+2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,miscellaneous food,Salt,185,200 G,"actual,aggregate",Retail,KES,12.5,0.097
+2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,151.5,1.17
+2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,90.28,0.7
+2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,miscellaneous food,Salt,185,200 G,"actual,aggregate",Retail,KES,15.5,0.12
+2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,157.22,1.22
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,92.17,0.71
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,153.83,1.19
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,91,0.7
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,miscellaneous food,Salt,185,200 G,"actual,aggregate",Retail,KES,15.5,0.12
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,149,1.15
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Wheat flour,58,KG,"actual,aggregate",Retail,KES,89.25,0.69
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,miscellaneous food,Salt,185,200 G,"actual,aggregate",Retail,KES,13.88,0.11
+2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,miscellaneous food,Sugar,97,KG,"actual,aggregate",Retail,KES,150.5,1.16
 2018-12-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,102.86,1
 2018-12-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,70,0.68
 2018-12-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,120,1.17
@@ -27954,13 +28614,10 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,97.92,0.76
 2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,62.9,0.49
 2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,113.31,0.88
-2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
 2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,650,5.02
 2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,750,5.8
 2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,150,1.16
 2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,milk and dairy,"Milk (cow, fresh)",439,L,aggregate,Retail,KES,150,1.16
-2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,14.27,0.11
-2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,115.65,0.89
 2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,263.78,2.04
 2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,120.24,0.93
 2026-06-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,10,0.077
@@ -27968,11 +28625,8 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,98.46,0.76
 2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,68.75,0.53
 2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,100.88,0.78
-2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,99.37,0.77
 2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,600,4.64
 2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,800,6.18
-2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,11.38,0.088
-2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,119.71,0.93
 2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,291.43,2.25
 2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,118.79,0.92
 2026-06-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,10,0.077
@@ -27980,12 +28634,9 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,100.71,0.78
 2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,60,0.46
 2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,127.14,0.98
-2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
 2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,725,5.6
 2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,825,6.38
 2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,200,1.55
-2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
-2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,120,0.93
 2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,249.29,1.93
 2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,122.14,0.94
 2026-06-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,10,0.077
@@ -27994,22 +28645,16 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,80,0.62
 2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,126,0.97
 2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,52.5,0.41
-2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,95,0.73
 2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,800,6.18
 2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,900,6.96
 2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,90,0.7
-2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,13,0.1
-2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,150,1.16
 2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,314,2.43
 2026-06-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,130,1
 2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,62.5,0.48
 2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,85,0.66
 2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,152.5,1.18
-2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,92.5,0.71
 2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,82.5,0.64
 2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,200,1.55
-2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,13.75,0.11
-2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,162.5,1.26
 2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,300,2.32
 2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,155,1.2
 2026-06-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
@@ -28017,10 +28662,7 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,106.67,0.82
 2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,146.67,1.13
 2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,30,0.23
-2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,93.33,0.72
 2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,86.67,0.67
-2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
-2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,160,1.24
 2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,276.67,2.14
 2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,123.33,0.95
 2026-06-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
@@ -28028,39 +28670,28 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,92,0.71
 2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,160,1.24
 2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,55,0.43
-2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,88,0.68
 2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,80,0.62
-2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
-2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,150,1.16
 2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,284,2.19
 2026-06-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,136,1.05
 2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,56.88,0.44
 2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,82.5,0.64
 2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,133.75,1.03
 2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,44,0.34
-2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,90.56,0.7
 2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,86.67,0.67
-2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
-2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,164.44,1.27
 2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,303.33,2.34
 2026-06-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,128.89,1
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,53.33,0.41
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,81.67,0.63
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,120,0.93
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,50,0.39
-2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,93.33,0.72
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,80,0.62
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,20,0.15
-2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,156.67,1.21
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,300,2.32
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,126.67,0.98
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,52.5,0.41
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,80,0.62
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,113.33,0.88
-2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,90,0.7
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,80,0.62
-2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
-2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,150,1.16
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,300,2.32
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,130,1
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,41.67,0.32
@@ -28068,10 +28699,7 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,100,0.77
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,132.5,1.02
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,65,0.5
-2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,87.5,0.68
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,76.67,0.59
-2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,13.75,0.11
-2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,150,1.16
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,305,2.36
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,112.5,0.87
 2026-06-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
@@ -28132,6 +28760,7 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-07-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,130,1.01
 2026-07-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,43.33,0.34
 2026-07-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,91.67,0.71
+2026-07-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,800,6.19
 2026-07-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,600,4.64
 2026-07-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,80,0.62
 2026-07-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
@@ -28145,6 +28774,8 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-07-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,143.33,1.11
 2026-07-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,30,0.23
 2026-07-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,90,0.7
+2026-07-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,800,6.19
+2026-07-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,700,5.41
 2026-07-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,86.67,0.67
 2026-07-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,milk and dairy,"Milk (cow, fresh)",439,L,aggregate,Retail,KES,150,1.16
 2026-07-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,13.33,0.1
@@ -28186,21 +28817,29 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,120,0.93
 2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,30,0.23
 2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,90,0.7
+2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,780,6.03
+2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,800,6.19
 2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,100,0.77
+2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,milk and dairy,"Milk (cow, fresh)",439,L,aggregate,Retail,KES,200,1.55
 2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
 2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,160,1.24
 2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,316.67,2.45
 2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,113.33,0.88
+2026-07-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,50,0.39
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,80,0.62
+2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,120,0.93
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,106.67,0.82
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,60,0.46
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,96.67,0.75
+2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,700,5.41
+2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,700,5.41
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,80,0.62
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,150,1.16
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,300,2.32
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,106.67,0.82
+2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,53.33,0.41
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,76.67,0.59
 2026-07-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,116.67,0.9
@@ -28229,6 +28868,8 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-07-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,120,0.93
 2026-07-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,43.33,0.34
 2026-07-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,93.33,0.72
+2026-07-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,600,4.64
+2026-07-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,700,5.41
 2026-07-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,75,0.58
 2026-07-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
 2026-07-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,163.33,1.26
@@ -28237,33 +28878,34 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-07-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
 2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,100,0.77
 2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,60,0.46
-2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,106.25,0.82
+2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,106.72,0.83
 2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,60,0.46
 2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
 2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,650,5.03
 2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,750,5.8
-2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,180,1.39
-2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,milk and dairy,"Milk (cow, fresh)",439,L,aggregate,Retail,KES,180,1.39
-2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,14.53,0.11
-2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,106.56,0.82
-2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,273.93,2.12
-2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,114.06,0.88
-2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,10.21,0.079
+2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,42.14,0.33
+2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,178.83,1.38
+2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,milk and dairy,"Milk (cow, fresh)",439,L,aggregate,Retail,KES,178.64,1.38
+2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,14.38,0.11
+2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,106.98,0.83
+2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,273.1,2.11
+2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,114.51,0.89
+2026-08-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,10.2,0.079
 2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,60,0.46
-2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,100.36,0.78
-2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,69.33,0.54
-2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,103.99,0.8
-2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,101.96,0.79
+2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,100.34,0.78
+2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,69.57,0.54
+2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,103.85,0.8
+2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,101.9,0.79
 2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,600,4.64
 2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,800,6.18
-2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,10.42,0.081
-2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,119.82,0.93
-2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,277.8,2.15
-2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,119.17,0.92
+2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,10.4,0.08
+2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,119.83,0.93
+2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,278.43,2.15
+2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,119.2,0.92
 2026-08-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,10,0.077
 2026-08-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,66.77,0.52
 2026-08-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,100.23,0.77
-2026-08-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,64.39,0.5
+2026-08-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,64.28,0.5
 2026-08-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,119.72,0.93
 2026-08-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,100.36,0.78
 2026-08-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100.15,0.77
@@ -28283,7 +28925,7 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-08-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,128.33,0.99
 2026-08-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,45.56,0.35
 2026-08-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,91.11,0.7
-2026-08-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,600,4.64
+2026-08-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,733.33,5.67
 2026-08-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,658.33,5.09
 2026-08-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,80,0.62
 2026-08-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,200,1.55
@@ -28298,7 +28940,7 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-08-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,137.22,1.06
 2026-08-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,40,0.31
 2026-08-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,91.11,0.7
-2026-08-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,733.33,5.67
+2026-08-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,777.78,6.01
 2026-08-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,700,5.41
 2026-08-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,87.78,0.68
 2026-08-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,milk and dairy,"Milk (cow, fresh)",439,L,aggregate,Retail,KES,133.33,1.03
@@ -28345,7 +28987,10 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-08-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,126.67,0.98
 2026-08-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,37.78,0.29
 2026-08-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,91.67,0.71
+2026-08-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,780,6.03
+2026-08-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,800,6.18
 2026-08-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,83.33,0.64
+2026-08-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,milk and dairy,"Milk (cow, fresh)",439,L,aggregate,Retail,KES,200,1.55
 2026-08-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
 2026-08-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,161.11,1.25
 2026-08-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,312.59,2.42
@@ -28353,14 +28998,18 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-08-15,Rift Valley,Turkana,Kakuma 4,3249,3.74,34.81,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,53.89,0.42
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,80,0.62
+2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,120,0.93
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,114.44,0.88
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,60,0.46
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,86.3,0.67
+2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,700,5.41
+2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,700,5.41
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,77.41,0.6
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,12.41,0.096
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,147.41,1.14
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,300,2.32
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,101.48,0.78
+2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 1),3244,3.77,34.73,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,55.93,0.43
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,79.26,0.61
 2026-08-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,100,0.77
@@ -28393,7 +29042,7 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-08-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,93.33,0.72
 2026-08-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,650,5.03
 2026-08-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,600,4.64
-2026-08-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,750,5.8
+2026-08-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,716.67,5.54
 2026-08-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,78.89,0.61
 2026-08-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,200,1.55
 2026-08-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,14.44,0.11
@@ -28401,64 +29050,250 @@ date,admin1,admin2,market,market_id,latitude,longitude,category,commodity,commod
 2026-08-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,295.56,2.28
 2026-08-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,120,0.93
 2026-08-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,70,0.54
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,100,0.77
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,106.67,0.82
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,100,0.77
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,67.85,0.52
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,117.65,0.91
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,48.07,0.37
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,150.95,1.16
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,milk and dairy,"Milk (cow, fresh)",439,L,aggregate,Retail,KES,150,1.16
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,10,0.077
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,122.41,0.94
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,253.06,1.95
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,133.88,1.03
+2026-09-15,North Eastern,Garissa,Dagahaley (Daadab),3252,0.19,40.29,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,10,0.077
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,56.5,0.44
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,99.22,0.76
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,73.31,0.56
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,100,0.77
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,99.61,0.77
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,600,4.62
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,800,6.17
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,180,1.39
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,10.39,0.08
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,120.47,0.93
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,297.49,2.29
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,134.06,1.03
+2026-09-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,10,0.077
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,69.2,0.53
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,100.22,0.77
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,71.22,0.55
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,115.25,0.89
 2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,100,0.77
 2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,600,4.62
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,800,6.17
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,100,0.77
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,180,1.39
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,606.43,4.67
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,802.92,6.19
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,97.08,0.75
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,181.41,1.4
 2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,milk and dairy,"Milk (cow, fresh)",439,L,aggregate,Retail,KES,180,1.39
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,20,0.15
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,120,0.92
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,280,2.16
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,120,0.92
-2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,5,0.039
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,18.48,0.14
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,120.31,0.93
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,271.76,2.09
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,128.94,0.99
+2026-09-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,5.96,0.046
 2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,55,0.42
-2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,80,0.62
+2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,83.33,0.64
 2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,90,0.69
-2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,125,0.96
+2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,135,1.04
 2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,50,0.39
-2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,90,0.69
-2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,600,4.62
-2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,775,5.97
+2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,93.33,0.72
+2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,666.67,5.14
+2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,766.67,5.91
 2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,80,0.62
 2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,200,1.54
 2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
-2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,155,1.19
-2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,290,2.24
-2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,125,0.96
+2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,153.33,1.18
+2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,293.33,2.26
+2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,133.33,1.03
 2026-09-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
-2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,56.67,0.44
-2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,90,0.69
+2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,57.78,0.45
+2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,86.67,0.67
 2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,100,0.77
-2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,125,0.96
-2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,60,0.46
-2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,93.33,0.72
-2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,733.33,5.65
+2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,123.33,0.95
+2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,53.33,0.41
+2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,95.56,0.74
+2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,688.89,5.31
 2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,700,5.39
-2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,90,0.69
+2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,93.33,0.72
 2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,milk and dairy,"Milk (cow, fresh)",439,L,aggregate,Retail,KES,100,0.77
-2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,13.33,0.1
-2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,160,1.23
-2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,293.33,2.26
-2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,150,1.16
+2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,13.89,0.11
+2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,166.67,1.28
+2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,312.22,2.41
+2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,160,1.23
 2026-09-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,60,0.46
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,80,0.62
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,120,0.92
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,93.33,0.72
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,725,5.59
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,700,5.39
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,750,5.78
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,110,0.85
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,156.67,1.21
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,293.33,2.26
+2026-09-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,130,1
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,65,0.5
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,82.86,0.64
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,152.86,1.18
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,92.5,0.71
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,700,5.39
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,675,5.2
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,766.67,5.91
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,86.67,0.67
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,14.44,0.11
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,155.56,1.2
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,282.22,2.18
+2026-09-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,141.25,1.09
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,47.5,0.37
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,76.67,0.59
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,50,0.39
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,120,0.92
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,80,0.62
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,93.33,0.72
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,700,5.39
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,600,4.62
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,650,5.01
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,90,0.69
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,10,0.077
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,140,1.08
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,283.33,2.18
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,130,1
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,55,0.42
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,80,0.62
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,120,0.92
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,45,0.35
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,600,4.62
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,800,6.17
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,95,0.73
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,13.33,0.1
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,143.33,1.1
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,300,2.31
+2026-09-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,143.33,1.1
 2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,60,0.46
-2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,80,0.62
+2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,83.33,0.64
 2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,100,0.77
-2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,126.67,0.98
+2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,147.78,1.14
 2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,53.33,0.41
-2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,93.33,0.72
+2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,95.56,0.74
 2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,650,5.01
 2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,600,4.62
-2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,750,5.78
-2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,86.67,0.67
+2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,766.67,5.91
+2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,91.11,0.7
 2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,200,1.54
-2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,13.33,0.1
-2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,153.33,1.18
-2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,286.67,2.21
-2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,133.33,1.03
+2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,14.72,0.11
+2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,152.22,1.17
+2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,291.11,2.24
+2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,138.89,1.07
 2026-09-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
+2026-10-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,100,0.77
+2026-10-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,80,0.62
+2026-10-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,100,0.77
+2026-10-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
+2026-10-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,10,0.077
+2026-10-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,120,0.92
+2026-10-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,300,2.31
+2026-10-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,140,1.08
+2026-10-15,North Eastern,Garissa,Hagadera (Daadab),3254,0.01,40.37,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,10,0.077
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,70,0.54
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,100,0.77
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,110.91,0.85
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,100,0.77
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,600,4.62
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,800,6.16
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,100,0.77
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,milk and dairy,"Milk (camel, fresh)",817,L,aggregate,Retail,KES,182.22,1.4
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,milk and dairy,"Milk (cow, fresh)",439,L,aggregate,Retail,KES,180,1.39
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,18.64,0.14
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,120,0.92
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,277.27,2.13
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,141.82,1.09
+2026-10-15,North Eastern,Garissa,IFO (Daadab),3255,0.11,40.32,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,5,0.038
+2026-10-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,90,0.69
+2026-10-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,155,1.19
+2026-10-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
+2026-10-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,800,6.16
+2026-10-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,750,5.77
+2026-10-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,80,0.62
+2026-10-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
+2026-10-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,150,1.15
+2026-10-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,300,2.31
+2026-10-15,Rift Valley,Turkana,Ethiopia (Kakuma),3253,3.72,34.85,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,150,1.15
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,60,0.46
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,80,0.62
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,120,0.92
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,40,0.31
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,600,4.62
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,700,5.39
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,100,0.77
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,180,1.39
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,350,2.69
+2026-10-15,Rift Valley,Turkana,HongKong (Kakuma),3250,3.75,34.84,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,180,1.39
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,60,0.46
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,80,0.62
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,120,0.92
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,93.33,0.72
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,725,5.58
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,700,5.39
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,750,5.77
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,110,0.85
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,15,0.12
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,156.67,1.21
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,293.33,2.26
+2026-10-15,Rift Valley,Turkana,Kakuma 2,3248,3.75,34.82,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,130,1
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,65,0.5
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,82.86,0.64
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,152.86,1.18
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,92.5,0.71
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,700,5.39
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,675,5.2
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,766.67,5.9
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,86.67,0.67
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,14.44,0.11
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,155.56,1.2
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,282.22,2.17
+2026-10-15,Rift Valley,Turkana,Kakuma 3,3251,3.77,34.82,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,141.25,1.09
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,47.5,0.37
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,76.67,0.59
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,50,0.38
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,120,0.92
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,80,0.62
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,93.33,0.72
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,700,5.39
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,600,4.62
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,650,5
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,90,0.69
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,10,0.077
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,140,1.08
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,283.33,2.18
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,130,1
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 2),3246,3.76,34.75,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Maize,51,KG,aggregate,Retail,KES,55,0.42
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,80,0.62
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,120,0.92
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Sorghum,65,KG,aggregate,Retail,KES,45,0.35
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,"meat, fish and eggs",Meat (beef),141,KG,aggregate,Retail,KES,600,4.62
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,800,6.16
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,95,0.73
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,13.33,0.1
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,143.33,1.1
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,300,2.31
+2026-10-15,Rift Valley,Turkana,Kalobeyei (Village 3),3247,3.75,34.76,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,143.33,1.1
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Maize flour,76,KG,aggregate,Retail,KES,90,0.69
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Potatoes (Irish),148,KG,aggregate,Retail,KES,100,0.77
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Rice,52,KG,aggregate,Retail,KES,190,1.46
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,cereals and tubers,Wheat flour,58,KG,aggregate,Retail,KES,100,0.77
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (camel),344,KG,aggregate,Retail,KES,600,4.62
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,"meat, fish and eggs",Meat (goat),451,KG,aggregate,Retail,KES,800,6.16
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,milk and dairy,Milk (UHT),794,500 ML,aggregate,Retail,KES,100,0.77
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,miscellaneous food,Salt,185,200 G,aggregate,Retail,KES,17.5,0.13
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,miscellaneous food,Sugar,97,KG,aggregate,Retail,KES,150,1.15
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,oil and fats,Oil (vegetable),96,L,aggregate,Retail,KES,300,2.31
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,pulses and nuts,Beans (dry),262,KG,aggregate,Retail,KES,150,1.15
+2026-10-15,Rift Valley,Turkana,Mogadishu (Kakuma),3245,3.72,34.85,vegetables and fruits,Bananas,254,Unit,aggregate,Retail,KES,20,0.15

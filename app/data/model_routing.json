@@ -8,31 +8,31 @@
   },
   "Beans (mixed)|Ahero|Retail": {
     "strategy": "chronos",
-    "test_mape": 2.97,
+    "test_mape": 2.94,
     "confidence": "high",
     "region": "Nyanza",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Bomet|Retail": {
     "strategy": "ensemble",
-    "test_mape": 9.72,
-    "confidence": "high",
+    "test_mape": 12.61,
+    "confidence": "medium",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Butere|Retail": {
     "strategy": "ensemble",
-    "test_mape": 23.73,
-    "confidence": "low",
+    "test_mape": 12.75,
+    "confidence": "medium",
     "region": "Western",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Eldoret|Retail": {
     "strategy": "chronos",
-    "test_mape": 9.14,
-    "confidence": "high",
+    "test_mape": 10.15,
+    "confidence": "medium",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Embu-Mbeere|Retail": {
     "strategy": "ensemble",
@@ -43,84 +43,84 @@
   },
   "Beans (mixed)|Gakoromere|Retail": {
     "strategy": "ensemble",
-    "test_mape": 4.57,
+    "test_mape": 4.26,
     "confidence": "high",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Gatundu|Retail": {
-    "strategy": "chronos",
-    "test_mape": 3.59,
+    "strategy": "ensemble",
+    "test_mape": 2.89,
     "confidence": "high",
     "region": "Central",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Githurai|Retail": {
     "strategy": "ensemble",
-    "test_mape": 11.84,
+    "test_mape": 15.54,
     "confidence": "medium",
     "region": "Nairobi",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Hola|Retail": {
     "strategy": "chronos",
-    "test_mape": 13.42,
+    "test_mape": 15.79,
     "confidence": "medium",
     "region": "Coast",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Iciara|Retail": {
     "strategy": "chronos",
-    "test_mape": 15.43,
+    "test_mape": 19.58,
     "confidence": "medium",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Kalundu|Retail": {
     "strategy": "ensemble",
-    "test_mape": 2.11,
+    "test_mape": 2.02,
     "confidence": "high",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Kapsabet|Retail": {
     "strategy": "ensemble",
-    "test_mape": 8.63,
+    "test_mape": 6.19,
     "confidence": "high",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Karatina|Retail": {
     "strategy": "ensemble",
-    "test_mape": 5.88,
+    "test_mape": 7.16,
     "confidence": "high",
     "region": "Central",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Kerugoya|Retail": {
     "strategy": "ensemble",
-    "test_mape": 11.29,
+    "test_mape": 11.08,
     "confidence": "medium",
     "region": "Central",
     "months_stale": 1
   },
   "Beans (mixed)|Kiambu|Retail": {
     "strategy": "chronos",
-    "test_mape": 4.49,
+    "test_mape": 3.62,
     "confidence": "high",
     "region": "Central",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Kianjai|Retail": {
     "strategy": "ensemble",
-    "test_mape": 7.26,
+    "test_mape": 8.74,
     "confidence": "high",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Kibuye|Retail": {
     "strategy": "chronos",
-    "test_mape": 2.67,
+    "test_mape": 2.64,
     "confidence": "high",
     "region": "Nyanza",
     "months_stale": 1
@@ -134,24 +134,24 @@
   },
   "Beans (mixed)|Kimulot|Retail": {
     "strategy": "ensemble",
-    "test_mape": 7.36,
+    "test_mape": 6.64,
     "confidence": "high",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Kipkaren|Retail": {
     "strategy": "ensemble",
-    "test_mape": 12.15,
+    "test_mape": 16.32,
     "confidence": "medium",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Kiritiri|Retail": {
     "strategy": "chronos",
-    "test_mape": 15.08,
+    "test_mape": 18.32,
     "confidence": "medium",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Kisumu|Wholesale": {
     "strategy": "chronos",
@@ -162,10 +162,10 @@
   },
   "Beans (mixed)|Kitale|Retail": {
     "strategy": "ensemble",
-    "test_mape": 9.14,
-    "confidence": "high",
+    "test_mape": 11.9,
+    "confidence": "medium",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Kitale Municipality|Retail": {
     "strategy": "chronos",
@@ -183,10 +183,10 @@
   },
   "Beans (mixed)|Kongowea|Retail": {
     "strategy": "ensemble",
-    "test_mape": 8.66,
-    "confidence": "high",
+    "test_mape": 12.3,
+    "confidence": "medium",
     "region": "Coast",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Lamu|Retail": {
     "strategy": "ensemble",
@@ -197,10 +197,10 @@
   },
   "Beans (mixed)|Majengo|Retail": {
     "strategy": "ensemble",
-    "test_mape": 11.46,
-    "confidence": "medium",
+    "test_mape": 6.99,
+    "confidence": "high",
     "region": "Coast",
-    "months_stale": 5
+    "months_stale": 2
   },
   "Beans (mixed)|Makueni|Retail": {
     "strategy": "ensemble",
@@ -225,10 +225,10 @@
   },
   "Beans (mixed)|Mbale|Retail": {
     "strategy": "chronos",
-    "test_mape": 4.66,
+    "test_mape": 5.36,
     "confidence": "high",
     "region": "Western",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Meru|Retail": {
     "strategy": "ensemble",
@@ -239,38 +239,38 @@
   },
   "Beans (mixed)|Migori|Retail": {
     "strategy": "chronos",
-    "test_mape": 9.5,
+    "test_mape": 8.52,
     "confidence": "high",
     "region": "Nyanza",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Mulot|Retail": {
     "strategy": "ensemble",
-    "test_mape": 7.03,
-    "confidence": "high",
+    "test_mape": 15.39,
+    "confidence": "medium",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Mumias|Retail": {
     "strategy": "ensemble",
-    "test_mape": 11.03,
+    "test_mape": 10.72,
     "confidence": "medium",
     "region": "Western",
     "months_stale": 1
   },
   "Beans (mixed)|Nanyuki|Retail": {
     "strategy": "chronos",
-    "test_mape": 8.11,
+    "test_mape": 8.18,
     "confidence": "high",
     "region": "Rift Valley",
-    "months_stale": 8
+    "months_stale": 2
   },
   "Beans (mixed)|Nyeri|Retail": {
     "strategy": "ensemble",
-    "test_mape": 3.28,
+    "test_mape": 4.44,
     "confidence": "high",
     "region": "Central",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Nyeri-Kieni|Retail": {
     "strategy": "ensemble",
@@ -281,24 +281,24 @@
   },
   "Beans (mixed)|Runyenjes|Retail": {
     "strategy": "ensemble",
-    "test_mape": 14.36,
+    "test_mape": 14.61,
     "confidence": "medium",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Siakago|Retail": {
     "strategy": "chronos",
-    "test_mape": 10.9,
+    "test_mape": 13.7,
     "confidence": "medium",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Sotik|Retail": {
     "strategy": "ensemble",
-    "test_mape": 6.88,
+    "test_mape": 9.19,
     "confidence": "high",
     "region": "Rift Valley",
-    "months_stale": 5
+    "months_stale": 2
   },
   "Beans (mixed)|Taita Taveta|Retail": {
     "strategy": "ensemble",
@@ -309,24 +309,24 @@
   },
   "Beans (mixed)|Thika|Retail": {
     "strategy": "ensemble",
-    "test_mape": 2.78,
+    "test_mape": 7.3,
     "confidence": "high",
     "region": "Central",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Turbo|Retail": {
     "strategy": "ensemble",
-    "test_mape": 7.89,
-    "confidence": "high",
+    "test_mape": 19.06,
+    "confidence": "medium",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (mixed)|Wote|Retail": {
     "strategy": "ensemble",
-    "test_mape": 4.1,
+    "test_mape": 3.88,
     "confidence": "high",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Beans (rosecoco)|Kisumu|Wholesale": {
     "strategy": "ensemble",
@@ -960,7 +960,7 @@
   },
   "Maize|Ahero|Retail": {
     "strategy": "chronos",
-    "test_mape": 4.42,
+    "test_mape": 4.6,
     "confidence": "high",
     "region": "Nyanza",
     "months_stale": 1
@@ -981,38 +981,31 @@
   },
   "Maize|Bomet|Retail": {
     "strategy": "ensemble",
-    "test_mape": 13.78,
-    "confidence": "medium",
+    "test_mape": 5.64,
+    "confidence": "high",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Busia|Retail": {
     "strategy": "chronos",
-    "test_mape": 6.42,
+    "test_mape": 7.23,
     "confidence": "high",
     "region": "Western",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Butere|Retail": {
     "strategy": "ensemble",
-    "test_mape": 13.7,
+    "test_mape": 12.93,
     "confidence": "medium",
     "region": "Western",
     "months_stale": 1
   },
   "Maize|Chuka|Retail": {
     "strategy": "chronos",
-    "test_mape": 9.78,
-    "confidence": "high",
+    "test_mape": 10.16,
+    "confidence": "medium",
     "region": "Eastern",
-    "months_stale": 3
-  },
-  "Maize|Eldoret|Retail": {
-    "strategy": "ensemble",
-    "test_mape": 24.1,
-    "confidence": "low",
-    "region": "Rift Valley",
-    "months_stale": 1
+    "months_stale": 2
   },
   "Maize|Eldoret|Wholesale": {
     "strategy": "ensemble",
@@ -1023,7 +1016,7 @@
   },
   "Maize|Embu|Retail": {
     "strategy": "ensemble",
-    "test_mape": 14.23,
+    "test_mape": 13.09,
     "confidence": "medium",
     "region": "Eastern",
     "months_stale": 1
@@ -1037,10 +1030,10 @@
   },
   "Maize|Gakoromere|Retail": {
     "strategy": "ensemble",
-    "test_mape": 24.33,
-    "confidence": "low",
+    "test_mape": 9.55,
+    "confidence": "high",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Gakoromone|Retail": {
     "strategy": "chronos",
@@ -1065,24 +1058,24 @@
   },
   "Maize|Gatundu|Retail": {
     "strategy": "chronos",
-    "test_mape": 5.39,
-    "confidence": "high",
+    "test_mape": 12.3,
+    "confidence": "medium",
     "region": "Central",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Hola|Retail": {
     "strategy": "ensemble",
-    "test_mape": 8.25,
+    "test_mape": 8.21,
     "confidence": "high",
     "region": "Coast",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Iciara|Retail": {
     "strategy": "chronos",
-    "test_mape": 15.93,
+    "test_mape": 15.82,
     "confidence": "medium",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Isiolo|Retail": {
     "strategy": "ensemble",
@@ -1114,21 +1107,21 @@
   },
   "Maize|Kakamega|Retail": {
     "strategy": "chronos",
-    "test_mape": 11.58,
+    "test_mape": 10.47,
     "confidence": "medium",
     "region": "Western",
     "months_stale": 1
   },
   "Maize|Kalundu|Retail": {
     "strategy": "ensemble",
-    "test_mape": 6.07,
+    "test_mape": 8.98,
     "confidence": "high",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Kangemi|Wholesale": {
     "strategy": "chronos",
-    "test_mape": 14.49,
+    "test_mape": 14.31,
     "confidence": "medium",
     "region": "Nairobi",
     "months_stale": 1
@@ -1163,17 +1156,17 @@
   },
   "Maize|Kapsabet|Retail": {
     "strategy": "ensemble",
-    "test_mape": 9.97,
+    "test_mape": 6.06,
     "confidence": "high",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Karatina|Retail": {
     "strategy": "ensemble",
-    "test_mape": 6.06,
+    "test_mape": 3.48,
     "confidence": "high",
     "region": "Central",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Katito|Wholesale": {
     "strategy": "chronos",
@@ -1184,14 +1177,14 @@
   },
   "Maize|Kerugoya|Retail": {
     "strategy": "ensemble",
-    "test_mape": 5.98,
+    "test_mape": 6.09,
     "confidence": "high",
     "region": "Central",
     "months_stale": 1
   },
   "Maize|Kibuye|Retail": {
     "strategy": "chronos",
-    "test_mape": 7.11,
+    "test_mape": 6.92,
     "confidence": "high",
     "region": "Nyanza",
     "months_stale": 1
@@ -1212,24 +1205,24 @@
   },
   "Maize|Kimulot|Retail": {
     "strategy": "ensemble",
-    "test_mape": 18.21,
-    "confidence": "medium",
+    "test_mape": 7.35,
+    "confidence": "high",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Kipkaren|Retail": {
     "strategy": "ensemble",
-    "test_mape": 23.86,
+    "test_mape": 22.53,
     "confidence": "low",
     "region": "Rift Valley",
     "months_stale": 1
   },
   "Maize|Kiritiri|Retail": {
     "strategy": "chronos",
-    "test_mape": 8.89,
+    "test_mape": 9.88,
     "confidence": "high",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Kisasi|Retail": {
     "strategy": "chronos",
@@ -1261,14 +1254,14 @@
   },
   "Maize|Kongowea|Retail": {
     "strategy": "ensemble",
-    "test_mape": 12.73,
+    "test_mape": 10.56,
     "confidence": "medium",
     "region": "Coast",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Kutus|Retail": {
     "strategy": "ensemble",
-    "test_mape": 9.38,
+    "test_mape": 7.08,
     "confidence": "high",
     "region": "Central",
     "months_stale": 2
@@ -1310,10 +1303,10 @@
   },
   "Maize|Majengo|Retail": {
     "strategy": "ensemble",
-    "test_mape": 10.27,
-    "confidence": "medium",
+    "test_mape": 9.27,
+    "confidence": "high",
     "region": "Coast",
-    "months_stale": 5
+    "months_stale": 2
   },
   "Maize|Makueni|Retail": {
     "strategy": "ensemble",
@@ -1352,10 +1345,10 @@
   },
   "Maize|Mbale|Retail": {
     "strategy": "chronos",
-    "test_mape": 9.24,
-    "confidence": "high",
+    "test_mape": 11.07,
+    "confidence": "medium",
     "region": "Western",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Meru|Retail": {
     "strategy": "ensemble",
@@ -1366,10 +1359,10 @@
   },
   "Maize|Migori|Retail": {
     "strategy": "ensemble",
-    "test_mape": 12.73,
+    "test_mape": 10.53,
     "confidence": "medium",
     "region": "Nyanza",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Muhoroni|Wholesale": {
     "strategy": "chronos",
@@ -1380,24 +1373,24 @@
   },
   "Maize|Mulot|Retail": {
     "strategy": "ensemble",
-    "test_mape": 12.79,
+    "test_mape": 13.03,
     "confidence": "medium",
     "region": "Rift Valley",
     "months_stale": 1
   },
   "Maize|Mumias|Retail": {
     "strategy": "ensemble",
-    "test_mape": 17.93,
+    "test_mape": 17.14,
     "confidence": "medium",
     "region": "Western",
     "months_stale": 1
   },
   "Maize|Nakuru|Retail": {
     "strategy": "chronos",
-    "test_mape": 8.75,
+    "test_mape": 7.76,
     "confidence": "high",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Narok|Retail": {
     "strategy": "ensemble",
@@ -1422,10 +1415,10 @@
   },
   "Maize|Nyeri|Retail": {
     "strategy": "ensemble",
-    "test_mape": 5.69,
+    "test_mape": 3.4,
     "confidence": "high",
     "region": "Central",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Nyeri-Kieni|Retail": {
     "strategy": "ensemble",
@@ -1436,10 +1429,10 @@
   },
   "Maize|Runyenjes|Retail": {
     "strategy": "chronos",
-    "test_mape": 17.1,
+    "test_mape": 11.51,
     "confidence": "medium",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Samburu|Retail": {
     "strategy": "ensemble",
@@ -1450,10 +1443,17 @@
   },
   "Maize|Siakago|Retail": {
     "strategy": "chronos",
-    "test_mape": 6.01,
+    "test_mape": 6.0,
     "confidence": "high",
     "region": "Eastern",
-    "months_stale": 3
+    "months_stale": 2
+  },
+  "Maize|Sotik|Retail": {
+    "strategy": "ensemble",
+    "test_mape": 23.06,
+    "confidence": "low",
+    "region": "Rift Valley",
+    "months_stale": 2
   },
   "Maize|Taita Taveta|Retail": {
     "strategy": "ensemble",
@@ -1478,17 +1478,17 @@
   },
   "Maize|Thika|Retail": {
     "strategy": "ensemble",
-    "test_mape": 11.78,
+    "test_mape": 12.24,
     "confidence": "medium",
     "region": "Central",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Turbo|Retail": {
     "strategy": "ensemble",
-    "test_mape": 10.66,
+    "test_mape": 16.23,
     "confidence": "medium",
     "region": "Rift Valley",
-    "months_stale": 3
+    "months_stale": 2
   },
   "Maize|Turkana|Retail": {
     "strategy": "ensemble",
