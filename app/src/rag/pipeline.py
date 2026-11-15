@@ -153,8 +153,13 @@ def _answer_alert_overview(entities: dict, language: str) -> dict:
 
 
 def _answer_alert(question: str, entities: dict, language: str) -> dict:
-    if not entities.get("commodity") or not entities.get("market"):
+    # A volatility question is about one series, so it still asks for the missing part.
+    about_volatility = any(k in question.lower() for k in ("volatil", "mabadiliko"))
+    if not about_volatility and (not entities.get("commodity") or not entities.get("market")):
         return _answer_alert_overview(entities, language)
+    missing = _missing_followup(entities, language)
+    if missing:
+        return {**missing, "sources": [], "confidence": None}
 
     result = lookup.get_anomaly(entities)
     status = result["status"]
