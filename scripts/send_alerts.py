@@ -6,8 +6,10 @@ Dry run by default: prints every message and sends nothing.
     python scripts/send_alerts.py --send                # really send
     python scripts/send_alerts.py --demo                # self-check
 
-Subscribers are a JSON list, from --subscribers <file> or the ALERT_SUBSCRIBERS
-environment variable (a GitHub secret in CI -- phone numbers never go in the repo):
+Subscribers come from, in order: --subscribers <file>; the Supabase `subscribers`
+table (people who signed up on the Alerts page) when SUPABASE_URL and
+SUPABASE_SECRET_KEY are set; else the ALERT_SUBSCRIBERS environment variable.
+Phone numbers never go in the repo. The file / variable is a JSON list:
     [{"phone": "+254712345678", "commodities": ["Maize"], "markets": ["Kitale"], "lang": "sw"}]
 An empty or missing "commodities" / "markets" means all of them; "lang" is "en" or "sw".
 
@@ -76,9 +78,26 @@ def send_sms(phone: str, text: str, username: str, api_key: str) -> str:
     return r.json()["SMSMessageData"]["Recipients"][0]["status"]
 
 
+def load_subscribers(path: str | None) -> list[dict]:
+    url, key = os.environ.get("SUPABASE_URL"), os.environ.get("SUPABASE_SECRET_KEY")
+    if path:
+        return json.loads(pathlib.Path(path).read_text())
+    if url and key:
+        import requests
+        r = requests.get(f"{url.rstrip('/')}/rest/v1/subscribers", timeout=30,
+                         params={"active": "eq.true", "select": "phone,commodities,markets,lang"},
+                         headers={"apikey": key, "Authorization": f"Bearer {key}"})
+        r.raise_for_status()
+        return r.json()
+    raw = os.environ.get("ALERT_SUBSCRIBERS", "")
+    return json.loads(raw) if raw.strip() else []
+
+
 def main(args) -> int:
-    raw = pathlib.Path(args.subscribers).read_text() if args.subscribers else os.environ.get("ALERT_SUBSCRIBERS", "")
-    subs = json.loads(raw) if raw.strip() else []
+    subs = load_subscribers(args.subscribers)
+    if len(subs) > args.max:  # a flood of sign-ups must not become a surprise SMS bill
+        print(f"[alerts] {len(subs)} subscribers exceeds --max {args.max}; sending to the first {args.max}")
+        subs = subs[:args.max]
     if not subs:
         print("[alerts] no subscribers configured; nothing to do")
         return 0
@@ -133,6 +152,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--send", action="store_true", help="actually send (default: print only)")
     ap.add_argument("--subscribers", help="JSON file; default is the ALERT_SUBSCRIBERS env var")
+    ap.add_argument("--max", type=int, default=500, help="most subscribers to text in one run")
     ap.add_argument("--demo", action="store_true")
     a = ap.parse_args()
     if a.demo:

@@ -295,12 +295,22 @@ def _chat_dialog() -> None:
     )
 
 
+def t(en: str, sw: str) -> str:
+    """The English or Kiswahili wording, per the sidebar language switch."""
+    return sw if st.session_state.get("lang") == "Kiswahili" else en
+
+
 def sidebar_brand() -> None:
     """AgriPulse name + tagline at the top of the sidebar, replacing the
     header that used to be repeated at the top of every page's main panel."""
     with st.sidebar:
         st.markdown(f"## 🌾 {APP_NAME}")
-        st.caption(APP_TAGLINE)
+        # Widget state is dropped on page change unless re-assigned, so keep the choice sticky.
+        if "lang" in st.session_state:
+            st.session_state["lang"] = st.session_state["lang"]
+        st.radio("Language / Lugha", ["English", "Kiswahili"], key="lang", horizontal=True,
+                 label_visibility="collapsed")
+        st.caption(t(APP_TAGLINE, "Utabiri wa bei za chakula na taarifa za masoko Kenya."))
         st.divider()
 
 
@@ -429,7 +439,7 @@ def forecast_chart(history: pd.DataFrame, forecast: pd.DataFrame) -> go.Figure:
         go.Scatter(
             x=history["date"],
             y=history["price_per_kg"],
-            name="Historical price",
+            name=t("Past prices", "Bei zilizopita"),
             mode="lines",
             line=dict(color=GREEN_DARK, width=2),
             hovertemplate="%{x|%b %Y}<br>KES %{y:.2f}<extra></extra>",
@@ -450,7 +460,7 @@ def forecast_chart(history: pd.DataFrame, forecast: pd.DataFrame) -> go.Figure:
         go.Scatter(
             x=forecast["forecast_date"],
             y=forecast["forecast_lower"],
-            name="Confidence band",
+            name=t("80% range", "Wigo wa 80%"),
             mode="lines",
             line=dict(width=0),
             fill="tonexty",
@@ -462,7 +472,7 @@ def forecast_chart(history: pd.DataFrame, forecast: pd.DataFrame) -> go.Figure:
         go.Scatter(
             x=forecast["forecast_date"],
             y=forecast["forecast_price_kes"],
-            name="Forecast",
+            name=t("Forecast", "Utabiri"),
             mode="lines+markers",
             line=dict(color=YELLOW, width=2, dash="dash"),
             hovertemplate="%{x|%b %Y}<br>KES %{y:.2f}<extra></extra>",
@@ -476,7 +486,7 @@ def forecast_chart(history: pd.DataFrame, forecast: pd.DataFrame) -> go.Figure:
         margin=dict(t=10, b=10, l=10, r=10),
         legend=dict(orientation="h", yanchor="bottom", y=1.02, x=0),
         xaxis=dict(showgrid=False, title=None),
-        yaxis=dict(showgrid=True, gridcolor=GREY, title=f"Price (KES/{unit})"),
+        yaxis=dict(showgrid=True, gridcolor=GREY, title=t(f"Price (KES/{unit})", f"Bei (KES/{unit})")),
         plot_bgcolor="white",
         paper_bgcolor="white",
     )

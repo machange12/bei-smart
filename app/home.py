@@ -13,7 +13,7 @@ if str(APP_DIR) not in sys.path:
     sys.path.insert(0, str(APP_DIR))
 
 from src.units import unit_label  # noqa: E402
-from src.ui import SERIES_KEY, inject_css, latest_prices, render_hero, sidebar_brand, sidebar_footer  # noqa: E402
+from src.ui import SERIES_KEY, inject_css, latest_prices, render_hero, sidebar_brand, sidebar_footer, t  # noqa: E402
 
 st.set_page_config(page_title="AgriPulse", page_icon="🌾", layout="wide")
 inject_css()
@@ -43,11 +43,12 @@ render_hero()
 
 # --- This month: three plain-language answers before any dashboard numbers ---
 def trusted_current() -> pd.DataFrame:
-    """3-month, high/medium-confidence forecasts for fully current series
-    (months_stale == 0), so "this month" really means now."""
+    """3-month, high/medium-confidence forecasts for the most current series.
+    (Was months_stale == 0, but when the newest month has only a handful of
+    prices no served series is at 0 and the sell and buy cards silently vanished.)"""
     current = forecasts
     if "months_stale" in forecasts.columns:
-        current = forecasts[forecasts["months_stale"] == 0]
+        current = forecasts[forecasts["months_stale"] == forecasts["months_stale"].min()]
     current = current[current["horizon_months"] == 3]
     return current[current["confidence"].isin(["high", "medium"])]
 
@@ -65,7 +66,8 @@ def sell_card():
     best = ends.sort_values("rise").iloc[-1]
     if best["rise"] <= 0:
         return None
-    return ("📈 Best time & place to sell", f"+{best['rise']:.0f}%",
+    return ("pages/6_Sell.py", t("Compare markets →", "Linganisha masoko →"),
+            t("📈 Best time & place to sell", "📈 Wakati na mahali bora pa kuuza"), f"+{best['rise']:.0f}%",
             f"{series_name(best)} expected to rise from KES {best['price_per_kg']:.0f} to "
             f"{best['forecast_price_kes']:.0f}/{unit_label(best['commodity'])} by {best['forecast_date']:%b %Y} · {best['confidence']} confidence")
 
@@ -80,7 +82,9 @@ def alerts_card():
     top = recent.sort_values("deviation_pct", ascending=False).drop_duplicates(["commodity", "market"]).head(2)
     detail = "; ".join(f"{series_name(r)} +{r['deviation_pct']:.0f}% above normal" for _, r in top.iterrows())
     crashes = int((anomalies["status"] == "CRASH").sum())
-    return ("🚨 Price alerts", f"{len(spikes)} spikes · {crashes} crashes", f"Biggest: {detail}" if detail else "See the Alerts page")
+    return ("pages/2_Alerts.py", t("See all alerts →", "Angalia tahadhari zote →"),
+            t("🚨 Price alerts", "🚨 Tahadhari za bei"), f"{len(spikes)} spikes · {crashes} crashes",
+            f"Biggest: {detail}" if detail else "")
 
 
 def buy_card():
@@ -90,7 +94,9 @@ def buy_card():
     nxt = maize[maize["forecast_date"] == maize["forecast_date"].min()]
     row = nxt.sort_values("forecast_price_kes").iloc[0]
     where = f"{row['market']} ({row['region']})" if "region" in row and pd.notna(row["region"]) else row["market"]
-    return ("🛒 Cheapest maize to buy", f"KES {row['forecast_price_kes']:.0f}/{unit_label(row['commodity'])}",
+    return ("pages/1_Forecast.py", t("See forecasts →", "Angalia utabiri →"),
+            t("🛒 Cheapest maize to buy", "🛒 Mahindi ya bei nafuu zaidi"),
+            f"KES {row['forecast_price_kes']:.0f}/{unit_label(row['commodity'])}",
             f"{where} retail, forecast for {row['forecast_date']:%b %Y}")
 
 
@@ -102,12 +108,13 @@ for build in (sell_card, alerts_card, buy_card):
         pass
 cards = [c for c in cards if c]
 if cards:
-    st.subheader("This month")
+    st.subheader(t("This month", "Mwezi huu"))
     with st.container(key="this_month"):
-        for col, (label, value, note) in zip(st.columns(len(cards)), cards):
+        for col, (page, link, label, value, note) in zip(st.columns(len(cards)), cards):
             with col.container(border=True):
                 st.metric(label, value)
                 st.caption(note)
+                st.page_link(page, label=link)
 
 live_series = forecasts
 if "months_stale" in forecasts.columns:
@@ -128,10 +135,10 @@ markets_covered = live_series["market"].nunique()
 active_alerts = int((anomalies["status"] != "NORMAL").sum())
 
 col1, col2, col3, col4 = st.columns(4)
-col1.metric("Live series", f"{live_series_count:,}")
-col2.metric("Median forecast error", f"{median_forecast_error:.1f}%")
-col3.metric("Markets covered", f"{markets_covered:,}")
-col4.metric("Active price alerts", f"{active_alerts:,}", help="Spikes (unusually high) plus crashes (unusually low)")
+col1.metric(t("Prices forecast", "Bei zinazotabiriwa"), f"{live_series_count:,}")
+col2.metric(t("Typical forecast error", "Kosa la kawaida la utabiri"), f"{median_forecast_error:.1f}%")
+col3.metric(t("Markets covered", "Masoko"), f"{markets_covered:,}")
+col4.metric(t("Active price alerts", "Tahadhari za bei"), f"{active_alerts:,}", help="Spikes (unusually high) plus crashes (unusually low)")
 
 st.caption(f"Median forecast error is {error_source}.")
 

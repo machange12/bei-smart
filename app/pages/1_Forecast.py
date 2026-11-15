@@ -28,6 +28,7 @@ from src.ui import (  # noqa: E402
     model_provenance_caption,
     sidebar_brand,
     sidebar_footer,
+    t,
 )
 
 st.set_page_config(page_title="Forecast | AgriPulse", page_icon="📈", layout="wide")
@@ -70,7 +71,7 @@ if "months_stale" in forecasts_all.columns:
 else:
     forecasts = forecasts_all
 
-st.subheader("Price Forecast")
+st.subheader(t("Price Forecast", "Utabiri wa Bei"))
 
 
 def seed_from_url(key: str, options: list, param: str) -> None:
@@ -82,43 +83,40 @@ def seed_from_url(key: str, options: list, param: str) -> None:
         st.session_state[key] = next((o for o in options if str(o) == wanted), options[0])
 
 
-with st.sidebar:
-    st.markdown("#### Filters")
+# Selectors sit in the page, not the sidebar: on a phone the sidebar starts closed
+# and visitors never found them. What you grow or buy comes first, then where.
+pick_cols = st.columns([3, 3, 2, 2])
+scoped = forecasts
 
-    regions = sorted(forecasts["region"].dropna().unique()) if "region" in forecasts.columns else []
-    region = None
-    if regions:
-        seed_from_url("fc_region", regions, "region")
-        region = st.selectbox("Region", regions, key="fc_region")
+commodities = sorted(scoped["commodity"].unique())
+seed_from_url("fc_commodity", commodities, "commodity")
+commodity = pick_cols[0].selectbox(t("Commodity", "Bidhaa"), commodities, key="fc_commodity")
+scoped = scoped[scoped["commodity"] == commodity]
 
-    scoped = forecasts[forecasts["region"] == region] if region else forecasts
+markets = sorted(scoped["market"].unique())
+seed_from_url("fc_market", markets, "market")
+region_of = scoped.drop_duplicates("market").set_index("market")["region"].to_dict() if "region" in scoped else {}
+market = pick_cols[1].selectbox(
+    t("Market", "Soko"), markets, key="fc_market",
+    format_func=lambda mk: f"{mk} ({region_of[mk]})" if region_of.get(mk) else mk,
+)
+scoped = scoped[scoped["market"] == market]
 
-    markets = sorted(scoped["market"].unique())
-    seed_from_url("fc_market", markets, "market")
-    market = st.selectbox("Market", markets, key="fc_market")
-    scoped = scoped[scoped["market"] == market]
+pricetypes = sorted(scoped["pricetype"].unique())
+seed_from_url("fc_pricetype", pricetypes, "pricetype")
+pricetype = pick_cols[2].selectbox(
+    t("Price type", "Aina ya bei"), pricetypes, key="fc_pricetype",
+    help=t("Wholesale = bulk price traders pay; Retail = what shoppers pay.",
+           "Jumla = bei ya wafanyabiashara; Rejareja = bei ya mnunuzi wa kawaida."),
+)
+scoped = scoped[scoped["pricetype"] == pricetype]
 
-    commodities = sorted(scoped["commodity"].unique())
-    seed_from_url("fc_commodity", commodities, "commodity")
-    commodity = st.selectbox("Commodity", commodities, key="fc_commodity")
-    scoped = scoped[scoped["commodity"] == commodity]
-
-    pricetypes = sorted(scoped["pricetype"].unique())
-    seed_from_url("fc_pricetype", pricetypes, "pricetype")
-    pricetype = st.selectbox(
-        "Price type", pricetypes, key="fc_pricetype",
-        help="Wholesale = bulk price traders pay; Retail = what shoppers pay.",
-    )
-    scoped = scoped[scoped["pricetype"] == pricetype]
-
-    horizons = [int(h) for h in sorted(scoped["horizon_months"].unique())]
-    seed_from_url("fc_horizon", horizons, "horizon")
-    horizon = st.radio("Horizon (months)", horizons, horizontal=True, key="fc_horizon")
+horizons = [int(h) for h in sorted(scoped["horizon_months"].unique())]
+seed_from_url("fc_horizon", horizons, "horizon")
+horizon = pick_cols[3].radio(t("Months ahead", "Miezi ijayo"), horizons, horizontal=True, key="fc_horizon")
 
 # Mirror the selection into the URL so the address bar is a shareable link.
-link_params = {"market": market, "commodity": commodity, "pricetype": pricetype, "horizon": horizon}
-if region:
-    link_params = {"region": region, **link_params}
+link_params = {"commodity": commodity, "market": market, "pricetype": pricetype, "horizon": horizon}
 st.query_params.from_dict({k: str(v) for k, v in link_params.items()})
 
 subset = scoped[scoped["horizon_months"] == horizon].sort_values("forecast_date")
@@ -159,17 +157,20 @@ if current_price is not None:
     delta = f"{forecast_at_horizon['forecast_price_kes'] - current_price:+.2f} KES"
 
 metric_cols[0].metric(
-    f"Forecast at {horizon} months",
+    t(f"Forecast in {horizon} months", f"Utabiri baada ya miezi {horizon}"),
     f"KES {forecast_at_horizon['forecast_price_kes']:.2f}/{unit_label(commodity)}",
     delta=delta,
 )
 with metric_cols[1]:
-    st.markdown("**Confidence**")
+    st.markdown(t("**Confidence**", "**Uhakika**"))
     confidence_badge(confidence)
 metric_cols[2].metric(
-    "Typical error",
+    t("Typical error", "Kosa la kawaida"),
     f"±{test_mape:.1f}%",
-    help="Test MAPE: the average gap between forecast and actual price on months the model never saw.",
+    help=t("The average gap between forecast and actual price on 12 months the model never saw. "
+           "The shaded band on the chart is the range 8 in 10 actual prices fell inside.",
+           "Tofauti ya wastani kati ya utabiri na bei halisi kwa miezi 12 ambayo modeli haikuiona. "
+           "Kivuli kwenye chati ni wigo ambao bei 8 kati ya 10 ziliangukia."),
 )
 
 model_provenance_caption(strategy, test_mape, last_observed_str)

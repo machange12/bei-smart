@@ -88,7 +88,7 @@ st.dataframe(
 st.caption(
     "Prices are the latest monthly wholesale observations, not offers: confirm with a buyer before "
     "you load. Distance is the straight line x 1.3. Markets marked ~ are placed at the centre of "
-    "their county, so two markets in one county show 0 km and long hauls can be off by tens of km. "
+    "their county, so their distances can be off by tens of km. "
     "Transport is your estimate from the slider; it excludes cess, loading and losses on the road."
 )
 

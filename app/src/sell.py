@@ -24,16 +24,20 @@ def road_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 
 def market_coords(history: pd.DataFrame) -> pd.DataFrame:
-    """market -> lat, lon. Surveyed coordinates where the source has them, else the
-    centre of the market's county.
-
-    ponytail: county centres put two markets in one county 0 km apart and can be
-    50+ km off in big counties; geocode the market towns if this page gets used.
+    """market -> lat, lon. In order: surveyed coordinates from the price source, the
+    geocoded town (scripts/geocode_markets.py -> market_coords.json), the centre of
+    the market's county. `approx` marks the county-centre ones.
     """
     centres = json.loads((DATA_DIR / "county_centroids.json").read_text())
+    try:
+        geo = json.loads((DATA_DIR / "market_coords.json").read_text())
+    except OSError:
+        geo = {}
     m = history.groupby("market").agg(lat=("latitude", "first"), lon=("longitude", "first"),
                                       admin1=("admin1", "first")).reset_index()
     key = m["admin1"].astype(str).str.lower().str.replace("-", " ").str.replace("'", "").str.strip()
+    for col, i in (("lat", 0), ("lon", 1)):
+        m[col] = m[col].fillna(m["market"].map(lambda k: geo[k][i] if k in geo and geo[k][2] == "geocoded" else None))
     m["approx"] = m["lat"].isna()
     m["lat"] = m["lat"].fillna(key.map(lambda k: centres.get(k, [None, None])[0]))
     m["lon"] = m["lon"].fillna(key.map(lambda k: centres.get(k, [None, None])[1]))

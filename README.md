@@ -26,8 +26,7 @@ _Updated automatically by the monthly refresh on 2026-11-15._
 |---|---|
 | **Home** | What matters this month: best place to sell, biggest price alerts, cheapest maize |
 | **Forecast** | What will this commodity cost in this market in 3, 6 or 12 months? (shareable links, CSV download) |
-| **Alerts** | Which prices are unusually high (spike) or low (crash) right now? |
-| **Map** | Where are the alerts? |
+| **Alerts & map** | Which prices are unusually high (spike) or low (crash) right now, and where? Sign up for SMS alerts |
 | **Where to sell** | Which market pays most for my produce after transport? (adjustable cost per km) |
 | **Classify** | Is a commodity likely cheap or expensive in a region? (a shortlist, not a verdict) |
 | **Coming soon** | Which series are still reporting and will pass the data rules within a year, and when |
@@ -58,6 +57,8 @@ app/                     Streamlit dashboard (entry point: app/streamlit_app.py)
   src/ui.py              shared look, charts, floating chat
   src/rag/               chatbot: routing, data lookups, retrieval, answer templates
   src/units.py           kg vs per-head labels
+  src/sell.py            where-to-sell maths and market coordinates
+  src/subscribe.py       SMS sign-up (Supabase functions; the app cannot read the subscriber list)
   data/                  what the app serves (rewritten by the monthly refresh)
   data/kb/               31 short explainers the chatbot retrieves from
   models/                price-level classifier (XGBoost)
@@ -74,6 +75,7 @@ scripts/                 the monthly pipeline, in run order:
   rebuild_forecasts.py     screen, model, score, write forecasts
   build_weekly.py          latest-week KAMIS prices for the Forecast page (run by the local KAMIS pull)
   send_alerts.py           SMS price alerts via Africa's Talking (dry run unless --send; needs secrets)
+  geocode_markets.py       OpenStreetMap coordinates for markets the sources give none for
   update_readme_stats.py   refresh the numbers in this README
   diff_mape.py             compare two runs' accuracy
   experiments/             one-off studies behind design decisions (exp1-exp9 + rainfall work)

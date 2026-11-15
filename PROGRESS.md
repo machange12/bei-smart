@@ -169,3 +169,14 @@ venv/Scripts/python.exe -m streamlit run app/streamlit_app.py
   - CI installs lightgbm; first CI run downloads Chronos-2 (~480 MB) — watch that run's time and memory.
   - Not done: NDVI as a Chronos-2 covariate (helped in exp8; untested together with cross-learning).
   - Re-run after pulling the 2026-11-05 CI refresh (what is deployed): 283 served, median test MAPE 8.4%% (CI run on Bolt: 270, 9.8%%); on the 268 shared series 9.83%% -> 8.35%%, 160 improved, 53 worse by more than 1 point; chronos 169, ensemble 114.
+
+## 2026-11-15 (later) — front end + SMS sign-up
+- **Navigation**: Home, Forecast, Alerts & map, Where to sell; Classify and Coming soon under "More". `3_Map.py` deleted, the map is a tab on Alerts.
+- **Forecast**: selectors moved from the sidebar into the page (commodity -> market -> price type -> months ahead); Region filter dropped (region shown beside the market). Old shared links with `region=` still work.
+- **Alerts**: top 10 + "show more", each card links to its forecast when one is served, plain column labels, volatility table collapsed.
+- **Map coordinates**: `scripts/geocode_markets.py` (OpenStreetMap Nominatim) -> `app/data/market_coords.json`: 38 of 42 active markets without source coordinates geocoded, 4 at county centres (Chebunyo, Gakoromone, Mghange, Ngurubani — hand-edit the JSON to fix). Used by the map and Where to sell.
+- **Kiswahili switch** in the sidebar (`ui.t(en, sw)`): headings, selectors, cards, alerts and sign-up are translated; Classify, Coming soon, Where to sell and long captions are still English only.
+- **Home**: cards link to their pages. Fixed: sell and buy cards had vanished because no served series had `months_stale == 0`; they now use the freshest series.
+- **SMS sign-up**: Supabase project `bei-smart` (ref `prphmchdrrqthqpzbnue`, eu-central-1). Table `public.subscribers` (RLS on, no policies); the app's publishable key can only call `subscribe_sms` / `unsubscribe_sms`. Form is on the Alerts page. `send_alerts.py` reads the table when `SUPABASE_URL` + `SUPABASE_SECRET_KEY` are set (GitHub secrets), capped by `--max 500`.
+  - Known gap: numbers are not verified by a code, so someone can sign up another person's number. Add an OTP step before promoting the form widely.
+  - No texts go out until `AT_USERNAME`, `AT_API_KEY`, `SUPABASE_URL`, `SUPABASE_SECRET_KEY` are GitHub secrets. STOP-by-reply is not handled; unsubscribe is on the Alerts page.

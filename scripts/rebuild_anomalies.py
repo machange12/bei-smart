@@ -12,7 +12,7 @@ Rule per (commodity, market, pricetype):
   - skip flat / zero-variance series
   - status: SPIKE if latest > upper, CRASH if < lower, else NORMAL
 
-Column contract matches app/pages/3_Map.py's expectations exactly.
+Column contract matches what app/pages/2_Alerts.py (list and map) expects.
 """
 from __future__ import annotations
 import pathlib

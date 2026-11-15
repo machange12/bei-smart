@@ -76,6 +76,8 @@ jobs:
         continue-on-error: true
         env:
           ALERT_SUBSCRIBERS: ${{ secrets.ALERT_SUBSCRIBERS }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
           AT_USERNAME: ${{ secrets.AT_USERNAME }}
           AT_API_KEY: ${{ secrets.AT_API_KEY }}
         run: python scripts/send_alerts.py --send
