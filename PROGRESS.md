@@ -168,3 +168,4 @@ venv/Scripts/python.exe -m streamlit run app/streamlit_app.py
   - Bands: raw coverage 89% (chronos) / 93% (ensemble) on the test window, scaled to 80%.
   - CI installs lightgbm; first CI run downloads Chronos-2 (~480 MB) — watch that run's time and memory.
   - Not done: NDVI as a Chronos-2 covariate (helped in exp8; untested together with cross-learning).
+  - Re-run after pulling the 2026-11-05 CI refresh (what is deployed): 283 served, median test MAPE 8.4%% (CI run on Bolt: 270, 9.8%%); on the 268 shared series 9.83%% -> 8.35%%, 160 improved, 53 worse by more than 1 point; chronos 169, ensemble 114.

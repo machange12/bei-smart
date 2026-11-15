@@ -21,6 +21,9 @@ Beans (yellow-green),Kangeta,Retail,2026-09-14,130.0,1
 Beans (yellow-green),Kangeta,Wholesale,2026-08-31,110.0,1
 Beans (yellow-green),Kangeta,Wholesale,2026-09-07,110.0,1
 Beans (yellow-green),Kangeta,Wholesale,2026-09-14,120.0,1
+Beans (yellow-green),Kerugoya,Wholesale,2026-08-31,142.5,2
+Beans (yellow-green),Kerugoya,Wholesale,2026-09-07,135.0,2
+Beans (yellow-green),Kerugoya,Wholesale,2026-09-14,140.0,2
 Beans (yellow-green),Kibuye,Retail,2026-08-31,250.0,1
 Beans (yellow-green),Kibuye,Retail,2026-09-07,250.0,1
 Beans (yellow-green),Makutano Kirinyaga,Retail,2026-09-14,200.0,1
@@ -104,7 +107,6 @@ Green maize,Kinango,Retail,2026-09-14,70.0,1
 Green maize,Kinango,Wholesale,2026-08-31,50.0,1
 Green maize,Kinango,Wholesale,2026-09-14,45.0,1
 Green maize,Kutus,Retail,2026-08-31,60.0,1
-Green maize,Kutus,Wholesale,2026-08-31,50.0,1
 Green maize,Ngurubani,Retail,2026-08-31,65.0,2
 Green maize,Ngurubani,Retail,2026-09-07,70.0,2
 Green maize,Ngurubani,Retail,2026-09-14,65.0,2
@@ -168,6 +170,12 @@ Maize,Muhoroni,Wholesale,2026-09-07,40.0,1
 Maize,Mulot,Retail,2026-09-14,60.0,1
 Maize,Mumias,Retail,2026-08-31,50.0,1
 Maize,Mumias,Retail,2026-09-14,50.0,1
+Maize,Ngurubani,Retail,2026-08-31,50.0,2
+Maize,Ngurubani,Retail,2026-09-07,50.0,2
+Maize,Ngurubani,Retail,2026-09-14,50.0,2
+Maize,Ngurubani,Wholesale,2026-08-31,43.34,2
+Maize,Ngurubani,Wholesale,2026-09-07,45.56,2
+Maize,Ngurubani,Wholesale,2026-09-14,46.67,2
 Maize,Nkubu,Retail,2026-08-31,50.0,1
 Maize,Nkubu,Retail,2026-09-07,50.0,1
 Maize,Nkubu,Retail,2026-09-14,50.0,1

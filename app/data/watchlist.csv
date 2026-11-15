@@ -1,15 +1,15 @@
 commodity,market,pricetype,n_records,months_stale,cv,source,last_obs,months_to_go,region,eligible_from
+Beans (mixed),Kwale,Retail,78,2,32.22,FEWS,2026-08-01,1,Coast,Nov 2026
+Maize,Kitale,Retail,78,2,33.25,FEWS,2026-08-01,1,Rift Valley,Nov 2026
 Rice,Katito,Retail,48,2,26.0,KAMIS,2026-08-01,1,Nyanza,Nov 2026
 Rice,Katito,Wholesale,48,2,21.52,KAMIS,2026-08-01,1,Nyanza,Nov 2026
 Rice,Maua,Retail,39,1,13.8,KAMIS,2026-09-01,1,Eastern,Nov 2026
 Rice,Maua,Wholesale,39,1,15.64,KAMIS,2026-09-01,1,Eastern,Nov 2026
-Beans (mixed),Kwale,Retail,77,3,32.44,FEWS,2026-07-01,2,Coast,Dec 2026
-Maize,Kitale,Retail,77,3,33.4,FEWS,2026-07-01,2,Rift Valley,Dec 2026
 Green maize,Wundanyi,Retail,46,3,25.33,KAMIS,2026-07-01,3,Coast,Jan 2027
 Peas (dry),Kerugoya,Retail,37,1,10.52,KAMIS,2026-09-01,3,Central,Jan 2027
 Peas (dry),Kerugoya,Wholesale,37,1,8.71,KAMIS,2026-09-01,3,Central,Jan 2027
-Rice,Kangemi,Wholesale,49,1,11.24,WFP,2026-09-01,3,Nairobi,Jan 2027
-Beans (mixed),Embu,Retail,78,1,31.15,FEWS,2026-09-01,4,Eastern,Feb 2027
+Rice,Kangemi,Wholesale,49,1,11.17,WFP,2026-09-01,3,Nairobi,Jan 2027
+Beans (mixed),Embu,Retail,78,1,31.45,FEWS,2026-09-01,4,Eastern,Feb 2027
 Beans red haricot (wairimu),Kibuye,Retail,48,1,21.7,KAMIS,2026-09-01,4,Nyanza,Feb 2027
 Beans rosecoco,Kerugoya,Retail,45,1,17.13,KAMIS,2026-09-01,4,Central,Feb 2027
 Beans rosecoco,Kerugoya,Wholesale,45,1,20.54,KAMIS,2026-09-01,4,Central,Feb 2027
@@ -22,11 +22,11 @@ Green maize,Makutano Kirinyaga,Retail,47,1,28.36,KAMIS,2026-09-01,5,Central,Mar 
 Green maize,Makutano Kirinyaga,Wholesale,47,1,28.31,KAMIS,2026-09-01,5,Central,Mar 2027
 Ground nuts,Katito,Retail,47,2,15.09,KAMIS,2026-08-01,5,Nyanza,Mar 2027
 Ground nuts,Katito,Wholesale,47,2,20.23,KAMIS,2026-08-01,5,Nyanza,Mar 2027
+Maize,Mkunguni,Retail,68,2,31.36,FEWS,2026-08-01,5,Coast,Mar 2027
 Maize,Mulot,Wholesale,47,1,27.12,KAMIS,2026-09-01,5,Rift Valley,Mar 2027
 Peas (dry),Nkubu,Retail,44,1,17.29,KAMIS,2026-09-01,5,Eastern,Mar 2027
 Peas (dry),Nkubu,Wholesale,44,1,14.91,KAMIS,2026-09-01,5,Eastern,Mar 2027
-Maize,Mkunguni,Retail,67,3,31.61,FEWS,2026-07-01,6,Coast,Apr 2027
-Maize,Wote,Retail,72,3,31.11,FEWS,2026-07-01,7,Eastern,May 2027
+Maize,Wote,Retail,73,2,30.89,FEWS,2026-08-01,6,Eastern,Apr 2027
 Beans (yellow-green),Kerugoya,Retail,47,1,25.98,KAMIS,2026-09-01,8,Central,Jun 2027
 Beans red haricot (wairimu),Kerugoya,Retail,47,1,23.64,KAMIS,2026-09-01,8,Central,Jun 2027
 Beans red haricot (wairimu),Kerugoya,Wholesale,47,1,27.66,KAMIS,2026-09-01,8,Central,Jun 2027
@@ -34,17 +34,18 @@ Beans red haricot (wairimu),Makutano Kirinyaga,Retail,47,1,17.73,KAMIS,2026-09-0
 Beans rosecoco,Muhoroni,Retail,47,1,24.45,KAMIS,2026-09-01,8,Nyanza,Jun 2027
 Ground nuts,Kangemi,Retail,47,1,15.73,KAMIS,2026-09-01,8,Nairobi,Jun 2027
 Maize,Makutano Kirinyaga,Retail,47,1,36.9,KAMIS,2026-09-01,8,Central,Jun 2027
+Beans (mixed),Makutano,Retail,49,2,19.06,FEWS,2026-08-01,9,Rift Valley,Jul 2027
 Beans (mixed),Makutano Kirinyaga,Retail,28,1,18.96,KAMIS,2026-09-01,9,Central,Jul 2027
 Beans (mixed),Makutano Kirinyaga,Wholesale,28,1,18.75,KAMIS,2026-09-01,9,Central,Jul 2027
+Beans (mixed),Nakuru,Retail,76,2,37.29,FEWS,2026-08-01,9,Rift Valley,Jul 2027
 Beans (yellow-green),Kangemi,Retail,46,2,18.44,KAMIS,2026-08-01,9,Nairobi,Jul 2027
-Beans (mixed),Makutano,Retail,48,3,19.04,FEWS,2026-07-01,10,Rift Valley,Aug 2027
+Maize,Kibauni Kilifi,Retail,27,2,17.26,FEWS,2026-08-01,9,Coast,Jul 2027
 Finger millet,Kutus,Retail,45,3,22.76,KAMIS,2026-07-01,10,Central,Aug 2027
 Finger millet,Kutus,Wholesale,45,3,21.94,KAMIS,2026-07-01,10,Central,Aug 2027
-Maize,Kibauni Kilifi,Retail,26,3,17.61,FEWS,2026-07-01,10,Coast,Aug 2027
+Maize,Daraja Mbili,Retail,75,2,29.33,FEWS,2026-08-01,10,Nyanza,Aug 2027
 Wheat flour,Kibuye,Retail,45,1,14.66,KAMIS,2026-09-01,10,Nyanza,Aug 2027
 Beans (mixed),Ngurubani,Retail,35,1,13.96,KAMIS,2026-09-01,11,Central,Sep 2027
 Beans (mixed),Ngurubani,Wholesale,35,1,16.43,KAMIS,2026-09-01,11,Central,Sep 2027
-Maize,Daraja Mbili,Retail,74,3,29.43,FEWS,2026-07-01,11,Nyanza,Sep 2027
 Beans red haricot (wairimu),Kangemi,Retail,46,1,20.96,KAMIS,2026-09-01,12,Nairobi,Oct 2027
 Beans red haricot (wairimu),Kangemi,Wholesale,46,1,21.77,KAMIS,2026-09-01,12,Nairobi,Oct 2027
 Beans red haricot (wairimu),Makutano Kirinyaga,Wholesale,46,1,15.9,KAMIS,2026-09-01,12,Central,Oct 2027
