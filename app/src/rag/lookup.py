@@ -489,6 +489,18 @@ def get_anomaly(entities: dict) -> dict:
     }
 
 
+def list_alerts(entities: dict, n: int = 3) -> dict:
+    """Current spikes and crashes, biggest first, narrowed to the commodity and/or
+    market when the question names one. For "which prices are spiking?"."""
+    active = ANOMALIES[ANOMALIES["status"] != "NORMAL"]
+    for col in ("commodity", "market"):
+        if entities.get(col):
+            active = active[active[col] == entities[col]]
+    active = active.sort_values("deviation_pct", ascending=False)
+    return {"status": "found" if len(active) else "none", "total": int(len(active)),
+            "rows": active.head(n).to_dict("records")}
+
+
 def get_volatility(entities: dict) -> dict:
     commodity = entities.get("commodity")
     market = entities.get("market")

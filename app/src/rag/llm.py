@@ -10,7 +10,9 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-DEFAULT_MODEL = "llama-3.3-70b-versatile"
+# Groq retires models (llama-3.3-70b-versatile now returns 404, which silently dropped every
+# answer to the template fallback). GROQ_MODEL overrides without a code change.
+DEFAULT_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
 DEFAULT_TEMPERATURE = 0.2
 
 # Repo root .env, e.g. GROQ_API_KEY=... -- loaded once at import time so

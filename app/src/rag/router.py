@@ -61,9 +61,9 @@ _INTENT_KEYWORDS = {
         "bei ya juu",
     ],
     "alert": [
-        "spike", "anomaly", "anomalies", "alert", "unusual", "abnormal",
+        "spik", "crash", "soar", "surg", "anomaly", "anomalies", "alert", "unusual", "abnormal",
         "volatility", "volatile", "kawaida", "ghafla", "imepanda", "imeshuka",
-        "mabadiliko",
+        "zimepanda", "zimeshuka", "tahadhari", "mabadiliko",
     ],
     "forecast": [
         "forecast", "predict", "price of", "price for", "cost", "will be",

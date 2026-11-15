@@ -62,7 +62,11 @@ QUESTIONS = [
     ("Soko la maharagwe Nairobi lina mabadiliko mengi ya bei?",
      "alert / SW / maharagwe->Beans, mabadiliko->alert intent, volatility"),
     ("Are there any price alerts for sorghum today?",
-     "alert / EN / Sorghum anomaly check, no market given"),
+     "alert / EN / no market given -> lists current sorghum alerts (overview), not a follow-up"),
+    ("Which prices are spiking right now?",
+     "alert / EN / 'spiking' -> alert intent; nothing named -> top current alerts"),
+    ("Bei gani zimepanda ghafla sasa?",
+     "alert / SW / nothing named -> top current alerts in Kiswahili"),
     # --- explain intent (exactly 3, per spec) ------------------------------
     ("Why do prices vary so much by region?",
      "explain / EN / should retrieve KB doc 15_regional_price_differences.md"),

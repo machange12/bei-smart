@@ -123,10 +123,38 @@ def _answer_compare(question: str, entities: dict, language: str) -> dict:
     }
 
 
+def _answer_alert_overview(entities: dict, language: str) -> dict:
+    """No single series named ("which prices are spiking?", "any alerts for sorghum?"):
+    list the biggest current alerts instead of asking which commodity and market.
+    Built from the table directly, not the LLM, so every figure is exact."""
+    result = lookup.list_alerts(entities)
+    sw = language == "sw"
+    scope = " ".join(str(entities[k]) for k in ("commodity", "market") if entities.get(k))
+    if result["status"] == "none":
+        text = (f"Hakuna bei zisizo za kawaida{' za ' + scope if scope else ''} kwa sasa."
+                if sw else f"No unusual prices{' for ' + scope if scope else ''} right now.")
+    else:
+        parts = []
+        for r in result["rows"]:
+            up = r["status"] == "SPIKE"
+            where = ("juu ya" if up else "chini ya") if sw else ("above" if up else "below")
+            pt = {"Wholesale": "jumla", "Retail": "rejareja"}.get(r["pricetype"], r["pricetype"]) if sw else r["pricetype"].lower()
+            parts.append(f"{r['commodity']} {'' if sw else 'in '}{r['market']} ({pt}) KES {r['latest_price']:.0f}/"
+                         f"{unit_label(r['commodity'], language)}, {r['deviation_pct']:.0f}% {where} "
+                         f"{'kawaida' if sw else 'normal'}")
+        total = result["total"]
+        if sw:
+            text = (f"Bei {total}{' za ' + scope if scope else ''} si za kawaida sasa. Kubwa zaidi: "
+                    + "; ".join(parts) + ". Angalia ukurasa wa Tahadhari kwa orodha kamili.")
+        else:
+            text = (f"{total} {scope + ' ' if scope else ''}price{'s are' if total != 1 else ' is'} unusual right now. "
+                    f"Biggest: " + "; ".join(parts) + ". The Alerts page has the full list.")
+    return {"answer": text, "status": result["status"], "sources": ["price_anomalies.csv"], "confidence": None}
+
+
 def _answer_alert(question: str, entities: dict, language: str) -> dict:
-    missing = _missing_followup(entities, language)
-    if missing:
-        return {**missing, "sources": [], "confidence": None}
+    if not entities.get("commodity") or not entities.get("market"):
+        return _answer_alert_overview(entities, language)
 
     result = lookup.get_anomaly(entities)
     status = result["status"]
