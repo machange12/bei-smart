@@ -1,6 +1,6 @@
 # AgriPulse (Bei Smart): Kenya Food Price Intelligence
 
-Forecasts of Kenyan food and livestock prices market by market, alerts when a price jumps or crashes, and a chatbot that answers in English or Kiswahili. Built as a Moringa School data science capstone.
+Forecasts of Kenyan food and livestock prices market by market, alerts when a price jumps or crashes, where to sell after transport costs, and a chatbot that answers in English or Kiswahili. Built as a Moringa School data science capstone.
 
 **Live app:** https://bei-smart.streamlit.app/
 
@@ -24,13 +24,15 @@ _Updated automatically by the monthly refresh on 2026-11-15._
 
 | Page | Question it answers |
 |---|---|
-| **Home** | What matters this month: best place to sell, biggest price alerts, cheapest maize |
-| **Forecast** | What will this commodity cost in this market in 3, 6 or 12 months? (shareable links, CSV download) |
-| **Alerts & map** | Which prices are unusually high (spike) or low (crash) right now, and where? Sign up for SMS alerts |
+| **Home** | What matters this month: best place to sell, biggest price alerts, cheapest maize, each linking to its page |
+| **Forecast** | What will this commodity cost in this market in 3, 6 or 12 months? (80% range, shareable links, CSV download, latest weekly KAMIS price when available) |
+| **Alerts & map** | Which prices are unusually high (spike) or low (crash) right now, and where? List and map tabs, SMS sign-up |
 | **Where to sell** | Which market pays most for my produce after transport? (adjustable cost per km) |
-| **Classify** | Is a commodity likely cheap or expensive in a region? (a shortlist, not a verdict) |
+| **Cheap or expensive?** | Is a commodity likely cheap or expensive in a region? (a shortlist, not a verdict) |
 | **Coming soon** | Which series are still reporting and will pass the data rules within a year, and when |
 | **Ask AgriPulse** 💬 | Floating, draggable chatbot on every page, English and Kiswahili, answers cite the data |
+
+A switch in the sidebar shows headings, selectors, Home cards and alerts in Kiswahili. The Where to sell, Cheap or expensive? and Coming soon pages are English only for now.
 
 ## How it works
 
@@ -38,8 +40,8 @@ _Updated automatically by the monthly refresh on 2026-11-15._
  KAMIS scraper ─┐
  FEWS NET API ──┤
  WFP (HDX) ─────┼─▶ build_chained_all ─▶ enrich_chain ─▶ rebuild_anomalies ─▶ rebuild_forecasts ─▶ app/data/ ─▶ Streamlit
- FAO FPMA API ──┤      (one monthly                         (IQR band,           (Prophet, SARIMA,
- KNBS, WFP supp ┘       price chain)                         last 36 months)      Chronos per series)
+ FAO FPMA API ──┤      (one monthly                         (seasonal IQR band,  (Prophet, SARIMA,
+ KNBS, WFP supp ┘       price chain)                         last 36 months)      Chronos-2, LightGBM)
 ```
 
 - **Runs itself:** `.github/workflows/refresh-data.yml` runs the whole chain on the 5th of each month, updates the numbers above, and commits. Streamlit Cloud redeploys on that commit.
@@ -48,6 +50,7 @@ _Updated automatically by the monthly refresh on 2026-11-15._
 - **Alerts:** a price outside its own 3-year normal range, after removing the series' usual seasonal pattern (the idea behind WFP's ALPS).
 - **Bands:** every forecast band is an 80% range, rescaled each run so about 8 in 10 held-out prices fall inside.
 - **Units:** prices are KES per kg, except goats, which are KES per head.
+- **Where to sell:** latest wholesale price in each market minus a transport estimate the visitor sets (default KES 1.5 per kg per 100 km, an assumption). Distance is the straight line x 1.3; markets without surveyed coordinates are placed by OpenStreetMap lookup or, failing that, at their county centre.
 
 ## Repository map
 
@@ -100,7 +103,7 @@ python -m venv venv && venv/Scripts/pip install -r app/requirements.txt
 venv/Scripts/python.exe -m streamlit run app/streamlit_app.py   # chat needs GROQ_API_KEY in .env (see .env.example)
 ```
 
-Full pipeline (slow: the forecast rebuild takes hours; it resumes from a checkpoint if interrupted):
+Full pipeline (the forecast rebuild took about 45 minutes on a laptop; it resumes from a checkpoint if interrupted, and downloads the Chronos-2 model, about 480 MB, on first run):
 
 ```bash
 pip install -r requirements.txt
@@ -109,7 +112,7 @@ python scripts/build_chained_all.py && python scripts/enrich_chain.py
 python scripts/rebuild_anomalies.py && python scripts/rebuild_forecasts.py
 ```
 
-Most scripts have a `--demo` self-check.
+Most scripts have a `--demo` self-check. The chatbot's regression questions run with `python -m tests.test_rag` from `app/`.
 
 **KAMIS is pulled from Kenya, not GitHub.** The KAMIS site refuses GitHub's runners, so a Windows scheduled task (`bei-smart KAMIS pull`, the 4th of each month at 10:00) scrapes the last 3 months and pushes them before the cloud run on the 5th. To run it by hand:
 
@@ -117,13 +120,22 @@ Most scripts have a `--demo` self-check.
 powershell -ExecutionPolicy Bypass -File scripts\kamis_local_push.ps1
 ```
 
+## SMS alerts
+
+People sign up on the Alerts page with a Kenyan mobile number, the commodities and markets they follow, and a language. Each monthly run texts every subscriber the three biggest alerts among what they follow, or nothing if none is flagged.
+
+- **Privacy:** numbers are stored in Supabase. The app's public key can only add or deactivate a number; it cannot read the list.
+- **Turning it on:** no texts are sent until these GitHub secrets exist: `AT_USERNAME` and `AT_API_KEY` (Africa's Talking), `SUPABASE_URL` and `SUPABASE_SECRET_KEY`. Without them the step does nothing.
+- **Preview:** `python scripts/send_alerts.py` prints the messages and sends nothing; `--send` sends.
+- **Limits:** numbers are not verified by a code, replying STOP does nothing (unsubscribe is on the Alerts page), and a run texts at most 500 subscribers.
+
 ## Data sources
 
-KAMIS (Kenya Ministry of Agriculture) · FEWS NET Data Warehouse · WFP Kenya Food Prices via HDX · FAO GIEWS FPMA · KNBS · ERA5 rainfall (World Bank CCKP) · NOAA ONI · World Bank commodity prices. All are public. Sources reviewed and not used, with the reasons, are in `PROGRESS.md`.
+KAMIS (Kenya Ministry of Agriculture) · FEWS NET Data Warehouse · WFP Kenya Food Prices via HDX · FAO GIEWS FPMA · KNBS · ERA5 rainfall (World Bank CCKP) · NOAA ONI · World Bank commodity prices · OpenStreetMap Nominatim and OCHA county boundaries via HDX (market locations). All are public. Sources reviewed and not used, with the reasons, are in `PROGRESS.md`.
 
 ## Tech stack
 
-Python, pandas · statsmodels (SARIMA), Prophet, Amazon Chronos-2, LightGBM · XGBoost (classifier) · ChromaDB + sentence-transformers (retrieval), Groq Llama 3.3 70B (answers) · Streamlit, Plotly, Folium · FastAPI · GitHub Actions
+Python, pandas · statsmodels (SARIMA), Prophet, Amazon Chronos-2, LightGBM · XGBoost (classifier) · ChromaDB + sentence-transformers (retrieval), Groq-hosted `openai/gpt-oss-120b` (answers; set `GROQ_MODEL` to change) · Streamlit, Plotly, Folium · Supabase (SMS subscribers), Africa's Talking (SMS) · FastAPI · GitHub Actions
 
 ## Team
 
