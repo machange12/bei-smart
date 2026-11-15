@@ -104,6 +104,7 @@ def inject_css() -> None:
     st.markdown(
         f"""
         <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         .block-container {{
             max-width: 1150px;
             padding-top: 4rem;  /* clears the 60px top bar so the freshness line isn't hidden */
@@ -112,9 +113,8 @@ def inject_css() -> None:
             gap: 0.5rem;
         }}
         div[data-testid="stMetric"] {{
-            background-color: #F1F5EE;
+            background-color: #FFFFFF;
             border: 1px solid {GREY};
-            border-radius: 10px;
             padding: 0.9rem 1rem;
         }}
         div[data-testid="stMetricLabel"] {{
@@ -161,7 +161,158 @@ def inject_css() -> None:
             border: none;
             padding: 0;
         }}
+        /* ---------- polish: type, motion, buttons, cards, tabs, links ---------- */
+        html, body, .stApp, button, input, textarea, [data-baseweb] {{
+            font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+        }}
+        :root {{
+            --ap-ease: cubic-bezier(.2, .7, .2, 1);
+            --ap-shadow: 0 1px 2px rgba(27, 94, 32, .06), 0 4px 14px rgba(27, 94, 32, .07);
+            --ap-shadow-lift: 0 2px 4px rgba(27, 94, 32, .08), 0 12px 28px rgba(27, 94, 32, .14);
+        }}
+        h1, h2, h3 {{ letter-spacing: -0.015em; font-weight: 700; }}
+
+        /* each page eases in instead of snapping */
+        @keyframes ap-rise {{ from {{ opacity: 0; transform: translateY(8px); }} to {{ opacity: 1; transform: none; }} }}
+        .block-container {{ animation: ap-rise .35s var(--ap-ease) both; }}
+
+        /* buttons: one shape, clear hover / press / keyboard focus */
+        div[data-testid="stButton"] button, div[data-testid="stDownloadButton"] button,
+        div[data-testid="stFormSubmitButton"] button {{
+            border-radius: 10px;
+            font-weight: 600;
+            padding: 0.5rem 1.1rem;
+            transition: transform .15s var(--ap-ease), box-shadow .15s var(--ap-ease),
+                        background-color .15s, border-color .15s, color .15s;
+        }}
+        div[data-testid="stButton"] button:hover, div[data-testid="stDownloadButton"] button:hover,
+        div[data-testid="stFormSubmitButton"] button:hover {{
+            transform: translateY(-1px);
+            box-shadow: var(--ap-shadow-lift);
+            border-color: {GREEN_MID};
+        }}
+        div[data-testid="stButton"] button:active, div[data-testid="stDownloadButton"] button:active,
+        div[data-testid="stFormSubmitButton"] button:active {{
+            transform: translateY(0) scale(.98);
+            box-shadow: none;
+        }}
+        button:focus-visible, a:focus-visible, [role="tab"]:focus-visible {{
+            outline: 3px solid {GREEN_LIGHT};
+            outline-offset: 2px;
+        }}
+        button[kind="primary"], button[kind="primaryFormSubmit"] {{
+            background: linear-gradient(180deg, {GREEN_MID}, {GREEN_DARK});
+            border: 1px solid {GREEN_DARK};
+        }}
+        button[kind="primary"]:hover, button[kind="primaryFormSubmit"]:hover {{ filter: brightness(1.08); }}
+
+        /* cards: metrics, Home cards, alert cards, the sign-up form */
+        div[data-testid="stMetric"], [class*="st-key-card_"], [class*="st-key-alert_"], div[data-testid="stForm"] {{
+            border-radius: 14px !important;
+            box-shadow: var(--ap-shadow);
+            transition: transform .2s var(--ap-ease), box-shadow .2s var(--ap-ease), border-color .2s;
+        }}
+        [class*="st-key-card_"], [class*="st-key-alert_"], div[data-testid="stForm"] {{ background: #FFFFFF; }}
+        div[data-testid="stMetric"]:hover, [class*="st-key-card_"]:hover, [class*="st-key-alert_"]:hover {{
+            transform: translateY(-2px);
+            box-shadow: var(--ap-shadow-lift);
+            border-color: {GREEN_LIGHT} !important;
+        }}
+        div[data-testid="stMetricValue"] {{ font-weight: 700; letter-spacing: -0.02em; }}
+        .st-key-this_month div[data-testid="stMetric"], .st-key-this_month div[data-testid="stMetric"]:hover {{
+            box-shadow: none;
+            transform: none;
+        }}
+
+        /* links that go somewhere: the arrow nudges on hover */
+        a[data-testid="stPageLink-NavLink"] {{
+            border-radius: 8px;
+            padding: 0.25rem 0.5rem;
+            margin-left: -0.5rem;
+            transition: background-color .15s, padding-left .2s var(--ap-ease);
+        }}
+        a[data-testid="stPageLink-NavLink"] p {{ color: {GREEN_DARK}; font-weight: 600; }}
+        a[data-testid="stPageLink-NavLink"]:hover {{ background: #F1F5EE; padding-left: 0.8rem; }}
+
+        /* sidebar navigation */
+        a[data-testid="stSidebarNavLink"] {{
+            border-radius: 10px;
+            transition: background-color .15s, transform .15s var(--ap-ease);
+        }}
+        a[data-testid="stSidebarNavLink"]:hover {{ transform: translateX(3px); }}
+        a[data-testid="stSidebarNavLink"][aria-current="page"] {{ background: #E3EEDD; }}
+        a[data-testid="stSidebarNavLink"][aria-current="page"] span {{ font-weight: 600; color: {GREEN_DARK}; }}
+
+        /* tabs */
+        div[data-testid="stTabs"] [role="tab"] {{
+            padding: 0.6rem 1.1rem;
+            font-weight: 600;
+            border-radius: 10px 10px 0 0;
+            transition: background-color .15s, color .15s;
+        }}
+        div[data-testid="stTabs"] [role="tab"]:hover {{ background: #F1F5EE; }}
+        div[data-testid="stTabs"] [role="tabpanel"] {{ animation: ap-rise .3s var(--ap-ease) both; }}
+
+        /* inputs, expanders, tables, charts */
+        div[data-baseweb="select"] > div, div[data-baseweb="input"], div[data-baseweb="base-input"] {{
+            border-radius: 10px !important;
+            transition: border-color .15s, box-shadow .15s;
+        }}
+        div[data-baseweb="select"] > div:hover {{ border-color: {GREEN_MID} !important; }}
+        div[data-baseweb="select"] > div:focus-within, div[data-baseweb="input"]:focus-within {{
+            box-shadow: 0 0 0 3px {GREEN_LIGHT}66;
+        }}
+        details[data-testid="stExpander"], div[data-testid="stExpander"] details {{
+            border-radius: 12px;
+            overflow: hidden;
+            transition: box-shadow .2s var(--ap-ease);
+        }}
+        div[data-testid="stExpander"] summary {{ font-weight: 600; transition: background-color .15s; }}
+        div[data-testid="stExpander"] summary:hover {{ background: #F1F5EE; color: {GREEN_DARK}; }}
+        div[data-testid="stDataFrame"], div[data-testid="stPlotlyChart"], div[data-testid="stCustomComponentV1"],
+        iframe[title="streamlit_folium.st_folium"] {{
+            border-radius: 12px;
+            overflow: hidden;
+        }}
+        div[data-testid="stPlotlyChart"] {{ box-shadow: var(--ap-shadow); background: #FFFFFF; padding: 0.5rem; }}
+        div[data-testid="stAlert"] {{ border-radius: 12px; animation: ap-rise .25s var(--ap-ease) both; }}
+
+        /* hero */
+        .ap-hero {{
+            height: 220px;
+            background-size: cover;
+            background-position: center 30%;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            box-shadow: var(--ap-shadow-lift);
+            overflow: hidden;
+        }}
+        .ap-hero .ap-title {{
+            color: #fff; font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, .35);
+            animation: ap-rise .6s var(--ap-ease) both;
+        }}
+        .ap-hero .ap-tag {{
+            color: #fff; font-size: 1.1rem; opacity: .95; margin-top: .25rem;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, .35);
+            animation: ap-rise .6s .12s var(--ap-ease) both;
+        }}
+
+        /* chat button */
+        .st-key-chat_fab button {{ transition: transform .2s var(--ap-ease), box-shadow .2s var(--ap-ease); }}
+        .st-key-chat_fab button:hover {{ transform: translateY(-2px) scale(1.04); box-shadow: 0 8px 22px rgba(0, 0, 0, .3); }}
+
+        @media (prefers-reduced-motion: reduce) {{
+            *, *::before, *::after {{ animation: none !important; transition: none !important; }}
+        }}
         @media (max-width: 640px) {{
+            .ap-hero {{ height: 170px; }}
+            .ap-hero .ap-title {{ font-size: 1.8rem; }}
             .block-container {{
                 padding: 4rem 1rem 5rem;  /* bottom room so the chat button never hides the last row */
             }}
@@ -330,7 +481,7 @@ def render_hero() -> None:
     if img_path.exists():
         encoded = base64.b64encode(img_path.read_bytes()).decode()
         layers = (
-            f"linear-gradient(rgba(27,94,32,0.55), rgba(27,94,32,0.55)), "
+            f"linear-gradient(160deg, rgba(27,94,32,0.78), rgba(27,94,32,0.35)), "
             f"url('data:image/jpeg;base64,{encoded}')"
         )
     else:
@@ -338,21 +489,9 @@ def render_hero() -> None:
 
     st.markdown(
         f"""
-        <div style="
-            height:200px;
-            background-image:{layers};
-            background-size:cover;
-            background-position:center top;
-            border-radius:12px;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            margin-bottom:0.5rem;
-        ">
-            <div style="color:white;font-size:2.1rem;font-weight:700;">🌾 {APP_NAME}</div>
-            <div style="color:white;font-size:1.05rem;opacity:0.95;">{APP_TAGLINE}</div>
+        <div class="ap-hero" style="background-image:{layers};">
+            <div class="ap-title">🌾 {APP_NAME}</div>
+            <div class="ap-tag">{t(APP_TAGLINE, "Utabiri wa bei za chakula na taarifa za masoko Kenya.")}</div>
         </div>
         """,
         unsafe_allow_html=True,

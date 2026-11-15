@@ -83,8 +83,9 @@ def alerts_card():
     detail = "; ".join(f"{series_name(r)} +{r['deviation_pct']:.0f}% above normal" for _, r in top.iterrows())
     crashes = int((anomalies["status"] == "CRASH").sum())
     return ("pages/2_Alerts.py", t("See all alerts →", "Angalia tahadhari zote →"),
-            t("🚨 Price alerts", "🚨 Tahadhari za bei"), f"{len(spikes)} spikes · {crashes} crashes",
-            f"Biggest: {detail}" if detail else "")
+            t("🚨 Price alerts", "🚨 Tahadhari za bei"), f"{len(spikes)} ▲ · {crashes} ▼",  # short, so it never truncates in a narrow card
+            (f"{len(spikes)} spikes, {crashes} crashes. Biggest: {detail}" if detail
+             else f"{len(spikes)} spikes, {crashes} crashes"))
 
 
 def buy_card():
@@ -110,8 +111,8 @@ cards = [c for c in cards if c]
 if cards:
     st.subheader(t("This month", "Mwezi huu"))
     with st.container(key="this_month"):
-        for col, (page, link, label, value, note) in zip(st.columns(len(cards)), cards):
-            with col.container(border=True):
+        for i, (col, (page, link, label, value, note)) in enumerate(zip(st.columns(len(cards)), cards)):
+            with col.container(border=True, key=f"card_{i}"):
                 st.metric(label, value)
                 st.caption(note)
                 st.page_link(page, label=link)

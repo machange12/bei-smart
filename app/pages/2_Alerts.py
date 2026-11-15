@@ -80,7 +80,7 @@ st.caption(t(f"{len(filtered):,} prices monitored · {len(active):,} unusual rig
 
 
 def alert_card(row) -> None:
-    with st.container(border=True):
+    with st.container(border=True, key=f"alert_{row.name}"):
         head_col, badge_col = st.columns([4, 1])
         head_col.markdown(f"**{row['commodity']}** · {row['market']} ({row['pricetype']})")
         with badge_col:
