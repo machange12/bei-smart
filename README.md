@@ -4,6 +4,10 @@ Forecasts of Kenyan food and livestock prices market by market, alerts when a pr
 
 **Live app:** https://bei-smart.streamlit.app/
 
+<img src="app/assets/qr_live_app.png" alt="QR code that opens the live app at bei-smart.streamlit.app" width="160">
+
+_Scan to open the app on your phone._
+
 ## Live numbers
 
 <!-- stats:start -->
