@@ -128,7 +128,9 @@ def inject_css() -> None:
         }}
         .st-key-chat_fab {{
             position: fixed;
-            bottom: 1.5rem;
+            /* Streamlit Cloud pins its own "Manage app" button and hosting badge to the
+               bottom-right corner; sit above them instead of underneath. */
+            bottom: 5rem;
             right: 1.5rem;
             z-index: 1000;
             width: auto;
@@ -314,10 +316,10 @@ def inject_css() -> None:
             .ap-hero {{ height: 170px; }}
             .ap-hero .ap-title {{ font-size: 1.8rem; }}
             .block-container {{
-                padding: 4rem 1rem 5rem;  /* bottom room so the chat button never hides the last row */
+                padding: 4rem 1rem 8rem;  /* bottom room so the chat button never hides the last row */
             }}
             .st-key-chat_fab {{
-                bottom: 1rem;
+                bottom: 4.5rem;
                 right: 1rem;
             }}
             .st-key-chat_fab button strong {{
