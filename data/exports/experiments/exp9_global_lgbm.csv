@@ -1,0 +1,271 @@
+commodity,market,pricetype,n,bolt,lgbm,blend
+Beans (rosecoco),Mombasa,Wholesale,202,35.444,33.74,34.592
+Sorghum,Eldoret,Wholesale,215,20.778,11.289,15.482
+Beans (yellow-green),Kisasi,Retail,40,9.561,18.717,13.379
+Beans (yellow-green),Kisasi,Wholesale,39,9.234,18.172,6.598
+Maize,Kisasi,Retail,41,12.194,12.432,11.67
+Maize,Kisasi,Wholesale,41,13.245,14.52,13.506
+Pearl rush millet,Kisasi,Retail,38,19.866,9.561,12.419
+Pearl rush millet,Kisasi,Wholesale,38,22.241,8.245,14.464
+Sorghum,Kisasi,Retail,41,13.979,13.929,13.072
+Sorghum,Kisasi,Wholesale,41,12.651,12.023,11.908
+Beans (mixed),Kitale Municipality,Retail,37,23.543,22.058,22.8
+Beans red haricot (wairimu),Kitale Municipality,Retail,38,12.236,15.443,13.295
+Beans red haricot (wairimu),Kitale Municipality,Wholesale,38,16.047,24.651,20.349
+Finger millet,Kitale Municipality,Retail,43,14.304,11.138,12.721
+Finger millet,Kitale Municipality,Wholesale,43,13.891,12.202,12.975
+Ground nuts,Kitale Municipality,Retail,48,5.497,7.498,3.308
+Ground nuts,Kitale Municipality,Wholesale,48,6.553,10.327,5.296
+Rice,Kitale Municipality,Retail,38,10.439,10.687,9.865
+Rice,Kitale Municipality,Wholesale,38,18.349,13.433,11.925
+Sorghum,Kitale Municipality,Retail,38,5.773,7.264,6.008
+Sorghum,Kitale Municipality,Wholesale,38,10.694,13.362,12.028
+Pearl rush millet,Kutus,Wholesale,50,24.644,23.086,23.594
+Potatoes (Irish),Kitui,Wholesale,193,17.697,44.53,28.911
+Beans (mixed),Nanyuki,Retail,78,8.106,10.264,9.179
+Beans (mixed),Maua,Retail,63,10.1,36.985,17.368
+Maize,Eldoret,Wholesale,236,18.593,16.723,17.658
+Maize,Kangemi,Wholesale,55,14.492,9.26,11.0
+Maize,Lodwar,Retail,221,13.467,11.867,10.73
+Maize,Majengo,Retail,87,21.628,12.491,17.06
+Beans (mixed),Majengo,Retail,94,10.681,3.834,7.104
+Beans (mixed),Sotik,Retail,86,7.065,5.189,5.85
+Beans (mixed),Kapsabet,Retail,90,12.129,6.104,8.55
+Beans (mixed),Migori,Retail,79,9.496,11.182,10.339
+Maize,Bomet,Retail,88,17.167,9.812,13.399
+Maize,Busia,Retail,76,6.421,4.68,4.533
+Maize,Chuka,Retail,65,9.784,9.395,9.59
+Maize,Gakoromere,Retail,88,26.873,18.877,22.875
+Maize,Gatundu,Retail,80,5.391,7.419,6.383
+Maize,Hola,Retail,115,9.261,9.945,9.534
+Maize,Iciara,Retail,75,15.928,10.915,12.223
+Maize,Kapsabet,Retail,91,10.454,7.204,8.604
+Maize,Karatina,Retail,91,6.569,3.648,4.85
+Maize,Kimulot,Retail,85,25.546,10.506,18.026
+Maize,Kiritiri,Retail,75,8.892,7.082,7.889
+Maize,Kongowea,Retail,94,13.699,8.301,10.517
+Maize,Mbale,Retail,81,9.243,9.521,9.301
+Maize,Migori,Retail,84,20.114,6.603,12.083
+Maize,Nakuru,Retail,82,8.748,2.569,5.453
+Maize,Nyeri,Retail,92,5.968,2.939,3.498
+Maize,Runyenjes,Retail,82,17.103,15.509,16.306
+Maize,Siakago,Retail,80,6.014,7.372,6.693
+Maize,Thika,Retail,85,12.842,11.124,11.351
+Maize,Turbo,Retail,89,6.654,8.174,6.626
+Rice,Kutus,Retail,50,15.13,9.988,12.559
+Rice,Kutus,Wholesale,50,17.025,11.071,14.048
+Sorghum,Nairobi,Wholesale,229,14.909,14.508,14.708
+Beans (mixed),Ahero,Retail,71,2.975,5.964,3.689
+Beans (mixed),Bomet,Retail,88,10.946,9.598,9.927
+Beans (mixed),Butere,Retail,87,18.323,13.28,15.621
+Beans (mixed),Eldoret,Retail,78,9.139,8.559,8.408
+Beans (mixed),Gakoromere,Retail,89,5.849,9.467,7.658
+Beans (mixed),Gatundu,Retail,83,3.591,7.112,4.783
+Beans (mixed),Githurai,Retail,89,11.844,15.167,13.48
+Beans (mixed),Hola,Retail,81,13.422,13.682,13.159
+Beans (mixed),Iciara,Retail,75,15.434,10.594,12.866
+Beans (mixed),Kalundu,Retail,88,2.109,4.827,2.468
+Beans (mixed),Karatina,Retail,89,6.465,6.605,6.057
+Beans (mixed),Kiambu,Retail,77,4.49,3.388,2.148
+Beans (mixed),Kianjai,Retail,85,7.675,11.534,7.27
+Beans (mixed),Kimulot,Retail,86,7.854,6.687,6.55
+Beans (mixed),Kipkaren,Retail,91,11.487,9.113,10.3
+Beans (mixed),Kiritiri,Retail,76,15.084,10.844,12.861
+Beans (mixed),Kitale,Retail,85,8.817,8.793,8.72
+Beans (mixed),Kongowea,Retail,96,9.693,9.273,8.78
+Beans (mixed),Mbale,Retail,78,4.66,5.778,2.991
+Beans (mixed),Mulot,Retail,86,11.416,4.411,7.137
+Beans (mixed),Nyeri,Retail,92,4.033,6.467,2.518
+Beans (mixed),Runyenjes,Retail,84,13.001,10.069,11.535
+Beans (mixed),Siakago,Retail,81,10.904,4.924,7.878
+Beans (mixed),Thika,Retail,86,3.948,8.474,5.868
+Beans (mixed),Turbo,Retail,89,13.92,7.362,10.614
+Beans (mixed),Wote,Retail,85,7.363,10.276,8.622
+Beans red haricot (wairimu),Kutus,Retail,54,18.249,23.941,21.095
+Beans red haricot (wairimu),Kutus,Wholesale,54,13.842,35.494,24.448
+Sorghum,Muhoroni,Wholesale,49,12.697,6.733,8.955
+Beans (dry),Nakuru,Retail,54,1.442,4.213,2.562
+Beans (yellow-green),Katito,Retail,49,7.338,11.693,7.287
+Beans (yellow-green),Katito,Wholesale,49,6.194,6.729,5.576
+Beans (yellow-green),Kutus,Retail,49,16.369,26.796,21.582
+Beans (yellow-green),Kutus,Wholesale,49,14.772,23.354,18.055
+Maize,Butere,Retail,89,10.234,9.78,9.673
+Maize,Eldoret,Retail,96,23.509,20.658,20.917
+Maize,Embu,Retail,84,13.818,15.914,14.765
+Maize,Kagio,Retail,52,9.561,6.186,7.547
+Maize,Kagio,Wholesale,52,12.874,8.299,9.92
+Maize,Kalundu,Retail,93,10.497,6.232,8.365
+Rice,Kagio,Retail,53,8.406,9.912,8.891
+Rice,Kagio,Wholesale,53,11.551,24.462,17.484
+Sorghum,Kutus,Retail,54,19.249,12.95,16.099
+Sorghum,Kutus,Wholesale,54,18.125,11.595,14.698
+Tea (Mombasa),Composite,Export,245,8.07,8.716,8.393
+Finger millet,Katito,Retail,49,4.971,6.039,5.469
+Finger millet,Katito,Wholesale,49,7.336,9.979,8.657
+Maize,Katito,Wholesale,50,22.725,20.605,20.969
+Maize,Muhoroni,Wholesale,52,16.675,12.35,13.862
+Sorghum,Katito,Retail,49,8.341,14.379,11.02
+Sorghum,Katito,Wholesale,49,18.008,16.921,17.464
+Sorghum,Muhoroni,Retail,52,9.725,7.096,7.693
+Beans (yellow-green),Kibuye,Retail,49,1.45,2.318,0.676
+Beans (yellow-green),Makutano Kirinyaga,Retail,49,13.89,24.516,16.123
+Beans (yellow-green),Makutano Kirinyaga,Wholesale,49,13.406,29.643,20.83
+Beans rosecoco,Kibuye,Retail,49,1.843,6.556,4.063
+Finger millet,Ahero,Retail,56,5.127,7.431,6.279
+Finger millet,Ahero,Wholesale,56,9.674,11.446,10.56
+Finger millet,Kibuye,Retail,49,6.47,11.824,9.021
+Ground nuts,Kerugoya,Retail,42,6.803,12.476,9.124
+Ground nuts,Kerugoya,Wholesale,42,7.006,8.148,5.944
+Ground nuts,Kibuye,Retail,49,6.774,5.02,5.844
+Maize,Gakoromone,Retail,55,7.031,13.284,7.726
+Maize,Gakoromone,Wholesale,55,6.722,7.799,6.446
+Maize,Kibuye,Retail,78,7.113,7.185,7.149
+Maize,Kibuye,Wholesale,57,9.998,12.428,11.213
+Maize,Kipkaren,Retail,95,21.774,20.224,20.18
+Maize,Kutus,Retail,96,10.217,10.129,9.784
+Maize,Kutus,Wholesale,57,12.678,11.961,11.756
+Rice,Kawangware,Retail,53,10.112,7.121,8.262
+Rice,Kibuye,Retail,49,8.261,11.589,8.209
+Sorghum,Kibuye,Retail,49,10.603,5.012,7.138
+Wheat,Kibuye,Retail,49,12.293,19.319,6.202
+Beans (mixed),Embu-Mbeere,Retail,126,7.812,10.145,8.965
+Beans (mixed),Kerugoya,Retail,93,7.292,21.393,13.139
+Beans (mixed),Kibuye,Retail,78,2.675,3.75,2.944
+Beans (mixed),Kilifi,Retail,162,8.312,5.186,5.685
+Beans (mixed),Kisumu,Wholesale,53,9.19,11.404,10.297
+Beans (mixed),Kitui,Retail,248,6.805,4.597,5.553
+Beans (mixed),Lamu,Retail,125,4.81,6.464,2.361
+Beans (mixed),Makueni,Retail,126,6.517,6.444,6.48
+Beans (mixed),Marsabit,Retail,95,4.578,5.996,5.169
+Beans (mixed),Meru,Retail,137,23.061,15.509,17.179
+Beans (mixed),Mumias,Retail,90,13.109,10.746,11.373
+Beans (mixed),Nyeri-Kieni,Retail,126,14.596,18.977,16.787
+Beans (mixed),Taita Taveta,Retail,162,5.546,6.066,5.435
+Beans (rosecoco),Kisumu,Wholesale,243,8.551,11.404,7.995
+Beans (yellow),Kisumu,Wholesale,53,10.752,8.478,9.615
+Beans (yellow-green),Ahero,Retail,58,4.346,5.161,4.346
+Beans (yellow-green),Ahero,Wholesale,58,2.62,9.397,5.408
+Beans (yellow-green),Kagio,Retail,54,10.221,10.869,8.81
+Beans (yellow-green),Kagio,Wholesale,54,17.793,35.409,24.581
+Beans (yellow-green),Kangeta,Retail,52,10.233,25.094,17.664
+Beans (yellow-green),Kangeta,Wholesale,52,9.736,18.526,14.131
+Beans (yellow-green),Maua,Retail,51,6.398,17.762,12.08
+Beans (yellow-green),Maua,Wholesale,51,10.391,22.988,16.69
+Beans (yellow-green),Muhoroni,Retail,53,14.224,15.65,12.577
+Beans (yellow-green),Muhoroni,Wholesale,53,15.122,10.074,10.762
+Beans (yellow-green),Ngurubani,Retail,58,10.618,11.481,9.35
+Beans (yellow-green),Ngurubani,Wholesale,58,5.25,23.542,10.337
+Beans (yellow-green),Nkubu,Retail,56,8.258,25.435,12.193
+Beans (yellow-green),Nkubu,Wholesale,56,9.311,29.607,17.054
+Beans red haricot (wairimu),Ahero,Retail,54,12.445,7.415,9.93
+Beans red haricot (wairimu),Ahero,Wholesale,54,11.749,12.245,11.923
+Beans red haricot (wairimu),Ngurubani,Retail,58,16.253,12.72,9.837
+Beans red haricot (wairimu),Ngurubani,Wholesale,58,6.413,15.157,4.791
+Beans red haricot (wairimu),Nkubu,Retail,56,12.945,7.33,5.948
+Beans red haricot (wairimu),Nkubu,Wholesale,56,16.954,6.307,8.812
+Beans rosecoco,Ahero,Retail,58,9.78,11.614,10.646
+Beans rosecoco,Ahero,Wholesale,58,8.621,11.097,9.806
+Beans rosecoco,Nkubu,Retail,55,10.193,23.121,7.754
+Beans rosecoco,Nkubu,Wholesale,55,15.103,13.035,7.585
+Bread,Nairobi,Retail,249,1.274,0.952,1.065
+Finger millet,Maua,Retail,53,12.546,11.071,11.618
+Finger millet,Maua,Wholesale,53,12.452,10.279,11.366
+Finger millet,Nkubu,Retail,56,8.354,10.807,9.518
+Finger millet,Nkubu,Wholesale,56,5.42,10.425,7.464
+Goats,Baringo,Retail,222,3.217,3.603,3.03
+Goats,Embu-Mbeere,Retail,222,6.69,5.774,5.73
+Goats,Garissa,Retail,249,10.816,12.097,11.457
+Goats,Isiolo,Retail,249,4.041,4.584,3.993
+Goats,Kajiado,Retail,222,7.183,6.696,6.94
+Goats,Kilifi,Retail,222,4.632,3.617,4.05
+Goats,Kitui,Retail,222,6.988,7.279,7.133
+Goats,Kwale,Retail,222,23.651,21.309,22.48
+Goats,Laikipia,Retail,221,6.955,7.716,7.304
+Goats,Lamu,Retail,222,5.94,6.082,5.98
+Goats,Makueni,Retail,221,7.565,11.008,8.988
+Goats,Marsabit,Retail,222,6.127,6.115,6.079
+Goats,Narok,Retail,223,6.024,6.055,5.952
+Goats,Samburu,Retail,222,2.927,2.815,2.871
+Goats,Taita Taveta,Retail,222,8.969,5.793,7.319
+Goats,Tana River,Retail,222,5.369,6.538,5.869
+Goats,Tharaka Nithi,Retail,222,11.098,11.319,10.957
+Goats,Turkana,Retail,249,5.001,5.19,4.743
+Goats,Wajir,Retail,222,16.147,17.147,16.647
+Goats,West Pokot,Retail,222,6.644,7.153,6.899
+Green maize,Kagio,Retail,58,13.819,11.39,7.701
+Green maize,Kagio,Wholesale,58,21.071,13.776,13.342
+Green maize,Kangeta,Retail,54,3.556,5.816,1.396
+Green maize,Kangeta,Wholesale,54,4.196,5.434,1.034
+Green maize,Kinango,Retail,54,6.507,6.027,6.04
+Green maize,Kinango,Wholesale,54,7.874,12.546,10.067
+Green maize,Kutus,Retail,53,12.569,13.602,12.304
+Green maize,Kutus,Wholesale,53,22.374,21.674,20.719
+Green maize,Ngurubani,Retail,55,12.672,15.452,13.812
+Green maize,Ngurubani,Wholesale,55,11.96,21.78,15.527
+Ground nuts,Ahero,Retail,58,12.15,8.408,9.393
+Ground nuts,Ahero,Wholesale,57,11.852,9.2,10.169
+Maize,Ahero,Retail,79,4.417,6.075,4.827
+Maize,Ahero,Wholesale,58,14.961,13.85,14.18
+Maize,Baringo,Retail,222,13.561,17.541,15.551
+Maize,Embu-Mbeere,Retail,222,21.932,10.805,16.304
+Maize,Garissa,Retail,246,1.725,12.61,5.443
+Maize,Isiolo,Retail,222,10.105,17.968,13.641
+Maize,Kajiado,Retail,225,3.026,13.566,6.755
+Maize,Kakamega,Retail,80,11.576,12.351,8.975
+Maize,Kangeta,Retail,58,17.67,8.628,10.264
+Maize,Kangeta,Wholesale,58,13.02,6.004,8.824
+Maize,Kapkwen,Retail,52,24.213,23.708,23.961
+Maize,Kapkwen,Wholesale,51,5.458,8.053,4.676
+Maize,Kerugoya,Retail,94,7.631,8.776,8.204
+Maize,Kilifi,Retail,225,4.251,5.585,4.435
+Maize,Kisumu,Wholesale,246,15.021,12.211,13.554
+Maize,Kitui,Retail,248,3.59,3.816,3.537
+Maize,Kwale,Retail,225,21.744,15.779,18.63
+Maize,Laikipia,Retail,222,10.759,7.268,7.792
+Maize,Lamu,Retail,222,3.35,3.417,2.036
+Maize,Makueni,Retail,222,11.31,3.372,7.039
+Maize,Mandera,Retail,249,7.649,18.714,12.213
+Maize,Marsabit,Retail,249,4.772,9.056,6.055
+Maize,Maua,Retail,70,5.487,4.492,3.691
+Maize,Maua,Wholesale,53,9.506,9.019,8.981
+Maize,Meru,Retail,222,22.261,14.298,16.818
+Maize,Mulot,Retail,94,8.19,9.677,8.802
+Maize,Mumias,Retail,91,15.905,15.791,15.848
+Maize,Narok,Retail,222,13.698,10.853,12.215
+Maize,Nkubu,Retail,56,5.83,5.414,1.11
+Maize,Nkubu,Wholesale,56,3.967,5.198,2.069
+Maize,Nyeri-Kieni,Retail,222,11.498,8.396,9.796
+Maize,Samburu,Retail,222,6.374,4.655,5.377
+Maize,Taita Taveta,Retail,222,2.988,2.782,2.713
+Maize,Tana River,Retail,222,6.755,4.816,4.671
+Maize,Tharaka Nithi,Retail,222,9.84,7.084,7.32
+Maize,Turkana,Retail,222,3.984,14.584,8.303
+Maize,Wajir,Retail,222,5.454,9.579,5.586
+Maize,West Pokot,Retail,222,17.978,15.175,16.509
+Maize flour,Ahero,Retail,49,3.533,4.45,3.527
+Maize flour,Ahero,Wholesale,49,3.292,4.774,2.42
+Maize flour,Nairobi Supermarkets,Retail,61,8.816,6.756,7.6
+Maize meal,Nairobi,Retail,235,4.077,9.105,6.307
+Pearl rush millet,Kangeta,Retail,58,21.213,15.474,18.287
+Pearl rush millet,Kangeta,Wholesale,58,18.263,13.962,15.767
+Pearl rush millet,Maua,Retail,53,19.57,15.286,17.083
+Pearl rush millet,Maua,Wholesale,53,19.555,16.774,18.161
+Pearl rush millet,Nkubu,Retail,56,22.435,19.699,21.037
+Rice,Ahero,Retail,58,5.031,5.087,5.04
+Rice,Ahero,Wholesale,58,7.326,5.609,6.468
+Rice,Ngurubani,Retail,58,1.886,2.196,1.936
+Rice,Ngurubani,Wholesale,58,2.512,2.275,2.031
+Sorghum,Ahero,Retail,57,17.811,6.671,11.899
+Sorghum,Ahero,Wholesale,57,13.598,8.751,11.126
+Sorghum,Kangeta,Retail,58,16.765,11.588,14.176
+Sorghum,Kangeta,Wholesale,58,11.823,11.062,11.443
+Sorghum,Kisumu,Wholesale,228,12.626,11.231,11.754
+Sorghum,Maua,Retail,53,18.078,13.413,15.746
+Sorghum,Maua,Wholesale,53,22.99,14.46,18.698
+Wheat,Maua,Retail,52,3.421,1.167,2.198
+Wheat,Maua,Wholesale,52,9.302,10.744,9.788
+Wheat flour,Nairobi Supermarkets,Retail,60,6.619,2.694,4.657
+White sorghum,Maua,Retail,53,16.136,11.919,13.915
+White sorghum,Maua,Wholesale,53,18.011,11.979,14.72
+White sorghum,Nkubu,Retail,56,18.591,8.259,13.382
+White sorghum,Nkubu,Wholesale,56,11.957,9.432,10.574

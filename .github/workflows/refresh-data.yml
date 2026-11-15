@@ -25,7 +25,7 @@ jobs:
       - name: Install pipeline deps
         run: |
           pip install torch --index-url https://download.pytorch.org/whl/cpu
-          pip install pandas numpy requests openpyxl prophet statsmodels scikit-learn chronos-forecasting
+          pip install pandas numpy requests openpyxl prophet statsmodels scikit-learn chronos-forecasting lightgbm
 
       - name: Fetch WFP (HDX)
         continue-on-error: true   # falls back to the committed copy
@@ -71,6 +71,14 @@ jobs:
 
       - name: Rebuild anomalies
         run: python scripts/rebuild_anomalies.py
+
+      - name: Text price alerts   # no-op until ALERT_SUBSCRIBERS + AT_* secrets are set
+        continue-on-error: true
+        env:
+          ALERT_SUBSCRIBERS: ${{ secrets.ALERT_SUBSCRIBERS }}
+          AT_USERNAME: ${{ secrets.AT_USERNAME }}
+          AT_API_KEY: ${{ secrets.AT_API_KEY }}
+        run: python scripts/send_alerts.py --send
 
       - name: Rebuild forecasts
         run: python scripts/rebuild_forecasts.py

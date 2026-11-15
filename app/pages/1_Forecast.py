@@ -50,6 +50,14 @@ def load_routing() -> dict:
     return json.loads((DATA_DIR / "model_routing.json").read_text())
 
 
+@st.cache_data(ttl="6h")
+def load_weekly() -> pd.DataFrame:
+    try:
+        return pd.read_csv(DATA_DIR / "kamis_weekly.csv", parse_dates=["week"])
+    except (OSError, ValueError):  # optional file: the line below just hides
+        return pd.DataFrame(columns=["commodity", "market", "pricetype", "week", "price", "days"])
+
+
 forecasts_all = load_forecasts()
 historical = load_historical()
 routing = load_routing()
@@ -165,6 +173,18 @@ metric_cols[2].metric(
 )
 
 model_provenance_caption(strategy, test_mape, last_observed_str)
+
+# Newest weekly reading, when KAMIS has one from the latest month onwards.
+weekly = load_weekly()
+weekly = weekly[(weekly["commodity"] == commodity) & (weekly["market"] == market)
+                & (weekly["pricetype"] == pricetype)].sort_values("week")
+if not weekly.empty and current_price and weekly["week"].iloc[-1] >= last_observed:
+    wk = weekly.iloc[-1]
+    st.caption(
+        f"🗓️ Latest week (from {wk['week']:%d %b %Y}): KES {wk['price']:.0f}/{unit_label(commodity)}, "
+        f"{(wk['price'] / current_price - 1) * 100:+.0f}% against the {last_observed_str} monthly price · "
+        f"KAMIS daily reports, {int(wk['days'])} day{'s' if wk['days'] != 1 else ''}"
+    )
 
 export = pd.concat(
     [

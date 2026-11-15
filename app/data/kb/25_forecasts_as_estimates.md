@@ -1,6 +1,6 @@
 # Forecasts Are Estimates, Not Guarantees
 
-Every AgriPulse forecast is a central estimate with a lower and upper bound around it, not a single certain number. That band exists because no model, however well it performs on average, is exact for every future month.
+Every AgriPulse forecast is a central estimate with a lower and upper bound around it, not a single certain number. That band exists because no model, however well it performs on average, is exact for every future month. The band is an 80% range: it is scaled so that about 8 in 10 actual prices landed inside it when the models were tested on months they had not seen.
 
 The band tends to widen the further out the forecast reaches. A twelve-month-ahead forecast typically carries more uncertainty than a three-month one — measured error rises from around 13% at three months to around 15–16% at twelve. In an early single-series test, a twelve-month SARIMA forecast's band spanned roughly KES 20 to 70 on one series, wide enough to hold the right general level while being far too broad to plan an exact transaction around.
 

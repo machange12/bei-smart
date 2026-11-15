@@ -38,6 +38,7 @@ STRATEGY_NAMES = {
     "chronos": "Chronos (AI foundation model)",
     "prophet": "Prophet",
     "sarima": "SARIMA (statistical)",
+    "lgbm": "LightGBM (learns across all markets)",
 }
 
 DATA_SOURCES = (

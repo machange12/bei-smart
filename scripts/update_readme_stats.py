@@ -22,7 +22,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 APP_DATA = ROOT / "app" / "data"
 START, END = "<!-- stats:start -->", "<!-- stats:end -->"
-STRATEGY_NAMES = {"chronos": "Chronos", "ensemble": "blend of 2 models", "sarima": "SARIMA", "prophet": "Prophet"}
+STRATEGY_NAMES = {"chronos": "Chronos", "ensemble": "blend of 2 models", "sarima": "SARIMA", "prophet": "Prophet", "lgbm": "LightGBM"}
 
 
 def stats_block(metrics: pd.DataFrame, anomalies: pd.DataFrame, history: pd.DataFrame) -> str:

@@ -7,16 +7,16 @@ Forecasts of Kenyan food and livestock prices market by market, alerts when a pr
 ## Live numbers
 
 <!-- stats:start -->
-_Updated automatically by the monthly refresh on 2026-11-05._
+_Updated automatically by the monthly refresh on 2026-11-15._
 
 | | |
 |---|---|
-| Forecast series served | 270 (250 with data under 6 months old) |
+| Forecast series served | 283 (261 with data under 6 months old) |
 | Markets / commodities | 84 / 23 |
 | Regions covered | 8 of 8 |
-| Median forecast error (12-month holdout) | 9.9% |
-| Models serving | Chronos 162, blend of 2 models 108 |
-| Price alerts | 35 spikes, 7 crashes across 791 monitored series |
+| Median forecast error (12-month holdout) | 8.7% |
+| Models serving | Chronos 170, blend of 2 models 113 |
+| Price alerts | 34 spikes, 8 crashes across 788 monitored series |
 | Prices observed up to | October 2026 |
 <!-- stats:end -->
 
@@ -28,6 +28,7 @@ _Updated automatically by the monthly refresh on 2026-11-05._
 | **Forecast** | What will this commodity cost in this market in 3, 6 or 12 months? (shareable links, CSV download) |
 | **Alerts** | Which prices are unusually high (spike) or low (crash) right now? |
 | **Map** | Where are the alerts? |
+| **Where to sell** | Which market pays most for my produce after transport? (adjustable cost per km) |
 | **Classify** | Is a commodity likely cheap or expensive in a region? (a shortlist, not a verdict) |
 | **Coming soon** | Which series are still reporting and will pass the data rules within a year, and when |
 | **Ask AgriPulse** 💬 | Floating, draggable chatbot on every page, English and Kiswahili, answers cite the data |
@@ -43,8 +44,10 @@ _Updated automatically by the monthly refresh on 2026-11-05._
 ```
 
 - **Runs itself:** `.github/workflows/refresh-data.yml` runs the whole chain on the 5th of each month, updates the numbers above, and commits. Streamlit Cloud redeploys on that commit.
-- **Honest accuracy:** each series is scored on its last 12 months, which the model never saw, and the test window is never used to *pick* the model. Long series (84+ months) use a blend of the 2 best models, weighted on a separate validation window. Shorter series use Chronos zero-shot. A series is only served if its error is 25% or less.
+- **Honest accuracy:** each series is scored on its last 12 months, which the model never saw, and the test window is never used to *pick* the model. Long series (84+ months) use a blend of the 2 best of four models (Prophet, SARIMA, Chronos-2, a LightGBM trained across all series), weighted on a separate validation window. Shorter series use Chronos-2 zero-shot, which forecasts related series together. A series is only served if its error is 25% or less.
 - **Gates:** at least 36 monthly observations, updated within 12 months, under 25% of months missing, not erratic. Refugee-settlement markets are excluded, because their prices follow aid distribution, not the market.
+- **Alerts:** a price outside its own 3-year normal range, after removing the series' usual seasonal pattern (the idea behind WFP's ALPS).
+- **Bands:** every forecast band is an 80% range, rescaled each run so about 8 in 10 held-out prices fall inside.
 - **Units:** prices are KES per kg, except goats, which are KES per head.
 
 ## Repository map
@@ -56,7 +59,7 @@ app/                     Streamlit dashboard (entry point: app/streamlit_app.py)
   src/rag/               chatbot: routing, data lookups, retrieval, answer templates
   src/units.py           kg vs per-head labels
   data/                  what the app serves (rewritten by the monthly refresh)
-  data/kb/               30 short explainers the chatbot retrieves from
+  data/kb/               31 short explainers the chatbot retrieves from
   models/                price-level classifier (XGBoost)
   tests/                 chatbot regression questions (python -m tests.test_rag from app/)
 api/                     optional FastAPI backend over the same exports
@@ -69,9 +72,11 @@ scripts/                 the monthly pipeline, in run order:
   enrich_chain.py          join external features
   rebuild_anomalies.py     spike / crash alerts
   rebuild_forecasts.py     screen, model, score, write forecasts
+  build_weekly.py          latest-week KAMIS prices for the Forecast page (run by the local KAMIS pull)
+  send_alerts.py           SMS price alerts via Africa's Talking (dry run unless --send; needs secrets)
   update_readme_stats.py   refresh the numbers in this README
   diff_mape.py             compare two runs' accuracy
-  experiments/             one-off studies behind design decisions (exp1-exp6 + rainfall work)
+  experiments/             one-off studies behind design decisions (exp1-exp9 + rainfall work)
 data/
   raw/                   source pulls (FEWS, WFP, KAMIS, supplements, new_sources/)
   cleaned/               the monthly chain + older modelling extracts
@@ -116,7 +121,7 @@ KAMIS (Kenya Ministry of Agriculture) · FEWS NET Data Warehouse · WFP Kenya Fo
 
 ## Tech stack
 
-Python, pandas · statsmodels (SARIMA), Prophet, Amazon Chronos-Bolt · XGBoost (classifier) · ChromaDB + sentence-transformers (retrieval), Groq Llama 3.3 70B (answers) · Streamlit, Plotly, Folium · FastAPI · GitHub Actions
+Python, pandas · statsmodels (SARIMA), Prophet, Amazon Chronos-2, LightGBM · XGBoost (classifier) · ChromaDB + sentence-transformers (retrieval), Groq Llama 3.3 70B (answers) · Streamlit, Plotly, Folium · FastAPI · GitHub Actions
 
 ## Team
 

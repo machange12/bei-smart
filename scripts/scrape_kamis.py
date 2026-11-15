@@ -179,6 +179,16 @@ def _month_end(year: int, month: int) -> str:
     return (pd.Timestamp(year, month, 1) + pd.offsets.MonthEnd(0)).strftime("%Y-%m-%d")
 
 
+def _cache_final(cache_file: pathlib.Path, year: int, month: int) -> bool:
+    """A cached month is only trusted if it was saved after the month ended (+3 days
+    for late entries). A file saved mid-month, or for a future month, froze that
+    month at whatever KAMIS had that day and was never fetched again."""
+    if not cache_file.exists():
+        return False
+    closed = pd.Timestamp(_month_end(year, month)) + pd.Timedelta(days=3)
+    return pd.Timestamp(cache_file.stat().st_mtime, unit="s") > closed
+
+
 def _fetch_product_month(product_id: int, year: int, month: int, sleep: float = 1.0) -> pd.DataFrame:
     """One request per (product, year-month). Cached to disk.
 
@@ -187,11 +197,9 @@ def _fetch_product_month(product_id: int, year: int, month: int, sleep: float = 
     """
     CACHE.mkdir(parents=True, exist_ok=True)
     cache_file = CACHE / f"prod{product_id}_{year}-{month:02d}.xlsx"
-    if cache_file.exists() and cache_file.stat().st_size > 0:
-        return pd.read_excel(cache_file)
-    # Empty marker file — already tried and got 500/empty
-    if cache_file.exists():
-        return pd.DataFrame()
+    if _cache_final(cache_file, year, month):
+        # non-empty = the month's data; empty marker = already tried and got 500/empty
+        return pd.read_excel(cache_file) if cache_file.stat().st_size > 0 else pd.DataFrame()
 
     params = [
         ("product[]", str(product_id)),
@@ -302,6 +310,13 @@ def scrape(product_ids: Iterable[int], years: Iterable[int], sleep: float = 1.0,
 
 def demo() -> None:
     """Small self-check — pull one commodity, one year, assert schema + rows."""
+    import os
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmp:  # cache saved mid-month is stale, after month end is final
+        f = pathlib.Path(tmp) / "x.xlsx"
+        f.write_bytes(b"PK")
+        os.utime(f, (pd.Timestamp("2024-03-15").timestamp(),) * 2)
+        assert not _cache_final(f, 2024, 3) and _cache_final(f, 2024, 2)
     df = scrape([1], [2024], sleep=0.3)  # Dry maize, 2024
     assert not df.empty, "demo pull returned no rows"
     expected = {"source", "market", "admin_1", "commodity",

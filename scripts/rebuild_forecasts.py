@@ -3,9 +3,10 @@
 Reads data/cleaned/bei_smart_forecasting_chained_all.csv (WFP+FEWS+KAMIS
 stitched by scripts/build_chained_all.py), screens series with the same
 gates as the notebook (min-obs, freshness, missing-share, cv), fits
-Prophet + SARIMA + Chronos per series, and ships a weighted top-2 ensemble
-(by 12-month validation MAPE) for long series and Chronos zero-shot for short
-ones -- the test window only scores, never selects. Writes production_forecasts.csv / model_metrics.csv /
+Prophet + SARIMA per long series, forecasts every series with Chronos-2
+(jointly, "cross-learning") and with one global LightGBM, and ships a weighted
+top-2 ensemble (by 12-month validation MAPE) for long series and Chronos-2
+zero-shot for short ones -- the test window only scores, never selects. Writes production_forecasts.csv / model_metrics.csv /
 model_routing.json in data/exports/ and app/data/.
 
 Gate default is 36 obs so KAMIS-plateau commodities (Beef, Milk, Cassava,
@@ -44,7 +45,10 @@ MODELS_DIR = ROOT / "models"
 # results every CHECKPOINT_EVERY series so a kill costs at most that many fits.
 # Deleted after successful full write.
 CHECKPOINT = EXPORTS / ".rebuild_checkpoint.pkl"
-CHECKPOINT_EVERY = 25
+CHECKPOINT_EVERY = 10
+# Every band is a nominal 80% band (Prophet default, Chronos q10-q90, SARIMA
+# alpha=0.2); calibrate_bands() then scales them so they cover 80% in practice.
+BAND_LEVEL = 0.8
 
 # Market-name overrides, checked before admin1. Only the 8 former provinces
 # are valid outputs (the Forecast page cascades Region -> Market).
@@ -103,11 +107,19 @@ SETTLEMENT_RE = re.compile(
 
 # Chronos pipeline is loaded lazily and once (per process).
 _CHRONOS = None
-CHRONOS_MODEL = "amazon/chronos-bolt-small"  # overridden by --chronos-model
+# exp8: Chronos-2 with cross-learning, median test MAPE 8.92% vs 10.11% for
+# chronos-bolt-small on the 270 served series. Bolt still works via --chronos-model.
+CHRONOS_MODEL = "amazon/chronos-2"
+# Chronos + LightGBM forecasts for every series, computed up front (they need
+# all series at once). Cached so an interrupted run does not redo them.
+PRE_CACHE = EXPORTS / ".rebuild_pre.pkl"
 
 
 def _chronos():
     global _CHRONOS
+    if _CHRONOS is None and "chronos-2" in CHRONOS_MODEL:
+        from chronos import Chronos2Pipeline
+        _CHRONOS = Chronos2Pipeline.from_pretrained(CHRONOS_MODEL, device_map="cpu")
     if _CHRONOS is None:
         import torch
         try:
@@ -212,13 +224,28 @@ def _sarima_predict(y_train, horizon):
     pred = np.asarray(res.predicted_mean)
     if not np.all(np.isfinite(pred)) or np.max(np.abs(pred)) > 10 * np.max(y_train):
         return None
-    ci = res.conf_int(alpha=0.05)
-    lo = np.asarray(ci)[:, 0] if hasattr(ci, "__array__") else pred - 1.96 * res.se_mean
-    hi = np.asarray(ci)[:, 1] if hasattr(ci, "__array__") else pred + 1.96 * res.se_mean
+    ci = res.conf_int(alpha=1 - BAND_LEVEL)  # was 95%, blended with 80% bands from the others
+    lo = np.asarray(ci)[:, 0] if hasattr(ci, "__array__") else pred - 1.28 * res.se_mean
+    hi = np.asarray(ci)[:, 1] if hasattr(ci, "__array__") else pred + 1.28 * res.se_mean
     return pred, lo, hi
 
 
+def _chronos_batch(contexts, horizon=12):
+    """(median, q10, q90) per context. Chronos-2 forecasts the whole batch jointly
+    (cross-learning: related series inform each other), so callers must only batch
+    contexts that end on the same date -- see precompute()."""
+    if "chronos-2" not in CHRONOS_MODEL:
+        return [_chronos_predict(c, horizon) for c in contexts]
+    q, _ = _chronos().predict_quantiles(
+        [np.asarray(c, dtype=np.float32) for c in contexts], prediction_length=horizon,
+        quantile_levels=[0.1, 0.5, 0.9], cross_learning=len(contexts) > 1, batch_size=100)
+    out = [np.asarray(t)[0] for t in q]  # each (horizon, 3)
+    return [(a[:, 1], a[:, 0], a[:, 2]) for a in out]
+
+
 def _chronos_predict(y_train, horizon):
+    if "chronos-2" in CHRONOS_MODEL:
+        return _chronos_batch([y_train], horizon)[0]
     import torch
     ctx = torch.tensor(np.asarray(y_train, dtype=np.float32))
     pipe = _chronos()
@@ -236,7 +263,133 @@ def _chronos_predict(y_train, horizon):
             np.quantile(arr, 0.9, axis=0))
 
 
-def _fit_one(c, mk, pt, y, last, cps, models):
+LGBM_FEATS = ["r1", "r2", "r3", "r6", "r12", "vs_mean12", "vol12", "level", "h", "month",
+              "target_month", "commodity", "pricetype"]
+
+
+def _lgbm_origin(y, dates) -> pd.DataFrame:
+    """Features at each observation t, in observation order (gaps ignored, as everywhere here)."""
+    ly = pd.Series(np.log(np.asarray(y, float)))
+    r = ly.diff()
+    return pd.DataFrame({
+        "r1": r, "r2": r.shift(1), "r3": r.shift(2),
+        "r6": ly - ly.shift(6), "r12": ly - ly.shift(12),
+        "vs_mean12": ly - ly.rolling(12, min_periods=6).mean(),
+        "vol12": r.rolling(12, min_periods=6).std(),
+        "level": ly, "month": pd.DatetimeIndex(dates).month,
+    })
+
+
+def _lgbm_table(df: pd.DataFrame) -> pd.DataFrame:
+    """Every (series, origin t, horizon h) with target = log(price[t+h] / price[t])."""
+    parts = []
+    for (c, mk, pt), g in df.groupby(["commodity", "market", "pricetype"]):
+        if len(g) < 24:
+            continue
+        dates = pd.DatetimeIndex(g["date"])
+        f = _lgbm_origin(g["price_per_kg"].to_numpy(), dates).assign(commodity=c, pricetype=pt)
+        ly = f["level"].to_numpy()
+        for h in range(1, 13):
+            t = f.iloc[:-h].copy()
+            t["h"] = h
+            t["target"] = ly[h:] - ly[:-h]
+            t["target_date"] = dates[h:]
+            t["target_month"] = dates[h:].month
+            parts.append(t)
+    return pd.concat(parts, ignore_index=True)
+
+
+def _requests(df: pd.DataFrame, scr: pd.DataFrame) -> list[dict]:
+    """Every forecast a screened series needs: forward, test window, and (84+ obs) validation
+    window. `cutoff` is the first date being forecast; nothing dated on or after it may be used."""
+    reqs = []
+    for r in scr.itertuples():
+        s = df[(df["commodity"] == r.commodity) & (df["market"] == r.market) &
+               (df["pricetype"] == r.pricetype)].sort_values("date").dropna(subset=["price_per_kg"])
+        y, d = s["price_per_kg"].to_numpy(float), pd.DatetimeIndex(s["date"])
+        key = (r.commodity, r.market, r.pricetype)
+        reqs.append({"key": key, "kind": "fwd", "y": y, "dates": d, "cutoff": None})
+        reqs.append({"key": key, "kind": "test", "y": y[:-12], "dates": d[:-12], "cutoff": d[-12]})
+        if len(y) >= 84:
+            reqs.append({"key": key, "kind": "val", "y": y[:-24], "dates": d[:-24], "cutoff": d[-24]})
+    return reqs
+
+
+def precompute(df: pd.DataFrame, scr: pd.DataFrame, models: list[str]) -> dict:
+    """{series key: {(model, kind): (median, lo, hi)}} for chronos and lgbm.
+
+    Leak rule for both: a forecast whose first target date is D only sees data
+    dated before D. Chronos batches share one D; LightGBM is trained per D.
+    """
+    stamp = (INPUT.stat().st_mtime, CHRONOS_MODEL)
+    cache = {"stamp": stamp, "pre": {}, "done": set()}
+    if PRE_CACHE.exists():
+        try:
+            with open(PRE_CACHE, "rb") as f:
+                old = pickle.load(f)
+            if old.get("stamp") == stamp:
+                cache = old
+                print(f"[pre] resumed {len(cache['done'])} finished groups from cache")
+        except Exception:
+            pass
+    pre, done = cache["pre"], cache["done"]
+
+    def save():
+        tmp = PRE_CACHE.with_suffix(".pkl.tmp")
+        with open(tmp, "wb") as f:
+            pickle.dump(cache, f)
+        tmp.replace(PRE_CACHE)
+
+    reqs = _requests(df, scr)
+    groups: dict = {}
+    for q in reqs:  # forward forecasts group by their own last date
+        groups.setdefault((q["kind"] == "fwd", q["cutoff"] if q["cutoff"] is not None else q["dates"][-1]), []).append(q)
+
+    if "chronos" in models and "chronos" not in done:
+        for qs in groups.values():
+            for j in range(0, len(qs), 100):  # ~100 per joint batch, as in the Chronos-2 report
+                chunk = qs[j:j + 100]
+                for q, out in zip(chunk, _chronos_batch([q["y"] for q in chunk])):
+                    pre.setdefault(q["key"], {})[("chronos", q["kind"])] = out
+        done.add("chronos")
+        save()
+        print(f"[pre] chronos: {len(reqs)} forecasts in {len(groups)} date groups", flush=True)
+
+    if "lgbm" in models:
+        import lightgbm as lgb
+        clean = df[~df["market"].str.contains(SETTLEMENT_RE) & (df["price_per_kg"] > 0)]
+        clean = clean.sort_values(["commodity", "market", "pricetype", "date"])
+        cats = {"commodity": pd.CategoricalDtype(sorted(clean["commodity"].unique())),
+                "pricetype": pd.CategoricalDtype(sorted(clean["pricetype"].unique()))}
+        by_cut: dict = {}
+        for q in reqs:
+            by_cut.setdefault(q["cutoff"], []).append(q)
+        todo = [c for c in by_cut if ("lgbm", c) not in done]
+        table = _lgbm_table(clean).astype(cats) if todo else None
+        for cut in todo:
+            tr = table if cut is None else table[table["target_date"] < cut]
+            model = lgb.LGBMRegressor(n_estimators=300, learning_rate=0.05, num_leaves=31, subsample=0.8,
+                                      subsample_freq=1, colsample_bytree=0.8, min_child_samples=50,
+                                      random_state=0, verbose=-1)
+            model.fit(tr[LGBM_FEATS], tr["target"])
+            # ponytail: band = +/-1.28 sd of in-sample residuals per horizon (optimistic);
+            # calibrate_bands() corrects the coverage. Quantile models if lgbm ever ships alone a lot.
+            sd = (tr["target"] - model.predict(tr[LGBM_FEATS])).groupby(tr["h"]).std().to_numpy()
+            for q in by_cut[cut]:
+                last = _lgbm_origin(q["y"], q["dates"]).iloc[[-1]].assign(commodity=q["key"][0], pricetype=q["key"][2])
+                x = pd.concat([last] * 12, ignore_index=True).astype(cats)
+                x["h"] = range(1, 13)
+                x["target_month"] = (x["month"] + x["h"] - 1) % 12 + 1  # assumes no gap ahead
+                med = q["y"][-1] * np.exp(model.predict(x[LGBM_FEATS]))
+                pre.setdefault(q["key"], {})[("lgbm", q["kind"])] = (med, med * np.exp(-1.2816 * sd), med * np.exp(1.2816 * sd))
+            done.add(("lgbm", cut))
+            save()
+            print(f"[pre] lgbm cutoff {'all data' if cut is None else f'{cut:%Y-%m}'}: "
+                  f"{len(by_cut[cut])} forecasts, {len(tr):,} training rows", flush=True)
+    return pre
+
+
+def _fit_one(c, mk, pt, y, last, cps, models, pre=None):
     """Run each requested model. Return {name: (val_mape, test_pred_tuple)}
     plus test_y for post-hoc MAPE, plus a forward forecast dict keyed by name.
 
@@ -244,7 +397,11 @@ def _fit_one(c, mk, pt, y, last, cps, models):
       - if n >= 84: train / val / test = n-24 / 12 / 12 -> validation-selected
       - if 24 <= n < 84: train / test = n-12 / 12 -> no val window, so ship Chronos
         zero-shot (test only scores, never selects)
+
+    `pre` holds this series' chronos / lgbm forecasts from precompute(); without it
+    Chronos is run here on the series alone and lgbm is skipped.
     """
+    pre = pre or {}
     y = np.asarray(y, float)
     n = len(y)
     if n < 24:
@@ -252,6 +409,7 @@ def _fit_one(c, mk, pt, y, last, cps, models):
 
     val_scores = {}
     test_preds = {}
+    test_bands = {}  # name -> (lo, hi) on the test window, for calibrate_bands
     forward = {}
     horizons = [3, 6, 12]
 
@@ -261,22 +419,27 @@ def _fit_one(c, mk, pt, y, last, cps, models):
     else:
         train_y, test_y = y[:-12], y[-12:]
         val_y = None
+    # A short series always ships Chronos, so fitting Prophet and SARIMA on it only
+    # filled the comparison table (most of the rebuild time). Fit them only when they
+    # can be chosen, or as the fallback when Chronos is not in the run.
+    need_stat = have_val or "chronos" not in models
 
     # --- Prophet (val + test + forward) ---
-    if "prophet" in models:
+    if "prophet" in models and need_stat:
         try:
             if have_val:
                 vp, *_ = _prophet_predict(train_y, 12, cps, pd.Timestamp(last) - pd.DateOffset(months=24))
                 val_scores["prophet"] = _mape(val_y, vp)
-            tp, *_ = _prophet_predict(y[:-12], 12, cps, pd.Timestamp(last) - pd.DateOffset(months=12))
+            tp, tlo, thi = _prophet_predict(y[:-12], 12, cps, pd.Timestamp(last) - pd.DateOffset(months=12))
             test_preds["prophet"] = tp
+            test_bands["prophet"] = (tlo, thi)
             fp, flo, fhi = _prophet_predict(y, 12, cps, pd.Timestamp(last))
             forward["prophet"] = (fp, flo, fhi)
         except Exception:
             pass
 
     # --- SARIMA ---
-    if "sarima" in models:
+    if "sarima" in models and need_stat:
         try:
             if have_val:
                 r = _sarima_predict(train_y, 12)
@@ -285,6 +448,7 @@ def _fit_one(c, mk, pt, y, last, cps, models):
             r = _sarima_predict(y[:-12], 12)
             if r is not None:
                 test_preds["sarima"] = r[0]
+                test_bands["sarima"] = r[1:]
             r = _sarima_predict(y, 12)
             if r is not None:
                 forward["sarima"] = r
@@ -294,15 +458,25 @@ def _fit_one(c, mk, pt, y, last, cps, models):
     # --- Chronos ---
     if "chronos" in models:
         try:
+            def chronos(kind, ctx):
+                return pre[("chronos", kind)] if ("chronos", kind) in pre else _chronos_predict(ctx, 12)
             if have_val:
-                r = _chronos_predict(train_y, 12)
+                r = chronos("val", train_y)
                 val_scores["chronos"] = _mape(val_y, r[0])
-            r = _chronos_predict(y[:-12], 12)
+            r = chronos("test", y[:-12])
             test_preds["chronos"] = r[0]
-            r = _chronos_predict(y, 12)
-            forward["chronos"] = r
+            test_bands["chronos"] = r[1:]
+            forward["chronos"] = chronos("fwd", y)
         except Exception:
             pass
+
+    # --- Global LightGBM (precomputed only: it is trained across all series) ---
+    if "lgbm" in models and ("lgbm", "test") in pre and ("lgbm", "fwd") in pre:
+        if have_val and ("lgbm", "val") in pre:
+            val_scores["lgbm"] = _mape(val_y, pre[("lgbm", "val")][0])
+        test_preds["lgbm"] = pre[("lgbm", "test")][0]
+        test_bands["lgbm"] = pre[("lgbm", "test")][1:]
+        forward["lgbm"] = pre[("lgbm", "fwd")]
 
     if not test_preds:
         return None
@@ -344,6 +518,17 @@ def _fit_one(c, mk, pt, y, last, cps, models):
         test_mape = ens_mape
     else:
         test_mape = _mape(test_y, test_preds[strategy])
+
+    # Test-window band of whatever ships, blended the same way as the forward band.
+    if ens_weights is not None:
+        t_lo, t_hi = (sum(wi * np.asarray(test_bands[k][j]) for wi, k in zip(*ens_weights[::-1]))
+                      for j in (0, 1))
+    elif strategy == "ensemble":
+        t_lo = np.min([test_bands[k][0] for k in usable], axis=0)
+        t_hi = np.max([test_bands[k][1] for k in usable], axis=0)
+    else:
+        t_lo, t_hi = (np.asarray(b) for b in test_bands[strategy])
+    cal_scores = band_scores(test_y, t_lo, t_hi)
 
     # ---- Forward forecast rows ----
     forecast_rows = []
@@ -394,7 +579,49 @@ def _fit_one(c, mk, pt, y, last, cps, models):
         "val_scores": val_scores,
         "test_mapes": {k: _mape(test_y, v) for k, v in test_preds.items()},
         "forecast_rows": forecast_rows,
+        "cal_scores": cal_scores,
     }
+
+
+def band_scores(y, lo, hi) -> list[float]:
+    """How far each actual fell outside its band, in band-widths (<= 0 = inside)."""
+    y, lo, hi = (np.asarray(a, float).ravel() for a in (y, lo, hi))
+    w = hi - lo
+    ok = np.isfinite(w) & (w > 0)
+    return (np.maximum(lo - y, y - hi)[ok] / w[ok]).tolist()
+
+
+def calibrate_bands(fc: pd.DataFrame, scores: dict[str, list[float]],
+                    level: float = BAND_LEVEL) -> pd.DataFrame:
+    """Conformal scaling: widen (or narrow) every band by q band-widths per side,
+    q = the `level` quantile of the test-window scores, so `level` of held-out
+    actuals would have landed inside. Per strategy when it has 200+ scores, else pooled.
+
+    ponytail: one q for all 12 steps; per-step q if far-horizon coverage lags.
+    """
+    pooled = [x for v in scores.values() for x in v]
+    if fc.empty or not pooled:
+        return fc
+    fc = fc.copy()
+    for strat, idx in fc.groupby("strategy").groups.items():
+        sc = scores.get(strat, [])
+        sc = sc if len(sc) >= 200 else pooled
+        q = float(np.quantile(sc, level))
+        print(f"[bands] {strat:<9} raw coverage {np.mean(np.asarray(sc) <= 0):.0%} "
+              f"of {len(sc)} test points (target {level:.0%}) -> shift {q:+.2f} band-widths per side")
+        w = fc.loc[idx, "forecast_upper"] - fc.loc[idx, "forecast_lower"]
+        p = fc.loc[idx, "forecast_price_kes"]
+        fc.loc[idx, "forecast_lower"] = np.minimum(fc.loc[idx, "forecast_lower"] - q * w, p).clip(lower=0).round(2)
+        fc.loc[idx, "forecast_upper"] = np.maximum(fc.loc[idx, "forecast_upper"] + q * w, p).round(2)
+    return fc
+
+
+def _demo_bands() -> None:
+    fc = pd.DataFrame({"strategy": ["chronos"], "forecast_price_kes": [100.0],
+                       "forecast_lower": [90.0], "forecast_upper": [110.0]})
+    out = calibrate_bands(fc, {"chronos": [0.5] * 10})  # actuals half a width outside
+    assert (out.forecast_lower[0], out.forecast_upper[0]) == (80.0, 120.0), out
+    assert band_scores([100, 130], [90, 90], [110, 110]) == [-0.5, 1.0]
 
 
 def _tier(test_mape, stale):
@@ -415,6 +642,24 @@ def _region(mk, admin1):
     return "Unknown"
 
 
+def _demo_pre(df, scr, models) -> dict:
+    """Demo: precompute without touching the real cache, and check the leak rule holds."""
+    global PRE_CACHE
+    real, PRE_CACHE = PRE_CACHE, EXPORTS / ".rebuild_pre_demo.pkl"
+    try:
+        pre = precompute(df, scr, models)
+    finally:
+        PRE_CACHE.unlink(missing_ok=True)
+        PRE_CACHE = real
+    for q in _requests(df, scr):
+        assert q["cutoff"] is None or q["dates"].max() < q["cutoff"], "context reaches past its cutoff"
+        for m in ("chronos", "lgbm"):
+            if m in models:
+                med, lo, hi = pre[q["key"]][(m, q["kind"])]
+                assert len(med) == 12 and np.all(lo <= med) and np.all(med <= hi), (m, q["key"], q["kind"])
+    return pre
+
+
 def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
     df = pd.read_csv(INPUT, parse_dates=["date"])
     print(f"[load] {len(df):,} rows, {df['commodity'].nunique()} commodities, "
@@ -427,8 +672,10 @@ def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
     print(f"[models] {models}")
 
     if demo:
-        scr = scr.head(3)
-        print("[demo] limiting to 3 series")
+        _demo_bands()
+        scr = pd.concat([scr[scr["n_records"] >= 84].head(2), scr[scr["n_records"] < 84].head(4)])
+        print("[demo] limiting to 6 series (2 long, 4 short)")
+    pre_all = _demo_pre(df, scr, models) if demo else precompute(df, scr, models)
 
     admin_map = df.groupby("market")["admin1"].agg(
         lambda s: s.dropna().mode().iloc[0] if s.notna().any() else ""
@@ -437,6 +684,7 @@ def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
     metrics_rows = []
     forecast_rows = []
     per_model_mapes = []  # for comparison table
+    cal_scores: dict[str, list[float]] = {}  # strategy -> band scores of served series
     done_keys: set[tuple[str, str, str]] = set()
 
     if not demo and CHECKPOINT.exists():
@@ -446,6 +694,7 @@ def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
             metrics_rows = ck["metrics_rows"]
             forecast_rows = ck["forecast_rows"]
             per_model_mapes = ck["per_model_mapes"]
+            cal_scores = ck.get("cal_scores", {})
             done_keys = set(ck["done_keys"])
             print(f"[resume] loaded checkpoint: {len(done_keys)} series done, "
                   f"{len(metrics_rows)} metric rows, {len(forecast_rows)} fc rows")
@@ -465,7 +714,7 @@ def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
                             "Spinach", "Carrots", "Bananas", "Beans (mixed)",
                             "Beans (dry)", "Sorghum"} else 0.05
 
-        res = _fit_one(c, mk, pt, y, last, cps, models)
+        res = _fit_one(c, mk, pt, y, last, cps, models, pre=pre_all.get((c, mk, pt)))
         stale = int(r["months_stale"])
         region = _region(mk, admin_map.get(mk))
 
@@ -495,6 +744,7 @@ def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
         })
 
         if reliable:
+            cal_scores.setdefault(res["strategy"], []).extend(res["cal_scores"])
             for row in res["forecast_rows"]:
                 forecast_rows.append({
                     "commodity": c, "market": mk, "region": region,
@@ -523,13 +773,14 @@ def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
                     "metrics_rows": metrics_rows,
                     "forecast_rows": forecast_rows,
                     "per_model_mapes": per_model_mapes,
+                    "cal_scores": cal_scores,
                     "done_keys": list(done_keys),
                 }, f)
             tmp.replace(CHECKPOINT)
             print(f"[ckpt] {len(done_keys)} series saved -> {CHECKPOINT.name}", flush=True)
 
     metrics_df = pd.DataFrame(metrics_rows)
-    forecasts_df = pd.DataFrame(forecast_rows)
+    forecasts_df = calibrate_bands(pd.DataFrame(forecast_rows), cal_scores)
     compare_df = pd.DataFrame(per_model_mapes)
 
     n_reliable = int(metrics_df["reliable"].sum())
@@ -571,17 +822,18 @@ def rebuild(min_obs: int, models: list[str], demo: bool = False) -> None:
           f"model_metrics.csv ({len(metrics_df)}), routing ({len(routing)})")
     print(f"[copy]  app/data/ refreshed")
 
-    if CHECKPOINT.exists():
-        CHECKPOINT.unlink()
-        print(f"[ckpt]  cleared (full run completed)")
+    for f in (CHECKPOINT, PRE_CACHE):
+        if f.exists():
+            f.unlink()
+    print(f"[ckpt]  cleared (full run completed)")
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--gate", type=int, default=36)
     ap.add_argument("--models", nargs="+",
-                    default=["prophet", "sarima", "chronos"],
-                    choices=["prophet", "sarima", "chronos"])
+                    default=["prophet", "sarima", "chronos", "lgbm"],
+                    choices=["prophet", "sarima", "chronos", "lgbm"])
     ap.add_argument("--demo", action="store_true")
     ap.add_argument("--chronos-model", default=CHRONOS_MODEL)
     args = ap.parse_args()

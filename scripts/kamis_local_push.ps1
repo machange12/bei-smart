@@ -11,7 +11,8 @@ try {
     git pull --rebase --autostash origin main
     & "$repo\venv\Scripts\python.exe" scripts\scrape_kamis.py --discover --months-back 3 --workers 6 --max-minutes 30
     if ($LASTEXITCODE -ne 0) { throw "scrape failed ($LASTEXITCODE)" }
-    git add data/raw/kamis_prices.csv
+    & "$repoenv\Scripts\python.exe" scriptsuild_weekly.py   # latest-week prices for the Forecast page
+    git add data/raw/kamis_prices.csv app/data/kamis_weekly.csv
     git diff --cached --quiet
     if ($LASTEXITCODE -eq 0) { "no new KAMIS rows"; return }
     git commit -m "data: KAMIS pull $(Get-Date -Format yyyy-MM-dd) (local)"

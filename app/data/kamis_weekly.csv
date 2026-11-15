@@ -1,0 +1,251 @@
+commodity,market,pricetype,week,price,days
+Beans (mixed),Kerugoya,Retail,2026-08-31,132.5,2
+Beans (mixed),Kerugoya,Retail,2026-09-07,130.0,1
+Beans (mixed),Kibuye,Retail,2026-08-31,150.0,1
+Beans (mixed),Kibuye,Retail,2026-09-07,150.0,1
+Beans (mixed),Maua,Retail,2026-08-31,100.0,1
+Beans (mixed),Maua,Retail,2026-09-14,90.0,1
+Beans (mixed),Mumias,Retail,2026-08-31,127.27,1
+Beans (mixed),Mumias,Retail,2026-09-14,136.36,1
+Beans (yellow-green),Ahero,Retail,2026-08-31,200.0,1
+Beans (yellow-green),Ahero,Retail,2026-09-07,225.0,1
+Beans (yellow-green),Ahero,Retail,2026-09-14,225.0,1
+Beans (yellow-green),Ahero,Wholesale,2026-08-31,190.0,1
+Beans (yellow-green),Ahero,Wholesale,2026-09-07,200.0,1
+Beans (yellow-green),Ahero,Wholesale,2026-09-14,200.0,1
+Beans (yellow-green),Kagio,Retail,2026-09-14,180.0,1
+Beans (yellow-green),Kagio,Wholesale,2026-09-14,135.56,1
+Beans (yellow-green),Kangeta,Retail,2026-08-31,120.0,1
+Beans (yellow-green),Kangeta,Retail,2026-09-07,120.0,1
+Beans (yellow-green),Kangeta,Retail,2026-09-14,130.0,1
+Beans (yellow-green),Kangeta,Wholesale,2026-08-31,110.0,1
+Beans (yellow-green),Kangeta,Wholesale,2026-09-07,110.0,1
+Beans (yellow-green),Kangeta,Wholesale,2026-09-14,120.0,1
+Beans (yellow-green),Kibuye,Retail,2026-08-31,250.0,1
+Beans (yellow-green),Kibuye,Retail,2026-09-07,250.0,1
+Beans (yellow-green),Makutano Kirinyaga,Retail,2026-09-14,200.0,1
+Beans (yellow-green),Makutano Kirinyaga,Wholesale,2026-09-14,180.0,1
+Beans (yellow-green),Maua,Retail,2026-08-31,130.0,1
+Beans (yellow-green),Maua,Retail,2026-09-14,130.0,1
+Beans (yellow-green),Maua,Wholesale,2026-08-31,111.11,1
+Beans (yellow-green),Maua,Wholesale,2026-09-14,111.11,1
+Beans (yellow-green),Muhoroni,Retail,2026-08-31,173.08,1
+Beans (yellow-green),Muhoroni,Retail,2026-09-07,173.08,1
+Beans (yellow-green),Muhoroni,Wholesale,2026-08-31,153.85,1
+Beans (yellow-green),Muhoroni,Wholesale,2026-09-07,153.85,1
+Beans (yellow-green),Ngurubani,Retail,2026-08-31,175.0,2
+Beans (yellow-green),Ngurubani,Retail,2026-09-07,175.0,2
+Beans (yellow-green),Ngurubani,Retail,2026-09-14,175.0,2
+Beans (yellow-green),Ngurubani,Wholesale,2026-08-31,119.34,2
+Beans (yellow-green),Ngurubani,Wholesale,2026-09-07,121.11,2
+Beans (yellow-green),Ngurubani,Wholesale,2026-09-14,125.0,2
+Beans (yellow-green),Nkubu,Retail,2026-08-31,120.0,1
+Beans (yellow-green),Nkubu,Retail,2026-09-07,120.0,1
+Beans (yellow-green),Nkubu,Retail,2026-09-14,120.0,1
+Beans (yellow-green),Nkubu,Wholesale,2026-08-31,100.0,1
+Beans (yellow-green),Nkubu,Wholesale,2026-09-07,100.0,1
+Beans (yellow-green),Nkubu,Wholesale,2026-09-14,100.0,1
+Beans red haricot (wairimu),Ahero,Retail,2026-08-31,135.0,1
+Beans red haricot (wairimu),Ahero,Retail,2026-09-07,140.0,1
+Beans red haricot (wairimu),Ahero,Retail,2026-09-14,150.0,1
+Beans red haricot (wairimu),Ahero,Wholesale,2026-08-31,125.0,1
+Beans red haricot (wairimu),Ahero,Wholesale,2026-09-07,135.0,1
+Beans red haricot (wairimu),Ahero,Wholesale,2026-09-14,135.0,1
+Beans red haricot (wairimu),Ngurubani,Retail,2026-08-31,120.0,1
+Beans red haricot (wairimu),Ngurubani,Retail,2026-09-07,120.0,2
+Beans red haricot (wairimu),Ngurubani,Retail,2026-09-14,125.0,2
+Beans red haricot (wairimu),Ngurubani,Wholesale,2026-08-31,91.11,1
+Beans red haricot (wairimu),Ngurubani,Wholesale,2026-09-07,97.22,2
+Beans red haricot (wairimu),Ngurubani,Wholesale,2026-09-14,100.0,2
+Beans red haricot (wairimu),Nkubu,Retail,2026-08-31,120.0,1
+Beans red haricot (wairimu),Nkubu,Retail,2026-09-07,120.0,1
+Beans red haricot (wairimu),Nkubu,Retail,2026-09-14,120.0,1
+Beans red haricot (wairimu),Nkubu,Wholesale,2026-08-31,100.0,1
+Beans red haricot (wairimu),Nkubu,Wholesale,2026-09-07,100.0,1
+Beans red haricot (wairimu),Nkubu,Wholesale,2026-09-14,100.0,1
+Beans rosecoco,Ahero,Retail,2026-08-31,150.0,1
+Beans rosecoco,Ahero,Retail,2026-09-07,150.0,1
+Beans rosecoco,Ahero,Retail,2026-09-14,150.0,1
+Beans rosecoco,Ahero,Wholesale,2026-08-31,140.0,1
+Beans rosecoco,Ahero,Wholesale,2026-09-07,140.0,1
+Beans rosecoco,Ahero,Wholesale,2026-09-14,135.0,1
+Beans rosecoco,Kibuye,Retail,2026-08-31,200.0,1
+Beans rosecoco,Kibuye,Retail,2026-09-07,200.0,1
+Beans rosecoco,Nkubu,Retail,2026-08-31,120.0,1
+Beans rosecoco,Nkubu,Retail,2026-09-07,120.0,1
+Beans rosecoco,Nkubu,Retail,2026-09-14,120.0,1
+Beans rosecoco,Nkubu,Wholesale,2026-08-31,100.0,1
+Beans rosecoco,Nkubu,Wholesale,2026-09-07,100.0,1
+Beans rosecoco,Nkubu,Wholesale,2026-09-14,100.0,1
+Finger millet,Ahero,Retail,2026-09-07,175.0,1
+Finger millet,Ahero,Wholesale,2026-09-07,165.0,1
+Finger millet,Kibuye,Retail,2026-08-31,200.0,1
+Finger millet,Kibuye,Retail,2026-09-07,200.0,1
+Finger millet,Maua,Retail,2026-08-31,135.0,2
+Finger millet,Maua,Retail,2026-09-14,120.0,1
+Finger millet,Maua,Wholesale,2026-08-31,120.0,2
+Finger millet,Maua,Wholesale,2026-09-14,110.0,1
+Finger millet,Nkubu,Retail,2026-08-31,100.0,1
+Finger millet,Nkubu,Retail,2026-09-07,100.0,1
+Finger millet,Nkubu,Retail,2026-09-14,100.0,1
+Finger millet,Nkubu,Wholesale,2026-08-31,88.89,1
+Finger millet,Nkubu,Wholesale,2026-09-07,88.89,1
+Finger millet,Nkubu,Wholesale,2026-09-14,88.89,1
+Green maize,Kagio,Retail,2026-09-14,60.0,1
+Green maize,Kagio,Wholesale,2026-09-14,40.0,1
+Green maize,Kangeta,Retail,2026-08-31,60.0,1
+Green maize,Kangeta,Retail,2026-09-07,60.0,1
+Green maize,Kangeta,Retail,2026-09-14,60.0,1
+Green maize,Kangeta,Wholesale,2026-08-31,50.0,1
+Green maize,Kangeta,Wholesale,2026-09-07,50.0,1
+Green maize,Kangeta,Wholesale,2026-09-14,50.0,1
+Green maize,Kinango,Retail,2026-08-31,70.0,1
+Green maize,Kinango,Retail,2026-09-14,70.0,1
+Green maize,Kinango,Wholesale,2026-08-31,50.0,1
+Green maize,Kinango,Wholesale,2026-09-14,45.0,1
+Green maize,Kutus,Retail,2026-08-31,60.0,1
+Green maize,Kutus,Wholesale,2026-08-31,50.0,1
+Green maize,Ngurubani,Retail,2026-08-31,65.0,2
+Green maize,Ngurubani,Retail,2026-09-07,70.0,2
+Green maize,Ngurubani,Retail,2026-09-14,65.0,2
+Green maize,Ngurubani,Wholesale,2026-08-31,42.5,2
+Green maize,Ngurubani,Wholesale,2026-09-07,50.0,2
+Green maize,Ngurubani,Wholesale,2026-09-14,47.5,2
+Ground nuts,Ahero,Retail,2026-08-31,287.5,2
+Ground nuts,Ahero,Retail,2026-09-07,300.0,2
+Ground nuts,Ahero,Retail,2026-09-14,300.0,2
+Ground nuts,Ahero,Wholesale,2026-08-31,262.5,2
+Ground nuts,Ahero,Wholesale,2026-09-07,275.0,2
+Ground nuts,Ahero,Wholesale,2026-09-14,275.0,2
+Ground nuts,Kerugoya,Retail,2026-08-31,277.5,2
+Ground nuts,Kerugoya,Retail,2026-09-07,275.0,4
+Ground nuts,Kerugoya,Retail,2026-09-14,265.0,4
+Ground nuts,Kerugoya,Wholesale,2026-08-31,215.0,2
+Ground nuts,Kerugoya,Wholesale,2026-09-07,205.0,4
+Ground nuts,Kerugoya,Wholesale,2026-09-14,210.0,4
+Ground nuts,Kibuye,Retail,2026-08-31,317.5,2
+Ground nuts,Kibuye,Retail,2026-09-07,315.0,2
+Maize,Ahero,Retail,2026-08-31,55.0,2
+Maize,Ahero,Retail,2026-09-07,55.0,2
+Maize,Ahero,Retail,2026-09-14,50.0,1
+Maize,Ahero,Wholesale,2026-08-31,50.0,2
+Maize,Ahero,Wholesale,2026-09-07,50.0,2
+Maize,Ahero,Wholesale,2026-09-14,45.0,1
+Maize,Butere,Retail,2026-09-14,47.83,1
+Maize,Eldoret,Retail,2026-08-31,50.0,3
+Maize,Eldoret,Retail,2026-09-07,50.0,2
+Maize,Eldoret,Retail,2026-09-14,50.0,4
+Maize,Eldoret,Wholesale,2026-08-31,40.0,3
+Maize,Eldoret,Wholesale,2026-09-07,42.5,2
+Maize,Eldoret,Wholesale,2026-09-14,42.5,4
+Maize,Embu,Retail,2026-09-14,50.0,1
+Maize,Kakamega,Retail,2026-09-07,65.0,2
+Maize,Kakamega,Retail,2026-09-14,50.0,3
+Maize,Kangemi,Wholesale,2026-08-31,46.67,1
+Maize,Kangeta,Retail,2026-08-31,5.0,1
+Maize,Kangeta,Retail,2026-09-07,50.0,1
+Maize,Kangeta,Retail,2026-09-14,50.0,1
+Maize,Kangeta,Wholesale,2026-08-31,45.0,1
+Maize,Kangeta,Wholesale,2026-09-07,45.0,1
+Maize,Kangeta,Wholesale,2026-09-14,45.0,1
+Maize,Kapkwen,Retail,2026-09-14,60.0,1
+Maize,Kapkwen,Wholesale,2026-09-14,42.22,1
+Maize,Kerugoya,Retail,2026-08-31,70.0,1
+Maize,Kerugoya,Retail,2026-09-07,75.0,1
+Maize,Kibuye,Retail,2026-08-31,60.0,2
+Maize,Kibuye,Retail,2026-09-07,60.0,2
+Maize,Kibuye,Wholesale,2026-08-31,48.89,1
+Maize,Kibuye,Wholesale,2026-09-07,48.89,1
+Maize,Kipkaren,Retail,2026-08-31,100.0,2
+Maize,Kipkaren,Retail,2026-09-07,100.0,1
+Maize,Kipkaren,Retail,2026-09-14,85.0,1
+Maize,Maua,Retail,2026-08-31,60.0,1
+Maize,Maua,Retail,2026-09-14,60.0,1
+Maize,Maua,Wholesale,2026-08-31,50.0,1
+Maize,Maua,Wholesale,2026-09-14,50.0,1
+Maize,Muhoroni,Wholesale,2026-08-31,50.0,1
+Maize,Muhoroni,Wholesale,2026-09-07,40.0,1
+Maize,Mulot,Retail,2026-09-14,60.0,1
+Maize,Mumias,Retail,2026-08-31,50.0,1
+Maize,Mumias,Retail,2026-09-14,50.0,1
+Maize,Nkubu,Retail,2026-08-31,50.0,1
+Maize,Nkubu,Retail,2026-09-07,50.0,1
+Maize,Nkubu,Retail,2026-09-14,50.0,1
+Maize,Nkubu,Wholesale,2026-08-31,38.89,1
+Maize,Nkubu,Wholesale,2026-09-07,44.44,1
+Maize,Nkubu,Wholesale,2026-09-14,44.44,1
+Maize flour,Ahero,Retail,2026-09-07,72.5,1
+Maize flour,Ahero,Wholesale,2026-09-07,70.0,1
+Maize flour,Nairobi Supermarkets,Retail,2026-09-07,76.0,34
+Pearl rush millet,Kangeta,Retail,2026-08-31,80.0,1
+Pearl rush millet,Kangeta,Retail,2026-09-07,80.0,1
+Pearl rush millet,Kangeta,Retail,2026-09-14,80.0,1
+Pearl rush millet,Kangeta,Wholesale,2026-08-31,70.0,1
+Pearl rush millet,Kangeta,Wholesale,2026-09-07,70.0,1
+Pearl rush millet,Kangeta,Wholesale,2026-09-14,70.0,1
+Pearl rush millet,Maua,Retail,2026-08-31,80.0,1
+Pearl rush millet,Maua,Retail,2026-09-14,80.0,1
+Pearl rush millet,Maua,Wholesale,2026-08-31,70.0,1
+Pearl rush millet,Maua,Wholesale,2026-09-14,70.0,1
+Pearl rush millet,Nkubu,Retail,2026-08-31,100.0,1
+Pearl rush millet,Nkubu,Retail,2026-09-07,100.0,1
+Pearl rush millet,Nkubu,Retail,2026-09-14,100.0,1
+Rice,Ahero,Retail,2026-08-31,175.0,1
+Rice,Ahero,Retail,2026-09-07,175.0,1
+Rice,Ahero,Retail,2026-09-14,165.0,1
+Rice,Ahero,Wholesale,2026-08-31,150.0,1
+Rice,Ahero,Wholesale,2026-09-07,150.0,1
+Rice,Ahero,Wholesale,2026-09-14,150.0,1
+Rice,Kawangware,Retail,2026-08-31,180.0,1
+Rice,Kawangware,Retail,2026-09-07,180.0,2
+Rice,Kawangware,Retail,2026-09-14,170.0,4
+Rice,Kibuye,Retail,2026-08-31,137.5,2
+Rice,Kibuye,Retail,2026-09-07,137.5,2
+Rice,Ngurubani,Retail,2026-08-31,167.5,2
+Rice,Ngurubani,Retail,2026-09-07,170.0,2
+Rice,Ngurubani,Retail,2026-09-14,170.0,2
+Rice,Ngurubani,Wholesale,2026-08-31,150.0,2
+Rice,Ngurubani,Wholesale,2026-09-07,150.0,2
+Rice,Ngurubani,Wholesale,2026-09-14,150.0,2
+Sorghum,Ahero,Retail,2026-08-31,65.0,1
+Sorghum,Ahero,Retail,2026-09-07,65.0,1
+Sorghum,Ahero,Retail,2026-09-14,0.02,1
+Sorghum,Ahero,Wholesale,2026-08-31,60.0,1
+Sorghum,Ahero,Wholesale,2026-09-07,60.0,1
+Sorghum,Ahero,Wholesale,2026-09-14,1.0,1
+Sorghum,Eldoret,Wholesale,2026-08-31,120.0,2
+Sorghum,Eldoret,Wholesale,2026-09-07,115.0,1
+Sorghum,Eldoret,Wholesale,2026-09-14,115.0,2
+Sorghum,Kangeta,Retail,2026-08-31,80.0,1
+Sorghum,Kangeta,Retail,2026-09-07,80.0,1
+Sorghum,Kangeta,Retail,2026-09-14,80.0,1
+Sorghum,Kangeta,Wholesale,2026-08-31,70.0,1
+Sorghum,Kangeta,Wholesale,2026-09-07,70.0,1
+Sorghum,Kangeta,Wholesale,2026-09-14,70.0,1
+Sorghum,Kibuye,Retail,2026-08-31,100.0,1
+Sorghum,Kibuye,Retail,2026-09-07,100.0,1
+Sorghum,Maua,Retail,2026-08-31,80.0,1
+Sorghum,Maua,Retail,2026-09-14,80.0,1
+Sorghum,Maua,Wholesale,2026-08-31,65.0,1
+Sorghum,Maua,Wholesale,2026-09-14,65.0,1
+Sorghum,Muhoroni,Retail,2026-08-31,80.0,1
+Sorghum,Muhoroni,Retail,2026-09-07,90.0,1
+Sorghum,Muhoroni,Wholesale,2026-08-31,70.0,1
+Sorghum,Muhoroni,Wholesale,2026-09-07,75.0,1
+Wheat,Kibuye,Retail,2026-08-31,65.0,1
+Wheat,Kibuye,Retail,2026-09-07,65.0,1
+Wheat,Maua,Retail,2026-08-31,100.0,1
+Wheat,Maua,Retail,2026-09-14,100.0,1
+Wheat,Maua,Wholesale,2026-08-31,83.33,1
+Wheat,Maua,Wholesale,2026-09-14,83.33,1
+Wheat flour,Nairobi Supermarkets,Retail,2026-09-07,89.25,56
+White sorghum,Maua,Retail,2026-08-31,80.0,1
+White sorghum,Maua,Retail,2026-09-14,80.0,1
+White sorghum,Maua,Wholesale,2026-08-31,65.0,1
+White sorghum,Maua,Wholesale,2026-09-14,65.0,1
+White sorghum,Nkubu,Retail,2026-08-31,80.0,1
+White sorghum,Nkubu,Retail,2026-09-07,80.0,1
+White sorghum,Nkubu,Retail,2026-09-14,80.0,1
+White sorghum,Nkubu,Wholesale,2026-08-31,66.67,1
+White sorghum,Nkubu,Wholesale,2026-09-07,66.67,1
+White sorghum,Nkubu,Wholesale,2026-09-14,66.67,1
